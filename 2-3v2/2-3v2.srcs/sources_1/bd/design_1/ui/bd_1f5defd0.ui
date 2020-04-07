@@ -1,0 +1,25 @@
+{
+   ExpandedHierarchyInLayout: "",
+   guistr: "# # String gsaved with Nlview 6.8.5  2018-01-30 bk=1.4354 VDI=40 GEI=35 GUI=JA:1.6 non-TLS-threadsafe
+#  -string -flagsOSRD
+preplace port VGA_VS_0 -pg 1 -y -220 -defaultsOSRD
+preplace port VGA_HS_0 -pg 1 -y -240 -defaultsOSRD
+preplace portBus VGA_R_0 -pg 1 -y -300 -defaultsOSRD
+preplace portBus VGA_G_0 -pg 1 -y -280 -defaultsOSRD
+preplace portBus VGA_B_0 -pg 1 -y -260 -defaultsOSRD
+preplace inst zynq_ultra_ps_e_0 -pg 1 -lvl 1 -y -80 -defaultsOSRD
+preplace inst pattern_0 -pg 1 -lvl 1 -y -260 -defaultsOSRD
+preplace netloc pattern_0_VGA_B 1 1 1 N
+preplace netloc pattern_0_VGA_VS 1 1 1 N
+preplace netloc zynq_ultra_ps_e_0_pl_clk0 1 0 2 10 20 620
+preplace netloc pattern_0_VGA_R 1 1 1 N
+preplace netloc zynq_ultra_ps_e_0_pl_clk1 1 0 2 -10 30 610
+preplace netloc pattern_0_VGA_G 1 1 1 N
+preplace netloc pattern_0_VGA_HS 1 1 1 N
+preplace netloc zynq_ultra_ps_e_0_pl_resetn0 1 0 2 0 40 630
+levelinfo -pg 1 -30 310 650 -top -360 -bot 180
+",
+}
+{
+   da_zynq_ultra_ps_e_cnt: "1",
+}
