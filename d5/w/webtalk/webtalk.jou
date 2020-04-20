@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# 
+# Start of session at: Tue Apr 21 00:41:59 2020
+# Process ID: 15400
+# Current directory: /home/y/fpga/d5/w/webtalk
+# Command line: wbtcv -mode batch -source sdk_webtalk.tcl
+# Log file: /home/y/fpga/d5/w/webtalk/webtalk.log
+# Journal file: /home/y/fpga/d5/w/webtalk/webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl
