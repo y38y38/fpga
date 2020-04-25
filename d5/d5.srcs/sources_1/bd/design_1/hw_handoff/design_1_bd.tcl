@@ -169,11 +169,11 @@ proc create_root_design { parentCell } {
   # Create instance: clk_wiz_0, and set properties
   set clk_wiz_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_0 ]
   set_property -dict [ list \
-   CONFIG.CLKOUT1_JITTER {250.227} \
+   CONFIG.CLKOUT1_JITTER {228.536} \
    CONFIG.CLKOUT1_PHASE_ERROR {394.762} \
-   CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {74.250} \
+   CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {148.5} \
    CONFIG.MMCM_CLKFBOUT_MULT_F {111.375} \
-   CONFIG.MMCM_CLKOUT0_DIVIDE_F {15.000} \
+   CONFIG.MMCM_CLKOUT0_DIVIDE_F {7.500} \
    CONFIG.MMCM_DIVCLK_DIVIDE {10} \
    CONFIG.PRIM_IN_FREQ {100.000} \
    CONFIG.USE_LOCKED {false} \
@@ -818,7 +818,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins test_output_0/test_clk_in] [get_bd_pins zynq_ultra_ps_e_0/dp_video_in_clk]
   connect_bd_net -net test_output_0_test_de_out [get_bd_pins test_output_0/test_de_out] [get_bd_pins zynq_ultra_ps_e_0/dp_live_video_in_de]
   connect_bd_net -net test_output_0_test_hsync_out [get_bd_pins test_output_0/test_hsync_out] [get_bd_pins zynq_ultra_ps_e_0/dp_live_video_in_hsync]
-  connect_bd_net -net test_output_0_test_output [get_bd_pins test_output_0/test_output] [get_bd_pins zynq_ultra_ps_e_0/dp_live_video_in_pixel1]
+  connect_bd_net -net test_output_0_test_value [get_bd_pins test_output_0/test_value] [get_bd_pins zynq_ultra_ps_e_0/dp_live_video_in_pixel1]
   connect_bd_net -net test_output_0_test_vsync_out [get_bd_pins test_output_0/test_vsync_out] [get_bd_pins zynq_ultra_ps_e_0/dp_live_video_in_vsync]
   connect_bd_net -net zynq_ultra_ps_e_0_pl_clk0 [get_bd_pins clk_wiz_0/clk_in1] [get_bd_pins zynq_ultra_ps_e_0/maxihpm0_fpd_aclk] [get_bd_pins zynq_ultra_ps_e_0/maxihpm1_fpd_aclk] [get_bd_pins zynq_ultra_ps_e_0/pl_clk0]
   connect_bd_net -net zynq_ultra_ps_e_0_pl_resetn0 [get_bd_pins test_output_0/test_rst_in] [get_bd_pins zynq_ultra_ps_e_0/pl_resetn0]

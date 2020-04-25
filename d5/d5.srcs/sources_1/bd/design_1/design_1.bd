@@ -5,7 +5,8 @@
       "device": "xczu3eg-sbva484-1-e",
       "name": "design_1",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2018.3"
+      "tool_version": "2018.3",
+      "validated": "true"
     },
     "design_tree": {
       "zynq_ultra_ps_e_0": "",
@@ -1299,19 +1300,19 @@
         "xci_name": "design_1_clk_wiz_0_0",
         "parameters": {
           "CLKOUT1_JITTER": {
-            "value": "250.227"
+            "value": "228.536"
           },
           "CLKOUT1_PHASE_ERROR": {
             "value": "394.762"
           },
           "CLKOUT1_REQUESTED_OUT_FREQ": {
-            "value": "74.250"
+            "value": "148.5"
           },
           "MMCM_CLKFBOUT_MULT_F": {
             "value": "111.375"
           },
           "MMCM_CLKOUT0_DIVIDE_F": {
-            "value": "15.000"
+            "value": "7.500"
           },
           "MMCM_DIVCLK_DIVIDE": {
             "value": "10"
@@ -1337,10 +1338,30 @@
         },
         "ports": {
           "test_rst_in": {
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "default_prop"
+              }
+            }
           },
           "test_clk_in": {
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "design_1_clk_wiz_0_0_clk_out1",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "148500000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              }
+            }
           },
           "test_vsync_out": {
             "direction": "O"
@@ -1387,21 +1408,22 @@
           "zynq_ultra_ps_e_0/dp_live_video_in_hsync"
         ]
       },
+      "zynq_ultra_ps_e_0_pl_resetn0": {
+        "ports": [
+          "zynq_ultra_ps_e_0/pl_resetn0",
+          "test_output_0/test_rst_in"
+        ]
+      },
       "test_output_0_test_de_out": {
         "ports": [
           "test_output_0/test_de_out",
           "zynq_ultra_ps_e_0/dp_live_video_in_de"
         ]
       },
-      "test_output_0_test_output": {
+      "test_output_0_test_value": {
         "ports": [
+          "test_output_0/test_value",
           "zynq_ultra_ps_e_0/dp_live_video_in_pixel1"
-        ]
-      },
-      "zynq_ultra_ps_e_0_pl_resetn0": {
-        "ports": [
-          "zynq_ultra_ps_e_0/pl_resetn0",
-          "test_output_0/test_rst_in"
         ]
       }
     },

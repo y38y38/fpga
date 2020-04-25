@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../d5.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../d5.srcs/sources_1/bd/design_1/ipshared/00a3/hdl" --include "../../../../d5.srcs/sources_1/bd/design_1/ipshared/85a3" --include "/tools/Xilinx/Vivado/2018.3/Vivado/2018.3/data/xilinx_vip/include" \
+"../../../../d5.srcs/sources_1/imports/d1/test_pattern.v" \
+"../../../../d5.srcs/sim_1/imports/d5/pattern_test.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

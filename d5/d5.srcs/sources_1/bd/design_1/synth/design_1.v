@@ -1,8 +1,8 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
-//Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-//Date        : Thu Apr 16 01:12:12 2020
-//Host        : DESKTOP-EAMGFGQ running 64-bit major release  (build 9200)
+//Tool Version: Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+//Date        : Sun Apr 26 02:04:21 2020
+//Host        : y-Blade-Stealth running 64-bit Ubuntu 16.04.6 LTS
 //Command     : generate_target design_1.bd
 //Design      : design_1
 //Purpose     : IP block netlist
@@ -16,7 +16,7 @@ module design_1
   wire clk_wiz_0_clk_out1;
   wire test_output_0_test_de_out;
   wire test_output_0_test_hsync_out;
-  wire [35:0]test_output_0_test_output;
+  wire [35:0]test_output_0_test_value;
   wire test_output_0_test_vsync_out;
   wire zynq_ultra_ps_e_0_pl_clk0;
   wire zynq_ultra_ps_e_0_pl_resetn0;
@@ -28,8 +28,8 @@ module design_1
        (.test_clk_in(clk_wiz_0_clk_out1),
         .test_de_out(test_output_0_test_de_out),
         .test_hsync_out(test_output_0_test_hsync_out),
-        .test_output(test_output_0_test_output),
         .test_rst_in(zynq_ultra_ps_e_0_pl_resetn0),
+        .test_value(test_output_0_test_value),
         .test_vsync_out(test_output_0_test_vsync_out));
   design_1_zynq_ultra_ps_e_0_0 zynq_ultra_ps_e_0
        (.dp_external_custom_event1(1'b0),
@@ -39,7 +39,7 @@ module design_1
         .dp_live_gfx_pixel1_in({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .dp_live_video_in_de(test_output_0_test_de_out),
         .dp_live_video_in_hsync(test_output_0_test_hsync_out),
-        .dp_live_video_in_pixel1(test_output_0_test_output),
+        .dp_live_video_in_pixel1(test_output_0_test_value),
         .dp_live_video_in_vsync(test_output_0_test_vsync_out),
         .dp_video_in_clk(clk_wiz_0_clk_out1),
         .maxigp0_arready(1'b0),

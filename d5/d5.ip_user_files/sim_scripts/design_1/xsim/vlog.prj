@@ -1,0 +1,10 @@
+verilog xil_defaultlib --include "../../../../d5.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../d5.srcs/sources_1/bd/design_1/ipshared/00a3/hdl" --include "../../../../d5.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/sim_tlm" --include "../../../../d5.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0" --include "../../../../d5.srcs/sources_1/bd/design_1/ipshared/85a3" \
+"../../../bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/sim/design_1_zynq_ultra_ps_e_0_0_vip_wrapper.v" \
+"../../../bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_clk_wiz.v" \
+"../../../bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.v" \
+"../../../bd/design_1/sim/design_1.v" \
+"../../../bd/design_1/ip/design_1_test_output_0_4/sim/design_1_test_output_0_4.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

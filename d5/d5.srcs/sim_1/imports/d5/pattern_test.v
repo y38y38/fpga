@@ -23,7 +23,7 @@
 module pattern_test;
 
 localparam STEP =8;
-localparam CLKNUM = (800*525+12000)*5;
+localparam CLKNUM = (800*525+12000)*50;
 
 reg     test_clk_in;
 reg     test_rst_in;
@@ -39,7 +39,7 @@ test_output test_output(
     .test_vsync_out  (test_vsync_out),
     .test_hsync_out  (test_hsync_out),
     .test_de_out  (test_de_out),
-    .test_output (test_value),
+    .test_value (test_value)
 );
 
 always begin
@@ -47,12 +47,12 @@ always begin
     test_clk_in = 1; #(STEP/2);
 end
 
-integer fd;
+//integer fd;
 
 initial begin
     test_rst_in = 0;
-    #(STEP*500) test_rst_in = 0;
-    #(STEP*10)  test_rst_in = 1;
+    #(STEP*10) test_rst_in = 1;
+    #(STEP*10)  test_rst_in = 0;
     #(STEP*CLKNUM);
     $stop;
 end
