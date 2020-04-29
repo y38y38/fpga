@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Sun Apr 26 02:12:56 2020
-| Host         : y-Blade-Stealth running 64-bit Ubuntu 16.04.6 LTS
+| Date         : Mon Apr 27 00:47:40 2020
+| Host         : y-Blade-Stealth running 64-bit unknown
 | Command      : report_methodology -file design_1_wrapper_methodology_drc_routed.rpt -pb design_1_wrapper_methodology_drc_routed.pb -rpx design_1_wrapper_methodology_drc_routed.rpx
 | Design       : design_1_wrapper
 | Device       : xczu3eg-sbva484-1-e
@@ -20,7 +20,7 @@ Table of Contents
 1. REPORT SUMMARY
 -----------------
             Netlist: netlist
-          Floorplan: design_1
+          Floorplan: checkpoint_design_1_wrapper
       Design limits: <entire design considered>
              Max violations: <unlimited>
              Violations found: 16
@@ -87,22 +87,22 @@ Related violations: <none>
 
 TIMING-16#1 Warning
 Large setup violation  
-There is a large setup violation of -2.161 ns between design_1_i/test_output_0/inst/test_hsync_out_reg/C (clocked by clk_out1_design_1_clk_wiz_0_0) and u_ila_1/inst/ila_core_inst/shifted_data_in_reg[7][0]_srl8/D (clocked by clk_pl_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.171 ns between design_1_i/test_output_0/inst/test_vsync_out_reg/C (clocked by clk_out1_design_1_clk_wiz_0_0) and u_ila_1/inst/ila_core_inst/shifted_data_in_reg[7][2]_srl8/D (clocked by clk_pl_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#2 Warning
 Large setup violation  
-There is a large setup violation of -2.165 ns between design_1_i/test_output_0/inst/test_vsync_out_reg/C (clocked by clk_out1_design_1_clk_wiz_0_0) and u_ila_1/inst/ila_core_inst/shifted_data_in_reg[7][2]_srl8/D (clocked by clk_pl_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.180 ns between design_1_i/test_output_0/inst/test_hsync_out_reg/C (clocked by clk_out1_design_1_clk_wiz_0_0) and u_ila_1/inst/ila_core_inst/shifted_data_in_reg[7][0]_srl8/D (clocked by clk_pl_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#3 Warning
 Large setup violation  
-There is a large setup violation of -2.224 ns between design_1_i/test_output_0/inst/test_hsync_out_reg/C (clocked by clk_out1_design_1_clk_wiz_0_0) and u_ila_1/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[0].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[0]/D (clocked by clk_pl_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.182 ns between design_1_i/test_output_0/inst/test_vsync_out_reg/C (clocked by clk_out1_design_1_clk_wiz_0_0) and u_ila_1/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[8].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[0]/D (clocked by clk_pl_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#4 Warning
 Large setup violation  
-There is a large setup violation of -2.234 ns between design_1_i/test_output_0/inst/test_vsync_out_reg/C (clocked by clk_out1_design_1_clk_wiz_0_0) and u_ila_1/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[2].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[0]/D (clocked by clk_pl_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.274 ns between design_1_i/test_output_0/inst/test_hsync_out_reg/C (clocked by clk_out1_design_1_clk_wiz_0_0) and u_ila_1/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[0].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[0]/D (clocked by clk_pl_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-27#1 Warning
@@ -112,7 +112,7 @@ Related violations: <none>
 
 TIMING-35#1 Warning
 No common node in paths with the same clock  
-The clock dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/INTERNAL_TCK has paths without a common node. First path found between dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/shiftreg_reg[0]/C and dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TDO. Please review clock constraints
+The clock dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/INTERNAL_TCK has paths without a common node. First path found between dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/state_reg[1]/C and dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TDO. Please review clock constraints
 Related violations: <none>
 
 CLKC-56#1 Advisory

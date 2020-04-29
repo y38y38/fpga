@@ -1,7 +1,7 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-// Date        : Sun Apr 26 02:05:35 2020
+// Date        : Mon Apr 27 00:33:08 2020
 // Host        : y-Blade-Stealth running 64-bit Ubuntu 16.04.6 LTS
 // Command     : write_verilog -force -mode synth_stub
 //               /home/y/fpga/d5/d5.srcs/sources_1/bd/design_1/ip/design_1_test_output_0_4/design_1_test_output_0_4_stub.v

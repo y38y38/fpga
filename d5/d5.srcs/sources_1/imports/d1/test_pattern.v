@@ -4,7 +4,7 @@ module test_output (
     (* mark_debug = "true" *) output reg          test_vsync_out,
     (* mark_debug = "true" *) output reg          test_hsync_out,
     (* mark_debug = "true" *) output reg          test_de_out,
-    output reg[35:0]    test_value
+    (* mark_debug = "true" *) output reg[35:0]    test_value
 );
 
 localparam HSTART   = 13'd2008;
@@ -15,8 +15,8 @@ localparam VSTART   = 13'd1083;
 localparam VEND     = 13'd1088;
 localparam VMAX     = 13'd1125;
 
-reg [13:0] hcnt;
-reg [13:0] vcnt;
+(* mark_debug = "true" *) reg [13:0] hcnt;
+(* mark_debug = "true" *) reg [13:0] vcnt;
 
 task green();
 begin

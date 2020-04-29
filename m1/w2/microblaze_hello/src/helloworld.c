@@ -49,13 +49,37 @@
 #include "platform.h"
 #include "xil_printf.h"
 
+#include "xparameters.h"
+
+#define LED      *((volatile unsigned int*) (XPAR_GPIO_0_BASEADDR + 0x00))
+#define LED_ctrl *((volatile unsigned int*) (XPAR_GPIO_0_BASEADDR + 0x04))
 
 int main()
 {
-    init_platform();
+    int i,j;
+
+
+	init_platform();
+
 
     print("Hello World\n\r");
 
+    LED_ctrl = 0x0;
+    print("Hello World\n\r");
+
+    while(1) {
+    	for (i=0;i<6;i++) {
+    		xil_printf("i=%d\n",i);
+    		switch (i) {
+    		case 0: LED = 0x0; break;
+    		case 1: LED = 0x1; break;
+    		case 2: LED = 0x2; break;
+    		case 3: LED = 0x3; break;
+    		default : LED =0x0;
+    		}
+    		for (j=0;j<1000000;j++);
+    	}
+    }
     cleanup_platform();
     return 0;
 }

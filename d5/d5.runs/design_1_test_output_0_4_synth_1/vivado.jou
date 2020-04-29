@@ -2,8 +2,8 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Sun Apr 26 02:04:27 2020
-# Process ID: 29979
+# Start of session at: Mon Apr 27 00:31:55 2020
+# Process ID: 21320
 # Current directory: /home/y/fpga/d5/d5.runs/design_1_test_output_0_4_synth_1
 # Command line: vivado -log design_1_test_output_0_4.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_test_output_0_4.tcl
 # Log file: /home/y/fpga/d5/d5.runs/design_1_test_output_0_4_synth_1/design_1_test_output_0_4.vds

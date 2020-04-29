@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Sun Apr 26 02:11:47 2020
-| Host         : y-Blade-Stealth running 64-bit Ubuntu 16.04.6 LTS
+| Date         : Mon Apr 27 00:45:40 2020
+| Host         : y-Blade-Stealth running 64-bit unknown
 | Command      : report_drc -file design_1_wrapper_drc_opted.rpt -pb design_1_wrapper_drc_opted.pb -rpx design_1_wrapper_drc_opted.rpx
 | Design       : design_1_wrapper
 | Device       : xczu3eg-sbva484-1-e
@@ -20,7 +20,7 @@ Table of Contents
 1. REPORT SUMMARY
 -----------------
             Netlist: netlist
-          Floorplan: design_1
+          Floorplan: checkpoint_design_1_wrapper
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
