@@ -1,7 +1,7 @@
-//Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+//Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
-//Tool Version: Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-//Date        : Mon Apr 27 00:31:49 2020
+//Tool Version: Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
+//Date        : Tue May  5 20:48:41 2020
 //Host        : y-Blade-Stealth running 64-bit Ubuntu 16.04.6 LTS
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -9,7 +9,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=3,numReposBlks=3,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_zynq_ultra_ps_e_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
+(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=3,numReposBlks=3,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_zynq_ultra_ps_e_cnt=2,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
 module design_1
    ();
 
@@ -21,7 +21,7 @@ module design_1
   wire zynq_ultra_ps_e_0_pl_clk0;
   wire zynq_ultra_ps_e_0_pl_resetn0;
 
-  design_1_clk_wiz_0_0 clk_wiz_0
+  design_1_clk_wiz_0_1 clk_wiz_0
        (.clk_in1(zynq_ultra_ps_e_0_pl_clk0),
         .clk_out1(clk_wiz_0_clk_out1));
   design_1_test_output_0_4 test_output_0
@@ -31,7 +31,7 @@ module design_1
         .test_rst_in(zynq_ultra_ps_e_0_pl_resetn0),
         .test_value(test_output_0_test_value),
         .test_vsync_out(test_output_0_test_vsync_out));
-  design_1_zynq_ultra_ps_e_0_0 zynq_ultra_ps_e_0
+  design_1_zynq_ultra_ps_e_0_1 zynq_ultra_ps_e_0
        (.dp_external_custom_event1(1'b0),
         .dp_external_custom_event2(1'b0),
         .dp_external_vsync_event(1'b0),

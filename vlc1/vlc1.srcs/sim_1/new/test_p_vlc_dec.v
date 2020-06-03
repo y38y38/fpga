@@ -76,8 +76,10 @@ initial begin
     enable = 1'b1;
     begin:FILE_LOOP
 //        forever begin
-    for(loop_counter2 = 0;loop_counter2 <4;loop_counter2 = loop_counter2 +1 ) begin
-            if ($feof(fd) != 0) begin
+        for(loop_counter2 = 0;loop_counter2 <4;loop_counter2 = loop_counter2 +1 ) 
+        begin
+            if ($feof(fd) != 0)
+            begin
                 $display("File Nd");
                 disable FILE_LOOP;
                 enable = 1'b0;
@@ -86,18 +88,18 @@ initial begin
             
             vlc_data = $fgetc(fd);
             $display("vlc %x", vlc_data);
-            for(loop_counter=0;loop_counter < 8;loop_counter = loop_counter + 1) begin
+            for(loop_counter=0;loop_counter < 8;loop_counter = loop_counter + 1)
+            begin
                     code = ((vlc_data >> (7 - loop_counter)) & 1'b1);
                     enable = 1'b1;
-                    $display("bit %x", code);
+                    //$display("bit %x", code);
                     #(STEP*2);
             end
             //$stop;
-         end
-            $stop;
-//       end
-   end
-    
+        end
+        $stop;
+//        end
+    end
 end 
    
 

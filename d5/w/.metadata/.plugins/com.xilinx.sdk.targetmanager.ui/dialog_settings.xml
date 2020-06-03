@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<section name="Workbench">
-	<item value="Auto Detect" key="h2-device"/>
-	<item value="h2" key="programfpga.hwplatform"/>
-	<item value="" key="h2-bmmFile"/>
-	<item value="design_1_wrapper.bit" key="h2-bitFile"/>
-	<item value="Local" key="h2-target"/>
-	<item value="false" key="h2-partial_bit"/>
-</section>

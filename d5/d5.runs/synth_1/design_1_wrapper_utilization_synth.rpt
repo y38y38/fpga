@@ -1,7 +1,7 @@
-Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Mon Apr 27 00:34:31 2020
+| Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
+| Date         : Tue May  5 20:52:43 2020
 | Host         : y-Blade-Stealth running 64-bit Ubuntu 16.04.6 LTS
 | Command      : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
 | Design       : design_1_wrapper
@@ -144,7 +144,7 @@ Table of Contents
 | PLL                  |    0 |     0 |         6 |  0.00 |
 | MMCM                 |    0 |     0 |         3 |  0.00 |
 +----------------------+------+-------+-----------+-------+
-* Note: Each used BUFGCTRL counts as two global buffer resources. This table does not include global clocking resources, only buffer cell usage. See the Clock Utilization Report (report_clock_utilization) for detailed accounting of global clocking resource availability.
+* Note: Each used BUFGCTRL counts as two GLOBAL CLOCK BUFFERs. This table does not include global clocking resources, only buffer cell usage. See the Clock Utilization Report (report_clock_utilization) for detailed accounting of global clocking resource availability.
 
 
 7. ADVANCED
@@ -188,9 +188,9 @@ Table of Contents
 +------------------------------+------+
 |           Ref Name           | Used |
 +------------------------------+------+
-| design_1_zynq_ultra_ps_e_0_0 |    1 |
+| design_1_zynq_ultra_ps_e_0_1 |    1 |
 | design_1_test_output_0_4     |    1 |
-| design_1_clk_wiz_0_0         |    1 |
+| design_1_clk_wiz_0_1         |    1 |
 +------------------------------+------+
 
 

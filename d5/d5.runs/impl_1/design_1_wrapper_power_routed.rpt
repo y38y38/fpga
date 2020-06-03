@@ -1,8 +1,8 @@
-Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version     : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date             : Mon Apr 27 00:47:45 2020
-| Host             : y-Blade-Stealth running 64-bit unknown
+| Tool Version     : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
+| Date             : Tue May  5 21:02:32 2020
+| Host             : y-Blade-Stealth running 64-bit Ubuntu 16.04.6 LTS
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
 | Device           : xczu3eg-sbva484-1-e
@@ -33,7 +33,7 @@ Table of Contents
 | Total On-Chip Power (W)  | 2.113        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.797        |
+| Dynamic (W)              | 1.798        |
 | Device Static (W)        | 0.316        |
 | Effective TJA (C/W)      | 2.7          |
 | Max Ambient (C)          | 94.2         |
@@ -53,15 +53,15 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.029 |        6 |       --- |             --- |
-| CLB Logic                |     0.005 |    17079 |       --- |             --- |
+| CLB Logic                |     0.005 |    17083 |       --- |             --- |
 |   LUT as Shift Register  |     0.003 |      873 |     28800 |            3.03 |
-|   LUT as Logic           |     0.002 |     5043 |     70560 |            7.15 |
+|   LUT as Logic           |     0.002 |     5042 |     70560 |            7.15 |
 |   LUT as Distributed RAM |    <0.001 |      288 |     28800 |            1.00 |
 |   Register               |    <0.001 |     7977 |    141120 |            5.65 |
 |   CARRY8                 |    <0.001 |      211 |      8820 |            2.39 |
 |   Others                 |     0.000 |     1154 |       --- |             --- |
-|   F7/F8 Muxes            |     0.000 |      186 |     70560 |            0.26 |
-| Signals                  |     0.003 |    11650 |       --- |             --- |
+|   F7/F8 Muxes            |     0.000 |      185 |     70560 |            0.26 |
+| Signals                  |     0.003 |    11654 |       --- |             --- |
 | Block RAM                |     0.007 |        8 |       216 |            3.70 |
 | MMCM                     |     0.000 |        0 |       --- |             --- |
 | PS8                      |     1.753 |        1 |       --- |             --- |
@@ -78,7 +78,7 @@ Table of Contents
 +-----------------+-------------+-----------+-------------+------------+
 | Source          | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------------+-------------+-----------+-------------+------------+
-| Vccint          |       0.850 |     0.104 |       0.050 |      0.054 |
+| Vccint          |       0.850 |     0.105 |       0.051 |      0.054 |
 | Vccint_io       |       0.850 |     0.027 |       0.000 |      0.027 |
 | Vccbram         |       0.850 |     0.002 |       0.001 |      0.001 |
 | Vccaux          |       1.800 |     0.048 |       0.000 |      0.048 |
@@ -149,7 +149,7 @@ Table of Contents
 +-----------------------------------------------------------------------------------------------------+-------------------------------------------------------------------+-----------------+
 | Clock                                                                                               | Domain                                                            | Constraint (ns) |
 +-----------------------------------------------------------------------------------------------------+-------------------------------------------------------------------+-----------------+
-| clk_out1_design_1_clk_wiz_0_0                                                                       | design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0           |             6.7 |
+| clk_out1_design_1_clk_wiz_0_1                                                                       | design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_1           |             6.7 |
 | clk_pl_0                                                                                            | design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0                         |            10.0 |
 | clk_pl_0                                                                                            | design_1_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0]            |            10.0 |
 | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/INTERNAL_TCK | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/in0 |            50.0 |
@@ -165,19 +165,19 @@ Table of Contents
 +--------------------------+-----------+
 | Name                     | Power (W) |
 +--------------------------+-----------+
-| design_1_wrapper         |     1.797 |
+| design_1_wrapper         |     1.798 |
 |   dbg_hub                |     0.002 |
 |     inst                 |     0.002 |
 |       BSCANID.u_xsdbm_id |     0.002 |
 |   design_1_i             |     1.754 |
 |     zynq_ultra_ps_e_0    |     1.753 |
 |       inst               |     1.753 |
-|   u_ila_0                |     0.025 |
-|     inst                 |     0.025 |
-|       ila_core_inst      |     0.025 |
-|   u_ila_1                |     0.015 |
-|     inst                 |     0.015 |
-|       ila_core_inst      |     0.015 |
+|   u_ila_0                |     0.026 |
+|     inst                 |     0.026 |
+|       ila_core_inst      |     0.026 |
+|   u_ila_1                |     0.016 |
+|     inst                 |     0.016 |
+|       ila_core_inst      |     0.016 |
 +--------------------------+-----------+
 
 
