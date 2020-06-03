@@ -25,7 +25,7 @@ module test_p_vlc_dec;
 
 localparam STEP = 8;
 
-parameter TERGET_FILE_PATH="file.txt";
+parameter TERGET_FILE_PATH="/home/y/fpga/vlc1/vlc.bin";
 
 reg clk;
 reg reset;
@@ -46,20 +46,22 @@ p_vlc_dec p_vlc_dec(
 
 
 always begin
-    clk = 0; #(STEP/2);
-    clk = 1; #(STEP/2);
+    clk = 0; #(STEP);
+    clk = 1; #(STEP);
 end
 
 
 integer fd = 0;
 integer vlc_data;
 integer loop_counter;
+integer loop_counter2;
 
 
 initial begin
-    reset  = 1'b1; #(STEP*3);
-    reset  = 1'b0; #(STEP*3);
-    enable = 1'b0; #(STEP*3);
+    reset  = 1'b0; #(STEP*2);
+    reset  = 1'b1; #(STEP*2);
+    reset  = 1'b0;
+    enable = 1'b0; #(STEP*4);
 
     fd = $fopen(TERGET_FILE_PATH, "r");    
     if (fd ==0) begin
@@ -73,7 +75,8 @@ initial begin
     
     enable = 1'b1;
     begin:FILE_LOOP
-        forever begin
+//        forever begin
+    for(loop_counter2 = 0;loop_counter2 <4;loop_counter2 = loop_counter2 +1 ) begin
             if ($feof(fd) != 0) begin
                 $display("File Nd");
                 disable FILE_LOOP;
@@ -82,15 +85,18 @@ initial begin
             end
             
             vlc_data = $fgetc(fd);
+            $display("vlc %x", vlc_data);
             for(loop_counter=0;loop_counter < 8;loop_counter = loop_counter + 1) begin
-                    code = ((vlc_data >> loop_counter) & 1'b1);
-                    enable = 1'b0;
-                    #(STEP);
+                    code = ((vlc_data >> (7 - loop_counter)) & 1'b1);
+                    enable = 1'b1;
+                    $display("bit %x", code);
+                    #(STEP*2);
             end
-            
-        end
-    end
-    
+            //$stop;
+         end
+            $stop;
+//       end
+   end
     
 end 
    
