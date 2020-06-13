@@ -25,7 +25,7 @@ module test_p_vlc_dec;
 
 localparam STEP = 8;
 
-parameter TERGET_FILE_PATH="/home/y/fpga/vlc1/vlc.bin";
+parameter TERGET_FILE_PATH="/home/y/fpga/vlc1/vlc.code";
 
 reg clk;
 reg reset;
