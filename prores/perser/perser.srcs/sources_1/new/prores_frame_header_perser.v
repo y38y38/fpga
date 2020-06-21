@@ -21,7 +21,7 @@
 
 
 module prores_frame_header_perser(
-	input			rtst,
+	input			rst,
 	input			clk,
 
 	input			DataInEnable,
