@@ -122,7 +122,7 @@ initial begin
                 $stop;
             end
             
-            vlc_data = $fgetc(fd);
+            pores_data = $fgetc(fd);
             $display("vlc %x", vlc_data);
             for(loop_counter=0;loop_counter < 8;loop_counter = loop_counter + 1)
             begin
