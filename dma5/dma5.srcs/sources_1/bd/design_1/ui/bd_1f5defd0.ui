@@ -6,15 +6,15 @@
    "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:9.0 TLS
 #  -string -flagsOSRD
 preplace inst zynq_ultra_ps_e_0 -pg 1 -lvl 1 -x 350 -y -180 -defaultsOSRD
-preplace inst myip4_v1_0_0 -pg 1 -lvl 1 -x 350 -y -340 -defaultsOSRD
 preplace inst ps8_0_axi_periph -pg 1 -lvl 3 -x 1220 -y -230 -defaultsOSRD
 preplace inst rst_ps8_0_100M -pg 1 -lvl 2 -x 880 -y -190 -defaultsOSRD
+preplace inst myip4_v1_0_0 -pg 1 -lvl 1 -x 350 -y -340 -defaultsOSRD
 preplace netloc zynq_ultra_ps_e_0_pl_clk0 1 0 3 30 -70 700 -290 1060
 preplace netloc zynq_ultra_ps_e_0_pl_resetn0 1 1 1 690 -210n
 preplace netloc rst_ps8_0_100M_peripheral_aresetn 1 0 3 40 -90 680J -310 1070
-preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM0_FPD 1 1 2 660J -320 N
 preplace netloc ps8_0_axi_periph_M00_AXI 1 0 4 20 -80 NJ -80 NJ -80 1370
 preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM1_FPD 1 1 2 670 -300 NJ
+preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM0_FPD 1 1 2 660J -320 N
 levelinfo -pg 1 0 350 880 1220 1390
 pagesize -pg 1 -db -bbox -sgen 0 -420 1390 180
 "

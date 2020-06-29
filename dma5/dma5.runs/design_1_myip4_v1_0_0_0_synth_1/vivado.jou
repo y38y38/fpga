@@ -2,8 +2,8 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Sun Jun 28 22:23:04 2020
-# Process ID: 5786
+# Start of session at: Mon Jun 29 19:40:56 2020
+# Process ID: 5468
 # Current directory: /home/y/fpga/dma5/dma5.runs/design_1_myip4_v1_0_0_0_synth_1
 # Command line: vivado -log design_1_myip4_v1_0_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_myip4_v1_0_0_0.tcl
 # Log file: /home/y/fpga/dma5/dma5.runs/design_1_myip4_v1_0_0_0_synth_1/design_1_myip4_v1_0_0_0.vds

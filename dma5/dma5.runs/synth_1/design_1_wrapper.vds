@@ -2,8 +2,8 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Sun Jun 28 22:27:08 2020
-# Process ID: 7510
+# Start of session at: Mon Jun 29 19:42:30 2020
+# Process ID: 5880
 # Current directory: /home/y/fpga/dma5/dma5.runs/synth_1
 # Command line: vivado -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
 # Log file: /home/y/fpga/dma5/dma5.runs/synth_1/design_1_wrapper.vds
@@ -13,7 +13,7 @@ source design_1_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2020.1/data/ip'.
-add_files: Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 2303.062 ; gain = 120.059 ; free physical = 9507 ; free virtual = 13269
+add_files: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 2311.066 ; gain = 128.062 ; free physical = 6896 ; free virtual = 13709
 Command: synth_design -top design_1_wrapper -part xczu3eg-sbva484-1-e
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xczu3eg'
@@ -21,41 +21,41 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu3eg
 INFO: [Device 21-403] Loading part xczu3eg-sbva484-1-e
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 7623
+INFO: [Synth 8-7075] Helper process launched with PID 6055
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2614.355 ; gain = 5.934 ; free physical = 8252 ; free virtual = 12324
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2614.355 ; gain = 5.934 ; free physical = 5958 ; free virtual = 12691
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [/home/y/fpga/dma5/dma5.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'design_1' [/home/y/fpga/dma5/dma5.srcs/sources_1/bd/design_1/synth/design_1.v:13]
-INFO: [Synth 8-6157] synthesizing module 'design_1_myip4_v1_0_0_0' [/home/y/fpga/dma5/dma5.runs/synth_1/.Xil/Vivado-7510-y-Blade-Stealth/realtime/design_1_myip4_v1_0_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_myip4_v1_0_0_0' (1#1) [/home/y/fpga/dma5/dma5.runs/synth_1/.Xil/Vivado-7510-y-Blade-Stealth/realtime/design_1_myip4_v1_0_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_myip4_v1_0_0_0' [/home/y/fpga/dma5/dma5.runs/synth_1/.Xil/Vivado-5880-y-Blade-Stealth/realtime/design_1_myip4_v1_0_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_myip4_v1_0_0_0' (1#1) [/home/y/fpga/dma5/dma5.runs/synth_1/.Xil/Vivado-5880-y-Blade-Stealth/realtime/design_1_myip4_v1_0_0_0_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'design_1_ps8_0_axi_periph_0' [/home/y/fpga/dma5/dma5.srcs/sources_1/bd/design_1/synth/design_1.v:326]
 INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_QJIMLI' [/home/y/fpga/dma5/dma5.srcs/sources_1/bd/design_1/synth/design_1.v:986]
 INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_QJIMLI' (2#1) [/home/y/fpga/dma5/dma5.srcs/sources_1/bd/design_1/synth/design_1.v:986]
 INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1A7ZMW4' [/home/y/fpga/dma5/dma5.srcs/sources_1/bd/design_1/synth/design_1.v:1132]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_ds_0' [/home/y/fpga/dma5/dma5.runs/synth_1/.Xil/Vivado-7510-y-Blade-Stealth/realtime/design_1_auto_ds_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_ds_0' (3#1) [/home/y/fpga/dma5/dma5.runs/synth_1/.Xil/Vivado-7510-y-Blade-Stealth/realtime/design_1_auto_ds_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_0' [/home/y/fpga/dma5/dma5.runs/synth_1/.Xil/Vivado-7510-y-Blade-Stealth/realtime/design_1_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_0' (4#1) [/home/y/fpga/dma5/dma5.runs/synth_1/.Xil/Vivado-7510-y-Blade-Stealth/realtime/design_1_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_ds_0' [/home/y/fpga/dma5/dma5.runs/synth_1/.Xil/Vivado-5880-y-Blade-Stealth/realtime/design_1_auto_ds_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_ds_0' (3#1) [/home/y/fpga/dma5/dma5.runs/synth_1/.Xil/Vivado-5880-y-Blade-Stealth/realtime/design_1_auto_ds_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_0' [/home/y/fpga/dma5/dma5.runs/synth_1/.Xil/Vivado-5880-y-Blade-Stealth/realtime/design_1_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_0' (4#1) [/home/y/fpga/dma5/dma5.runs/synth_1/.Xil/Vivado-5880-y-Blade-Stealth/realtime/design_1_auto_pc_0_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1A7ZMW4' (5#1) [/home/y/fpga/dma5/dma5.srcs/sources_1/bd/design_1/synth/design_1.v:1132]
 INFO: [Synth 8-6157] synthesizing module 's01_couplers_imp_KGUFR9' [/home/y/fpga/dma5/dma5.srcs/sources_1/bd/design_1/synth/design_1.v:1542]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_ds_1' [/home/y/fpga/dma5/dma5.runs/synth_1/.Xil/Vivado-7510-y-Blade-Stealth/realtime/design_1_auto_ds_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_ds_1' (6#1) [/home/y/fpga/dma5/dma5.runs/synth_1/.Xil/Vivado-7510-y-Blade-Stealth/realtime/design_1_auto_ds_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_1' [/home/y/fpga/dma5/dma5.runs/synth_1/.Xil/Vivado-7510-y-Blade-Stealth/realtime/design_1_auto_pc_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_1' (7#1) [/home/y/fpga/dma5/dma5.runs/synth_1/.Xil/Vivado-7510-y-Blade-Stealth/realtime/design_1_auto_pc_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_ds_1' [/home/y/fpga/dma5/dma5.runs/synth_1/.Xil/Vivado-5880-y-Blade-Stealth/realtime/design_1_auto_ds_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_ds_1' (6#1) [/home/y/fpga/dma5/dma5.runs/synth_1/.Xil/Vivado-5880-y-Blade-Stealth/realtime/design_1_auto_ds_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_1' [/home/y/fpga/dma5/dma5.runs/synth_1/.Xil/Vivado-5880-y-Blade-Stealth/realtime/design_1_auto_pc_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_1' (7#1) [/home/y/fpga/dma5/dma5.runs/synth_1/.Xil/Vivado-5880-y-Blade-Stealth/realtime/design_1_auto_pc_1_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 's01_couplers_imp_KGUFR9' (8#1) [/home/y/fpga/dma5/dma5.srcs/sources_1/bd/design_1/synth/design_1.v:1542]
-INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_0' [/home/y/fpga/dma5/dma5.runs/synth_1/.Xil/Vivado-7510-y-Blade-Stealth/realtime/design_1_xbar_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_0' (9#1) [/home/y/fpga/dma5/dma5.runs/synth_1/.Xil/Vivado-7510-y-Blade-Stealth/realtime/design_1_xbar_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_0' [/home/y/fpga/dma5/dma5.runs/synth_1/.Xil/Vivado-5880-y-Blade-Stealth/realtime/design_1_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_0' (9#1) [/home/y/fpga/dma5/dma5.runs/synth_1/.Xil/Vivado-5880-y-Blade-Stealth/realtime/design_1_xbar_0_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_ps8_0_axi_periph_0' (10#1) [/home/y/fpga/dma5/dma5.srcs/sources_1/bd/design_1/synth/design_1.v:326]
-INFO: [Synth 8-6157] synthesizing module 'design_1_rst_ps8_0_100M_0' [/home/y/fpga/dma5/dma5.runs/synth_1/.Xil/Vivado-7510-y-Blade-Stealth/realtime/design_1_rst_ps8_0_100M_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_rst_ps8_0_100M_0' (11#1) [/home/y/fpga/dma5/dma5.runs/synth_1/.Xil/Vivado-7510-y-Blade-Stealth/realtime/design_1_rst_ps8_0_100M_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_rst_ps8_0_100M_0' [/home/y/fpga/dma5/dma5.runs/synth_1/.Xil/Vivado-5880-y-Blade-Stealth/realtime/design_1_rst_ps8_0_100M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_rst_ps8_0_100M_0' (11#1) [/home/y/fpga/dma5/dma5.runs/synth_1/.Xil/Vivado-5880-y-Blade-Stealth/realtime/design_1_rst_ps8_0_100M_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_rst_ps8_0_100M_0' is unconnected for instance 'rst_ps8_0_100M' [/home/y/fpga/dma5/dma5.srcs/sources_1/bd/design_1/synth/design_1.v:237]
 WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_1_rst_ps8_0_100M_0' is unconnected for instance 'rst_ps8_0_100M' [/home/y/fpga/dma5/dma5.srcs/sources_1/bd/design_1/synth/design_1.v:237]
 WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_1_rst_ps8_0_100M_0' is unconnected for instance 'rst_ps8_0_100M' [/home/y/fpga/dma5/dma5.srcs/sources_1/bd/design_1/synth/design_1.v:237]
 WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'design_1_rst_ps8_0_100M_0' is unconnected for instance 'rst_ps8_0_100M' [/home/y/fpga/dma5/dma5.srcs/sources_1/bd/design_1/synth/design_1.v:237]
 WARNING: [Synth 8-7023] instance 'rst_ps8_0_100M' of module 'design_1_rst_ps8_0_100M_0' has 10 connections declared, but only 6 given [/home/y/fpga/dma5/dma5.srcs/sources_1/bd/design_1/synth/design_1.v:237]
-INFO: [Synth 8-6157] synthesizing module 'design_1_zynq_ultra_ps_e_0_0' [/home/y/fpga/dma5/dma5.runs/synth_1/.Xil/Vivado-7510-y-Blade-Stealth/realtime/design_1_zynq_ultra_ps_e_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_zynq_ultra_ps_e_0_0' (12#1) [/home/y/fpga/dma5/dma5.runs/synth_1/.Xil/Vivado-7510-y-Blade-Stealth/realtime/design_1_zynq_ultra_ps_e_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_zynq_ultra_ps_e_0_0' [/home/y/fpga/dma5/dma5.runs/synth_1/.Xil/Vivado-5880-y-Blade-Stealth/realtime/design_1_zynq_ultra_ps_e_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_zynq_ultra_ps_e_0_0' (12#1) [/home/y/fpga/dma5/dma5.runs/synth_1/.Xil/Vivado-5880-y-Blade-Stealth/realtime/design_1_zynq_ultra_ps_e_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'maxigp0_awuser' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/y/fpga/dma5/dma5.srcs/sources_1/bd/design_1/synth/design_1.v:244]
 WARNING: [Synth 8-7071] port 'maxigp0_aruser' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/y/fpga/dma5/dma5.srcs/sources_1/bd/design_1/synth/design_1.v:244]
 WARNING: [Synth 8-7071] port 'maxigp1_awuser' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/y/fpga/dma5/dma5.srcs/sources_1/bd/design_1/synth/design_1.v:244]
@@ -64,18 +64,18 @@ WARNING: [Synth 8-7023] instance 'zynq_ultra_ps_e_0' of module 'design_1_zynq_ul
 INFO: [Synth 8-6155] done synthesizing module 'design_1' (13#1) [/home/y/fpga/dma5/dma5.srcs/sources_1/bd/design_1/synth/design_1.v:13]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (14#1) [/home/y/fpga/dma5/dma5.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2656.262 ; gain = 47.840 ; free physical = 8276 ; free virtual = 12412
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2656.262 ; gain = 47.840 ; free physical = 6055 ; free virtual = 12784
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 2671.105 ; gain = 62.684 ; free physical = 8277 ; free virtual = 12407
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2672.105 ; gain = 63.684 ; free physical = 6050 ; free virtual = 12780
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 2671.105 ; gain = 62.684 ; free physical = 8277 ; free virtual = 12407
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2672.105 ; gain = 63.684 ; free physical = 6050 ; free virtual = 12780
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2671.105 ; gain = 0.000 ; free physical = 8271 ; free virtual = 12400
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2672.105 ; gain = 0.000 ; free physical = 6043 ; free virtual = 12773
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -87,6 +87,8 @@ Parsing XDC File [/home/y/fpga/dma5/dma5.srcs/sources_1/bd/design_1/ip/design_1_
 Finished Parsing XDC File [/home/y/fpga/dma5/dma5.srcs/sources_1/bd/design_1/ip/design_1_myip4_v1_0_0_0/design_1_myip4_v1_0_0_0/design_1_myip4_v1_0_0_0_in_context.xdc] for cell 'design_1_i/myip4_v1_0_0'
 Parsing XDC File [/home/y/fpga/dma5/dma5.srcs/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0/design_1_xbar_0_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/xbar'
 Finished Parsing XDC File [/home/y/fpga/dma5/dma5.srcs/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0/design_1_xbar_0_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/xbar'
+Parsing XDC File [/home/y/fpga/dma5/dma5.srcs/sources_1/bd/design_1/ip/design_1_rst_ps8_0_100M_0/design_1_rst_ps8_0_100M_0/design_1_rst_ps8_0_100M_0_in_context.xdc] for cell 'design_1_i/rst_ps8_0_100M'
+Finished Parsing XDC File [/home/y/fpga/dma5/dma5.srcs/sources_1/bd/design_1/ip/design_1_rst_ps8_0_100M_0/design_1_rst_ps8_0_100M_0/design_1_rst_ps8_0_100M_0_in_context.xdc] for cell 'design_1_i/rst_ps8_0_100M'
 Parsing XDC File [/home/y/fpga/dma5/dma5.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0/design_1_auto_ds_1_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds'
 Finished Parsing XDC File [/home/y/fpga/dma5/dma5.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0/design_1_auto_ds_1_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds'
 Parsing XDC File [/home/y/fpga/dma5/dma5.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0/design_1_auto_pc_1_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/s00_couplers/auto_pc'
@@ -95,19 +97,17 @@ Parsing XDC File [/home/y/fpga/dma5/dma5.srcs/sources_1/bd/design_1/ip/design_1_
 Finished Parsing XDC File [/home/y/fpga/dma5/dma5.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_1/design_1_auto_ds_1/design_1_auto_ds_1_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/s01_couplers/auto_ds'
 Parsing XDC File [/home/y/fpga/dma5/dma5.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1/design_1_auto_pc_1_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/s01_couplers/auto_pc'
 Finished Parsing XDC File [/home/y/fpga/dma5/dma5.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1/design_1_auto_pc_1_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/s01_couplers/auto_pc'
-Parsing XDC File [/home/y/fpga/dma5/dma5.srcs/sources_1/bd/design_1/ip/design_1_rst_ps8_0_100M_0/design_1_rst_ps8_0_100M_0/design_1_rst_ps8_0_100M_0_in_context.xdc] for cell 'design_1_i/rst_ps8_0_100M'
-Finished Parsing XDC File [/home/y/fpga/dma5/dma5.srcs/sources_1/bd/design_1/ip/design_1_rst_ps8_0_100M_0/design_1_rst_ps8_0_100M_0/design_1_rst_ps8_0_100M_0_in_context.xdc] for cell 'design_1_i/rst_ps8_0_100M'
 Parsing XDC File [/home/y/fpga/dma5/dma5.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [/home/y/fpga/dma5/dma5.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2751.777 ; gain = 0.000 ; free physical = 8232 ; free virtual = 12326
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2751.840 ; gain = 0.000 ; free physical = 5978 ; free virtual = 12721
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00 . Memory (MB): peak = 2751.777 ; gain = 0.000 ; free physical = 8232 ; free virtual = 12326
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00 . Memory (MB): peak = 2751.840 ; gain = 0.000 ; free physical = 5978 ; free virtual = 12721
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 2751.777 ; gain = 143.355 ; free physical = 8298 ; free virtual = 12393
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 2751.840 ; gain = 143.418 ; free physical = 6041 ; free virtual = 12786
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -115,7 +115,7 @@ Start Loading Part and Timing Information
 Loading part: xczu3eg-sbva484-1-e
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 2751.777 ; gain = 143.355 ; free physical = 8298 ; free virtual = 12393
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 2751.840 ; gain = 143.418 ; free physical = 6041 ; free virtual = 12786
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -124,17 +124,17 @@ Applied set_property DONT_TOUCH = true for design_1_i. (constraint file  auto ge
 Applied set_property DONT_TOUCH = true for design_1_i/zynq_ultra_ps_e_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/myip4_v1_0_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/ps8_0_axi_periph/xbar. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/ps8_0_axi_periph. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/rst_ps8_0_100M. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/ps8_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/ps8_0_axi_periph/s01_couplers/auto_ds. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/ps8_0_axi_periph/s01_couplers/auto_pc. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/ps8_0_axi_periph. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/rst_ps8_0_100M. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 2751.777 ; gain = 143.355 ; free physical = 8298 ; free virtual = 12393
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 2751.840 ; gain = 143.418 ; free physical = 6041 ; free virtual = 12787
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 2751.777 ; gain = 143.355 ; free physical = 8301 ; free virtual = 12396
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 2751.840 ; gain = 143.418 ; free physical = 6042 ; free virtual = 12788
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -156,25 +156,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 2751.777 ; gain = 143.355 ; free physical = 8288 ; free virtual = 12387
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 2751.840 ; gain = 143.418 ; free physical = 5984 ; free virtual = 12767
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:49 . Memory (MB): peak = 3251.176 ; gain = 642.754 ; free physical = 7605 ; free virtual = 11855
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:37 ; elapsed = 00:00:56 . Memory (MB): peak = 3251.270 ; gain = 642.848 ; free physical = 5102 ; free virtual = 11988
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:49 . Memory (MB): peak = 3251.176 ; gain = 642.754 ; free physical = 7605 ; free virtual = 11855
+Finished Timing Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:00:56 . Memory (MB): peak = 3251.270 ; gain = 642.848 ; free physical = 5102 ; free virtual = 11988
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:32 ; elapsed = 00:00:49 . Memory (MB): peak = 3271.207 ; gain = 662.785 ; free physical = 7603 ; free virtual = 11853
+Finished Technology Mapping : Time (s): cpu = 00:00:37 ; elapsed = 00:00:57 . Memory (MB): peak = 3271.309 ; gain = 662.887 ; free physical = 5100 ; free virtual = 11985
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -192,37 +192,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:52 . Memory (MB): peak = 3277.145 ; gain = 668.723 ; free physical = 7604 ; free virtual = 11852
+Finished IO Insertion : Time (s): cpu = 00:00:39 ; elapsed = 00:00:59 . Memory (MB): peak = 3277.246 ; gain = 668.824 ; free physical = 5115 ; free virtual = 11981
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:52 . Memory (MB): peak = 3277.145 ; gain = 668.723 ; free physical = 7604 ; free virtual = 11852
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:39 ; elapsed = 00:00:59 . Memory (MB): peak = 3277.246 ; gain = 668.824 ; free physical = 5115 ; free virtual = 11981
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:34 ; elapsed = 00:00:52 . Memory (MB): peak = 3277.145 ; gain = 668.723 ; free physical = 7604 ; free virtual = 11852
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:39 ; elapsed = 00:00:59 . Memory (MB): peak = 3277.246 ; gain = 668.824 ; free physical = 5115 ; free virtual = 11981
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:34 ; elapsed = 00:00:52 . Memory (MB): peak = 3277.145 ; gain = 668.723 ; free physical = 7604 ; free virtual = 11852
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:39 ; elapsed = 00:00:59 . Memory (MB): peak = 3277.246 ; gain = 668.824 ; free physical = 5115 ; free virtual = 11981
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:00:52 . Memory (MB): peak = 3277.145 ; gain = 668.723 ; free physical = 7604 ; free virtual = 11852
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:39 ; elapsed = 00:00:59 . Memory (MB): peak = 3277.246 ; gain = 668.824 ; free physical = 5115 ; free virtual = 11981
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:34 ; elapsed = 00:00:52 . Memory (MB): peak = 3277.145 ; gain = 668.723 ; free physical = 7604 ; free virtual = 11852
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:39 ; elapsed = 00:00:59 . Memory (MB): peak = 3277.246 ; gain = 668.824 ; free physical = 5115 ; free virtual = 11981
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -254,23 +254,23 @@ Report Cell Usage:
 |8     |design_1_zynq_ultra_ps_e_0 |     1|
 +------+---------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:52 . Memory (MB): peak = 3277.145 ; gain = 668.723 ; free physical = 7604 ; free virtual = 11852
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:39 ; elapsed = 00:00:59 . Memory (MB): peak = 3277.246 ; gain = 668.824 ; free physical = 5115 ; free virtual = 11981
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:30 ; elapsed = 00:00:45 . Memory (MB): peak = 3277.145 ; gain = 588.051 ; free physical = 7641 ; free virtual = 11889
-Synthesis Optimization Complete : Time (s): cpu = 00:00:34 ; elapsed = 00:00:52 . Memory (MB): peak = 3277.152 ; gain = 668.723 ; free physical = 7641 ; free virtual = 11889
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:34 ; elapsed = 00:00:52 . Memory (MB): peak = 3277.246 ; gain = 589.090 ; free physical = 5152 ; free virtual = 12018
+Synthesis Optimization Complete : Time (s): cpu = 00:00:39 ; elapsed = 00:00:59 . Memory (MB): peak = 3277.254 ; gain = 668.824 ; free physical = 5152 ; free virtual = 12018
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:04 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3277.152 ; gain = 0.000 ; free physical = 7712 ; free virtual = 11959
+Netlist sorting complete. Time (s): cpu = 00:00:04 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3277.254 ; gain = 0.000 ; free physical = 5225 ; free virtual = 12091
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3303.895 ; gain = 0.000 ; free physical = 7654 ; free virtual = 11901
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3304.965 ; gain = 0.000 ; free physical = 5166 ; free virtual = 12031
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
 44 Infos, 11 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:47 ; elapsed = 00:01:06 . Memory (MB): peak = 3309.832 ; gain = 1006.770 ; free physical = 7813 ; free virtual = 12033
+synth_design: Time (s): cpu = 00:00:53 ; elapsed = 00:01:16 . Memory (MB): peak = 3318.902 ; gain = 1007.836 ; free physical = 5307 ; free virtual = 12163
 INFO: [Common 17-1381] The checkpoint '/home/y/fpga/dma5/dma5.runs/synth_1/design_1_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Jun 28 22:28:35 2020...
+INFO: [Common 17-206] Exiting Vivado at Mon Jun 29 19:44:06 2020...

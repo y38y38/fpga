@@ -69,21 +69,30 @@ int main()
     ptr = (u32*)0xa000000c;
     xil_printf("ptr %x val %x\n\r", ptr, *ptr);
 
-    ptr = (u32*)0xa0000000;
+    ptr = (u32*)0xa0000000;//slv_reg0
     *ptr = 0x4;
+
+    ptr = (u32*)0xa0000004;//slv_reg1
+    *ptr = 0x8;
+
+    ptr = (u32*)0xa0000008;//slv_reg2
+    *ptr = 0xd;
+
+//    ptr = (u32*)0xa000000c;//slv_reg3
+//    *ptr = 0x10;
+
+    ptr = (u32*)0xa0000000;
     xil_printf("ptr %x val %x\n\r", ptr, *ptr);
 
     ptr = (u32*)0xa0000004;
-    *ptr = 0x8;
     xil_printf("ptr %x val %x\n\r", ptr, *ptr);
 
     ptr = (u32*)0xa0000008;
-    *ptr = 0xc;
     xil_printf("ptr %x val %x\n\r", ptr, *ptr);
 
     ptr = (u32*)0xa000000c;
-    *ptr = 0x10;
     xil_printf("ptr %x val %x\n\r", ptr, *ptr);
+
 
     print("Successfully ran Hello World application");
     cleanup_platform();

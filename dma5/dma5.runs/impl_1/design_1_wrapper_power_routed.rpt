@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
-| Date             : Sun Jun 28 22:30:52 2020
+| Date             : Mon Jun 29 19:46:22 2020
 | Host             : y-Blade-Stealth running 64-bit Ubuntu 18.04.4 LTS
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
@@ -30,7 +30,7 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 2.085        |
+| Total On-Chip Power (W)  | 2.086        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
 | Dynamic (W)              | 1.770        |
@@ -53,20 +53,20 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.007 |        3 |       --- |             --- |
-| CLB Logic                |     0.004 |     6138 |       --- |             --- |
-|   LUT as Logic           |     0.003 |     2262 |     70560 |            3.21 |
+| CLB Logic                |     0.004 |     6210 |       --- |             --- |
+|   LUT as Logic           |     0.003 |     2333 |     70560 |            3.31 |
 |   LUT as Shift Register  |    <0.001 |       91 |     28800 |            0.32 |
 |   LUT as Distributed RAM |    <0.001 |      112 |     28800 |            0.39 |
 |   Register               |    <0.001 |     2842 |    141120 |            2.01 |
-|   CARRY8                 |    <0.001 |       16 |      8820 |            0.18 |
-|   Others                 |     0.000 |      165 |       --- |             --- |
+|   CARRY8                 |    <0.001 |       20 |      8820 |            0.23 |
+|   Others                 |     0.000 |      167 |       --- |             --- |
 |   F7/F8 Muxes            |     0.000 |        6 |     70560 |           <0.01 |
-| Signals                  |     0.004 |     5196 |       --- |             --- |
+| Signals                  |     0.004 |     5216 |       --- |             --- |
 | PS8                      |     1.755 |        1 |       --- |             --- |
 | Static Power             |     0.316 |          |           |                 |
 |   PS Static              |     0.100 |          |           |                 |
 |   PL Static              |     0.215 |          |           |                 |
-| Total                    |     2.085 |          |           |                 |
+| Total                    |     2.086 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
