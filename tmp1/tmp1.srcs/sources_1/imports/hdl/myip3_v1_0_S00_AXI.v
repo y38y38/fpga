@@ -15,8 +15,8 @@
 	)
 	(
 		// Users to add ports here
-		output wire DMA_START,
-		input wire DMA_COMP,
+//		output wire DMA_START,
+//		input wire DMA_COMP,
 
 		// User ports ends
 		// Do not modify the ports beyond this line
@@ -232,6 +232,7 @@
 	      slv_reg1 <= 0;
 	      slv_reg2 <= 0;
 	      slv_reg3 <= 0;
+		  dma_start <= 0;
 	    end 
 	  else begin
 	    if (slv_reg_wren)
@@ -272,13 +273,13 @@
 	                      slv_reg3 <= slv_reg3;
 	                    end
 	        endcase
-		  end else begin
-			  slv_reg0 <= slv_reg1 + slv_reg2;
-			  slv_reg1 <= dma_comp;
-			  if (slv_reg3 == 1'b1) begin
-				  dma_start <= 1'b1;
-				  slv_reg3 <= 0;
-			  end
+//		  end else begin
+//			  slv_reg0 <= slv_reg1 + slv_reg2;
+//			  slv_reg1 <= dma_comp;
+//			  if (slv_reg3[0] == 1'b1) begin
+//				  dma_start <= 1'b1;
+//				  slv_reg3[0] <= 0;
+//			  end
 		  end 
 	  end
 	end    
@@ -413,8 +414,8 @@
 	end    
 
 	// Add user logic here
-	assign DMA_START_START = dma_start;
-	assign DMA_COMP = dma_comp;
+//	assign DMA_START = dma_start;
+//	assign DMA_COMP = dma_comp;
 	// User logic ends
 
 	endmodule

@@ -3,6 +3,58 @@
 # 
 
 set TIME_start [clock seconds] 
+namespace eval ::optrace {
+  variable script "/home/y/fpga/tmp1/tmp1.runs/synth_1/design_1_wrapper.tcl"
+  variable category "vivado_synth"
+}
+
+# Try to connect to running dispatch if we haven't done so already.
+# This code assumes that the Tcl interpreter is not using threads,
+# since the ::dispatch::connected variable isn't mutex protected.
+if {![info exists ::dispatch::connected]} {
+  namespace eval ::dispatch {
+    variable connected false
+    if {[llength [array get env XILINX_CD_CONNECT_ID]] > 0} {
+      set result "true"
+      if {[catch {
+        if {[lsearch -exact [package names] DispatchTcl] < 0} {
+          set result [load librdi_cd_clienttcl[info sharedlibextension]] 
+        }
+        if {$result eq "false"} {
+          puts "WARNING: Could not load dispatch client library"
+        }
+        set connect_id [ ::dispatch::init_client -mode EXISTING_SERVER ]
+        if { $connect_id eq "" } {
+          puts "WARNING: Could not initialize dispatch client"
+        } else {
+          puts "INFO: Dispatch client connection id - $connect_id"
+          set connected true
+        }
+      } catch_res]} {
+        puts "WARNING: failed to connect to dispatch server - $catch_res"
+      }
+    }
+  }
+}
+if {$::dispatch::connected} {
+  # Remove the dummy proc if it exists.
+  if { [expr {[llength [info procs ::OPTRACE]] > 0}] } {
+    rename ::OPTRACE ""
+  }
+  proc ::OPTRACE { task action {tags {} } } {
+    ::vitis_log::op_trace "$task" $action -tags $tags -script $::optrace::script -category $::optrace::category
+  }
+  # dispatch is generic. We specifically want to attach logging.
+  ::vitis_log::connect_client
+} else {
+  # Add dummy proc if it doesn't exist.
+  if { [expr {[llength [info procs ::OPTRACE]] == 0}] } {
+    proc ::OPTRACE {{arg1 \"\" } {arg2 \"\"} {arg3 \"\" } {arg4 \"\"} {arg5 \"\" } {arg6 \"\"}} {
+        # Do nothing
+    }
+  }
+}
+
 proc create_report { reportName command } {
   set status "."
   append status $reportName ".fail"
@@ -17,6 +69,10 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 2
+set_msg_config -id {HDL-1065} -limit 10000
+OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xczu3eg-sbva484-1-e
 
 set_param project.singleFileAddWarning.threshold 0
@@ -28,7 +84,6 @@ set_property parent.project_path /home/y/fpga/tmp1/tmp1.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property board_part em.avnet.com:ultra96v2:part0:1.0 [current_project]
 set_property ip_repo_paths {
   /home/y/fpga/ip_repo/myip3_1.0
   /home/y/fpga/ip_repo/myip2_1.0
@@ -36,24 +91,26 @@ set_property ip_repo_paths {
 update_ip_catalog
 set_property ip_output_repo /home/y/fpga/tmp1/tmp1.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
+OPTRACE "Creating in-memory project" END { }
+OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
 add_files /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/design_1.bd
 set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0.xdc]
-set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_1/ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_1/bd_6f02_psr_aclk_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_1/bd_6f02_psr_aclk_0.xdc]
-set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_5/bd_6f02_s00a2s_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_6/bd_6f02_sarn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_7/bd_6f02_srn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_8/bd_6f02_sawn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_9/bd_6f02_swn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_10/bd_6f02_sbn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_11/bd_6f02_m00s2a_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_rst_ps8_0_100M_1/design_1_rst_ps8_0_100M_1_board.xdc]
-set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_rst_ps8_0_100M_1/design_1_rst_ps8_0_100M_1.xdc]
-set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_rst_ps8_0_100M_1/design_1_rst_ps8_0_100M_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_xbar_1/design_1_xbar_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_1/bd_6e42_psr_aclk_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_1/bd_6e42_psr_aclk_0.xdc]
+set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_5/bd_6e42_s00a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_6/bd_6e42_sarn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_7/bd_6e42_srn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_8/bd_6e42_sawn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_9/bd_6e42_swn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_10/bd_6e42_sbn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_11/bd_6e42_m00s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_2/ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_rst_ps8_0_100M_2/design_1_rst_ps8_0_100M_2_board.xdc]
+set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_rst_ps8_0_100M_2/design_1_rst_ps8_0_100M_2.xdc]
+set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_rst_ps8_0_100M_2/design_1_rst_ps8_0_100M_2_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0_ooc.xdc]
 set_property used_in_synthesis false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_ooc.xdc]
@@ -64,6 +121,7 @@ set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1
 set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/design_1_ooc.xdc]
 
+OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
 # design are intentionally left as such for best results. Dcp files will be
@@ -77,12 +135,19 @@ set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 
+OPTRACE "synth_design" START { }
 synth_design -top design_1_wrapper -part xczu3eg-sbva484-1-e
+OPTRACE "synth_design" END { }
 
 
+OPTRACE "write_checkpoint" START { CHECKPOINT }
 # disable binary constraint mode for synth run checkpoints
 set_param constraints.enableBinaryConstraints false
 write_checkpoint -force -noxdef design_1_wrapper.dcp
+OPTRACE "write_checkpoint" END { }
+OPTRACE "synth reports" START { REPORT }
 create_report "synth_1_synth_report_utilization_0" "report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb"
+OPTRACE "synth reports" END { }
 file delete __synthesis_is_running__
 close [open __synthesis_is_complete__ w]
+OPTRACE "synth_1" END { }

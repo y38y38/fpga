@@ -2176,7 +2176,7 @@ set psu_ddr_init_data {
     # erating is enabled (DERATEEN.derate_enable=1), derated tDQSCKmax should
     # be used. For configurations with MEMC_FREQ_RATIO=2, divide the value cal
     # culated using the above equation by 2, and round it up to next integer.
-		# PSU_DDRC_DRAMTMG2_RD2WR                                                         0xf
+		# PSU_DDRC_DRAMTMG2_RD2WR                                                         0x16
 
 		# DDR4: CWL + PL + BL/2 + tWTR_L Others: CWL + BL/2 + tWTR In DDR4, minimu
     # m time from write command to read command for same bank group. In others
@@ -2194,8 +2194,8 @@ set psu_ddr_init_data {
 		# PSU_DDRC_DRAMTMG2_WR2RD                                                         0xd
 
 		# SDRAM Timing Register 2
-		#(OFFSET, MASK, VALUE)      (0XFD070108, 0x3F3F3F3FU ,0x04070F0DU)  */
-    mask_write 0XFD070108 0x3F3F3F3F 0x04070F0D
+		#(OFFSET, MASK, VALUE)      (0XFD070108, 0x3F3F3F3FU ,0x0407160DU)  */
+    mask_write 0XFD070108 0x3F3F3F3F 0x0407160D
 		# Register : DRAMTMG3 @ 0XFD07010C</p>
 
 		# Time to wait after a mode register write or read (MRW or MRR). Present o
@@ -4826,11 +4826,11 @@ set psu_ddr_init_data {
 		# Register : GPR1 @ 0XFD0800C4</p>
 
 		# General Purpose Register 1
-		# PSU_DDR_PHY_GPR1_GPR1                                                           0xde
+		# PSU_DDR_PHY_GPR1_GPR1                                                           0xe3
 
 		# General Purpose Register 1
-		#(OFFSET, MASK, VALUE)      (0XFD0800C4, 0xFFFFFFFFU ,0x000000DEU)  */
-    mask_write 0XFD0800C4 0xFFFFFFFF 0x000000DE
+		#(OFFSET, MASK, VALUE)      (0XFD0800C4, 0xFFFFFFFFU ,0x000000E3U)  */
+    mask_write 0XFD0800C4 0xFFFFFFFF 0x000000E3
 		# Register : DCR @ 0XFD080100</p>
 
 		# DDR4 Gear Down Timing.
@@ -5507,14 +5507,14 @@ set psu_ddr_init_data {
 		# PSU_DDR_PHY_MR14_RSVD                                                           0x0
 
 		# VREFDQ Range Selects.
-		# PSU_DDR_PHY_MR14_VR_DQ                                                          0x0
+		# PSU_DDR_PHY_MR14_VR_DQ                                                          0x1
 
 		# Reserved. Return zeroes on reads.
-		# PSU_DDR_PHY_MR14_VREF_DQ                                                        0x19
+		# PSU_DDR_PHY_MR14_VREF_DQ                                                        0x2f
 
 		# LPDDR4 Mode Register 14
-		#(OFFSET, MASK, VALUE)      (0XFD0801B8, 0xFFFFFFFFU ,0x00000019U)  */
-    mask_write 0XFD0801B8 0xFFFFFFFF 0x00000019
+		#(OFFSET, MASK, VALUE)      (0XFD0801B8, 0xFFFFFFFFU ,0x0000006FU)  */
+    mask_write 0XFD0801B8 0xFFFFFFFF 0x0000006F
 		# Register : MR22 @ 0XFD0801D8</p>
 
 		# Reserved. Return zeroes on reads.
@@ -5909,14 +5909,14 @@ set psu_ddr_init_data {
 		# PSU_DDR_PHY_VTCR0_DVMAX                                                         0x32
 
 		# Minimum VREF limit value used during DRAM VREF training
-		# PSU_DDR_PHY_VTCR0_DVMIN                                                         0x0
+		# PSU_DDR_PHY_VTCR0_DVMIN                                                         0x27
 
 		# Initial DRAM DQ VREF value used during DRAM VREF training
-		# PSU_DDR_PHY_VTCR0_DVINIT                                                        0x19
+		# PSU_DDR_PHY_VTCR0_DVINIT                                                        0x2f
 
 		# VREF Training Control Register 0
-		#(OFFSET, MASK, VALUE)      (0XFD080528, 0xFFFFFFFFU ,0xF1032019U)  */
-    mask_write 0XFD080528 0xFFFFFFFF 0xF1032019
+		#(OFFSET, MASK, VALUE)      (0XFD080528, 0xFFFFFFFFU ,0xF10329EFU)  */
+    mask_write 0XFD080528 0xFFFFFFFF 0xF10329EF
 		# Register : VTCR1 @ 0XFD08052C</p>
 
 		# Host VREF step size used during VREF training. The register value of N i
@@ -7004,14 +7004,14 @@ set psu_ddr_init_data {
 		# PSU_DDR_PHY_DX2GCR4_RESERVED_7_6                                                0x0
 
 		# VREF Enable control for DQ IO (Single Ended) buffers of a byte lane.
-		# PSU_DDR_PHY_DX2GCR4_DXREFIEN                                                    0x3
+		# PSU_DDR_PHY_DX2GCR4_DXREFIEN                                                    0x1
 
 		# VRMON control for DQ IO (Single Ended) buffers of a byte lane.
 		# PSU_DDR_PHY_DX2GCR4_DXREFIMON                                                   0x0
 
 		# DATX8 n General Configuration Register 4
-		#(OFFSET, MASK, VALUE)      (0XFD080910, 0xFFFFFFFFU ,0x0E00F50CU)  */
-    mask_write 0XFD080910 0xFFFFFFFF 0x0E00F50C
+		#(OFFSET, MASK, VALUE)      (0XFD080910, 0xFFFFFFFFU ,0x0E00F504U)  */
+    mask_write 0XFD080910 0xFFFFFFFF 0x0E00F504
 		# Register : DX2GCR5 @ 0XFD080914</p>
 
 		# Reserved. Returns zeros on reads.
@@ -7257,14 +7257,14 @@ set psu_ddr_init_data {
 		# PSU_DDR_PHY_DX3GCR4_RESERVED_7_6                                                0x0
 
 		# VREF Enable control for DQ IO (Single Ended) buffers of a byte lane.
-		# PSU_DDR_PHY_DX3GCR4_DXREFIEN                                                    0x3
+		# PSU_DDR_PHY_DX3GCR4_DXREFIEN                                                    0x1
 
 		# VRMON control for DQ IO (Single Ended) buffers of a byte lane.
 		# PSU_DDR_PHY_DX3GCR4_DXREFIMON                                                   0x0
 
 		# DATX8 n General Configuration Register 4
-		#(OFFSET, MASK, VALUE)      (0XFD080A10, 0xFFFFFFFFU ,0x0E00F50CU)  */
-    mask_write 0XFD080A10 0xFFFFFFFF 0x0E00F50C
+		#(OFFSET, MASK, VALUE)      (0XFD080A10, 0xFFFFFFFFU ,0x0E00F504U)  */
+    mask_write 0XFD080A10 0xFFFFFFFF 0x0E00F504
 		# Register : DX3GCR5 @ 0XFD080A14</p>
 
 		# Reserved. Returns zeros on reads.
@@ -7447,7 +7447,7 @@ set psu_ddr_init_data {
 		# PSU_DDR_PHY_DX4GCR3_WDLVT                                                       0x0
 
 		# Write Leveling LCDL Delay VT Compensation
-		# PSU_DDR_PHY_DX4GCR3_WLLVT                                                       0x1
+		# PSU_DDR_PHY_DX4GCR3_WLLVT                                                       0x0
 
 		# Reserved. Returns zeroes on reads.
 		# PSU_DDR_PHY_DX4GCR3_RESERVED_23_22                                              0x0
@@ -7486,8 +7486,8 @@ set psu_ddr_init_data {
 		# PSU_DDR_PHY_DX4GCR3_RESERVED_1_0                                                0x0
 
 		# DATX8 n General Configuration Register 3
-		#(OFFSET, MASK, VALUE)      (0XFD080B0C, 0xFFFFFFFFU ,0x0129A4A4U)  */
-    mask_write 0XFD080B0C 0xFFFFFFFF 0x0129A4A4
+		#(OFFSET, MASK, VALUE)      (0XFD080B0C, 0xFFFFFFFFU ,0x0029A4A4U)  */
+    mask_write 0XFD080B0C 0xFFFFFFFF 0x0029A4A4
 		# Register : DX4GCR4 @ 0XFD080B10</p>
 
 		# Byte lane VREF IOM (Used only by D4MU IOs)
@@ -9798,50 +9798,6 @@ set psu_ddr_init_data {
 		# DATX8 0-1 I/O Configuration Register
 		#(OFFSET, MASK, VALUE)      (0XFD081530, 0xFFFFFFFFU ,0x70400000U)  */
     mask_write 0XFD081530 0xFFFFFFFF 0x70400000
-		# Register : DX8SLbPLLCR0 @ 0XFD0817C4</p>
-
-		# PLL Bypass
-		# PSU_DDR_PHY_DX8SLBPLLCR0_PLLBYP                                                 0x0
-
-		# PLL Reset
-		# PSU_DDR_PHY_DX8SLBPLLCR0_PLLRST                                                 0x0
-
-		# PLL Power Down
-		# PSU_DDR_PHY_DX8SLBPLLCR0_PLLPD                                                  0x0
-
-		# Reference Stop Mode
-		# PSU_DDR_PHY_DX8SLBPLLCR0_RSTOPM                                                 0x0
-
-		# PLL Frequency Select
-		# PSU_DDR_PHY_DX8SLBPLLCR0_FRQSEL                                                 0x5
-
-		# Relock Mode
-		# PSU_DDR_PHY_DX8SLBPLLCR0_RLOCKM                                                 0x0
-
-		# Charge Pump Proportional Current Control
-		# PSU_DDR_PHY_DX8SLBPLLCR0_CPPC                                                   0x8
-
-		# Charge Pump Integrating Current Control
-		# PSU_DDR_PHY_DX8SLBPLLCR0_CPIC                                                   0x1
-
-		# Gear Shift
-		# PSU_DDR_PHY_DX8SLBPLLCR0_GSHIFT                                                 0x0
-
-		# Reserved. Return zeroes on reads.
-		# PSU_DDR_PHY_DX8SLBPLLCR0_RESERVED_11_9                                          0x0
-
-		# Analog Test Enable (ATOEN)
-		# PSU_DDR_PHY_DX8SLBPLLCR0_ATOEN                                                  0x0
-
-		# Analog Test Control
-		# PSU_DDR_PHY_DX8SLBPLLCR0_ATC                                                    0x0
-
-		# Digital Test Control
-		# PSU_DDR_PHY_DX8SLBPLLCR0_DTC                                                    0x0
-
-		# DAXT8 0-8 PLL Control Register 0
-		#(OFFSET, MASK, VALUE)      (0XFD0817C4, 0xFFFFFFFFU ,0x05102000U)  */
-    mask_write 0XFD0817C4 0xFFFFFFFF 0x05102000
 		# Register : DX8SLbDQSCTL @ 0XFD0817DC</p>
 
 		# Reserved. Return zeroes on reads.
@@ -10007,6 +9963,42 @@ set psu_ddr_qos_init_data {
 		#(OFFSET, MASK, VALUE)      (0XFD090010, 0x0000007FU ,0x00000010U)  */
     mask_write 0XFD090010 0x0000007F 0x00000010
 		# : AFI INTERCONNECT QOS CONFIGURATION
+		# Register : AFIFM_RDQoS @ 0XFD360008</p>
+
+		# Sets the level of the QoS field to be used for the read channel 4'b0000:
+    #  Lowest Priority' ' '4'b1111: Highest Priority
+		# PSU_AFIFM0_AFIFM_RDQOS_VALUE                                                    0
+
+		# QoS Read Channel Register
+		#(OFFSET, MASK, VALUE)      (0XFD360008, 0x0000000FU ,0x00000000U)  */
+    mask_write 0XFD360008 0x0000000F 0x00000000
+		# Register : AFIFM_WRQoS @ 0XFD36001C</p>
+
+		# Sets the level of the QoS field to be used for the write channel 4'b0000
+    # : Lowest Priority' ' '4'b1111: Highest Priority
+		# PSU_AFIFM0_AFIFM_WRQOS_VALUE                                                    0
+
+		# QoS Write Channel Register
+		#(OFFSET, MASK, VALUE)      (0XFD36001C, 0x0000000FU ,0x00000000U)  */
+    mask_write 0XFD36001C 0x0000000F 0x00000000
+		# Register : AFIFM_RDQoS @ 0XFD370008</p>
+
+		# Sets the level of the QoS field to be used for the read channel 4'b0000:
+    #  Lowest Priority' ' '4'b1111: Highest Priority
+		# PSU_AFIFM1_AFIFM_RDQOS_VALUE                                                    0
+
+		# QoS Read Channel Register
+		#(OFFSET, MASK, VALUE)      (0XFD370008, 0x0000000FU ,0x00000000U)  */
+    mask_write 0XFD370008 0x0000000F 0x00000000
+		# Register : AFIFM_WRQoS @ 0XFD37001C</p>
+
+		# Sets the level of the QoS field to be used for the write channel 4'b0000
+    # : Lowest Priority' ' '4'b1111: Highest Priority
+		# PSU_AFIFM1_AFIFM_WRQOS_VALUE                                                    0
+
+		# QoS Write Channel Register
+		#(OFFSET, MASK, VALUE)      (0XFD37001C, 0x0000000FU ,0x00000000U)  */
+    mask_write 0XFD37001C 0x0000000F 0x00000000
 		# Register : AFIFM_RDQoS @ 0XFD380008</p>
 
 		# Sets the level of the QoS field to be used for the read channel 4'b0000:
@@ -10079,6 +10071,24 @@ set psu_ddr_qos_init_data {
 		# QoS Write Channel Register
 		#(OFFSET, MASK, VALUE)      (0XFD3B001C, 0x0000000FU ,0x00000003U)  */
     mask_write 0XFD3B001C 0x0000000F 0x00000003
+		# Register : AFIFM_RDQoS @ 0XFF9B0008</p>
+
+		# Sets the level of the QoS field to be used for the read channel 4'b0000:
+    #  Lowest Priority' ' '4'b1111: Highest Priority
+		# PSU_AFIFM6_AFIFM_RDQOS_VALUE                                                    0
+
+		# QoS Read Channel Register
+		#(OFFSET, MASK, VALUE)      (0XFF9B0008, 0x0000000FU ,0x00000000U)  */
+    mask_write 0XFF9B0008 0x0000000F 0x00000000
+		# Register : AFIFM_WRQoS @ 0XFF9B001C</p>
+
+		# Sets the level of the QoS field to be used for the write channel 4'b0000
+    # : Lowest Priority' ' '4'b1111: Highest Priority
+		# PSU_AFIFM6_AFIFM_WRQOS_VALUE                                                    0
+
+		# QoS Write Channel Register
+		#(OFFSET, MASK, VALUE)      (0XFF9B001C, 0x0000000FU ,0x00000000U)  */
+    mask_write 0XFF9B001C 0x0000000F 0x00000000
 }
 
 set psu_mio_init_data {
@@ -16242,6 +16252,7 @@ set psu_serdes_init_data {
 		# eq dynamic offset correction
 		#(OFFSET, MASK, VALUE)      (0XFD40D978, 0x00000010U ,0x00000010U)  */
     mask_write 0XFD40D978 0x00000010 0x00000010
+		# : SERDES ILL CALIB
 		# : DISABLE ECO FOR PCIE
 		# : GT LANE SETTINGS
 		# Register : ICM_CFG0 @ 0XFD410010</p>
@@ -17459,6 +17470,7 @@ proc psu_protection {} {
 
 proc psu_ddr_phybringup_data {} {
 mwr -force  0xFD080004 0x00040073
+mwr -force  0xFD0800C0 0x00000001
 mwr -force  0xFD090000 0x00000845
 mwr -force  0xFD090004 0x003FFFFF
 mwr -force  0xFD09000C 0x00000010
@@ -17479,10 +17491,10 @@ poll 0xFD070018 0x00000001 0
 mwr -force  0xFD070014 0x00000B36
 mwr -force  0xFD070010 0x80000018
 poll 0xFD070018 0x00000001 0 
-mwr -force  0xFD070014 0x00000C21
+mwr -force  0xFD070014 0x00000C56
 mwr -force  0xFD070010 0x80000018
 poll 0xFD070018 0x00000001 0 
-mwr -force  0xFD070014 0x00000E19
+mwr -force  0xFD070014 0x00000E6F
 mwr -force  0xFD070010 0x80000018
 poll 0xFD070018 0x00000001 0 
 mwr -force  0xFD070014 0x00001616

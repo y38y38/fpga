@@ -36,7 +36,7 @@
 		// Do not modify the ports beyond this line
 
 		// Initiate AXI transactions
-		input wire  INIT_AXI_TXN,
+		 input wire  INIT_AXI_TXN,
 		// Asserts when transaction is complete
 		output wire  TXN_DONE,
 		// Asserts when ERROR is detected

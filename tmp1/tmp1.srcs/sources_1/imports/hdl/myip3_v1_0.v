@@ -105,14 +105,15 @@
 		output wire  m00_axi_rready
 	);
 
-	wire DMA_START;
+//	wire DMA_START;
+//	wire internal_dma_start;
 
 // Instantiation of Axi Bus Interface S00_AXI
 	myip3_v1_0_S00_AXI # ( 
 		.C_S_AXI_DATA_WIDTH(C_S00_AXI_DATA_WIDTH),
 		.C_S_AXI_ADDR_WIDTH(C_S00_AXI_ADDR_WIDTH)
 	) myip3_v1_0_S00_AXI_inst (
-		.DMA_START(m00_axi_init_axi_txn),
+		.DMA_START(DMA_START),
 		.S_AXI_ACLK(s00_axi_aclk),
 		.S_AXI_ARESETN(s00_axi_aresetn),
 		.S_AXI_AWADDR(s00_axi_awaddr),
@@ -149,6 +150,7 @@
 		.C_M_AXI_RUSER_WIDTH(C_M00_AXI_RUSER_WIDTH),
 		.C_M_AXI_BUSER_WIDTH(C_M00_AXI_BUSER_WIDTH)
 	) myip3_v1_0_M00_AXI_inst (
+//		.INIT_AXI_TXN(DMA_START),
 		.INIT_AXI_TXN(m00_axi_init_axi_txn),
 		.TXN_DONE(m00_axi_txn_done),
 		.ERROR(m00_axi_error),

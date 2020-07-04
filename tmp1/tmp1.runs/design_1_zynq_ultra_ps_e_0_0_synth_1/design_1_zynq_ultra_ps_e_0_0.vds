@@ -1,27 +1,33 @@
 #-----------------------------------------------------------
-# Vivado v2019.1 (64-bit)
-# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
-# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Sat Jun 27 11:42:28 2020
-# Process ID: 16160
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Sun Jun 28 20:20:25 2020
+# Process ID: 4812
 # Current directory: /home/y/fpga/tmp1/tmp1.runs/design_1_zynq_ultra_ps_e_0_0_synth_1
 # Command line: vivado -log design_1_zynq_ultra_ps_e_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_zynq_ultra_ps_e_0_0.tcl
 # Log file: /home/y/fpga/tmp1/tmp1.runs/design_1_zynq_ultra_ps_e_0_0_synth_1/design_1_zynq_ultra_ps_e_0_0.vds
 # Journal file: /home/y/fpga/tmp1/tmp1.runs/design_1_zynq_ultra_ps_e_0_0_synth_1/vivado.jou
 #-----------------------------------------------------------
 source design_1_zynq_ultra_ps_e_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/y/fpga/ip_repo/myip3_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/y/fpga/ip_repo/myip2_1.0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2020.1/data/ip'.
+update_ip_catalog: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 2183.977 ; gain = 0.000 ; free physical = 2236 ; free virtual = 9282
 Command: synth_design -top design_1_zynq_ultra_ps_e_0_0 -part xczu3eg-sbva484-1-e -mode out_of_context
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xczu3eg'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu3eg'
 INFO: [Device 21-403] Loading part xczu3eg-sbva484-1-e
-INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 16946 
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 5034
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2190.215 ; gain = 0.000 ; free physical = 937 ; free virtual = 7357
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:12 . Memory (MB): peak = 2572.344 ; gain = 3.965 ; free physical = 150 ; free virtual = 3492
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_1_zynq_ultra_ps_e_0_0' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/synth/design_1_zynq_ultra_ps_e_0_0.v:59]
-INFO: [Synth 8-6157] synthesizing module 'zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_0.v:282]
+INFO: [Synth 8-6157] synthesizing module 'zynq_ultra_ps_e_v3_3_2_zynq_ultra_ps_e' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_2.v:282]
 	Parameter C_MAXIGP0_DATA_WIDTH bound to: 128 - type: integer 
 	Parameter C_MAXIGP1_DATA_WIDTH bound to: 128 - type: integer 
 	Parameter C_MAXIGP2_DATA_WIDTH bound to: 32 - type: integer 
@@ -59,147 +65,95 @@ INFO: [Synth 8-6157] synthesizing module 'zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e
 	Parameter C_USE_DEBUG_TEST bound to: 0 - type: integer 
 	Parameter C_DP_USE_AUDIO bound to: 0 - type: integer 
 	Parameter C_DP_USE_VIDEO bound to: 0 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'BUFG_PS' [/tools/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:1299]
+INFO: [Synth 8-6157] synthesizing module 'BUFG_PS' [/tools/Xilinx/Vivado/2020.1/scripts/rt/data/unisim_comp.v:1307]
 	Parameter SIM_DEVICE bound to: ULTRASCALE_PLUS - type: string 
 	Parameter STARTUP_SYNC bound to: FALSE - type: string 
-INFO: [Synth 8-6155] done synthesizing module 'BUFG_PS' (1#1) [/tools/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:1299]
-INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_0.v:2316]
-INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_0.v:2317]
-INFO: [Synth 8-6157] synthesizing module 'PS8' [/tools/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:62953]
-INFO: [Synth 8-6155] done synthesizing module 'PS8' (2#1) [/tools/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:62953]
-WARNING: [Synth 8-689] width (4) of port connection 'EMIOSDIO0DATAOUT' does not match port width (8) of module 'PS8' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_0.v:4646]
-WARNING: [Synth 8-689] width (4) of port connection 'EMIOSDIO0DATAENA' does not match port width (8) of module 'PS8' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_0.v:4647]
-WARNING: [Synth 8-689] width (4) of port connection 'EMIOSDIO1DATAOUT' does not match port width (8) of module 'PS8' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_0.v:4659]
-WARNING: [Synth 8-689] width (4) of port connection 'EMIOSDIO1DATAENA' does not match port width (8) of module 'PS8' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_0.v:4660]
-WARNING: [Synth 8-7023] instance 'PS8_i' of module 'PS8' has 1015 connections declared, but only 957 given [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_0.v:3836]
-WARNING: [Synth 8-3848] Net dp_audio_ref_clk in module/entity zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e does not have driver. [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_0.v:335]
-WARNING: [Synth 8-3848] Net irq_ipi_pl_0 in module/entity zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e does not have driver. [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_0.v:1355]
-WARNING: [Synth 8-3848] Net irq_ipi_pl_1 in module/entity zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e does not have driver. [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_0.v:1356]
-WARNING: [Synth 8-3848] Net irq_ipi_pl_2 in module/entity zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e does not have driver. [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_0.v:1357]
-WARNING: [Synth 8-3848] Net irq_ipi_pl_3 in module/entity zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e does not have driver. [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_0.v:1358]
-INFO: [Synth 8-6155] done synthesizing module 'zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e' (3#1) [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_0.v:282]
-WARNING: [Synth 8-7023] instance 'inst' of module 'zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e' has 1491 connections declared, but only 1487 given [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/synth/design_1_zynq_ultra_ps_e_0_0.v:482]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG_PS' (1#1) [/tools/Xilinx/Vivado/2020.1/scripts/rt/data/unisim_comp.v:1307]
+INFO: [Synth 8-6157] synthesizing module 'PS8' [/tools/Xilinx/Vivado/2020.1/scripts/rt/data/unisim_comp.v:63273]
+INFO: [Synth 8-6155] done synthesizing module 'PS8' (2#1) [/tools/Xilinx/Vivado/2020.1/scripts/rt/data/unisim_comp.v:63273]
+WARNING: [Synth 8-689] width (4) of port connection 'EMIOSDIO0DATAOUT' does not match port width (8) of module 'PS8' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_2.v:4646]
+WARNING: [Synth 8-689] width (4) of port connection 'EMIOSDIO0DATAENA' does not match port width (8) of module 'PS8' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_2.v:4647]
+WARNING: [Synth 8-689] width (4) of port connection 'EMIOSDIO1DATAOUT' does not match port width (8) of module 'PS8' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_2.v:4659]
+WARNING: [Synth 8-689] width (4) of port connection 'EMIOSDIO1DATAENA' does not match port width (8) of module 'PS8' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_2.v:4660]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTTXN0OUT' of module 'PS8' is unconnected for instance 'PS8_i' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_2.v:3836]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTTXN1OUT' of module 'PS8' is unconnected for instance 'PS8_i' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_2.v:3836]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTTXN2OUT' of module 'PS8' is unconnected for instance 'PS8_i' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_2.v:3836]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTTXN3OUT' of module 'PS8' is unconnected for instance 'PS8_i' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_2.v:3836]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTTXP0OUT' of module 'PS8' is unconnected for instance 'PS8_i' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_2.v:3836]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTTXP1OUT' of module 'PS8' is unconnected for instance 'PS8_i' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_2.v:3836]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTTXP2OUT' of module 'PS8' is unconnected for instance 'PS8_i' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_2.v:3836]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTTXP3OUT' of module 'PS8' is unconnected for instance 'PS8_i' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_2.v:3836]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_PADO' of module 'PS8' is unconnected for instance 'PS8_i' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_2.v:3836]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_BOOTMODE' of module 'PS8' is unconnected for instance 'PS8_i' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_2.v:3836]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_CLK' of module 'PS8' is unconnected for instance 'PS8_i' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_2.v:3836]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DONEB' of module 'PS8' is unconnected for instance 'PS8_i' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_2.v:3836]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMA' of module 'PS8' is unconnected for instance 'PS8_i' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_2.v:3836]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMACTN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_2.v:3836]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMALERTN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_2.v:3836]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMBA' of module 'PS8' is unconnected for instance 'PS8_i' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_2.v:3836]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMBG' of module 'PS8' is unconnected for instance 'PS8_i' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_2.v:3836]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMCK' of module 'PS8' is unconnected for instance 'PS8_i' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_2.v:3836]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMCKE' of module 'PS8' is unconnected for instance 'PS8_i' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_2.v:3836]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMCKN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_2.v:3836]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMCSN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_2.v:3836]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMDM' of module 'PS8' is unconnected for instance 'PS8_i' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_2.v:3836]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMDQ' of module 'PS8' is unconnected for instance 'PS8_i' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_2.v:3836]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMDQS' of module 'PS8' is unconnected for instance 'PS8_i' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_2.v:3836]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMDQSN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_2.v:3836]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMODT' of module 'PS8' is unconnected for instance 'PS8_i' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_2.v:3836]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMPARITY' of module 'PS8' is unconnected for instance 'PS8_i' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_2.v:3836]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMRAMRSTN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_2.v:3836]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_ERROROUT' of module 'PS8' is unconnected for instance 'PS8_i' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_2.v:3836]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_ERRORSTATUS' of module 'PS8' is unconnected for instance 'PS8_i' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_2.v:3836]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_INITB' of module 'PS8' is unconnected for instance 'PS8_i' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_2.v:3836]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_JTAGTCK' of module 'PS8' is unconnected for instance 'PS8_i' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_2.v:3836]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_JTAGTDI' of module 'PS8' is unconnected for instance 'PS8_i' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_2.v:3836]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_JTAGTDO' of module 'PS8' is unconnected for instance 'PS8_i' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_2.v:3836]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_JTAGTMS' of module 'PS8' is unconnected for instance 'PS8_i' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_2.v:3836]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MIO' of module 'PS8' is unconnected for instance 'PS8_i' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_2.v:3836]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_PORB' of module 'PS8' is unconnected for instance 'PS8_i' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_2.v:3836]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_PROGB' of module 'PS8' is unconnected for instance 'PS8_i' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_2.v:3836]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_RCALIBINOUT' of module 'PS8' is unconnected for instance 'PS8_i' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_2.v:3836]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_SRSTB' of module 'PS8' is unconnected for instance 'PS8_i' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_2.v:3836]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_ZQ' of module 'PS8' is unconnected for instance 'PS8_i' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_2.v:3836]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTRXN0IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_2.v:3836]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTRXN1IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_2.v:3836]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTRXN2IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_2.v:3836]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTRXN3IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_2.v:3836]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTRXP0IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_2.v:3836]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTRXP1IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_2.v:3836]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTRXP2IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_2.v:3836]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTRXP3IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_2.v:3836]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_PADI' of module 'PS8' is unconnected for instance 'PS8_i' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_2.v:3836]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_REFN0IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_2.v:3836]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_REFN1IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_2.v:3836]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_REFN2IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_2.v:3836]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_REFN3IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_2.v:3836]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_REFP0IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_2.v:3836]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_REFP1IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_2.v:3836]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_REFP2IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_2.v:3836]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_REFP3IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_2.v:3836]
+WARNING: [Synth 8-7023] instance 'PS8_i' of module 'PS8' has 1015 connections declared, but only 957 given [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_2.v:3836]
+INFO: [Synth 8-6155] done synthesizing module 'zynq_ultra_ps_e_v3_3_2_zynq_ultra_ps_e' (3#1) [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_2.v:282]
+WARNING: [Synth 8-7071] port 'emio_enet0_signal_detect' of module 'zynq_ultra_ps_e_v3_3_2_zynq_ultra_ps_e' is unconnected for instance 'inst' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/synth/design_1_zynq_ultra_ps_e_0_0.v:482]
+WARNING: [Synth 8-7071] port 'emio_enet1_signal_detect' of module 'zynq_ultra_ps_e_v3_3_2_zynq_ultra_ps_e' is unconnected for instance 'inst' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/synth/design_1_zynq_ultra_ps_e_0_0.v:482]
+WARNING: [Synth 8-7071] port 'emio_enet2_signal_detect' of module 'zynq_ultra_ps_e_v3_3_2_zynq_ultra_ps_e' is unconnected for instance 'inst' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/synth/design_1_zynq_ultra_ps_e_0_0.v:482]
+WARNING: [Synth 8-7071] port 'emio_enet3_signal_detect' of module 'zynq_ultra_ps_e_v3_3_2_zynq_ultra_ps_e' is unconnected for instance 'inst' [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/synth/design_1_zynq_ultra_ps_e_0_0.v:482]
+WARNING: [Synth 8-7023] instance 'inst' of module 'zynq_ultra_ps_e_v3_3_2_zynq_ultra_ps_e' has 1491 connections declared, but only 1487 given [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/synth/design_1_zynq_ultra_ps_e_0_0.v:482]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_zynq_ultra_ps_e_0_0' (4#1) [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/synth/design_1_zynq_ultra_ps_e_0_0.v:59]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port dp_audio_ref_clk
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port irq_ipi_pl_0
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port irq_ipi_pl_1
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port irq_ipi_pl_2
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port irq_ipi_pl_3
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port saxihpc0_fpd_rclk
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port saxihpc0_fpd_wclk
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port saxihpc1_fpd_rclk
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port saxihpc1_fpd_wclk
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port saxihp0_fpd_rclk
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port saxihp0_fpd_wclk
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port saxihp1_fpd_rclk
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port saxihp1_fpd_wclk
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port saxihp2_fpd_rclk
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port saxihp2_fpd_wclk
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port saxihp3_fpd_rclk
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port saxihp3_fpd_wclk
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port saxi_lpd_rclk
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port saxi_lpd_wclk
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port sacefpd_awuser[15]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port sacefpd_awuser[14]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port sacefpd_awuser[13]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port sacefpd_awuser[12]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port sacefpd_awuser[11]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port sacefpd_awuser[10]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port sacefpd_awuser[9]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port sacefpd_awuser[8]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port sacefpd_awuser[7]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port sacefpd_awuser[6]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port sacefpd_aruser[15]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port sacefpd_aruser[14]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port sacefpd_aruser[13]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port sacefpd_aruser[12]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port sacefpd_aruser[11]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port sacefpd_aruser[10]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port sacefpd_aruser[9]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port sacefpd_aruser[8]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port sacefpd_aruser[7]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port sacefpd_aruser[6]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port test_adc_clk[3]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port test_adc_clk[2]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port test_adc_clk[1]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port test_adc_clk[0]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port test_adc_in[31]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port test_adc_in[30]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port test_adc_in[29]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port test_adc_in[28]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port test_adc_in[27]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port test_adc_in[26]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port test_adc_in[25]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port test_adc_in[24]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port test_adc_in[23]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port test_adc_in[22]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port test_adc_in[21]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port test_adc_in[20]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port test_adc_in[19]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port test_adc_in[18]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port test_adc_in[17]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port test_adc_in[16]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port test_adc_in[15]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port test_adc_in[14]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port test_adc_in[13]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port test_adc_in[12]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port test_adc_in[11]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port test_adc_in[10]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port test_adc_in[9]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port test_adc_in[8]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port test_adc_in[7]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port test_adc_in[6]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port test_adc_in[5]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port test_adc_in[4]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port test_adc_in[3]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port test_adc_in[2]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port test_adc_in[1]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port test_adc_in[0]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port test_adc2_in[31]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port test_adc2_in[30]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port test_adc2_in[29]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port test_adc2_in[28]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port test_adc2_in[27]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port test_adc2_in[26]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port test_adc2_in[25]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port test_adc2_in[24]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port test_adc2_in[23]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port test_adc2_in[22]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port test_adc2_in[21]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port test_adc2_in[20]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port test_adc2_in[19]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port test_adc2_in[18]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port test_adc2_in[17]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port test_adc2_in[16]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port test_adc2_in[15]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port test_adc2_in[14]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port test_adc2_in[13]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port test_adc2_in[12]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port test_adc2_in[11]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port test_adc2_in[10]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port test_adc2_in[9]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port test_adc2_in[8]
-WARNING: [Synth 8-3331] design zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e has unconnected port test_adc2_in[7]
-INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2190.215 ; gain = 0.000 ; free physical = 966 ; free virtual = 7391
+Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 2627.250 ; gain = 58.871 ; free physical = 158 ; free virtual = 3390
 ---------------------------------------------------------------------------------
-
-Report Check Netlist: 
-+------+------------------+-------+---------+-------+------------------+
-|      |Item              |Errors |Warnings |Status |Description       |
-+------+------------------+-------+---------+-------+------------------+
-|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
-+------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2190.215 ; gain = 0.000 ; free physical = 951 ; free virtual = 7382
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:18 . Memory (MB): peak = 2642.094 ; gain = 73.715 ; free physical = 164 ; free virtual = 2823
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2190.215 ; gain = 0.000 ; free physical = 951 ; free virtual = 7382
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:18 . Memory (MB): peak = 2642.094 ; gain = 73.715 ; free physical = 170 ; free virtual = 2821
 ---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2653.000 ; gain = 0.000 ; free physical = 647 ; free virtual = 2954
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -207,19 +161,18 @@ Initializing timing engine
 Parsing XDC File [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0_ooc.xdc] for cell 'inst'
 Finished Parsing XDC File [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0_ooc.xdc] for cell 'inst'
 Parsing XDC File [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0.xdc] for cell 'inst'
-create_clock: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2270.180 ; gain = 0.000 ; free physical = 366 ; free virtual = 6875
 Finished Parsing XDC File [/home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0.xdc] for cell 'inst'
 Parsing XDC File [/home/y/fpga/tmp1/tmp1.runs/design_1_zynq_ultra_ps_e_0_0_synth_1/dont_touch.xdc]
 Finished Parsing XDC File [/home/y/fpga/tmp1/tmp1.runs/design_1_zynq_ultra_ps_e_0_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2270.180 ; gain = 0.000 ; free physical = 367 ; free virtual = 6875
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2734.875 ; gain = 0.000 ; free physical = 430 ; free virtual = 2986
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.12 . Memory (MB): peak = 2270.180 ; gain = 0.000 ; free physical = 351 ; free virtual = 6866
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.10 . Memory (MB): peak = 2734.875 ; gain = 0.000 ; free physical = 426 ; free virtual = 2982
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:26 ; elapsed = 00:00:33 . Memory (MB): peak = 2270.180 ; gain = 79.965 ; free physical = 196 ; free virtual = 6786
+Finished Constraint Validation : Time (s): cpu = 00:00:31 ; elapsed = 00:00:43 . Memory (MB): peak = 2734.875 ; gain = 166.496 ; free physical = 418 ; free virtual = 3080
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -227,7 +180,7 @@ Start Loading Part and Timing Information
 Loading part: xczu3eg-sbva484-1-e
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:26 ; elapsed = 00:00:33 . Memory (MB): peak = 2270.180 ; gain = 79.965 ; free physical = 190 ; free virtual = 6784
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:31 ; elapsed = 00:00:43 . Memory (MB): peak = 2734.875 ; gain = 166.496 ; free physical = 418 ; free virtual = 3080
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -235,17 +188,11 @@ Start Applying 'set_property' XDC Constraints
 Applied set_property DONT_TOUCH = true for inst/PS8_i. (constraint file  /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0.xdc, line 25).
 Applied set_property DONT_TOUCH = true for inst. (constraint file  /home/y/fpga/tmp1/tmp1.runs/design_1_zynq_ultra_ps_e_0_0_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:33 . Memory (MB): peak = 2270.180 ; gain = 79.965 ; free physical = 182 ; free virtual = 6788
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:43 . Memory (MB): peak = 2734.875 ; gain = 166.496 ; free physical = 416 ; free virtual = 3078
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:27 ; elapsed = 00:00:35 . Memory (MB): peak = 2270.180 ; gain = 79.965 ; free physical = 168 ; free virtual = 6753
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:32 ; elapsed = 00:00:44 . Memory (MB): peak = 2734.875 ; gain = 166.496 ; free physical = 378 ; free virtual = 3042
 ---------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -254,17 +201,6 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start RTL Hierarchical Component Statistics 
----------------------------------------------------------------------------------
-Hierarchical RTL Component report 
-Module zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
----------------------------------------------------------------------------------
-Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Part Resource Summary
@@ -278,46 +214,27 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-Warning: Parallel synthesis criteria is not met 
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:36 . Memory (MB): peak = 2270.180 ; gain = 79.965 ; free physical = 202 ; free virtual = 6709
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:46 . Memory (MB): peak = 2734.875 ; gain = 166.496 ; free physical = 269 ; free virtual = 2938
 ---------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:03 ; elapsed = 00:01:45 . Memory (MB): peak = 3842.617 ; gain = 1652.402 ; free physical = 329 ; free virtual = 5222
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:21 ; elapsed = 00:02:59 . Memory (MB): peak = 4362.219 ; gain = 1793.840 ; free physical = 148 ; free virtual = 603
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:04 ; elapsed = 00:01:46 . Memory (MB): peak = 3868.625 ; gain = 1678.410 ; free physical = 298 ; free virtual = 5197
+Finished Timing Optimization : Time (s): cpu = 00:01:21 ; elapsed = 00:03:00 . Memory (MB): peak = 4387.227 ; gain = 1818.848 ; free physical = 172 ; free virtual = 669
 ---------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:17 ; elapsed = 00:02:01 . Memory (MB): peak = 3879.094 ; gain = 1688.879 ; free physical = 1486 ; free virtual = 6445
+Finished Technology Mapping : Time (s): cpu = 00:01:32 ; elapsed = 00:03:11 . Memory (MB): peak = 4403.242 ; gain = 1834.863 ; free physical = 3309 ; free virtual = 4379
 ---------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start IO Insertion
 ---------------------------------------------------------------------------------
@@ -435,50 +352,37 @@ INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[6]_inferred:in0[5] to co
 INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[6]_inferred:in0[4] to constant 0
 INFO: [Common 17-14] Message 'Synth 8-3295' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:26 ; elapsed = 00:02:11 . Memory (MB): peak = 3890.000 ; gain = 1699.785 ; free physical = 1312 ; free virtual = 6248
+Finished IO Insertion : Time (s): cpu = 00:01:44 ; elapsed = 00:03:22 . Memory (MB): peak = 4409.180 ; gain = 1840.801 ; free physical = 1979 ; free virtual = 3654
 ---------------------------------------------------------------------------------
-
-Report Check Netlist: 
-+------+------------------+-------+---------+-------+------------------+
-|      |Item              |Errors |Warnings |Status |Description       |
-+------+------------------+-------+---------+-------+------------------+
-|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
-+------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:26 ; elapsed = 00:02:11 . Memory (MB): peak = 3890.000 ; gain = 1699.785 ; free physical = 1312 ; free virtual = 6248
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:44 ; elapsed = 00:03:22 . Memory (MB): peak = 4409.180 ; gain = 1840.801 ; free physical = 1976 ; free virtual = 3651
 ---------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:26 ; elapsed = 00:02:11 . Memory (MB): peak = 3890.000 ; gain = 1699.785 ; free physical = 1312 ; free virtual = 6248
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:44 ; elapsed = 00:03:22 . Memory (MB): peak = 4409.180 ; gain = 1840.801 ; free physical = 1963 ; free virtual = 3638
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:26 ; elapsed = 00:02:11 . Memory (MB): peak = 3890.000 ; gain = 1699.785 ; free physical = 1311 ; free virtual = 6247
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:44 ; elapsed = 00:03:22 . Memory (MB): peak = 4409.180 ; gain = 1840.801 ; free physical = 1977 ; free virtual = 3652
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:26 ; elapsed = 00:02:11 . Memory (MB): peak = 3890.000 ; gain = 1699.785 ; free physical = 1311 ; free virtual = 6247
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:44 ; elapsed = 00:03:22 . Memory (MB): peak = 4409.180 ; gain = 1840.801 ; free physical = 1976 ; free virtual = 3651
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:26 ; elapsed = 00:02:11 . Memory (MB): peak = 3890.000 ; gain = 1699.785 ; free physical = 1306 ; free virtual = 6242
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:44 ; elapsed = 00:03:22 . Memory (MB): peak = 4409.180 ; gain = 1840.801 ; free physical = 1975 ; free virtual = 3650
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -499,40 +403,27 @@ Report Cell Usage:
 |3     |PS8     |     1|
 |4     |FDRE    |     1|
 +------+--------+------+
-
-Report Instance Areas: 
-+------+---------+---------------------------------------+------+
-|      |Instance |Module                                 |Cells |
-+------+---------+---------------------------------------+------+
-|1     |top      |                                       |   295|
-|2     |  inst   |zynq_ultra_ps_e_v3_3_0_zynq_ultra_ps_e |   295|
-+------+---------+---------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:26 ; elapsed = 00:02:11 . Memory (MB): peak = 3890.000 ; gain = 1699.785 ; free physical = 1305 ; free virtual = 6241
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:44 ; elapsed = 00:03:22 . Memory (MB): peak = 4409.180 ; gain = 1840.801 ; free physical = 1975 ; free virtual = 3650
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 569 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:13 ; elapsed = 00:01:54 . Memory (MB): peak = 3890.000 ; gain = 1619.820 ; free physical = 1341 ; free virtual = 6277
-Synthesis Optimization Complete : Time (s): cpu = 00:01:26 ; elapsed = 00:02:11 . Memory (MB): peak = 3890.008 ; gain = 1699.785 ; free physical = 1341 ; free virtual = 6277
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:33 ; elapsed = 00:03:08 . Memory (MB): peak = 4409.180 ; gain = 1748.020 ; free physical = 2003 ; free virtual = 3679
+Synthesis Optimization Complete : Time (s): cpu = 00:01:44 ; elapsed = 00:03:23 . Memory (MB): peak = 4409.188 ; gain = 1840.801 ; free physical = 2002 ; free virtual = 3678
 INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 4409.188 ; gain = 0.000 ; free physical = 2054 ; free virtual = 3734
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3919.719 ; gain = 0.000 ; free physical = 1251 ; free virtual = 6178
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4435.961 ; gain = 0.000 ; free physical = 1920 ; free virtual = 3625
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-122 Infos, 111 Warnings, 0 Critical Warnings and 0 Errors encountered.
+126 Infos, 68 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:42 ; elapsed = 00:02:36 . Memory (MB): peak = 3919.719 ; gain = 2521.953 ; free physical = 2382 ; free virtual = 7309
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3919.719 ; gain = 0.000 ; free physical = 2382 ; free virtual = 7309
-WARNING: [Constraints 18-5210] No constraints selected for write.
-Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+synth_design: Time (s): cpu = 00:02:13 ; elapsed = 00:03:57 . Memory (MB): peak = 4435.961 ; gain = 2251.984 ; free physical = 3095 ; free virtual = 4800
 INFO: [Common 17-1381] The checkpoint '/home/y/fpga/tmp1/tmp1.runs/design_1_zynq_ultra_ps_e_0_0_synth_1/design_1_zynq_ultra_ps_e_0_0.dcp' has been generated.
 WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_zynq_ultra_ps_e_0_0, cache-ID = 63b5057d6abe5785
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3919.719 ; gain = 0.000 ; free physical = 2237 ; free virtual = 7177
-WARNING: [Constraints 18-5210] No constraints selected for write.
-Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_zynq_ultra_ps_e_0_0, cache-ID = d57d6f6b7c454e6f
 INFO: [Common 17-1381] The checkpoint '/home/y/fpga/tmp1/tmp1.runs/design_1_zynq_ultra_ps_e_0_0_synth_1/design_1_zynq_ultra_ps_e_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_zynq_ultra_ps_e_0_0_utilization_synth.rpt -pb design_1_zynq_ultra_ps_e_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat Jun 27 11:45:33 2020...
+INFO: [Common 17-206] Exiting Vivado at Sun Jun 28 20:24:55 2020...
