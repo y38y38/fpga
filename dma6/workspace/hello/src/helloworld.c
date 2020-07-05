@@ -57,9 +57,11 @@ int main()
     print("Hello World\n\r");
     u32*ptr;
     ptr = (u32*)0x40000000;
+//    ptr = (u32*)0x30000000;
 
     int j;
     for(j=0;j<32;j++) {
+//        *(ptr+j) = 0xccccbbbb;
         *(ptr+j) = 0xaaaa5555;
     }
     Xil_DCacheFlush();
@@ -81,9 +83,12 @@ int main()
 
 //    ptr = (u32*)0xa0000004;//slv_reg1
 //    *ptr = 0x8;
+    ptr = (u32*)0xa0000004;//slv_reg2
+//    *ptr = 0x30000000;
+    *ptr = 0x40000000;
 
-    ptr = (u32*)0xa0000008;//slv_reg2
-    *ptr = 0xd;
+    ptr = (u32*)0xa0000000;//slv_reg2
+    *ptr = 0x1;
 
 //    ptr = (u32*)0xa000000c;//slv_reg3
 //    *ptr = 0x10;
@@ -105,6 +110,7 @@ int main()
         xil_printf("ptr %x val %x\n\r", ptr, *ptr);
         ptr = (u32*)0xa000000c;
         xil_printf("ptr %x val %x\n\r", ptr, *ptr);
+     	 xil_printf("\n\r");
         usleep(10000);
     }
 

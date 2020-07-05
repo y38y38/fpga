@@ -2,8 +2,8 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Wed Jul  1 20:32:40 2020
-# Process ID: 6108
+# Start of session at: Sun Jul  5 10:49:16 2020
+# Process ID: 15970
 # Current directory: /home/y/fpga/dma6/dma6.runs/impl_1
 # Command line: vivado -log design_1_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source design_1_wrapper.tcl -notrace
 # Log file: /home/y/fpga/dma6/dma6.runs/impl_1/design_1_wrapper.vdi
@@ -26,7 +26,7 @@ INFO: [Project 1-454] Reading design checkpoint '/home/y/fpga/dma6/dma6.srcs/sou
 INFO: [Project 1-454] Reading design checkpoint '/home/y/fpga/dma6/dma6.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0.dcp' for cell 'design_1_i/ps8_0_axi_periph/s00_couplers/auto_pc'
 INFO: [Project 1-454] Reading design checkpoint '/home/y/fpga/dma6/dma6.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_1/design_1_auto_ds_1.dcp' for cell 'design_1_i/ps8_0_axi_periph/s01_couplers/auto_ds'
 INFO: [Project 1-454] Reading design checkpoint '/home/y/fpga/dma6/dma6.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1.dcp' for cell 'design_1_i/ps8_0_axi_periph/s01_couplers/auto_pc'
-Netlist sorting complete. Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.18 . Memory (MB): peak = 2621.504 ; gain = 0.000 ; free physical = 3366 ; free virtual = 10825
+Netlist sorting complete. Time (s): cpu = 00:00:00.22 ; elapsed = 00:00:00.22 . Memory (MB): peak = 2621.438 ; gain = 0.000 ; free physical = 5631 ; free virtual = 12528
 INFO: [Netlist 29-17] Analyzing 92 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2020.1
@@ -68,14 +68,14 @@ Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/t
 Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/axi_smc/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
 Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/axi_smc/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2789.504 ; gain = 0.000 ; free physical = 3240 ; free virtual = 10699
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2781.438 ; gain = 0.000 ; free physical = 5476 ; free virtual = 12552
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 65 instances were transformed.
   RAM32M16 => RAM32M16 (RAMD32(x14), RAMS32(x2)): 65 instances
 
 19 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 link_design completed successfully
-link_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:25 . Memory (MB): peak = 2789.504 ; gain = 470.430 ; free physical = 3240 ; free virtual = 10699
+link_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:33 . Memory (MB): peak = 2781.438 ; gain = 464.430 ; free physical = 5478 ; free virtual = 12552
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xczu3eg'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xczu3eg'
@@ -86,59 +86,59 @@ INFO: [DRC 23-27] Running DRC with 8 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2789.504 ; gain = 0.000 ; free physical = 3225 ; free virtual = 10686
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2781.438 ; gain = 0.000 ; free physical = 5450 ; free virtual = 12507
 
 Starting Cache Timing Information Task
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Ending Cache Timing Information Task | Checksum: 37b8d736
+Ending Cache Timing Information Task | Checksum: 3982d5bd
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2942.402 ; gain = 152.898 ; free physical = 3048 ; free virtual = 10508
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 2942.367 ; gain = 160.930 ; free physical = 5217 ; free virtual = 12332
 
 Starting Logic Optimization Task
 
 Phase 1 Retarget
-INFO: [Opt 31-138] Pushed 23 inverter(s) to 1030 load pin(s).
+INFO: [Opt 31-138] Pushed 23 inverter(s) to 1093 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 1 Retarget | Checksum: f813f351
+Phase 1 Retarget | Checksum: 168b1edb8
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.61 . Memory (MB): peak = 3112.246 ; gain = 0.000 ; free physical = 2896 ; free virtual = 10356
-INFO: [Opt 31-389] Phase Retarget created 186 cells and removed 498 cells
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.89 . Memory (MB): peak = 3113.242 ; gain = 0.000 ; free physical = 4985 ; free virtual = 12136
+INFO: [Opt 31-389] Phase Retarget created 154 cells and removed 466 cells
 INFO: [Opt 31-1021] In phase Retarget, 64 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 2 Constant propagation
-INFO: [Opt 31-138] Pushed 11 inverter(s) to 12 load pin(s).
-Phase 2 Constant propagation | Checksum: 8ed15aee
+INFO: [Opt 31-138] Pushed 16 inverter(s) to 25 load pin(s).
+Phase 2 Constant propagation | Checksum: 140d5b7fb
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 3112.246 ; gain = 0.000 ; free physical = 2896 ; free virtual = 10356
-INFO: [Opt 31-389] Phase Constant propagation created 173 cells and removed 1615 cells
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 3113.242 ; gain = 0.000 ; free physical = 4984 ; free virtual = 12136
+INFO: [Opt 31-389] Phase Constant propagation created 189 cells and removed 1416 cells
 INFO: [Opt 31-1021] In phase Constant propagation, 69 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 3 Sweep
-Phase 3 Sweep | Checksum: 1bf5fe12
+Phase 3 Sweep | Checksum: 1110c8a45
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 3112.246 ; gain = 0.000 ; free physical = 2895 ; free virtual = 10355
-INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 1263 cells
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3113.242 ; gain = 0.000 ; free physical = 4987 ; free virtual = 12137
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 1252 cells
 INFO: [Opt 31-1021] In phase Sweep, 218 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 4 BUFG optimization
 INFO: [Opt 31-1077] Phase BUFG optimization inserted 0 global clock buffer(s) for CLOCK_LOW_FANOUT.
-Phase 4 BUFG optimization | Checksum: 1bf5fe12
+Phase 4 BUFG optimization | Checksum: 1110c8a45
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 3112.246 ; gain = 0.000 ; free physical = 2895 ; free virtual = 10355
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 3113.242 ; gain = 0.000 ; free physical = 4986 ; free virtual = 12136
 INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
 
 Phase 5 Shift Register Optimization
 INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
-Phase 5 Shift Register Optimization | Checksum: 1bf5fe12
+Phase 5 Shift Register Optimization | Checksum: 1110c8a45
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3112.246 ; gain = 0.000 ; free physical = 2895 ; free virtual = 10355
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 3113.242 ; gain = 0.000 ; free physical = 4996 ; free virtual = 12134
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Phase 6 Post Processing Netlist
-Phase 6 Post Processing Netlist | Checksum: 201a0f09
+Phase 6 Post Processing Netlist | Checksum: 18d9edb83
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3112.246 ; gain = 0.000 ; free physical = 2895 ; free virtual = 10355
-INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 9 cells
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3113.242 ; gain = 0.000 ; free physical = 4995 ; free virtual = 12133
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 5 cells
 INFO: [Opt 31-1021] In phase Post Processing Netlist, 82 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 Opt_design Change Summary
 =========================
@@ -147,43 +147,43 @@ Opt_design Change Summary
 -------------------------------------------------------------------------------------------------------------------------
 |  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
 -------------------------------------------------------------------------------------------------------------------------
-|  Retarget                     |             186  |             498  |                                             64  |
-|  Constant propagation         |             173  |            1615  |                                             69  |
-|  Sweep                        |               0  |            1263  |                                            218  |
+|  Retarget                     |             154  |             466  |                                             64  |
+|  Constant propagation         |             189  |            1416  |                                             69  |
+|  Sweep                        |               0  |            1252  |                                            218  |
 |  BUFG optimization            |               0  |               0  |                                              0  |
 |  Shift Register Optimization  |               0  |               0  |                                              0  |
-|  Post Processing Netlist      |               0  |               9  |                                             82  |
+|  Post Processing Netlist      |               0  |               5  |                                             82  |
 -------------------------------------------------------------------------------------------------------------------------
 
 
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3112.246 ; gain = 0.000 ; free physical = 2895 ; free virtual = 10355
-Ending Logic Optimization Task | Checksum: d5805e18
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3113.242 ; gain = 0.000 ; free physical = 4994 ; free virtual = 12132
+Ending Logic Optimization Task | Checksum: 11aca88d1
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3112.246 ; gain = 0.000 ; free physical = 2895 ; free virtual = 10355
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3113.242 ; gain = 0.000 ; free physical = 4994 ; free virtual = 12132
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
-Ending Power Optimization Task | Checksum: d5805e18
+Ending Power Optimization Task | Checksum: 11aca88d1
 
-Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3112.246 ; gain = 0.000 ; free physical = 2895 ; free virtual = 10355
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3113.242 ; gain = 0.000 ; free physical = 4995 ; free virtual = 12132
 
 Starting Final Cleanup Task
-Ending Final Cleanup Task | Checksum: d5805e18
+Ending Final Cleanup Task | Checksum: 11aca88d1
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3112.246 ; gain = 0.000 ; free physical = 2895 ; free virtual = 10355
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3113.242 ; gain = 0.000 ; free physical = 4995 ; free virtual = 12132
 
 Starting Netlist Obfuscation Task
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3112.246 ; gain = 0.000 ; free physical = 2895 ; free virtual = 10355
-Ending Netlist Obfuscation Task | Checksum: d5805e18
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3113.242 ; gain = 0.000 ; free physical = 4995 ; free virtual = 12132
+Ending Netlist Obfuscation Task | Checksum: 11aca88d1
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3112.246 ; gain = 0.000 ; free physical = 2895 ; free virtual = 10355
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3113.242 ; gain = 0.000 ; free physical = 4995 ; free virtual = 12132
 INFO: [Common 17-83] Releasing license: Implementation
 41 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 3112.246 ; gain = 322.742 ; free physical = 2895 ; free virtual = 10355
+opt_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 3113.242 ; gain = 331.805 ; free physical = 4995 ; free virtual = 12132
 INFO: [Timing 38-480] Writing timing data to binary archive.
 INFO: [Common 17-1381] The checkpoint '/home/y/fpga/dma6/dma6.runs/impl_1/design_1_wrapper_opt.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file design_1_wrapper_drc_opted.rpt -pb design_1_wrapper_drc_opted.pb -rpx design_1_wrapper_drc_opted.rpx
@@ -209,30 +209,30 @@ INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 
 Phase 1 Placer Initialization
 
 Phase 1.1 Placer Initialization Netlist Sorting
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3222.906 ; gain = 0.000 ; free physical = 2872 ; free virtual = 10336
-Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 06c2a6a2
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3218.867 ; gain = 0.000 ; free physical = 5691 ; free virtual = 12507
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: bafb06e5
 
-Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.06 . Memory (MB): peak = 3222.906 ; gain = 0.000 ; free physical = 2872 ; free virtual = 10336
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3222.906 ; gain = 0.000 ; free physical = 2872 ; free virtual = 10336
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3218.867 ; gain = 0.000 ; free physical = 5691 ; free virtual = 12507
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3218.867 ; gain = 0.000 ; free physical = 5691 ; free virtual = 12507
 
 Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: ee0218b6
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: a4d6b65f
 
-Time (s): cpu = 00:00:29 ; elapsed = 00:00:41 . Memory (MB): peak = 4291.207 ; gain = 1068.301 ; free physical = 2061 ; free virtual = 9526
+Time (s): cpu = 00:00:37 ; elapsed = 00:00:52 . Memory (MB): peak = 4291.141 ; gain = 1072.273 ; free physical = 4411 ; free virtual = 11396
 
 Phase 1.3 Build Placer Netlist Model
-Phase 1.3 Build Placer Netlist Model | Checksum: 1dc37a536
+Phase 1.3 Build Placer Netlist Model | Checksum: b20ea49d
 
-Time (s): cpu = 00:00:34 ; elapsed = 00:00:44 . Memory (MB): peak = 4330.250 ; gain = 1107.344 ; free physical = 2004 ; free virtual = 9469
+Time (s): cpu = 00:00:41 ; elapsed = 00:00:55 . Memory (MB): peak = 4330.184 ; gain = 1111.316 ; free physical = 4348 ; free virtual = 11333
 
 Phase 1.4 Constrain Clocks/Macros
-Phase 1.4 Constrain Clocks/Macros | Checksum: 1dc37a536
+Phase 1.4 Constrain Clocks/Macros | Checksum: b20ea49d
 
-Time (s): cpu = 00:00:34 ; elapsed = 00:00:44 . Memory (MB): peak = 4330.250 ; gain = 1107.344 ; free physical = 2004 ; free virtual = 9469
-Phase 1 Placer Initialization | Checksum: 1dc37a536
+Time (s): cpu = 00:00:41 ; elapsed = 00:00:55 . Memory (MB): peak = 4330.184 ; gain = 1111.316 ; free physical = 4348 ; free virtual = 11333
+Phase 1 Placer Initialization | Checksum: b20ea49d
 
-Time (s): cpu = 00:00:34 ; elapsed = 00:00:44 . Memory (MB): peak = 4330.250 ; gain = 1107.344 ; free physical = 2004 ; free virtual = 9469
+Time (s): cpu = 00:00:41 ; elapsed = 00:00:55 . Memory (MB): peak = 4330.184 ; gain = 1111.316 ; free physical = 4348 ; free virtual = 11333
 
 Phase 2 Global Placement
 
@@ -241,42 +241,42 @@ Phase 2.1 Floorplanning
 Phase 2.1.1 Partition Driven Placement
 
 Phase 2.1.1.1 PBP: Partition Driven Placement
-Phase 2.1.1.1 PBP: Partition Driven Placement | Checksum: 1099f9d0f
+Phase 2.1.1.1 PBP: Partition Driven Placement | Checksum: 14ecc2666
 
-Time (s): cpu = 00:00:36 ; elapsed = 00:00:44 . Memory (MB): peak = 4330.250 ; gain = 1107.344 ; free physical = 1999 ; free virtual = 9464
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:56 . Memory (MB): peak = 4330.184 ; gain = 1111.316 ; free physical = 4340 ; free virtual = 11326
 
 Phase 2.1.1.2 PBP: Clock Region Placement
-Phase 2.1.1.2 PBP: Clock Region Placement | Checksum: 1099f9d0f
+Phase 2.1.1.2 PBP: Clock Region Placement | Checksum: 14ecc2666
 
-Time (s): cpu = 00:00:36 ; elapsed = 00:00:44 . Memory (MB): peak = 4330.250 ; gain = 1107.344 ; free physical = 1998 ; free virtual = 9463
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:56 . Memory (MB): peak = 4330.184 ; gain = 1111.316 ; free physical = 4342 ; free virtual = 11324
 
 Phase 2.1.1.3 PBP: Compute Congestion
-Phase 2.1.1.3 PBP: Compute Congestion | Checksum: 1099f9d0f
+Phase 2.1.1.3 PBP: Compute Congestion | Checksum: 14ecc2666
 
-Time (s): cpu = 00:00:36 ; elapsed = 00:00:45 . Memory (MB): peak = 4330.250 ; gain = 1107.344 ; free physical = 1994 ; free virtual = 9459
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:56 . Memory (MB): peak = 4330.184 ; gain = 1111.316 ; free physical = 4337 ; free virtual = 11319
 
 Phase 2.1.1.4 PBP: UpdateTiming
-Phase 2.1.1.4 PBP: UpdateTiming | Checksum: 14f1eb80c
+Phase 2.1.1.4 PBP: UpdateTiming | Checksum: b9a16b6c
 
-Time (s): cpu = 00:00:37 ; elapsed = 00:00:45 . Memory (MB): peak = 4330.250 ; gain = 1107.344 ; free physical = 1996 ; free virtual = 9461
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:56 . Memory (MB): peak = 4330.184 ; gain = 1111.316 ; free physical = 4340 ; free virtual = 11322
 
 Phase 2.1.1.5 PBP: Add part constraints
-Phase 2.1.1.5 PBP: Add part constraints | Checksum: 14f1eb80c
+Phase 2.1.1.5 PBP: Add part constraints | Checksum: b9a16b6c
 
-Time (s): cpu = 00:00:37 ; elapsed = 00:00:45 . Memory (MB): peak = 4330.250 ; gain = 1107.344 ; free physical = 1996 ; free virtual = 9461
-Phase 2.1.1 Partition Driven Placement | Checksum: 14f1eb80c
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:56 . Memory (MB): peak = 4330.184 ; gain = 1111.316 ; free physical = 4340 ; free virtual = 11322
+Phase 2.1.1 Partition Driven Placement | Checksum: b9a16b6c
 
-Time (s): cpu = 00:00:37 ; elapsed = 00:00:45 . Memory (MB): peak = 4330.250 ; gain = 1107.344 ; free physical = 1996 ; free virtual = 9461
-Phase 2.1 Floorplanning | Checksum: 107c7cb0c
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:56 . Memory (MB): peak = 4330.184 ; gain = 1111.316 ; free physical = 4340 ; free virtual = 11323
+Phase 2.1 Floorplanning | Checksum: 110ea4e6c
 
-Time (s): cpu = 00:00:37 ; elapsed = 00:00:45 . Memory (MB): peak = 4330.250 ; gain = 1107.344 ; free physical = 1996 ; free virtual = 9461
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:56 . Memory (MB): peak = 4330.184 ; gain = 1111.316 ; free physical = 4340 ; free virtual = 11323
 
 Phase 2.2 Global Placement Core
 
 Phase 2.2.1 Physical Synthesis In Placer
-INFO: [Physopt 32-1035] Found 0 LUTNM shape to break, 333 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1035] Found 0 LUTNM shape to break, 332 LUT instances to create LUTNM shape
 INFO: [Physopt 32-1044] Break lutnm for timing: one critical 0, two critical 0, total 0, new lutff created 0
-INFO: [Physopt 32-775] End 1 Pass. Optimized 132 nets or cells. Created 0 new cell, deleted 132 existing cells and moved 0 existing cell
+INFO: [Physopt 32-775] End 1 Pass. Optimized 129 nets or cells. Created 0 new cell, deleted 129 existing cells and moved 0 existing cell
 INFO: [Physopt 32-65] No nets found for high-fanout optimization.
 INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
@@ -287,7 +287,7 @@ INFO: [Physopt 32-670] No setup violation found.  BRAM Register Optimization was
 INFO: [Physopt 32-670] No setup violation found.  URAM Register Optimization was not performed.
 INFO: [Physopt 32-949] No candidate nets found for HD net replication
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4330.250 ; gain = 0.000 ; free physical = 1984 ; free virtual = 9449
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4330.184 ; gain = 0.000 ; free physical = 4322 ; free virtual = 11314
 
 Summary of Physical Synthesis Optimizations
 ============================================
@@ -296,7 +296,7 @@ Summary of Physical Synthesis Optimizations
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 |  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
-|  LUT Combining                                    |            0  |            132  |                   132  |           0  |           1  |  00:00:00  |
+|  LUT Combining                                    |            0  |            129  |                   129  |           0  |           1  |  00:00:00  |
 |  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  DSP Register                                     |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
 |  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
@@ -304,69 +304,69 @@ Summary of Physical Synthesis Optimizations
 |  BRAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
 |  URAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
 |  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
-|  Total                                            |            0  |            132  |                   132  |           0  |           3  |  00:00:00  |
+|  Total                                            |            0  |            129  |                   129  |           0  |           3  |  00:00:00  |
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-Phase 2.2.1 Physical Synthesis In Placer | Checksum: f9ee8630
+Phase 2.2.1 Physical Synthesis In Placer | Checksum: 10489c2d0
 
-Time (s): cpu = 00:00:48 ; elapsed = 00:00:48 . Memory (MB): peak = 4330.250 ; gain = 1107.344 ; free physical = 1984 ; free virtual = 9449
-Phase 2.2 Global Placement Core | Checksum: 1effc27c3
+Time (s): cpu = 00:01:00 ; elapsed = 00:01:01 . Memory (MB): peak = 4330.184 ; gain = 1111.316 ; free physical = 4322 ; free virtual = 11314
+Phase 2.2 Global Placement Core | Checksum: 172de0ac9
 
-Time (s): cpu = 00:00:49 ; elapsed = 00:00:48 . Memory (MB): peak = 4330.250 ; gain = 1107.344 ; free physical = 1978 ; free virtual = 9443
-Phase 2 Global Placement | Checksum: 1effc27c3
+Time (s): cpu = 00:01:02 ; elapsed = 00:01:01 . Memory (MB): peak = 4330.184 ; gain = 1111.316 ; free physical = 4318 ; free virtual = 11309
+Phase 2 Global Placement | Checksum: 172de0ac9
 
-Time (s): cpu = 00:00:49 ; elapsed = 00:00:48 . Memory (MB): peak = 4330.250 ; gain = 1107.344 ; free physical = 1983 ; free virtual = 9448
+Time (s): cpu = 00:01:02 ; elapsed = 00:01:01 . Memory (MB): peak = 4330.184 ; gain = 1111.316 ; free physical = 4319 ; free virtual = 11310
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: 1352ab3c7
+Phase 3.1 Commit Multi Column Macros | Checksum: 16ffc1fce
 
-Time (s): cpu = 00:00:50 ; elapsed = 00:00:49 . Memory (MB): peak = 4330.250 ; gain = 1107.344 ; free physical = 1989 ; free virtual = 9454
+Time (s): cpu = 00:01:02 ; elapsed = 00:01:01 . Memory (MB): peak = 4330.184 ; gain = 1111.316 ; free physical = 4322 ; free virtual = 11314
 
 Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 257cf6f6b
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 2543f3eeb
 
-Time (s): cpu = 00:00:51 ; elapsed = 00:00:49 . Memory (MB): peak = 4330.250 ; gain = 1107.344 ; free physical = 1987 ; free virtual = 9452
+Time (s): cpu = 00:01:04 ; elapsed = 00:01:02 . Memory (MB): peak = 4330.184 ; gain = 1111.316 ; free physical = 4321 ; free virtual = 11314
 
 Phase 3.3 Area Swap Optimization
-Phase 3.3 Area Swap Optimization | Checksum: 20d8163a4
+Phase 3.3 Area Swap Optimization | Checksum: 1b742fac4
 
-Time (s): cpu = 00:00:51 ; elapsed = 00:00:49 . Memory (MB): peak = 4330.250 ; gain = 1107.344 ; free physical = 1982 ; free virtual = 9447
+Time (s): cpu = 00:01:05 ; elapsed = 00:01:02 . Memory (MB): peak = 4330.184 ; gain = 1111.316 ; free physical = 4314 ; free virtual = 11307
 
 Phase 3.4 Small Shape DP
 
 Phase 3.4.1 Small Shape Clustering
-Phase 3.4.1 Small Shape Clustering | Checksum: 1f31f452f
+Phase 3.4.1 Small Shape Clustering | Checksum: 174a8da15
 
-Time (s): cpu = 00:00:52 ; elapsed = 00:00:50 . Memory (MB): peak = 4330.250 ; gain = 1107.344 ; free physical = 1984 ; free virtual = 9450
+Time (s): cpu = 00:01:05 ; elapsed = 00:01:03 . Memory (MB): peak = 4330.184 ; gain = 1111.316 ; free physical = 4316 ; free virtual = 11309
 
 Phase 3.4.2 Flow Legalize Slice Clusters
-Phase 3.4.2 Flow Legalize Slice Clusters | Checksum: 20e4321b2
+Phase 3.4.2 Flow Legalize Slice Clusters | Checksum: 1bf2c0cdb
 
-Time (s): cpu = 00:00:52 ; elapsed = 00:00:50 . Memory (MB): peak = 4330.250 ; gain = 1107.344 ; free physical = 1981 ; free virtual = 9446
+Time (s): cpu = 00:01:05 ; elapsed = 00:01:03 . Memory (MB): peak = 4330.184 ; gain = 1111.316 ; free physical = 4312 ; free virtual = 11306
 
 Phase 3.4.3 Slice Area Swap
-Phase 3.4.3 Slice Area Swap | Checksum: 1ee357b98
+Phase 3.4.3 Slice Area Swap | Checksum: 185c22d4d
 
-Time (s): cpu = 00:00:53 ; elapsed = 00:00:50 . Memory (MB): peak = 4330.250 ; gain = 1107.344 ; free physical = 1977 ; free virtual = 9442
-Phase 3.4 Small Shape DP | Checksum: 2b3b89ffd
+Time (s): cpu = 00:01:06 ; elapsed = 00:01:03 . Memory (MB): peak = 4330.184 ; gain = 1111.316 ; free physical = 4304 ; free virtual = 11296
+Phase 3.4 Small Shape DP | Checksum: dcef3d22
 
-Time (s): cpu = 00:00:54 ; elapsed = 00:00:51 . Memory (MB): peak = 4330.250 ; gain = 1107.344 ; free physical = 1981 ; free virtual = 9447
+Time (s): cpu = 00:01:08 ; elapsed = 00:01:04 . Memory (MB): peak = 4330.184 ; gain = 1111.316 ; free physical = 4308 ; free virtual = 11300
 
 Phase 3.5 Re-assign LUT pins
-Phase 3.5 Re-assign LUT pins | Checksum: 1efbebf5c
+Phase 3.5 Re-assign LUT pins | Checksum: ee19e872
 
-Time (s): cpu = 00:00:55 ; elapsed = 00:00:51 . Memory (MB): peak = 4330.250 ; gain = 1107.344 ; free physical = 1982 ; free virtual = 9447
+Time (s): cpu = 00:01:08 ; elapsed = 00:01:05 . Memory (MB): peak = 4330.184 ; gain = 1111.316 ; free physical = 4307 ; free virtual = 11298
 
 Phase 3.6 Pipeline Register Optimization
-Phase 3.6 Pipeline Register Optimization | Checksum: 152de370a
+Phase 3.6 Pipeline Register Optimization | Checksum: 1d10b2584
 
-Time (s): cpu = 00:00:55 ; elapsed = 00:00:51 . Memory (MB): peak = 4330.250 ; gain = 1107.344 ; free physical = 1982 ; free virtual = 9447
-Phase 3 Detail Placement | Checksum: 152de370a
+Time (s): cpu = 00:01:08 ; elapsed = 00:01:05 . Memory (MB): peak = 4330.184 ; gain = 1111.316 ; free physical = 4307 ; free virtual = 11298
+Phase 3 Detail Placement | Checksum: 1d10b2584
 
-Time (s): cpu = 00:00:55 ; elapsed = 00:00:51 . Memory (MB): peak = 4330.250 ; gain = 1107.344 ; free physical = 1982 ; free virtual = 9447
+Time (s): cpu = 00:01:08 ; elapsed = 00:01:05 . Memory (MB): peak = 4330.184 ; gain = 1111.316 ; free physical = 4307 ; free virtual = 11298
 
 Phase 4 Post Placement Optimization and Clean-Up
 
@@ -374,7 +374,7 @@ Phase 4.1 Post Commit Optimization
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 4.1.1 Post Placement Optimization
-Post Placement Optimization Initialization | Checksum: 1e5835506
+Post Placement Optimization Initialization | Checksum: f520379d
 
 Phase 4.1.1.1 BUFG Insertion
 
@@ -382,63 +382,63 @@ Starting Physical Synthesis Task
 
 Phase 1 Physical Synthesis Initialization
 INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 8 CPUs
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=6.473 | TNS=0.000 |
-Phase 1 Physical Synthesis Initialization | Checksum: 2a51a51eb
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=6.211 | TNS=0.000 |
+Phase 1 Physical Synthesis Initialization | Checksum: 13cf9c0ea
 
-Time (s): cpu = 00:00:00.49 ; elapsed = 00:00:00.21 . Memory (MB): peak = 4330.250 ; gain = 0.000 ; free physical = 1983 ; free virtual = 9448
+Time (s): cpu = 00:00:00.54 ; elapsed = 00:00:00.24 . Memory (MB): peak = 4330.184 ; gain = 0.000 ; free physical = 4291 ; free virtual = 11296
 INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
-Ending Physical Synthesis Task | Checksum: 1cf3b393e
+Ending Physical Synthesis Task | Checksum: 901c9d38
 
-Time (s): cpu = 00:00:00.51 ; elapsed = 00:00:00.23 . Memory (MB): peak = 4330.250 ; gain = 0.000 ; free physical = 1983 ; free virtual = 9448
-Phase 4.1.1.1 BUFG Insertion | Checksum: 1e5835506
+Time (s): cpu = 00:00:00.56 ; elapsed = 00:00:00.26 . Memory (MB): peak = 4330.184 ; gain = 0.000 ; free physical = 4293 ; free virtual = 11298
+Phase 4.1.1.1 BUFG Insertion | Checksum: f520379d
 
-Time (s): cpu = 00:00:59 ; elapsed = 00:00:53 . Memory (MB): peak = 4330.250 ; gain = 1107.344 ; free physical = 1986 ; free virtual = 9451
-INFO: [Place 30-746] Post Placement Timing Summary WNS=6.473. For the most accurate timing information please run report_timing.
-Phase 4.1.1 Post Placement Optimization | Checksum: 1a2d803e1
+Time (s): cpu = 00:01:13 ; elapsed = 00:01:06 . Memory (MB): peak = 4330.184 ; gain = 1111.316 ; free physical = 4293 ; free virtual = 11298
+INFO: [Place 30-746] Post Placement Timing Summary WNS=6.211. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 111758e9a
 
-Time (s): cpu = 00:00:59 ; elapsed = 00:00:53 . Memory (MB): peak = 4330.250 ; gain = 1107.344 ; free physical = 1986 ; free virtual = 9451
-Phase 4.1 Post Commit Optimization | Checksum: 1a2d803e1
+Time (s): cpu = 00:01:14 ; elapsed = 00:01:06 . Memory (MB): peak = 4330.184 ; gain = 1111.316 ; free physical = 4292 ; free virtual = 11298
+Phase 4.1 Post Commit Optimization | Checksum: 111758e9a
 
-Time (s): cpu = 00:00:59 ; elapsed = 00:00:53 . Memory (MB): peak = 4330.250 ; gain = 1107.344 ; free physical = 1986 ; free virtual = 9451
+Time (s): cpu = 00:01:14 ; elapsed = 00:01:07 . Memory (MB): peak = 4330.184 ; gain = 1111.316 ; free physical = 4292 ; free virtual = 11298
 
 Phase 4.2 Post Placement Cleanup
-Phase 4.2 Post Placement Cleanup | Checksum: 1a2d803e1
+Phase 4.2 Post Placement Cleanup | Checksum: 111758e9a
 
-Time (s): cpu = 00:00:59 ; elapsed = 00:00:53 . Memory (MB): peak = 4330.250 ; gain = 1107.344 ; free physical = 1979 ; free virtual = 9444
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4330.250 ; gain = 0.000 ; free physical = 1976 ; free virtual = 9441
+Time (s): cpu = 00:01:14 ; elapsed = 00:01:07 . Memory (MB): peak = 4330.184 ; gain = 1111.316 ; free physical = 4274 ; free virtual = 11289
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4330.184 ; gain = 0.000 ; free physical = 4266 ; free virtual = 11276
 
 Phase 4.3 Placer Reporting
-Phase 4.3 Placer Reporting | Checksum: 1b7edd4e7
+Phase 4.3 Placer Reporting | Checksum: 155009e6c
 
-Time (s): cpu = 00:01:01 ; elapsed = 00:00:54 . Memory (MB): peak = 4330.250 ; gain = 1107.344 ; free physical = 1976 ; free virtual = 9441
+Time (s): cpu = 00:01:16 ; elapsed = 00:01:09 . Memory (MB): peak = 4330.184 ; gain = 1111.316 ; free physical = 4270 ; free virtual = 11277
 
 Phase 4.4 Final Placement Cleanup
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4330.250 ; gain = 0.000 ; free physical = 1976 ; free virtual = 9441
-Phase 4.4 Final Placement Cleanup | Checksum: da8f50ba
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4330.184 ; gain = 0.000 ; free physical = 4270 ; free virtual = 11277
+Phase 4.4 Final Placement Cleanup | Checksum: 1f5114546
 
-Time (s): cpu = 00:01:01 ; elapsed = 00:00:54 . Memory (MB): peak = 4330.250 ; gain = 1107.344 ; free physical = 1976 ; free virtual = 9441
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: da8f50ba
+Time (s): cpu = 00:01:16 ; elapsed = 00:01:09 . Memory (MB): peak = 4330.184 ; gain = 1111.316 ; free physical = 4270 ; free virtual = 11277
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1f5114546
 
-Time (s): cpu = 00:01:01 ; elapsed = 00:00:55 . Memory (MB): peak = 4330.250 ; gain = 1107.344 ; free physical = 1976 ; free virtual = 9441
-Ending Placer Task | Checksum: 3834cea1
+Time (s): cpu = 00:01:16 ; elapsed = 00:01:09 . Memory (MB): peak = 4330.184 ; gain = 1111.316 ; free physical = 4270 ; free virtual = 11277
+Ending Placer Task | Checksum: 113e8d1f8
 
-Time (s): cpu = 00:01:01 ; elapsed = 00:00:55 . Memory (MB): peak = 4330.250 ; gain = 1107.344 ; free physical = 1976 ; free virtual = 9441
+Time (s): cpu = 00:01:16 ; elapsed = 00:01:09 . Memory (MB): peak = 4330.184 ; gain = 1111.316 ; free physical = 4270 ; free virtual = 11276
 INFO: [Common 17-83] Releasing license: Implementation
 75 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:01:04 ; elapsed = 00:00:57 . Memory (MB): peak = 4330.250 ; gain = 1107.344 ; free physical = 2008 ; free virtual = 9473
+place_design: Time (s): cpu = 00:01:21 ; elapsed = 00:01:13 . Memory (MB): peak = 4330.184 ; gain = 1115.188 ; free physical = 4304 ; free virtual = 11310
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00.95 ; elapsed = 00:00:00.27 . Memory (MB): peak = 4330.250 ; gain = 0.000 ; free physical = 1982 ; free virtual = 9462
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.33 . Memory (MB): peak = 4330.184 ; gain = 0.000 ; free physical = 4276 ; free virtual = 11297
 INFO: [Common 17-1381] The checkpoint '/home/y/fpga/dma6/dma6.runs/impl_1/design_1_wrapper_placed.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_io -file design_1_wrapper_io_placed.rpt
-report_io: Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.16 . Memory (MB): peak = 4330.250 ; gain = 0.000 ; free physical = 1985 ; free virtual = 9456
+report_io: Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.22 . Memory (MB): peak = 4330.184 ; gain = 0.000 ; free physical = 4270 ; free virtual = 11293
 INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_placed.rpt -pb design_1_wrapper_utilization_placed.pb
 INFO: [runtcl-4] Executing : report_control_sets -verbose -file design_1_wrapper_control_sets_placed.rpt
-report_control_sets: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.13 . Memory (MB): peak = 4330.250 ; gain = 0.000 ; free physical = 1994 ; free virtual = 9464
+report_control_sets: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.13 . Memory (MB): peak = 4330.184 ; gain = 0.000 ; free physical = 4281 ; free virtual = 11301
 Command: phys_opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xczu3eg'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xczu3eg'
@@ -452,7 +452,7 @@ Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00.94 ; elapsed = 00:00:00.27 . Memory (MB): peak = 4330.250 ; gain = 0.000 ; free physical = 1943 ; free virtual = 9428
+Write XDEF Complete: Time (s): cpu = 00:00:00.98 ; elapsed = 00:00:00.28 . Memory (MB): peak = 4330.184 ; gain = 0.000 ; free physical = 4244 ; free virtual = 11261
 INFO: [Common 17-1381] The checkpoint '/home/y/fpga/dma6/dma6.runs/impl_1/design_1_wrapper_physopt.dcp' has been generated.
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xczu3eg'
@@ -465,47 +465,47 @@ INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more in
 
 Starting Routing Task
 INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 8 CPUs
-Checksum: PlaceDB: f26ba91 ConstDB: 0 ShapeSum: 13f8430a RouteDB: 1515d106
+Checksum: PlaceDB: 17f5f89f ConstDB: 0 ShapeSum: b867c987 RouteDB: 438b0fd2
 
 Phase 1 Build RT Design
-Nodegraph reading from file.  Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.45 . Memory (MB): peak = 4346.258 ; gain = 16.008 ; free physical = 1863 ; free virtual = 9339
-Phase 1 Build RT Design | Checksum: 1ae04fef8
+Nodegraph reading from file.  Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.45 . Memory (MB): peak = 4346.191 ; gain = 16.008 ; free physical = 4154 ; free virtual = 11161
+Phase 1 Build RT Design | Checksum: 1d6bb611d
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 4346.258 ; gain = 16.008 ; free physical = 1860 ; free virtual = 9336
-Post Restoration Checksum: NetGraph: 3f1e5a97 NumContArr: e1e239c1 Constraints: 934420aa Timing: 0
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 4346.191 ; gain = 16.008 ; free physical = 4166 ; free virtual = 11160
+Post Restoration Checksum: NetGraph: fb10e623 NumContArr: f44e7f7b Constraints: 7a0c90d Timing: 0
 
 Phase 2 Router Initialization
 
 Phase 2.1 Create Timer
-Phase 2.1 Create Timer | Checksum: 1b444b502
+Phase 2.1 Create Timer | Checksum: 1f7002eab
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 4346.258 ; gain = 16.008 ; free physical = 1862 ; free virtual = 9338
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 4346.191 ; gain = 16.008 ; free physical = 4168 ; free virtual = 11162
 
 Phase 2.2 Fix Topology Constraints
-Phase 2.2 Fix Topology Constraints | Checksum: 1b444b502
+Phase 2.2 Fix Topology Constraints | Checksum: 1f7002eab
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 4346.258 ; gain = 16.008 ; free physical = 1820 ; free virtual = 9296
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 4346.191 ; gain = 16.008 ; free physical = 4125 ; free virtual = 11120
 
 Phase 2.3 Pre Route Cleanup
-Phase 2.3 Pre Route Cleanup | Checksum: 1b444b502
+Phase 2.3 Pre Route Cleanup | Checksum: 1f7002eab
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 4346.258 ; gain = 16.008 ; free physical = 1820 ; free virtual = 9296
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 4346.191 ; gain = 16.008 ; free physical = 4125 ; free virtual = 11120
 
 Phase 2.4 Global Clock Net Routing
  Number of Nodes with overlaps = 0
-Phase 2.4 Global Clock Net Routing | Checksum: ba47de9a
+Phase 2.4 Global Clock Net Routing | Checksum: 18150a78d
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 4346.258 ; gain = 16.008 ; free physical = 1812 ; free virtual = 9288
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 4346.191 ; gain = 16.008 ; free physical = 4117 ; free virtual = 11112
 
 Phase 2.5 Update Timing
-Phase 2.5 Update Timing | Checksum: 10533912e
+Phase 2.5 Update Timing | Checksum: 299a3facc
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:03 . Memory (MB): peak = 4346.258 ; gain = 16.008 ; free physical = 1811 ; free virtual = 9287
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=6.612  | TNS=0.000  | WHS=-0.052 | THS=-8.196 |
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:04 . Memory (MB): peak = 4346.191 ; gain = 16.008 ; free physical = 4118 ; free virtual = 11113
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=6.394  | TNS=0.000  | WHS=-0.059 | THS=-9.590 |
 
-Phase 2 Router Initialization | Checksum: 19d4c9fd8
+Phase 2 Router Initialization | Checksum: 2a495e856
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:04 . Memory (MB): peak = 4346.258 ; gain = 16.008 ; free physical = 1810 ; free virtual = 9285
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:05 . Memory (MB): peak = 4346.191 ; gain = 16.008 ; free physical = 4112 ; free virtual = 11107
 
 Router Utilization Summary
   Global Vertical Routing Utilization    = 0 %
@@ -513,76 +513,75 @@ Router Utilization Summary
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
-  Number of Failed Nets               = 6883
+  Number of Failed Nets               = 7123
     (Failed Nets is the sum of unrouted and partially routed nets)
-  Number of Unrouted Nets             = 5352
-  Number of Partially Routed Nets     = 1531
+  Number of Unrouted Nets             = 5591
+  Number of Partially Routed Nets     = 1532
   Number of Node Overlaps             = 0
 
 
 Phase 3 Initial Routing
-Phase 3 Initial Routing | Checksum: 1ccb57ca0
+Phase 3 Initial Routing | Checksum: 1a873d7ef
 
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:05 . Memory (MB): peak = 4346.258 ; gain = 16.008 ; free physical = 1800 ; free virtual = 9276
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:06 . Memory (MB): peak = 4346.191 ; gain = 16.008 ; free physical = 4096 ; free virtual = 11091
 
 Phase 4 Rip-up And Reroute
 
 Phase 4.1 Global Iteration 0
- Number of Nodes with overlaps = 1287
- Number of Nodes with overlaps = 81
- Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 1272
+ Number of Nodes with overlaps = 98
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=5.935  | TNS=0.000  | WHS=0.001  | THS=0.000  |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=5.904  | TNS=0.000  | WHS=0.000  | THS=0.000  |
 
-Phase 4.1 Global Iteration 0 | Checksum: 2034dac86
+Phase 4.1 Global Iteration 0 | Checksum: 13f5c741a
 
-Time (s): cpu = 00:00:26 ; elapsed = 00:00:09 . Memory (MB): peak = 4346.258 ; gain = 16.008 ; free physical = 1798 ; free virtual = 9274
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:10 . Memory (MB): peak = 4346.191 ; gain = 16.008 ; free physical = 4064 ; free virtual = 11081
 
 Phase 4.2 Additional Iteration for Hold
-Phase 4.2 Additional Iteration for Hold | Checksum: 14f675969
+Phase 4.2 Additional Iteration for Hold | Checksum: 11f03dd13
 
-Time (s): cpu = 00:00:26 ; elapsed = 00:00:09 . Memory (MB): peak = 4346.258 ; gain = 16.008 ; free physical = 1798 ; free virtual = 9274
-Phase 4 Rip-up And Reroute | Checksum: 14f675969
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:10 . Memory (MB): peak = 4346.191 ; gain = 16.008 ; free physical = 4064 ; free virtual = 11081
+Phase 4 Rip-up And Reroute | Checksum: 11f03dd13
 
-Time (s): cpu = 00:00:26 ; elapsed = 00:00:09 . Memory (MB): peak = 4346.258 ; gain = 16.008 ; free physical = 1798 ; free virtual = 9274
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:10 . Memory (MB): peak = 4346.191 ; gain = 16.008 ; free physical = 4064 ; free virtual = 11081
 
 Phase 5 Delay and Skew Optimization
 
 Phase 5.1 Delay CleanUp
-Phase 5.1 Delay CleanUp | Checksum: 16aace6b5
+Phase 5.1 Delay CleanUp | Checksum: e43d7dff
 
-Time (s): cpu = 00:00:26 ; elapsed = 00:00:09 . Memory (MB): peak = 4346.258 ; gain = 16.008 ; free physical = 1799 ; free virtual = 9275
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:10 . Memory (MB): peak = 4346.191 ; gain = 16.008 ; free physical = 4066 ; free virtual = 11083
 
 Phase 5.2 Clock Skew Optimization
-Phase 5.2 Clock Skew Optimization | Checksum: 16aace6b5
+Phase 5.2 Clock Skew Optimization | Checksum: e43d7dff
 
-Time (s): cpu = 00:00:26 ; elapsed = 00:00:09 . Memory (MB): peak = 4346.258 ; gain = 16.008 ; free physical = 1799 ; free virtual = 9275
-Phase 5 Delay and Skew Optimization | Checksum: 16aace6b5
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:10 . Memory (MB): peak = 4346.191 ; gain = 16.008 ; free physical = 4066 ; free virtual = 11083
+Phase 5 Delay and Skew Optimization | Checksum: e43d7dff
 
-Time (s): cpu = 00:00:26 ; elapsed = 00:00:09 . Memory (MB): peak = 4346.258 ; gain = 16.008 ; free physical = 1799 ; free virtual = 9275
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:10 . Memory (MB): peak = 4346.191 ; gain = 16.008 ; free physical = 4066 ; free virtual = 11083
 
 Phase 6 Post Hold Fix
 
 Phase 6.1 Hold Fix Iter
 
 Phase 6.1.1 Update Timing
-Phase 6.1.1 Update Timing | Checksum: 24528ce90
+Phase 6.1.1 Update Timing | Checksum: ff3a30fa
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:10 . Memory (MB): peak = 4346.258 ; gain = 16.008 ; free physical = 1802 ; free virtual = 9278
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=5.935  | TNS=0.000  | WHS=0.001  | THS=0.000  |
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:11 . Memory (MB): peak = 4346.191 ; gain = 16.008 ; free physical = 4066 ; free virtual = 11079
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=5.904  | TNS=0.000  | WHS=0.000  | THS=0.000  |
 
-Phase 6.1 Hold Fix Iter | Checksum: 1a2962099
+Phase 6.1 Hold Fix Iter | Checksum: 104448f07
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:10 . Memory (MB): peak = 4346.258 ; gain = 16.008 ; free physical = 1802 ; free virtual = 9278
-Phase 6 Post Hold Fix | Checksum: 1a2962099
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:11 . Memory (MB): peak = 4346.191 ; gain = 16.008 ; free physical = 4066 ; free virtual = 11079
+Phase 6 Post Hold Fix | Checksum: 104448f07
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:10 . Memory (MB): peak = 4346.258 ; gain = 16.008 ; free physical = 1802 ; free virtual = 9278
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:11 . Memory (MB): peak = 4346.191 ; gain = 16.008 ; free physical = 4066 ; free virtual = 11079
 
 Phase 7 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 0.951981 %
-  Global Horizontal Routing Utilization  = 1.0933 %
+  Global Vertical Routing Utilization    = 1.00669 %
+  Global Horizontal Routing Utilization  = 1.15971 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -592,44 +591,44 @@ Router Utilization Summary
   Number of Partially Routed Nets     = 0
   Number of Node Overlaps             = 0
 
-Phase 7 Route finalize | Checksum: 24b0d3d96
+Phase 7 Route finalize | Checksum: bd424d47
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:10 . Memory (MB): peak = 4346.258 ; gain = 16.008 ; free physical = 1802 ; free virtual = 9278
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:11 . Memory (MB): peak = 4346.191 ; gain = 16.008 ; free physical = 4066 ; free virtual = 11079
 
 Phase 8 Verifying routed nets
 
  Verification completed successfully
-Phase 8 Verifying routed nets | Checksum: 24b0d3d96
+Phase 8 Verifying routed nets | Checksum: bd424d47
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:10 . Memory (MB): peak = 4346.258 ; gain = 16.008 ; free physical = 1800 ; free virtual = 9276
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:11 . Memory (MB): peak = 4346.191 ; gain = 16.008 ; free physical = 4064 ; free virtual = 11077
 
 Phase 9 Depositing Routes
-Phase 9 Depositing Routes | Checksum: 24b0d3d96
+Phase 9 Depositing Routes | Checksum: bd424d47
 
-Time (s): cpu = 00:00:29 ; elapsed = 00:00:11 . Memory (MB): peak = 4346.258 ; gain = 16.008 ; free physical = 1800 ; free virtual = 9276
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:11 . Memory (MB): peak = 4346.191 ; gain = 16.008 ; free physical = 4064 ; free virtual = 11077
 
 Phase 10 Post Router Timing
-INFO: [Route 35-57] Estimated Timing Summary | WNS=5.935  | TNS=0.000  | WHS=0.001  | THS=0.000  |
+INFO: [Route 35-57] Estimated Timing Summary | WNS=5.904  | TNS=0.000  | WHS=0.000  | THS=0.000  |
 
 INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
-Phase 10 Post Router Timing | Checksum: 24b0d3d96
+Phase 10 Post Router Timing | Checksum: bd424d47
 
-Time (s): cpu = 00:00:29 ; elapsed = 00:00:12 . Memory (MB): peak = 4346.258 ; gain = 16.008 ; free physical = 1801 ; free virtual = 9277
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:11 . Memory (MB): peak = 4346.191 ; gain = 16.008 ; free physical = 4066 ; free virtual = 11079
 INFO: [Route 35-16] Router Completed Successfully
 
-Time (s): cpu = 00:00:29 ; elapsed = 00:00:12 . Memory (MB): peak = 4346.258 ; gain = 16.008 ; free physical = 1850 ; free virtual = 9326
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:11 . Memory (MB): peak = 4346.191 ; gain = 16.008 ; free physical = 4116 ; free virtual = 11130
 
 Routing Is Done.
 INFO: [Common 17-83] Releasing license: Implementation
 98 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:14 . Memory (MB): peak = 4346.258 ; gain = 16.008 ; free physical = 1850 ; free virtual = 9326
+route_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:13 . Memory (MB): peak = 4346.191 ; gain = 16.008 ; free physical = 4116 ; free virtual = 11130
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.48 . Memory (MB): peak = 4346.258 ; gain = 0.000 ; free physical = 1817 ; free virtual = 9310
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.34 . Memory (MB): peak = 4346.191 ; gain = 0.000 ; free physical = 4090 ; free virtual = 11121
 INFO: [Common 17-1381] The checkpoint '/home/y/fpga/dma6/dma6.runs/impl_1/design_1_wrapper_routed.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file design_1_wrapper_drc_routed.rpt -pb design_1_wrapper_drc_routed.pb -rpx design_1_wrapper_drc_routed.rpx
 Command: report_drc -file design_1_wrapper_drc_routed.rpt -pb design_1_wrapper_drc_routed.pb -rpx design_1_wrapper_drc_routed.rpx
@@ -649,7 +648,9 @@ INFO: [Timing 38-35] Done setting XDC timing constraints.
 Running Vector-less Activity Propagation...
 
 Finished Running Vector-less Activity Propagation
-110 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+WARNING: [Power 33-332] Found switching activity that implies high-fanout reset nets being asserted for excessive periods of time which may result in inaccurate power analysis.
+Resolution: To review and fix problems, please run Power Constraints Advisor in the GUI from Tools > Power Constraints Advisor or run report_power with the -advisory option to generate a text report.
+110 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
 report_power completed successfully
 INFO: [runtcl-4] Executing : report_route_status -file design_1_wrapper_route_status.rpt -pb design_1_wrapper_route_status.pb
 INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file design_1_wrapper_timing_summary_routed.rpt -pb design_1_wrapper_timing_summary_routed.pb -rpx design_1_wrapper_timing_summary_routed.rpx -warn_on_violation 
@@ -671,7 +672,7 @@ INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc
 Running DRC as a precondition to command write_bitstream
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
 INFO: [DRC 23-27] Running DRC with 8 threads
-WARNING: [DRC RTSTAT-10] No routable loads: 66 net(s) have no routable loads. The problem bus(es) and/or net(s) are design_1_i/ps8_0_axi_periph/s01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, design_1_i/ps8_0_axi_periph/s01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, design_1_i/ps8_0_axi_periph/s01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, design_1_i/ps8_0_axi_periph/s01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, design_1_i/ps8_0_axi_periph/s01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, design_1_i/ps8_0_axi_periph/s01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, design_1_i/ps8_0_axi_periph/s01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_i, design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_i, design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_i... and (the first 15 of 42 listed).
+WARNING: [DRC RTSTAT-10] No routable loads: 66 net(s) have no routable loads. The problem bus(es) and/or net(s) are design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, design_1_i/ps8_0_axi_periph/s01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, design_1_i/ps8_0_axi_periph/s01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, design_1_i/ps8_0_axi_periph/s01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, design_1_i/ps8_0_axi_periph/s01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, design_1_i/ps8_0_axi_periph/s01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, design_1_i/ps8_0_axi_periph/s01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, design_1_i/ps8_0_axi_periph/s01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_i, design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_i, design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_i... and (the first 15 of 42 listed).
 INFO: [Vivado 12-3199] DRC finished with 0 Errors, 1 Warnings
 INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
 INFO: [Designutils 20-2272] Running write_bitstream with 8 threads.
@@ -684,9 +685,9 @@ Creating bitstream...
 Writing bitstream ./design_1_wrapper.bit...
 INFO: [Vivado 12-1842] Bitgen Completed Successfully.
 INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
-INFO: [Common 17-186] '/home/y/fpga/dma6/dma6.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Wed Jul  1 20:35:24 2020. For additional details about this file, please refer to the WebTalk help file at /tools/Xilinx/Vivado/2020.1/doc/webtalk_introduction.html.
+INFO: [Common 17-186] '/home/y/fpga/dma6/dma6.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Sun Jul  5 10:52:33 2020. For additional details about this file, please refer to the WebTalk help file at /tools/Xilinx/Vivado/2020.1/doc/webtalk_introduction.html.
 INFO: [Common 17-83] Releasing license: Implementation
-134 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+134 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
 write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 4387.281 ; gain = 0.000 ; free physical = 1783 ; free virtual = 9262
-INFO: [Common 17-206] Exiting Vivado at Wed Jul  1 20:35:24 2020...
+write_bitstream: Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 4387.215 ; gain = 0.000 ; free physical = 4114 ; free virtual = 11132
+INFO: [Common 17-206] Exiting Vivado at Sun Jul  5 10:52:33 2020...

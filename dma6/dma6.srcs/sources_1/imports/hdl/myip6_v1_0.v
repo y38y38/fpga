@@ -108,6 +108,7 @@
 	//user start
 	wire dma_start;
 	wire [31:0] dma_value;
+	wire [31:0] result_dma_addr;
 	wire [31:0] dma_addr;
 
 
@@ -123,6 +124,7 @@
 		.DMA_START(dma_start),
 		.DMA_COMP(m00_axi_txn_done),
 		.DMA_VALUE(dma_value),
+		.RESULT_DMA_ADDR(result_dma_addr),
 		.DMA_ADDR(dma_addr),
 		.S_AXI_ACLK(s00_axi_aclk),
 		.S_AXI_ARESETN(s00_axi_aresetn),
@@ -161,7 +163,8 @@
 		.C_M_AXI_BUSER_WIDTH(C_M00_AXI_BUSER_WIDTH)
 	) myip6_v1_0_M00_AXI_inst (
 		.DMA_READ_DATA(dma_value),
-		.DMA_READ_ADDR(dma_addr),
+		.DMA_READ_ADDR(result_dma_addr),
+		.DMA_ADDR(dma_addr),
 		.INIT_AXI_TXN(dma_start),
 		.TXN_DONE(m00_axi_txn_done),
 		.ERROR(m00_axi_error),

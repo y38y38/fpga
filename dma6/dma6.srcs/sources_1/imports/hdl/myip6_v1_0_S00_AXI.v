@@ -18,7 +18,8 @@
 		output wire DMA_START,
 		input wire DMA_COMP,
 		input wire [31:0] DMA_VALUE,
-		input wire [31:0] DMA_ADDR,
+		input wire [31:0] RESULT_DMA_ADDR,
+		output wire [31:0] DMA_ADDR,
 		// User ports ends
 		// Do not modify the ports beyond this line
 
@@ -86,6 +87,7 @@
 
 	//user
 	reg dma_start;
+	reg [31:0] dma_addr;
 
 	// AXI4LITE signals
 	reg [C_S_AXI_ADDR_WIDTH-1 : 0] 	axi_awaddr;
@@ -231,6 +233,7 @@
 	      slv_reg2 <= 0;
 	      slv_reg3 <= 0;
 		  dma_start <=0;
+		  dma_addr <= 32'h30000000;
 	    end 
 	  else begin
 	    if (slv_reg_wren)
@@ -273,13 +276,13 @@
 	        endcase
 		  end else begin
 //			slv_reg0 <= slv_reg1 + slv_reg2;
-			if (slv_reg2[0] == 1'b1) begin
+			if (slv_reg0[0] == 1'b1) begin
 				dma_start <= 1'b1;
+				dma_addr <= slv_reg1;
 			end  
 			if (DMA_COMP == 1'b1) begin
-				slv_reg3 <= DMA_VALUE;
-				slv_reg1 <= DMA_ADDR;
-				slv_reg0 <= 1'b1;
+				slv_reg2 <= DMA_VALUE;
+				slv_reg3 <= RESULT_DMA_ADDR;
 			end
 	      end
 	  end
@@ -416,6 +419,7 @@
 
 	// Add user logic here
 	assign DMA_START = dma_start;
+	assign DMA_ADDR = dma_addr;
 
 	// User logic ends
 

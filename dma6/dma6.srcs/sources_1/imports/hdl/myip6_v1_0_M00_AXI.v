@@ -33,6 +33,7 @@
 		// Users to add ports here
 		output wire [31:0] DMA_READ_DATA,
 		output wire [31:0] DMA_READ_ADDR,
+		input wire [31:0] DMA_ADDR,
 
 		// User ports ends
 		// Do not modify the ports beyond this line
@@ -241,6 +242,7 @@
 	//user
 	reg	[31:0]	dma_read_data;
 	reg	[31:0]	dma_read_addr;
+	reg [31:0]  dma_addr;
 
 
 	// I/O Connections assignments
@@ -274,7 +276,9 @@
 	//Read Address (AR)
 	assign M_AXI_ARID	= 'b0;
 //	assign M_AXI_ARADDR	= C_M_TARGET_SLAVE_BASE_ADDR + axi_araddr;
-	assign M_AXI_ARADDR	= C_M_TARGET_SLAVE_BASE_ADDR;
+//	assign M_AXI_ARADDR	= C_M_TARGET_SLAVE_BASE_ADDR;
+	assign M_AXI_ARADDR	= dma_addr;
+	
 	//Burst LENgth is number of transaction beats, minus 1
 	assign M_AXI_ARLEN	= C_M_AXI_BURST_LEN - 1;
 	//Size should be C_M_AXI_DATA_WIDTH, in 2^n bytes, otherwise narrow bursts are used
@@ -309,7 +313,8 @@
 	    else                                                                       
 	      begin  
 	        init_txn_ff <= INIT_AXI_TXN;
-	        init_txn_ff2 <= init_txn_ff;                                                                 
+	        init_txn_ff2 <= init_txn_ff;
+			dma_addr <= DMA_ADDR;                                                                 
 	      end                                                                      
 	  end     
 
