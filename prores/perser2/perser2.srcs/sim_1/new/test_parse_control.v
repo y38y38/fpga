@@ -26,12 +26,13 @@ module test_parse_control(
 
 	reg PARSE_CLK;
 	reg PARSE_RESETN;
+
 	reg PARSE_START;
 	reg [31:0] PARSE_TOP_ADDR;
 	reg [31:0] PARSE_TOTAL_SIZE;
 
-	wire PARSE_START;
-	wire [31:0] PARSE_TOP_ADDR;
+	wire PARSE_ONE_START;
+	wire [31:0] PARSE_ADDR;
 	wire [31:0] PARSE_SIZE;
 
 	reg [31:0] PARSE_DATA;
@@ -45,10 +46,10 @@ module test_parse_control(
 	wire [15:0]	vertival_size;
 	wire [1:0]		chroma_format;
 	wire [1:0]		interlace_mode;
-	wire [3:0]		aspect_ratio_informat;
+	wire [3:0]		aspect_ratio_information;
 	wire [3:0]		frame_rate_code;
 	wire [7:0]		color_primaries;
-	wire [7:0]		transfer_characterist;
+	wire [7:0]		transfer_characteristic;
 	wire [7:0]		matrix_coefficients;
 	wire [3:0]		alpha_channel_type;
 	wire [8*64-1:0]	luma_quantization_matrix;
@@ -73,7 +74,7 @@ module test_parse_control(
 	.PARSE_DATA_ENABLE(PARSE_DATA_ENABLE),
 
 	.frame_size(frame_size),
-	.frameidentifier(frameidentifier),
+	.frame_identifier(frameidentifier),
 	.frame_header_size(frame_header_size),
 	.bitstream_version(bitstream_version),
 	.encoder_identifier(encoder_identifier),

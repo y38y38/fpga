@@ -26,8 +26,8 @@
 
 
 module parse_control(
-	input wire  PARSE_CLK,
-	input wire  PARSE_RESETN,
+	input wire PARSE_CLK,
+	input wire PARSE_RESETN,
 
 	input wire PARSE_START,
 	input wire [31:0] PARSE_TOP_ADDR,
@@ -41,7 +41,7 @@ module parse_control(
 	input wire PARSE_DATA_ENABLE,
 
 	output wire [31:0]	frame_size,
-	output wire [31:0]	frameidentifier,
+	output wire [31:0]	frame_identifier,
 	output wire [15:0]	frame_header_size,
 	output wire [7:0]		bitstream_version,
 	output wire [31:0]	encoder_identifier,
@@ -114,6 +114,11 @@ module parse_control(
 	localparam	S_chroma_quantization_matrix_13	= 5'd0;
 	localparam	S_chroma_quantization_matrix_14	= 5'd0;
 	localparam	S_chroma_quantization_matrix_15	= 5'd0;
+	localparam 	S_picture_header_size = 5'd0;
+	localparam  S_picture_size = 5'd0;
+	localparam	S_slice_table_Calc1 = 5'd0;
+	localparam	S_slice_table_Calc2 = 5'd0;
+	localparam	S_slice_table_perse = 5'd0;
 
 
 	reg one_parse_start;
@@ -125,7 +130,7 @@ module parse_control(
 	reg [4:0]	State;
 
 	reg [31:0]	reg_frame_size;
-	reg [31:0]	reg_frame_idetifier;
+	reg [31:0]	reg_frame_identifier;
 	reg [15:0]	reg_frame_header_size;
 	reg [7:0]	reg_bitstream_version;
 	reg [31:0]	reg_encoder_identifier;
@@ -143,6 +148,12 @@ module parse_control(
 	reg 		reg_load_chroma_quantization_matrix;
 	reg [8*64-1:0]	reg_luma_quantization_matrix;
 	reg [8*64-1:0]	reg_chroma_quantization_matrix;
+
+
+	reg [7:0] reg_picture_header_size;
+	reg [31:0 ] reg_picture_size;
+	reg [15:0] reg_deprecated_number_of_slices;
+	reg [7:0]  reg_log2_desired_slize_size_in_mb;
 	reg ParamEnable;
 
 	reg [31:0] parse_top_addr;
@@ -230,14 +241,14 @@ module parse_control(
 						parse_size<= 32'd8; 
 						parse_temporary_size = parse_temporary_size + 32'd8;
 					end
-				end else if (State == S_chorma_quantization_matrix_15) begin
+				end else if (State == S_chroma_quantization_matrix_15) begin
 						//get picture_header
 						one_parse_start = 1'b1;
 						parse_addr <= parse_addr + parse_temporary_size;
 						parse_size<= 32'd8; 
 						parse_temporary_size = parse_temporary_size + 32'd8;
 
-				end else if (State == S_slice_talbe_Calc2) begin
+				end else if (State == S_slice_table_Calc2) begin
 						one_parse_start = 1'b1;
 						parse_addr <= parse_addr + parse_temporary_size;
 						parse_size<= reg_slice_table_size; 
@@ -269,7 +280,7 @@ module parse_control(
 			if (PARSE_RESETN == 0 ) begin
 				reg_mb_width <= 16'd0;
 			end else begin
-				if (State == S_pciture_size) begin
+				if (State == S_picture_size) begin
 					if (reg_horizontal_size == 32'd128) begin
 						if (PARSE_DATA[7:0] == 0) begin
 							reg_mb_width = 16'd8;
@@ -363,7 +374,7 @@ module parse_control(
 			if (PARSE_RESETN == 0 ) begin
 				reg_slice_num <= 16'd0;
 			end else begin
-				if (State == S_slice_talbe_Calc1) begin
+				if (State == S_slice_table_Calc1) begin
 					reg_slice_num <= reg_mb_width * reg_mb_height;
 					reg_slice_table_num <= reg_mb_width * reg_mb_height;
 					reg_slice_table_size <= reg_mb_width * reg_mb_height * 2;
@@ -373,11 +384,11 @@ module parse_control(
 
 	reg bram_enable_porta;
 	reg bram_write_enable_porta;
-	reg bram_addr_porta;
-	reg bram_data_in_porta;
+	reg [16:0] bram_addr_porta;
+	reg [31:0] bram_data_in_porta;
 	reg bram_enable_portb;
-	reg bram_addr_portb;
-	reg bram_data_out_portb;
+	reg [16:0] bram_addr_portb;
+	wire [31:0] bram_data_out_portb;
 
 	
 
@@ -385,12 +396,12 @@ blk_mem_gen_0 blk_mem_gen_0_slice_table (
   .clka(PARSE_CLK),              // input wire clka
   .ena(bram_enable_porta),       // input wire ena
   .wea(bram_write_enable_porta), // input wire [0 : 0] wea
-  .addra(bram_addr_porta),       // input wire [17 : 0] addra
-  .dina(bram_data_in_porta),     // input wire [15 : 0] dina
+  .addra(bram_addr_porta),       // input wire [16 : 0] addra
+  .dina(bram_data_in_porta),     // input wire [31 : 0] dina
   .clkb(PARSE_CLK),              // input wire clkb
   .enb(bram_enable_portb),       // input wire enb
-  .addrb(bram_addr_portb),       // input wire [17 : 0] addrb
-  .doutb(bram_data_out_portb)    // output wire [15 : 0] doutb
+  .addrb(bram_addr_portb),       // input wire [16 : 0] addrb
+  .doutb(bram_data_out_portb)    // output wire [31 : 0] doutb
 );
 
 	reg [17:0] slice_table_counter = 18'h0;
@@ -406,7 +417,7 @@ blk_mem_gen_0 blk_mem_gen_0_slice_table (
 				bram_data_in_porta = 16'h0;
 			end	else begin
 				if (PARSE_DATA_ENABLE == 1'b1) begin
-					if (State == S_slice_talbe) begin
+					if (State == S_slice_table_perse) begin
 						bram_write_enable_porta = 1'b1;
 						bram_addr_porta = bram_addr_porta + 1;
 						bram_data_in_porta = PARSE_DATA;
@@ -472,8 +483,8 @@ blk_mem_gen_0 blk_mem_gen_0_slice_table (
 
 						end
 						S_matrix_coefficients:begin
-							reg_matrix_coeffficients <= PARSE_DATA[31:24];
-							reg_alpha_channed_type <= PARSE_DATA[19:16];
+							reg_matrix_coefficients <= PARSE_DATA[31:24];
+							reg_alpha_channel_type <= PARSE_DATA[19:16];
 							reg_load_luma_quantization_matrix <= PARSE_DATA[1];
 							reg_load_chroma_quantization_matrix <= PARSE_DATA[0];
 						end
@@ -526,65 +537,62 @@ blk_mem_gen_0 blk_mem_gen_0_slice_table (
 						S_luma_quantization_matrix_15:begin
 							reg_luma_quantization_matrix[511:480] <= PARSE_DATA[31:0];
 						end
-						S_chorma_quantization_matrix_00:begin
-							reg_chorma_quantization_matrix[31:0] <= PARSE_DATA[31:0];
+						S_chroma_quantization_matrix_00:begin
+							reg_chroma_quantization_matrix[31:0] <= PARSE_DATA[31:0];
 						end
-						S_chorma_quantization_matrix_01:begin
-							reg_chorma_quantization_matrix[63:32] <= PARSE_DATA[31:0];
+						S_chroma_quantization_matrix_01:begin
+							reg_chroma_quantization_matrix[63:32] <= PARSE_DATA[31:0];
 						end
-						S_chorma_quantization_matrix_02:begin
-							reg_chorma_quantization_matrix[95:64] <= PARSE_DATA[31:0];
+						S_chroma_quantization_matrix_02:begin
+							reg_chroma_quantization_matrix[95:64] <= PARSE_DATA[31:0];
 						end
-						S_chorma_quantization_matrix_03:begin
-						reg_chorma_quantization_matrix[127:96] <= PARSE_DATA[31:0];
+						S_chroma_quantization_matrix_03:begin
+						reg_chroma_quantization_matrix[127:96] <= PARSE_DATA[31:0];
 						end
-						S_chorma_quantization_matrix_04:begin
-							reg_chorma_quantization_matrix[159:128] <= PARSE_DATA[31:0];
+						S_chroma_quantization_matrix_04:begin
+							reg_chroma_quantization_matrix[159:128] <= PARSE_DATA[31:0];
 						end
-						S_chorma_quantization_matrix_05:begin
-							reg_chorma_quantization_matrix[191:160] <= PARSE_DATA[31:0];
+						S_chroma_quantization_matrix_05:begin
+							reg_chroma_quantization_matrix[191:160] <= PARSE_DATA[31:0];
 						end
-						S_chorma_quantization_matrix_06:begin
-							reg_chorma_quantization_matrix[223:192] <= PARSE_DATA[31:0];
+						S_chroma_quantization_matrix_06:begin
+							reg_chroma_quantization_matrix[223:192] <= PARSE_DATA[31:0];
 						end
-						S_chorma_quantization_matrix_07:begin
-							reg_chorma_quantization_matrix[255:224] <= PARSE_DATA[31:0];
+						S_chroma_quantization_matrix_07:begin
+							reg_chroma_quantization_matrix[255:224] <= PARSE_DATA[31:0];
 						end
-						S_chorma_quantization_matrix_08:begin
-							reg_chorma_quantization_matrix[287:256] <= PARSE_DATA[31:0];
+						S_chroma_quantization_matrix_08:begin
+							reg_chroma_quantization_matrix[287:256] <= PARSE_DATA[31:0];
 						end
-						S_chorma_quantization_matrix_09:begin
-							reg_chorma_quantization_matrix[319:288] <= PARSE_DATA[31:0];
+						S_chroma_quantization_matrix_09:begin
+							reg_chroma_quantization_matrix[319:288] <= PARSE_DATA[31:0];
 						end
-						S_chorma_quantization_matrix_10:begin
-							reg_chorma_quantization_matrix[351:320] <= PARSE_DATA[31:0];
+						S_chroma_quantization_matrix_10:begin
+							reg_chroma_quantization_matrix[351:320] <= PARSE_DATA[31:0];
 						end
-						S_chorma_quantization_matrix_11:begin
-							reg_chorma_quantization_matrix[385:352] <= PARSE_DATA[31:0];
+						S_chroma_quantization_matrix_11:begin
+							reg_chroma_quantization_matrix[385:352] <= PARSE_DATA[31:0];
 						end
-						S_chorma_quantization_matrix_12:begin
-							reg_chorma_quantization_matrix[415:386] <= PARSE_DATA[31:0];
+						S_chroma_quantization_matrix_12:begin
+							reg_chroma_quantization_matrix[415:386] <= PARSE_DATA[31:0];
 						end
-						S_chorma_quantization_matrix_13:begin
-							reg_chorma_quantization_matrix[447:416] <= PARSE_DATA[31:0];
+						S_chroma_quantization_matrix_13:begin
+							reg_chroma_quantization_matrix[447:416] <= PARSE_DATA[31:0];
 						end
-						S_chorma_quantization_matrix_14:begin
-							reg_chorma_quantization_matrix[479:448] <= PARSE_DATA[31:0];
+						S_chroma_quantization_matrix_14:begin
+							reg_chroma_quantization_matrix[479:448] <= PARSE_DATA[31:0];
 						end
-						S_chorma_quantization_matrix_15:begin
-							reg_chorma_quantization_matrix[511:480] <= PARSE_DATA[31:0];
+						S_chroma_quantization_matrix_15:begin
+							reg_chroma_quantization_matrix[511:480] <= PARSE_DATA[31:0];
 						end
-						S_pciture_header_size:begin
-							reg_pciture_header_size <= PARSE_DATA[31:26];
-							reg_pciture_size[31:8] <= PARSE_DATA[22:0];
+						S_picture_header_size:begin
+							reg_picture_header_size <= PARSE_DATA[31:26];
+							reg_picture_size[31:8] <= PARSE_DATA[22:0];
 						end
-						S_pciture_size:begin
-							reg_pciture_size[7:0] <= PARSE_DATA[31:24];
+						S_picture_size:begin
+							reg_picture_size[7:0] <= PARSE_DATA[31:24];
 							reg_deprecated_number_of_slices <= PARSE_DATA[23:8];
 							reg_log2_desired_slize_size_in_mb <= PARSE_DATA[7:0];
-						end
-						S_slice_talbe:begin
-
 						end
 					endcase
 				end
@@ -625,7 +633,7 @@ blk_mem_gen_0 blk_mem_gen_0_slice_table (
 						else if (PARSE_DATA[0] == 1'b1 ) begin
 							State = S_chroma_quantization_matrix_00;
 						end else begin
-							State = S_pciture_header_size;
+							State = S_picture_header_size;
 						end
 					end
 
@@ -678,70 +686,70 @@ blk_mem_gen_0 blk_mem_gen_0_slice_table (
 						if (reg_load_chroma_quantization_matrix == 1'b1 ) begin
 							State = S_chroma_quantization_matrix_00;
 						end else begin
-							State = S_pciture_header_size;
+							State = S_picture_header_size;
 						end
 					end
-					S_chorma_quantization_matrix_00:begin
-						State = S_chorma_quantization_matrix_01;
+					S_chroma_quantization_matrix_00:begin
+						State = S_chroma_quantization_matrix_01;
 					end
-					S_chorma_quantization_matrix_01:begin
-						State = S_chorma_quantization_matrix_02;
+					S_chroma_quantization_matrix_01:begin
+						State = S_chroma_quantization_matrix_02;
 					end
-					S_chorma_quantization_matrix_02:begin
-						State = S_chorma_quantization_matrix_03;
+					S_chroma_quantization_matrix_02:begin
+						State = S_chroma_quantization_matrix_03;
 					end
-					S_chorma_quantization_matrix_03:begin
-						State = S_chorma_quantization_matrix_04;
+					S_chroma_quantization_matrix_03:begin
+						State = S_chroma_quantization_matrix_04;
 					end
-					S_chorma_quantization_matrix_04:begin
-						State = S_chorma_quantization_matrix_05;
+					S_chroma_quantization_matrix_04:begin
+						State = S_chroma_quantization_matrix_05;
 					end
-					S_chorma_quantization_matrix_05:begin
-						State = S_chorma_quantization_matrix_06;
+					S_chroma_quantization_matrix_05:begin
+						State = S_chroma_quantization_matrix_06;
 					end
-					S_chorma_quantization_matrix_06:begin
-						State = S_chorma_quantization_matrix_07;
+					S_chroma_quantization_matrix_06:begin
+						State = S_chroma_quantization_matrix_07;
 					end
-					S_chorma_quantization_matrix_07:begin
-						State = S_chorma_quantization_matrix_08;
+					S_chroma_quantization_matrix_07:begin
+						State = S_chroma_quantization_matrix_08;
 					end
-					S_chorma_quantization_matrix_08:begin
-						State = S_chorma_quantization_matrix_09;
+					S_chroma_quantization_matrix_08:begin
+						State = S_chroma_quantization_matrix_09;
 					end
-					S_chorma_quantization_matrix_09:begin
-						State = S_chorma_quantization_matrix_10;
+					S_chroma_quantization_matrix_09:begin
+						State = S_chroma_quantization_matrix_10;
 					end
-					S_chorma_quantization_matrix_10:begin
-						State = S_chorma_quantization_matrix_11;
+					S_chroma_quantization_matrix_10:begin
+						State = S_chroma_quantization_matrix_11;
 					end
-					S_chorma_quantization_matrix_11:begin
-						State = S_chorma_quantization_matrix_12;
+					S_chroma_quantization_matrix_11:begin
+						State = S_chroma_quantization_matrix_12;
 					end
-					S_chorma_quantization_matrix_12:begin
-						State = S_chorma_quantization_matrix_13;
+					S_chroma_quantization_matrix_12:begin
+						State = S_chroma_quantization_matrix_13;
 					end
-					S_chorma_quantization_matrix_13:begin
-						State = S_chorma_quantization_matrix_14;
+					S_chroma_quantization_matrix_13:begin
+						State = S_chroma_quantization_matrix_14;
 					end
-					S_chorma_quantization_matrix_14:begin
-						State = S_chorma_quantization_matrix_15;
+					S_chroma_quantization_matrix_14:begin
+						State = S_chroma_quantization_matrix_15;
 					end
-					S_chorma_quantization_matrix_15:begin
-						State = S_pciture_header_size;
+					S_chroma_quantization_matrix_15:begin
+						State = S_picture_header_size;
 					end
-					S_pciture_header_size:begin
+					S_picture_header_size:begin
 						State = S_picture_size;
 					end
-					S_pciture_size:begin
+					S_picture_size:begin
 						//get width_in_mb
-						State = S_slice_talbe_Calc;
+						State = S_slice_table_Calc1;
 					end
-					S_slice_talbe_Calc1:begin
+					S_slice_table_Calc1:begin
 						//calc slice num
-						State = S_slice_talbe_Calc2;
+						State = S_slice_table_Calc2;
 						
 					end
-					S_slice_talbe_Calc2:begin
+					S_slice_table_Calc2:begin
 						//set slice_table size
 						State = S_slice_table_perse;
 					end
