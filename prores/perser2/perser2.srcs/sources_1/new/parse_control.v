@@ -20,6 +20,11 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
+//ToDo
+//one parse startを落とすタイミング
+//matrix tableの配列化
+
+
 module parse_control(
 	input wire  PARSE_CLK,
 	input wire  PARSE_RESETN,
@@ -51,7 +56,11 @@ module parse_control(
 	output wire [7:0]		matrix_coefficients,
 	output wire [3:0]		alpha_channel_type,
 	output wire [8*64-1:0]	luma_quantization_matrix,
-	output wire [8*64-1:0]	chroma_quantization_matrix
+	output wire [8*64-1:0]	chroma_quantization_matrix,
+
+	output wire  [15:0]		mb_height,
+	output wire  [15:0]		mb_width,
+	output wire [15:0]		slice_table_num
 
 
     );
@@ -138,7 +147,15 @@ module parse_control(
 
 	reg [31:0] parse_top_addr;
 	reg [31:0] parse_total_size;
+	reg [31:0] parse_temporary_size;
 
+	reg [15:0] reg_mb_height;
+	reg [15:0] reg_mb_width;
+	reg [15:0] reg_slice_num;
+
+	reg [15:0] reg_slice_table_num;
+
+	reg [15:0] reg_slice_table_size;
 
 	always @(posedge PARSE_CLK)
 		begin
@@ -168,26 +185,233 @@ module parse_control(
 			end
 			else
 			begin  
-				if (PARSE_START == 1'b1)
-				begin
+				if (PARSE_START == 1'b1) begin
 					//parse start!!
 					one_parse_start <= 1'b1;
 					parse_addr <= PARSE_TOP_ADDR;
 					parse_size <= 32'd28;/* frame_size load_chroma_quantization_matrix */
-				end
-				else if (State == S_matrix_coefficients)
-				begin
+					parse_temporary_size <= 32'd28; 
+				end else if (State == S_matrix_coefficients) begin
 					if (reg_load_luma_quantization_matrix == 1'b1) begin
+
+						//get luma_quantization_matrix
 						one_parse_start = 1'b1;
-						parse_addr <= parse_addr + 32'd28;
+						parse_addr <= parse_addr + parse_temporary_size;
 						parse_size<= 32'd64; 
+						parse_temporary_size = parse_temporary_size + 32'd64;
 					end else if (reg_load_chroma_quantization_matrix == 1'b1 ) begin
+
+						//get chroma_quantization_matrix
 						one_parse_start = 1'b1;
-						parse_addr <= parse_addr + 32'd28;
+						parse_addr <= parse_addr + parse_temporary_size;
 						parse_size<= 32'd64;
+						parse_temporary_size = parse_temporary_size + 32'd64;
+
 					end else begin
 
+						//get picture_header
+						one_parse_start = 1'b1;
+						parse_addr <= parse_addr + parse_temporary_size;
+						parse_size<= 32'd8; 
+						parse_temporary_size = parse_temporary_size + 32'd8;
+					end
+				end else if (State == S_luma_quantization_matrix_15) begin
+					if (reg_load_chroma_quantization_matrix == 1'b1 ) begin
 
+						//get chroma_quantization_matrix
+						one_parse_start = 1'b1;
+						parse_addr <= parse_addr + parse_temporary_size;
+						parse_size<= 32'd64;
+						parse_temporary_size = parse_temporary_size + 32'd64;
+					end else begin
+						//get picture_header
+						one_parse_start = 1'b1;
+						parse_addr <= parse_addr + parse_temporary_size;
+						parse_size<= 32'd8; 
+						parse_temporary_size = parse_temporary_size + 32'd8;
+					end
+				end else if (State == S_chorma_quantization_matrix_15) begin
+						//get picture_header
+						one_parse_start = 1'b1;
+						parse_addr <= parse_addr + parse_temporary_size;
+						parse_size<= 32'd8; 
+						parse_temporary_size = parse_temporary_size + 32'd8;
+
+				end else if (State == S_slice_talbe_Calc2) begin
+						one_parse_start = 1'b1;
+						parse_addr <= parse_addr + parse_temporary_size;
+						parse_size<= reg_slice_table_size; 
+						parse_temporary_size = parse_temporary_size + reg_slice_table_size;
+				end
+			end
+		end
+
+	//get mb_height
+	always @(posedge PARSE_CLK)
+		begin
+			if (PARSE_RESETN == 0 ) begin
+					reg_mb_height <= 1'd0;
+			end else begin
+				if (State == S_chroma_format) begin
+					if (PARSE_DATA[27:26]) begin
+						reg_mb_height <= (reg_vertival_size + 31) >> 5;
+					end else begin
+						reg_mb_height <= (reg_vertival_size + 15) >> 4;
+					end
+				end
+			end
+		end
+
+
+	//get mb_witdh
+	always @(posedge PARSE_CLK)
+		begin
+			if (PARSE_RESETN == 0 ) begin
+				reg_mb_width <= 16'd0;
+			end else begin
+				if (State == S_pciture_size) begin
+					if (reg_horizontal_size == 32'd128) begin
+						if (PARSE_DATA[7:0] == 0) begin
+							reg_mb_width = 16'd8;
+						end else if (PARSE_DATA[7:0] == 1) begin
+							reg_mb_width <= 16'd4;
+						end else if (PARSE_DATA[7:0] == 2) begin
+							reg_mb_width <= 16'd2;
+						end else if (PARSE_DATA[7:0] == 3) begin
+							reg_mb_width <= 16'd1;
+						end
+					end else if (reg_horizontal_size == 32'd256) begin
+						if (PARSE_DATA[7:0] == 0) begin
+							reg_mb_width <= 16'd16;
+						end else if (PARSE_DATA[7:0] == 1) begin
+							reg_mb_width <= 16'd8;
+						end else if (PARSE_DATA[7:0] == 2) begin
+							reg_mb_width <= 16'd4;
+						end else if (PARSE_DATA[7:0] == 3) begin
+							reg_mb_width <= 16'd2;
+						end
+					end else if (reg_horizontal_size == 32'd1920) begin
+						if (PARSE_DATA[7:0] == 0) begin
+							reg_mb_width <= 16'd120;
+						end else if (PARSE_DATA[7:0] == 1) begin
+							reg_mb_width <= 16'd60;
+						end else if (PARSE_DATA[7:0] == 2) begin
+							reg_mb_width <= 16'd30;
+						end else if (PARSE_DATA[7:0] == 3) begin
+							reg_mb_width <= 16'd15;
+						end
+					end else if (reg_horizontal_size == 32'd2048) begin
+						if (PARSE_DATA[7:0] == 0) begin
+							reg_mb_width <= 16'd128;
+						end else if (PARSE_DATA[7:0] == 1) begin
+							reg_mb_width <= 16'd64;
+						end else if (PARSE_DATA[7:0] == 2) begin
+							reg_mb_width <= 16'd32;
+						end else if (PARSE_DATA[7:0] == 3) begin
+							reg_mb_width <= 16'd16;
+						end
+
+					end else if (reg_horizontal_size == 32'd3840) begin
+						if (PARSE_DATA[7:0] == 0) begin
+							reg_mb_width <= 16'd240;
+						end else if (PARSE_DATA[7:0] == 1) begin
+							reg_mb_width <= 16'd120;
+						end else if (PARSE_DATA[7:0] == 2) begin
+							reg_mb_width <= 16'd60;
+						end else if (PARSE_DATA[7:0] == 3) begin
+							reg_mb_width <= 16'd30;
+						end
+					end else if (reg_horizontal_size == 32'd4096) begin
+						if (PARSE_DATA[7:0] == 0) begin
+							reg_mb_width <= 16'd256;
+						end else if (PARSE_DATA[7:0] == 1) begin
+							reg_mb_width <= 16'd128;
+						end else if (PARSE_DATA[7:0] == 2) begin
+							reg_mb_width <= 16'd64;
+						end else if (PARSE_DATA[7:0] == 3) begin
+							reg_mb_width <= 16'd32;
+						end
+					end else if (reg_horizontal_size == 32'd7680) begin
+						if (PARSE_DATA[7:0] == 0) begin
+							reg_mb_width <= 16'd480;
+						end else if (PARSE_DATA[7:0] == 1) begin
+							reg_mb_width <= 16'd240;
+						end else if (PARSE_DATA[7:0] == 2) begin
+							reg_mb_width <= 16'd120;
+						end else if (PARSE_DATA[7:0] == 3) begin
+							reg_mb_width <= 16'd60;
+						end
+					end else if (reg_horizontal_size == 32'd8192) begin
+						if (PARSE_DATA[7:0] == 0) begin
+							reg_mb_width <= 16'd512;
+						end else if (PARSE_DATA[7:0] == 1) begin
+							reg_mb_width <= 16'd256;
+						end else if (PARSE_DATA[7:0] == 2) begin
+							reg_mb_width <= 16'd128;
+						end else if (PARSE_DATA[7:0] == 3) begin
+							reg_mb_width <= 16'd64;
+						end
+					end else begin
+						reg_mb_width <= 16'd32;
+					end
+				end
+		end
+	end
+	//get slice table num
+	always @(posedge PARSE_CLK)
+		begin
+			if (PARSE_RESETN == 0 ) begin
+				reg_slice_num <= 16'd0;
+			end else begin
+				if (State == S_slice_talbe_Calc1) begin
+					reg_slice_num <= reg_mb_width * reg_mb_height;
+					reg_slice_table_num <= reg_mb_width * reg_mb_height;
+					reg_slice_table_size <= reg_mb_width * reg_mb_height * 2;
+				end
+			end
+		end
+
+	reg bram_enable_porta;
+	reg bram_write_enable_porta;
+	reg bram_addr_porta;
+	reg bram_data_in_porta;
+	reg bram_enable_portb;
+	reg bram_addr_portb;
+	reg bram_data_out_portb;
+
+	
+
+blk_mem_gen_0 blk_mem_gen_0_slice_table (
+  .clka(PARSE_CLK),              // input wire clka
+  .ena(bram_enable_porta),       // input wire ena
+  .wea(bram_write_enable_porta), // input wire [0 : 0] wea
+  .addra(bram_addr_porta),       // input wire [17 : 0] addra
+  .dina(bram_data_in_porta),     // input wire [15 : 0] dina
+  .clkb(PARSE_CLK),              // input wire clkb
+  .enb(bram_enable_portb),       // input wire enb
+  .addrb(bram_addr_portb),       // input wire [17 : 0] addrb
+  .doutb(bram_data_out_portb)    // output wire [15 : 0] doutb
+);
+
+	reg [17:0] slice_table_counter = 18'h0;
+	//get slice table
+	//Max Table Size 16bit * 512 * 270 = 16bit * 138240
+	always @(posedge PARSE_CLK)
+		begin
+			if (PARSE_RESETN == 0 )
+			begin
+				bram_enable_porta = 1'b1;
+				bram_write_enable_porta = 1'b0;
+				bram_addr_porta = 18'h0;
+				bram_data_in_porta = 16'h0;
+			end	else begin
+				if (PARSE_DATA_ENABLE == 1'b1) begin
+					if (State == S_slice_talbe) begin
+						bram_write_enable_porta = 1'b1;
+						bram_addr_porta = bram_addr_porta + 1;
+						bram_data_in_porta = PARSE_DATA;
+					end else begin
+						bram_write_enable_porta = 1'b0;
 					end
 				end
 			end
@@ -215,6 +439,7 @@ module parse_control(
 				reg_alpha_channel_type 			<= 4'd0;
 				reg_luma_quantization_matrix 	<= 128'h0;
 				reg_chroma_quantization_matrix 	<= 128'h0;
+				reg_slice_num 					<= 16'h0;
 			end
 			else
 			begin
@@ -244,6 +469,7 @@ module parse_control(
 							reg_frame_rate_code <= PARSE_DATA[19:16];
 							reg_color_primaries <= PARSE_DATA[15:8];
 							reg_transfer_characteristic <= PARSE_DATA[7:0];
+
 						end
 						S_matrix_coefficients:begin
 							reg_matrix_coeffficients <= PARSE_DATA[31:24];
@@ -356,6 +582,9 @@ module parse_control(
 							reg_pciture_size[7:0] <= PARSE_DATA[31:24];
 							reg_deprecated_number_of_slices <= PARSE_DATA[23:8];
 							reg_log2_desired_slize_size_in_mb <= PARSE_DATA[7:0];
+						end
+						S_slice_talbe:begin
+
 						end
 					endcase
 				end
@@ -504,7 +733,22 @@ module parse_control(
 						State = S_picture_size;
 					end
 					S_pciture_size:begin
-						State = S_slice_talbe;
+						//get width_in_mb
+						State = S_slice_talbe_Calc;
+					end
+					S_slice_talbe_Calc1:begin
+						//calc slice num
+						State = S_slice_talbe_Calc2;
+						
+					end
+					S_slice_talbe_Calc2:begin
+						//set slice_table size
+						State = S_slice_table_perse;
+					end
+					S_slice_table_perse:begin
+						if (reg_slice_table_num == 16'd0) begin
+							
+						end
 					end
 				endcase
 			end
@@ -529,6 +773,12 @@ module parse_control(
 	assign luma_quantization_matrix 	= reg_luma_quantization_matrix;
 	assign chroma_quantization_matrix 	= reg_chroma_quantization_matrix;
 
+
+
+	assign mb_width 					= reg_mb_width;
+	assign mb_height 					= reg_mb_height;
+
+	assign  slice_table_num				= reg_slice_num;
 
 
 	assign ONE_PARSE_START = one_parse_start;

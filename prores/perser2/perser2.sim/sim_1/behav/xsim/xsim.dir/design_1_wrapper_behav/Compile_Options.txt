@@ -1,0 +1,1 @@
+-wto "0120e0f85f9845f7983bacf699d0948d" --incr --debug "typical" --relax --mt "8" -L "axi_infrastructure_v1_1_0" -L "axi_vip_v1_1_7" -L "zynq_ultra_ps_e_vip_v1_0_7" -L "xil_defaultlib" -L "xilinx_vip" -L "unisims_ver" -L "unimacro_ver" -L "secureip" -L "xpm" --snapshot "design_1_wrapper_behav" "xil_defaultlib.design_1_wrapper" "xil_defaultlib.glbl" -log "elaborate.log" 

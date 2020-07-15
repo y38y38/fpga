@@ -1,0 +1,11 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../perser2.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../perser2.srcs/sources_1/bd/design_1/ipshared/e257/hdl" --include "/tools/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
+"../../../../perser2.ip_user_files/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/sim/design_1_zynq_ultra_ps_e_0_0_vip_wrapper.v" \
+"../../../../perser2.ip_user_files/bd/design_1/sim/design_1.v" \
+"../../../../perser2.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
