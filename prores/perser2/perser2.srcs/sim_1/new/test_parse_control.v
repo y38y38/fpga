@@ -24,6 +24,10 @@ module test_parse_control(
 
     );
 
+
+	localparam STEP = 8;
+	localparam INITIAL_WAIT = STEP * 20;
+
 	reg PARSE_CLK;
 	reg PARSE_RESETN;
 
@@ -95,5 +99,82 @@ module test_parse_control(
 	.mb_width(mb_width),
 	.slice_table_num(slice_table_num)
 	);
-	
+
+
+reg [7:0] mem[12:0];
+
+//1183byte
+
+
+initial begin
+	$readmemh("out.txt", mem);
+end
+
+
+/* create clock */
+always begin
+	PARSE_CLK = 0 ;
+	#(STEP/2);
+	PARSE_CLK = 1 ;
+	#(STEP/2);
+end
+
+/* reset and start*/
+initial begin
+	//reset
+	PARSE_RESETN = 1;
+	#(STEP*10) PARSE_RESETN = 0;
+	#(STEP*2)  PARSE_RESETN = 1;
+	PARSE_START = 1'b1;
+	PARSE_TOP_ADDR = 32'h40000000;
+	PARSE_TOTAL_SIZE = 32'd1183;
+
+	//start
+	#STEP
+	PARSE_START = 1'b0;
+	PARSE_TOP_ADDR = 32'h00000000;
+	PARSE_TOTAL_SIZE = 32'd0;
+end
+
+reg [31:0] offset_addr; 
+reg [31:0] parse_size;
+integer j;
+
+always @(posedge PARSE_CLK) begin
+	if (PARSE_RESETN == 0) begin
+		PARSE_DATA = 32'h0;
+		PARSE_DATA_ENABLE  = 1'b0;
+
+		offset_addr = 32'h0;
+		parse_size = 32'h0;
+		j = 0;
+		
+	end else begin
+		if (ONE_PARSE_START) begin
+			$display ("addr" , PARSE_ADDR);
+			$display ("size" , PARSE_SIZE);
+			parse_size = PARSE_SIZE;
+
+			for(j = 0;parse_size <= 32'h0; j = j + 1) begin
+				PARSE_DATA[ 7: 0] = mem[offset_addr];
+				PARSE_DATA[15: 8] = mem[offset_addr + 1];
+				PARSE_DATA[23:16] = mem[offset_addr + 2];
+				PARSE_DATA[31:24] = mem[offset_addr + 3];
+
+				offset_addr = offset_addr + 4;
+				PARSE_DATA_ENABLE = 1'b1;
+				parse_size = parse_size - 4;
+
+				
+			end
+		end
+	end
+end
+
+
+
+
+
+
+
 endmodule
