@@ -135,9 +135,35 @@ initial begin
 	PARSE_TOTAL_SIZE = 32'd0;
 end
 
+reg [1:0] state;
+
 reg [31:0] offset_addr; 
 reg [31:0] parse_size;
 integer j;
+
+localparam S_IDLE = 2'd0;
+localparam S_READ = 2'd1;
+
+always @(posedge PARSE_CLK) begin
+	if (PARSE_RESETN == 0) begin
+		state <= S_IDLE;
+	end else begin
+		if (state == S_IDLE) begin
+			if (ONE_PARSE_START) begin
+				state <= S_READ;
+			end else begin
+				
+			end
+		end else if (state == S_READ) begin
+			if (parse_size <= 32'd4) begin
+				state <= S_IDLE;
+			end 
+		end
+ 	end
+end
+
+
+
 
 always @(posedge PARSE_CLK) begin
 	if (PARSE_RESETN == 0) begin
@@ -149,31 +175,33 @@ always @(posedge PARSE_CLK) begin
 		j = 0;
 		
 	end else begin
-		if (ONE_PARSE_START) begin
-			$display ("addr" , PARSE_ADDR);
-			$display ("size" , PARSE_SIZE);
-			parse_size <= PARSE_SIZE;
-
-			for(j = 0;PARSE_SIZE <= 32'h0; j = j + 1) begin
-				PARSE_DATA[ 7: 0] <= mem[offset_addr];
-				PARSE_DATA[15: 8] <= mem[offset_addr + 1];
-				PARSE_DATA[23:16] <= mem[offset_addr + 2];
-				PARSE_DATA[31:24] <= mem[offset_addr + 3];
-
-				offset_addr <= offset_addr + 4;
-				PARSE_DATA_ENABLE <= 1'b1;
-				parse_size <= parse_size - 4;
-				#STEP;
-				
+		if (state == S_IDLE) begin
+			offset_addr <= 32'h00;
+			PARSE_DATA_ENABLE <= 1'b0;
+			if (ONE_PARSE_START) begin
+				$display ("addr" , PARSE_ADDR);
+				$display ("size" , PARSE_SIZE);
+				parse_size <= PARSE_SIZE;
+			end else begin
+				parse_size <= 32'h0;
 			end
+		end else if (state == S_READ) begin
+			PARSE_DATA[ 7: 0] <= mem[offset_addr];
+			if (parse_size >= 2) begin
+				PARSE_DATA[15: 8] <= mem[offset_addr + 1];
+			end
+			if (parse_size >= 3) begin
+				PARSE_DATA[23:16] <= mem[offset_addr + 2];
+			end
+			if (parse_size >= 4) begin
+				PARSE_DATA[31:24] <= mem[offset_addr + 3];
+			end
+			offset_addr <= offset_addr + 4;
+			PARSE_DATA_ENABLE <= 1'b1;
+			parse_size <= parse_size - 4;
+			
 		end
 	end
 end
-
-
-
-
-
-
 
 endmodule
