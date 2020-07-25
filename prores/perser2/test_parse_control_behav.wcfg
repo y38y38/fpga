@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="test_parse_control_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="test_parse_control" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="168380fs"></ZoomStartTime>
+      <ZoomEndTime time="189521fs"></ZoomEndTime>
+      <Cursor1Time time="172000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="318"></NameColumnWidth>
+      <ValueColumnWidth column_width="108"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="43" />
+   <wvobject type="logic" fp_name="/test_parse_control/PARSE_CLK">
+      <obj_property name="ElementShortName">PARSE_CLK</obj_property>
+      <obj_property name="ObjectShortName">PARSE_CLK</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/test_parse_control/PARSE_RESETN">
+      <obj_property name="ElementShortName">PARSE_RESETN</obj_property>
+      <obj_property name="ObjectShortName">PARSE_RESETN</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/test_parse_control/PARSE_START">
+      <obj_property name="ElementShortName">PARSE_START</obj_property>
+      <obj_property name="ObjectShortName">PARSE_START</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_parse_control/PARSE_TOP_ADDR">
+      <obj_property name="ElementShortName">PARSE_TOP_ADDR[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PARSE_TOP_ADDR[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_parse_control/PARSE_TOTAL_SIZE">
+      <obj_property name="ElementShortName">PARSE_TOTAL_SIZE[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PARSE_TOTAL_SIZE[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/test_parse_control/ONE_PARSE_START">
+      <obj_property name="ElementShortName">ONE_PARSE_START</obj_property>
+      <obj_property name="ObjectShortName">ONE_PARSE_START</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_parse_control/PARSE_ADDR">
+      <obj_property name="ElementShortName">PARSE_ADDR[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PARSE_ADDR[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_parse_control/PARSE_SIZE">
+      <obj_property name="ElementShortName">PARSE_SIZE[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PARSE_SIZE[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_parse_control/PARSE_DATA">
+      <obj_property name="ElementShortName">PARSE_DATA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PARSE_DATA[31:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/test_parse_control/PARSE_DATA_ENABLE">
+      <obj_property name="ElementShortName">PARSE_DATA_ENABLE</obj_property>
+      <obj_property name="ObjectShortName">PARSE_DATA_ENABLE</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_parse_control/frame_size">
+      <obj_property name="ElementShortName">frame_size[31:0]</obj_property>
+      <obj_property name="ObjectShortName">frame_size[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_parse_control/frameidentifier">
+      <obj_property name="ElementShortName">frameidentifier[31:0]</obj_property>
+      <obj_property name="ObjectShortName">frameidentifier[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_parse_control/frame_header_size">
+      <obj_property name="ElementShortName">frame_header_size[15:0]</obj_property>
+      <obj_property name="ObjectShortName">frame_header_size[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_parse_control/bitstream_version">
+      <obj_property name="ElementShortName">bitstream_version[7:0]</obj_property>
+      <obj_property name="ObjectShortName">bitstream_version[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_parse_control/encoder_identifier">
+      <obj_property name="ElementShortName">encoder_identifier[31:0]</obj_property>
+      <obj_property name="ObjectShortName">encoder_identifier[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_parse_control/horizontal_size">
+      <obj_property name="ElementShortName">horizontal_size[15:0]</obj_property>
+      <obj_property name="ObjectShortName">horizontal_size[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_parse_control/vertival_size">
+      <obj_property name="ElementShortName">vertival_size[15:0]</obj_property>
+      <obj_property name="ObjectShortName">vertival_size[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_parse_control/chroma_format">
+      <obj_property name="ElementShortName">chroma_format[1:0]</obj_property>
+      <obj_property name="ObjectShortName">chroma_format[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_parse_control/interlace_mode">
+      <obj_property name="ElementShortName">interlace_mode[1:0]</obj_property>
+      <obj_property name="ObjectShortName">interlace_mode[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_parse_control/aspect_ratio_information">
+      <obj_property name="ElementShortName">aspect_ratio_information[3:0]</obj_property>
+      <obj_property name="ObjectShortName">aspect_ratio_information[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_parse_control/frame_rate_code">
+      <obj_property name="ElementShortName">frame_rate_code[3:0]</obj_property>
+      <obj_property name="ObjectShortName">frame_rate_code[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_parse_control/color_primaries">
+      <obj_property name="ElementShortName">color_primaries[7:0]</obj_property>
+      <obj_property name="ObjectShortName">color_primaries[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_parse_control/transfer_characteristic">
+      <obj_property name="ElementShortName">transfer_characteristic[7:0]</obj_property>
+      <obj_property name="ObjectShortName">transfer_characteristic[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_parse_control/matrix_coefficients">
+      <obj_property name="ElementShortName">matrix_coefficients[7:0]</obj_property>
+      <obj_property name="ObjectShortName">matrix_coefficients[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_parse_control/alpha_channel_type">
+      <obj_property name="ElementShortName">alpha_channel_type[3:0]</obj_property>
+      <obj_property name="ObjectShortName">alpha_channel_type[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_parse_control/luma_quantization_matrix">
+      <obj_property name="ElementShortName">luma_quantization_matrix[511:0]</obj_property>
+      <obj_property name="ObjectShortName">luma_quantization_matrix[511:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_parse_control/chroma_quantization_matrix">
+      <obj_property name="ElementShortName">chroma_quantization_matrix[511:0]</obj_property>
+      <obj_property name="ObjectShortName">chroma_quantization_matrix[511:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_parse_control/mb_height">
+      <obj_property name="ElementShortName">mb_height[15:0]</obj_property>
+      <obj_property name="ObjectShortName">mb_height[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_parse_control/mb_width">
+      <obj_property name="ElementShortName">mb_width[15:0]</obj_property>
+      <obj_property name="ObjectShortName">mb_width[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_parse_control/slice_table_num">
+      <obj_property name="ElementShortName">slice_table_num[15:0]</obj_property>
+      <obj_property name="ObjectShortName">slice_table_num[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_parse_control/mem">
+      <obj_property name="ElementShortName">mem[1185:0][7:0]</obj_property>
+      <obj_property name="ObjectShortName">mem[1185:0][7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_parse_control/state">
+      <obj_property name="ElementShortName">state[1:0]</obj_property>
+      <obj_property name="ObjectShortName">state[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_parse_control/offset_addr">
+      <obj_property name="ElementShortName">offset_addr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">offset_addr[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_parse_control/parse_size">
+      <obj_property name="ElementShortName">parse_size[31:0]</obj_property>
+      <obj_property name="ObjectShortName">parse_size[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_parse_control/j">
+      <obj_property name="ElementShortName">j[31:0]</obj_property>
+      <obj_property name="ObjectShortName">j[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_parse_control/STEP">
+      <obj_property name="ElementShortName">STEP[31:0]</obj_property>
+      <obj_property name="ObjectShortName">STEP[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_parse_control/INITIAL_WAIT">
+      <obj_property name="ElementShortName">INITIAL_WAIT[31:0]</obj_property>
+      <obj_property name="ObjectShortName">INITIAL_WAIT[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_parse_control/S_IDLE">
+      <obj_property name="ElementShortName">S_IDLE[1:0]</obj_property>
+      <obj_property name="ObjectShortName">S_IDLE[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_parse_control/S_READ">
+      <obj_property name="ElementShortName">S_READ[1:0]</obj_property>
+      <obj_property name="ObjectShortName">S_READ[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_parse_control/target_parse_control/parse_state">
+      <obj_property name="ElementShortName">parse_state[3:0]</obj_property>
+      <obj_property name="ObjectShortName">parse_state[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_parse_control/target_parse_control/State">
+      <obj_property name="ElementShortName">State[5:0]</obj_property>
+      <obj_property name="ObjectShortName">State[5:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/test_parse_control/target_parse_control/reg_load_luma_quantization_matrix">
+      <obj_property name="ElementShortName">reg_load_luma_quantization_matrix</obj_property>
+      <obj_property name="ObjectShortName">reg_load_luma_quantization_matrix</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/test_parse_control/target_parse_control/reg_load_chroma_quantization_matrix">
+      <obj_property name="ElementShortName">reg_load_chroma_quantization_matrix</obj_property>
+      <obj_property name="ObjectShortName">reg_load_chroma_quantization_matrix</obj_property>
+   </wvobject>
+</wave_config>

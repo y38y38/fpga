@@ -146,8 +146,11 @@ module parse_control(
 	reg [3:0]	reg_alpha_channel_type;
 	reg 		reg_load_luma_quantization_matrix;
 	reg 		reg_load_chroma_quantization_matrix;
-	reg [8*64-1:0]	reg_luma_quantization_matrix;
-	reg [8*64-1:0]	reg_chroma_quantization_matrix;
+//	reg [8*64-1:0]	reg_luma_quantization_matrix;
+//	reg [8*64-1:0]	reg_chroma_quantization_matrix;
+
+	reg [7:0] reg_luma_quantization_matrix[0:63];
+	reg [7:0] reg_chroma_quantization_matrix[0:63];
 
 
 	reg [7:0] reg_picture_header_size;
@@ -185,6 +188,13 @@ module parse_control(
 			end
 		end
 
+
+	reg[3:0] parse_state ;
+	localparam S_parse_idle = 4'd0;
+	localparam S_parse_start  = 4'd1;
+	localparam S_parse_run  = 4'd2;
+
+
 	//set one_parse_start and addr and size
 	always @(posedge PARSE_CLK)
 		begin
@@ -193,66 +203,102 @@ module parse_control(
 				one_parse_start <= 1'b0;
 				parse_addr <= 32'h0;
 				parse_size <= 32'h0;
-			end
-			else
-			begin  
-				if (PARSE_START == 1'b1) begin
-					//parse start!!
-					one_parse_start <= 1'b1;
-					parse_addr <= PARSE_TOP_ADDR;
-					parse_size <= 32'd28;/* frame_size load_chroma_quantization_matrix */
-					parse_temporary_size <= 32'd28; 
-				end else if (State == S_matrix_coefficients) begin
-					if (reg_load_luma_quantization_matrix == 1'b1) begin
 
-						//get luma_quantization_matrix
-						one_parse_start = 1'b1;
-						parse_addr <= parse_addr + parse_temporary_size;
-						parse_size<= 32'd64; 
-						parse_temporary_size = parse_temporary_size + 32'd64;
-					end else if (reg_load_chroma_quantization_matrix == 1'b1 ) begin
+				parse_state <= S_parse_idle;
 
-						//get chroma_quantization_matrix
-						one_parse_start = 1'b1;
-						parse_addr <= parse_addr + parse_temporary_size;
-						parse_size<= 32'd64;
-						parse_temporary_size = parse_temporary_size + 32'd64;
+			end else begin  
+				if (parse_state == S_parse_idle) begin
+					if (PARSE_START == 1'b1) begin
+						//parse start!!
+						one_parse_start <= 1'b1;
+						parse_addr <= PARSE_TOP_ADDR;
+						parse_size <= 32'd28;/* frame_size load_chroma_quantization_matrix */
+						parse_temporary_size <= 32'd28;
 
+						parse_state <= S_parse_start;
+
+					end else if (State == S_matrix_coefficients) begin
+						if ( PARSE_DATA[24] == 1'b1) begin //reg_load_luma_quantization_matrix
+ 
+							//get luma_quantization_matrix
+							one_parse_start = 1'b1;
+							parse_addr <= parse_addr + parse_temporary_size;
+							parse_size<= 32'd64; 
+							parse_temporary_size = parse_temporary_size + 32'd64;
+
+							parse_state <= S_parse_start;
+						end else if (PARSE_DATA[25]  == 1'b1 ) begin //reg_load_chroma_quantization_matrix
+
+							//get chroma_quantization_matrix
+							one_parse_start = 1'b1;
+							parse_addr <= parse_addr + parse_temporary_size;
+							parse_size<= 32'd64;
+							parse_temporary_size = parse_temporary_size + 32'd64;
+
+							parse_state <= S_parse_start;
+						end else begin
+
+							//get picture_header
+							one_parse_start = 1'b1;
+							parse_addr <= parse_addr + parse_temporary_size;
+							parse_size<= 32'd8; 
+							parse_temporary_size = parse_temporary_size + 32'd8;
+
+							parse_state <= S_parse_start;
+						end
+					end else if (State == S_luma_quantization_matrix_15) begin
+						if (reg_load_chroma_quantization_matrix == 1'b1 ) begin
+
+							//get chroma_quantization_matrix
+							one_parse_start = 1'b1;
+							parse_addr <= parse_addr + parse_temporary_size;
+							parse_size<= 32'd64;
+							parse_temporary_size = parse_temporary_size + 32'd64;
+
+							parse_state <= S_parse_start;
+						end else begin
+							//get picture_header
+							one_parse_start = 1'b1;
+							parse_addr <= parse_addr + parse_temporary_size;
+							parse_size<= 32'd8; 
+							parse_temporary_size = parse_temporary_size + 32'd8;
+
+							parse_state <= S_parse_start;
+						end
+					end else if (State == S_chroma_quantization_matrix_15) begin
+							//get picture_header
+							one_parse_start = 1'b1;
+							parse_addr <= parse_addr + parse_temporary_size;
+							parse_size<= 32'd8; 
+							parse_temporary_size = parse_temporary_size + 32'd8;
+
+							parse_state <= S_parse_start;
+					end else if (State == S_slice_table_Calc2) begin
+							one_parse_start = 1'b1;
+							parse_addr <= parse_addr + parse_temporary_size;
+							parse_size<= reg_slice_table_size; 
+							parse_temporary_size = parse_temporary_size + reg_slice_table_size;
+
+							parse_state <= S_parse_start;
 					end else begin
-
-						//get picture_header
-						one_parse_start = 1'b1;
-						parse_addr <= parse_addr + parse_temporary_size;
-						parse_size<= 32'd8; 
-						parse_temporary_size = parse_temporary_size + 32'd8;
+						
 					end
-				end else if (State == S_luma_quantization_matrix_15) begin
-					if (reg_load_chroma_quantization_matrix == 1'b1 ) begin
+				end else if (parse_state == S_parse_start) begin
+					one_parse_start <= 1'b0;
 
-						//get chroma_quantization_matrix
-						one_parse_start = 1'b1;
-						parse_addr <= parse_addr + parse_temporary_size;
-						parse_size<= 32'd64;
-						parse_temporary_size = parse_temporary_size + 32'd64;
+					if (parse_size > 4) begin
+						parse_state <= S_parse_run;
+						parse_size <= parse_size - 32'h4;
 					end else begin
-						//get picture_header
-						one_parse_start = 1'b1;
-						parse_addr <= parse_addr + parse_temporary_size;
-						parse_size<= 32'd8; 
-						parse_temporary_size = parse_temporary_size + 32'd8;
+						parse_state <= S_parse_idle;
 					end
-				end else if (State == S_chroma_quantization_matrix_15) begin
-						//get picture_header
-						one_parse_start = 1'b1;
-						parse_addr <= parse_addr + parse_temporary_size;
-						parse_size<= 32'd8; 
-						parse_temporary_size = parse_temporary_size + 32'd8;
-
-				end else if (State == S_slice_table_Calc2) begin
-						one_parse_start = 1'b1;
-						parse_addr <= parse_addr + parse_temporary_size;
-						parse_size<= reg_slice_table_size; 
-						parse_temporary_size = parse_temporary_size + reg_slice_table_size;
+				end else if (parse_state == S_parse_run ) begin
+					if (parse_size > 4) begin
+						parse_state <= S_parse_run;
+						parse_size <= parse_size - 32'h4;
+					end else begin
+						parse_state <= S_parse_idle;
+					end
 				end
 			end
 		end
@@ -457,40 +503,64 @@ blk_mem_gen_0 blk_mem_gen_0_slice_table (
 				if (PARSE_DATA_ENABLE == 1'b1) begin
 					case(State)
 						S_frame_size: begin
-							reg_frame_size <= PARSE_DATA[31:0];
+							reg_frame_size[7:0] <= PARSE_DATA[31:24];
+							reg_frame_size[15:8] <= PARSE_DATA[23:16];
+							reg_frame_size[23:16] <= PARSE_DATA[15:8];
+							reg_frame_size[31:24] <= PARSE_DATA[7:0];
+
 						end
 						S_frame_identifier:begin
-							reg_frame_identifier <= PARSE_DATA[31:0];
+							reg_frame_identifier[7:0] <= PARSE_DATA[31:24];
+							reg_frame_identifier[15:8] <= PARSE_DATA[23:16];
+							reg_frame_identifier[23:16] <= PARSE_DATA[15:8];
+							reg_frame_identifier[31:24] <= PARSE_DATA[7:0];
 						end
 						S_frame_header_size: begin
-							reg_frame_header_size <= PARSE_DATA[31:16];
-							reg_bitstream_version <= PARSE_DATA[7:0];
+							reg_frame_header_size[7:0]  <= PARSE_DATA[15:8];
+							reg_frame_header_size[15:8] <= PARSE_DATA[7:0];
+
+							reg_bitstream_version[7:0] <= PARSE_DATA[31:24];
 						end
 						S_encoder_identifier:begin
-							reg_encoder_identifier <= PARSE_DATA[31:0];
+							reg_encoder_identifier[7:0] <= PARSE_DATA[31:24];
+							reg_encoder_identifier[15:8] <= PARSE_DATA[23:16];
+							reg_encoder_identifier[23:16] <= PARSE_DATA[15:8];
+							reg_encoder_identifier[31:24] <= PARSE_DATA[7:0];
 						end
 						S_horizontal_size:begin
-							reg_horizontal_size <= PARSE_DATA[31:16];
-							reg_vertival_size <= PARSE_DATA[15:0];
+							reg_horizontal_size[7:0] <= PARSE_DATA[15:8];
+							reg_horizontal_size[15:8] <= PARSE_DATA[7:0];
+
+							reg_vertival_size[7:0] <= PARSE_DATA[31:24];
+							reg_vertival_size[15:8] <= PARSE_DATA[23:16];
+
 						end
 						S_chroma_format:begin
-							reg_chroma_format <= PARSE_DATA[31:30];
-							reg_interlace_mode <= PARSE_DATA[27:26];
-							reg_aspect_ratio_information <= PARSE_DATA[23:20];
-							reg_frame_rate_code <= PARSE_DATA[19:16];
-							reg_color_primaries <= PARSE_DATA[15:8];
-							reg_transfer_characteristic <= PARSE_DATA[7:0];
+							reg_chroma_format <= PARSE_DATA[7:6];
+							
+							reg_interlace_mode <= PARSE_DATA[3:2];
+
+							reg_aspect_ratio_information <= PARSE_DATA[15:12];
+							reg_frame_rate_code <= PARSE_DATA[11:8];
+							
+							reg_color_primaries <= PARSE_DATA[23:16];
+							reg_transfer_characteristic <= PARSE_DATA[31:24];
 
 						end
 						S_matrix_coefficients:begin
-							reg_matrix_coefficients <= PARSE_DATA[31:24];
-							reg_alpha_channel_type <= PARSE_DATA[19:16];
-							reg_load_luma_quantization_matrix <= PARSE_DATA[1];
-							reg_load_chroma_quantization_matrix <= PARSE_DATA[0];
+							reg_matrix_coefficients <= PARSE_DATA[7:0];
+							//reserved (4)
+							reg_alpha_channel_type <= PARSE_DATA[11:8];
+							//reserved (14)
+							reg_load_luma_quantization_matrix <= PARSE_DATA[24];
+							reg_load_chroma_quantization_matrix <= PARSE_DATA[25];
 						end
 
 						S_luma_quantization_matrix_00:begin
-							reg_luma_quantization_matrix[31:0] <= PARSE_DATA[31:0];
+							reg_luma_quantization_matrix[0] <= PARSE_DATA[7:0];
+							reg_luma_quantization_matrix[1] <= PARSE_DATA[15:8];
+							reg_luma_quantization_matrix[2] <= PARSE_DATA[23:16];
+							reg_luma_quantization_matrix[3] <= PARSE_DATA[31:24];
 						end
 						S_luma_quantization_matrix_01:begin
 							reg_luma_quantization_matrix[63:32] <= PARSE_DATA[31:0];
@@ -603,155 +673,155 @@ blk_mem_gen_0 blk_mem_gen_0_slice_table (
 	//set state machine
 	always@(posedge PARSE_CLK or negedge PARSE_RESETN) begin
 		if(!PARSE_RESETN) begin
-			State 							<= S_idle;
+			State 							<= S_frame_size;
 		end
 		else begin
 			if (PARSE_DATA_ENABLE == 1'b1) begin
 				case(State)
 					S_frame_size: begin
-						State = S_frame_identifier;
+						State <= S_frame_identifier;
 					end
 					S_frame_identifier: begin
-						State = S_frame_header_size;
+						State <= S_frame_header_size;
 					end
 					S_frame_header_size: begin
-						State = S_encoder_identifier;
+						State <= S_encoder_identifier;
 					end
 					S_encoder_identifier:begin
-						State = S_horizontal_size;
+						State <= S_horizontal_size;
 					end
 					S_horizontal_size:begin
-						State = S_chroma_format;
+						State <= S_chroma_format;
 					end
 					S_chroma_format:begin
-						State = S_matrix_coefficients;
+						State <= S_matrix_coefficients;
 					end
 					S_matrix_coefficients:begin
 						if (PARSE_DATA[1] == 1'b1) begin
-							State = S_luma_quantization_matrix_00;
+							State <= S_luma_quantization_matrix_00;
 						end
 						else if (PARSE_DATA[0] == 1'b1 ) begin
-							State = S_chroma_quantization_matrix_00;
+							State <= S_chroma_quantization_matrix_00;
 						end else begin
-							State = S_picture_header_size;
+							State <= S_picture_header_size;
 						end
 					end
 
 					S_luma_quantization_matrix_00:begin
-						State = S_luma_quantization_matrix_01;
+						State <= S_luma_quantization_matrix_01;
 					end
 					S_luma_quantization_matrix_01:begin
-						State = S_luma_quantization_matrix_02;
+						State <= S_luma_quantization_matrix_02;
 					end
 					S_luma_quantization_matrix_02:begin
-						State = S_luma_quantization_matrix_03;
+						State <= S_luma_quantization_matrix_03;
 					end
 					S_luma_quantization_matrix_03:begin
-						State = S_luma_quantization_matrix_04;
+						State <= S_luma_quantization_matrix_04;
 					end
 					S_luma_quantization_matrix_04:begin
-						State = S_luma_quantization_matrix_05;
+						State <= S_luma_quantization_matrix_05;
 					end
 					S_luma_quantization_matrix_05:begin
-						State = S_luma_quantization_matrix_06;
+						State <= S_luma_quantization_matrix_06;
 					end
 					S_luma_quantization_matrix_06:begin
-						State = S_luma_quantization_matrix_07;
+						State <= S_luma_quantization_matrix_07;
 					end
 					S_luma_quantization_matrix_07:begin
-						State = S_luma_quantization_matrix_08;
+						State <= S_luma_quantization_matrix_08;
 					end
 					S_luma_quantization_matrix_08:begin
-						State = S_luma_quantization_matrix_09;
+						State <= S_luma_quantization_matrix_09;
 					end
 					S_luma_quantization_matrix_09:begin
-						State = S_luma_quantization_matrix_10;
+						State <= S_luma_quantization_matrix_10;
 					end
 					S_luma_quantization_matrix_10:begin
-						State = S_luma_quantization_matrix_11;
+						State <= S_luma_quantization_matrix_11;
 					end
 					S_luma_quantization_matrix_11:begin
-						State = S_luma_quantization_matrix_12;
+						State <= S_luma_quantization_matrix_12;
 					end
 					S_luma_quantization_matrix_12:begin
-						State = S_luma_quantization_matrix_13;
+						State <= S_luma_quantization_matrix_13;
 					end
 					S_luma_quantization_matrix_13:begin
-						State = S_luma_quantization_matrix_14;
+						State <= S_luma_quantization_matrix_14;
 					end
 					S_luma_quantization_matrix_14:begin
-						State = S_luma_quantization_matrix_15;
+						State <= S_luma_quantization_matrix_15;
 					end
 					S_luma_quantization_matrix_15:begin
 						if (reg_load_chroma_quantization_matrix == 1'b1 ) begin
-							State = S_chroma_quantization_matrix_00;
+							State <= S_chroma_quantization_matrix_00;
 						end else begin
-							State = S_picture_header_size;
+							State <= S_picture_header_size;
 						end
 					end
 					S_chroma_quantization_matrix_00:begin
-						State = S_chroma_quantization_matrix_01;
+						State <= S_chroma_quantization_matrix_01;
 					end
 					S_chroma_quantization_matrix_01:begin
-						State = S_chroma_quantization_matrix_02;
+						State <= S_chroma_quantization_matrix_02;
 					end
 					S_chroma_quantization_matrix_02:begin
-						State = S_chroma_quantization_matrix_03;
+						State <= S_chroma_quantization_matrix_03;
 					end
 					S_chroma_quantization_matrix_03:begin
-						State = S_chroma_quantization_matrix_04;
+						State <= S_chroma_quantization_matrix_04;
 					end
 					S_chroma_quantization_matrix_04:begin
-						State = S_chroma_quantization_matrix_05;
+						State <= S_chroma_quantization_matrix_05;
 					end
 					S_chroma_quantization_matrix_05:begin
-						State = S_chroma_quantization_matrix_06;
+						State <= S_chroma_quantization_matrix_06;
 					end
 					S_chroma_quantization_matrix_06:begin
-						State = S_chroma_quantization_matrix_07;
+						State <= S_chroma_quantization_matrix_07;
 					end
 					S_chroma_quantization_matrix_07:begin
-						State = S_chroma_quantization_matrix_08;
+						State <= S_chroma_quantization_matrix_08;
 					end
 					S_chroma_quantization_matrix_08:begin
-						State = S_chroma_quantization_matrix_09;
+						State <= S_chroma_quantization_matrix_09;
 					end
 					S_chroma_quantization_matrix_09:begin
-						State = S_chroma_quantization_matrix_10;
+						State <= S_chroma_quantization_matrix_10;
 					end
 					S_chroma_quantization_matrix_10:begin
-						State = S_chroma_quantization_matrix_11;
+						State <= S_chroma_quantization_matrix_11;
 					end
 					S_chroma_quantization_matrix_11:begin
-						State = S_chroma_quantization_matrix_12;
+						State <= S_chroma_quantization_matrix_12;
 					end
 					S_chroma_quantization_matrix_12:begin
-						State = S_chroma_quantization_matrix_13;
+						State <= S_chroma_quantization_matrix_13;
 					end
 					S_chroma_quantization_matrix_13:begin
-						State = S_chroma_quantization_matrix_14;
+						State <= S_chroma_quantization_matrix_14;
 					end
 					S_chroma_quantization_matrix_14:begin
-						State = S_chroma_quantization_matrix_15;
+						State <= S_chroma_quantization_matrix_15;
 					end
 					S_chroma_quantization_matrix_15:begin
-						State = S_picture_header_size;
+						State <= S_picture_header_size;
 					end
 					S_picture_header_size:begin
-						State = S_picture_size;
+						State <= S_picture_size;
 					end
 					S_picture_size:begin
 						//get width_in_mb
-						State = S_slice_table_Calc1;
+						State <= S_slice_table_Calc1;
 					end
 					S_slice_table_Calc1:begin
 						//calc slice num
-						State = S_slice_table_Calc2;
+						State <= S_slice_table_Calc2;
 						
 					end
 					S_slice_table_Calc2:begin
 						//set slice_table size
-						State = S_slice_table_perse;
+						State <= S_slice_table_perse;
 					end
 					S_slice_table_perse:begin
 						if (reg_slice_table_num == 16'd0) begin

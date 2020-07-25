@@ -124,15 +124,19 @@ initial begin
 	PARSE_RESETN = 1;
 	#(STEP*10) ; PARSE_RESETN = 0;
 	#(STEP*2)  ; PARSE_RESETN = 1;
+
+	//start
 	PARSE_START = 1'b1;
 	PARSE_TOP_ADDR = 32'h40000000;
 	PARSE_TOTAL_SIZE = 32'd1183;
 
-	//start
+	//clear parameter
 	#STEP;
 	PARSE_START = 1'b0;
 	PARSE_TOP_ADDR = 32'h00000000;
 	PARSE_TOTAL_SIZE = 32'd0;
+	#STEP;
+
 end
 
 reg [1:0] state;
