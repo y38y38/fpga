@@ -11,13 +11,13 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="168380fs"></ZoomStartTime>
-      <ZoomEndTime time="189521fs"></ZoomEndTime>
-      <Cursor1Time time="172000fs"></Cursor1Time>
+      <ZoomStartTime time="88834fs"></ZoomStartTime>
+      <ZoomEndTime time="203835fs"></ZoomEndTime>
+      <Cursor1Time time="116000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="318"></NameColumnWidth>
-      <ValueColumnWidth column_width="108"></ValueColumnWidth>
+      <ValueColumnWidth column_width="104"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="43" />
    <wvobject type="logic" fp_name="/test_parse_control/PARSE_CLK">
@@ -55,7 +55,6 @@
    <wvobject type="array" fp_name="/test_parse_control/PARSE_DATA">
       <obj_property name="ElementShortName">PARSE_DATA[31:0]</obj_property>
       <obj_property name="ObjectShortName">PARSE_DATA[31:0]</obj_property>
-      <obj_property name="isExpanded"></obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="/test_parse_control/PARSE_DATA_ENABLE">
       <obj_property name="ElementShortName">PARSE_DATA_ENABLE</obj_property>
@@ -153,10 +152,6 @@
       <obj_property name="ElementShortName">offset_addr[31:0]</obj_property>
       <obj_property name="ObjectShortName">offset_addr[31:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/test_parse_control/parse_size">
-      <obj_property name="ElementShortName">parse_size[31:0]</obj_property>
-      <obj_property name="ObjectShortName">parse_size[31:0]</obj_property>
-   </wvobject>
    <wvobject type="array" fp_name="/test_parse_control/j">
       <obj_property name="ElementShortName">j[31:0]</obj_property>
       <obj_property name="ObjectShortName">j[31:0]</obj_property>
@@ -176,6 +171,10 @@
    <wvobject type="array" fp_name="/test_parse_control/S_READ">
       <obj_property name="ElementShortName">S_READ[1:0]</obj_property>
       <obj_property name="ObjectShortName">S_READ[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_parse_control/parse_size">
+      <obj_property name="ElementShortName">parse_size[31:0]</obj_property>
+      <obj_property name="ObjectShortName">parse_size[31:0]</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/test_parse_control/target_parse_control/parse_state">
       <obj_property name="ElementShortName">parse_state[3:0]</obj_property>

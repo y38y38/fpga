@@ -55,8 +55,8 @@ module parse_control(
 	output wire [7:0]		transfer_characteristic,
 	output wire [7:0]		matrix_coefficients,
 	output wire [3:0]		alpha_channel_type,
-	output wire [8*64-1:0]	luma_quantization_matrix,
-	output wire [8*64-1:0]	chroma_quantization_matrix,
+	output wire [511:0]	luma_quantization_matrix,
+	output wire [511:0]	chroma_quantization_matrix,
 
 	output wire  [15:0]		mb_height,
 	output wire  [15:0]		mb_width,
@@ -288,14 +288,18 @@ module parse_control(
 
 					if (parse_size > 4) begin
 						parse_state <= S_parse_run;
-						parse_size <= parse_size - 32'h4;
+						if (PARSE_DATA_ENABLE == 1'd1 ) begin
+							parse_size <= parse_size - 32'h4;
+						end
 					end else begin
 						parse_state <= S_parse_idle;
 					end
 				end else if (parse_state == S_parse_run ) begin
 					if (parse_size > 4) begin
 						parse_state <= S_parse_run;
-						parse_size <= parse_size - 32'h4;
+						if (PARSE_DATA_ENABLE == 1'd1 ) begin
+							parse_size <= parse_size - 32'h4;
+						end
 					end else begin
 						parse_state <= S_parse_idle;
 					end
@@ -474,6 +478,8 @@ blk_mem_gen_0 blk_mem_gen_0_slice_table (
 			end
 		end
 
+	integer i;
+
 	//get param
 	always @(posedge PARSE_CLK)
 		begin
@@ -494,8 +500,15 @@ blk_mem_gen_0 blk_mem_gen_0_slice_table (
 				reg_transfer_characteristic 	<= 8'd0;
 				reg_matrix_coefficients 		<= 8'd0;
 				reg_alpha_channel_type 			<= 4'd0;
-				reg_luma_quantization_matrix 	<= 128'h0;
-				reg_chroma_quantization_matrix 	<= 128'h0;
+				
+				for( i = 0; i< 64; i = i + 1) begin
+					reg_luma_quantization_matrix[i] 	<= 8'h0;
+				end
+
+				for( i = 0; i< 64; i = i + 1) begin
+					reg_chroma_quantization_matrix[i] 	<= 8'h0;
+				end
+
 				reg_slice_num 					<= 16'h0;
 			end
 			else
@@ -563,38 +576,72 @@ blk_mem_gen_0 blk_mem_gen_0_slice_table (
 							reg_luma_quantization_matrix[3] <= PARSE_DATA[31:24];
 						end
 						S_luma_quantization_matrix_01:begin
-							reg_luma_quantization_matrix[63:32] <= PARSE_DATA[31:0];
+							reg_luma_quantization_matrix[4] <= PARSE_DATA[7:0];
+							reg_luma_quantization_matrix[5] <= PARSE_DATA[15:8];
+							reg_luma_quantization_matrix[6] <= PARSE_DATA[23:16];
+							reg_luma_quantization_matrix[7] <= PARSE_DATA[31:24];
 						end
 						S_luma_quantization_matrix_02:begin
-							reg_luma_quantization_matrix[95:64] <= PARSE_DATA[31:0];
+							reg_luma_quantization_matrix[8] <= PARSE_DATA[7:0];
+							reg_luma_quantization_matrix[9] <= PARSE_DATA[15:8];
+							reg_luma_quantization_matrix[10] <= PARSE_DATA[23:16];
+							reg_luma_quantization_matrix[11] <= PARSE_DATA[31:24];
 						end
 						S_luma_quantization_matrix_03:begin
-							reg_luma_quantization_matrix[127:96] <= PARSE_DATA[31:0];
+							reg_luma_quantization_matrix[12] <= PARSE_DATA[7:0];
+							reg_luma_quantization_matrix[13] <= PARSE_DATA[15:8];
+							reg_luma_quantization_matrix[14] <= PARSE_DATA[23:16];
+							reg_luma_quantization_matrix[15] <= PARSE_DATA[31:24];
 						end
 						S_luma_quantization_matrix_04:begin
-							reg_luma_quantization_matrix[159:128] <= PARSE_DATA[31:0];
+							reg_luma_quantization_matrix[16] <= PARSE_DATA[7:0];
+							reg_luma_quantization_matrix[17] <= PARSE_DATA[15:8];
+							reg_luma_quantization_matrix[18] <= PARSE_DATA[23:16];
+							reg_luma_quantization_matrix[19] <= PARSE_DATA[31:24];
 						end
 						S_luma_quantization_matrix_05:begin
-							reg_luma_quantization_matrix[191:160] <= PARSE_DATA[31:0];
+							reg_luma_quantization_matrix[20] <= PARSE_DATA[7:0];
+							reg_luma_quantization_matrix[21] <= PARSE_DATA[15:8];
+							reg_luma_quantization_matrix[22] <= PARSE_DATA[23:16];
+							reg_luma_quantization_matrix[23] <= PARSE_DATA[31:24];
 						end
 						S_luma_quantization_matrix_06:begin
-							reg_luma_quantization_matrix[223:192] <= PARSE_DATA[31:0];
+							reg_luma_quantization_matrix[24] <= PARSE_DATA[7:0];
+							reg_luma_quantization_matrix[25] <= PARSE_DATA[15:8];
+							reg_luma_quantization_matrix[26] <= PARSE_DATA[23:16];
+							reg_luma_quantization_matrix[27] <= PARSE_DATA[31:24];
 						end
 						S_luma_quantization_matrix_07:begin
-							reg_luma_quantization_matrix[255:224] <= PARSE_DATA[31:0];
+							reg_luma_quantization_matrix[28] <= PARSE_DATA[7:0];
+							reg_luma_quantization_matrix[29] <= PARSE_DATA[15:8];
+							reg_luma_quantization_matrix[30] <= PARSE_DATA[23:16];
+							reg_luma_quantization_matrix[31] <= PARSE_DATA[31:24];
 						end
 						S_luma_quantization_matrix_08:begin
-							reg_luma_quantization_matrix[287:256] <= PARSE_DATA[31:0];
+							reg_luma_quantization_matrix[32] <= PARSE_DATA[7:0];
+							reg_luma_quantization_matrix[33] <= PARSE_DATA[15:8];
+							reg_luma_quantization_matrix[34] <= PARSE_DATA[23:16];
+							reg_luma_quantization_matrix[35] <= PARSE_DATA[31:24];
 						end
 						S_luma_quantization_matrix_09:begin
-							reg_luma_quantization_matrix[319:288] <= PARSE_DATA[31:0];
+							reg_luma_quantization_matrix[36] <= PARSE_DATA[7:0];
+							reg_luma_quantization_matrix[37] <= PARSE_DATA[15:8];
+							reg_luma_quantization_matrix[38] <= PARSE_DATA[23:16];
+							reg_luma_quantization_matrix[39] <= PARSE_DATA[31:24];
 						end
 						S_luma_quantization_matrix_10:begin
-							reg_luma_quantization_matrix[351:320] <= PARSE_DATA[31:0];
+							reg_luma_quantization_matrix[40] <= PARSE_DATA[7:0];
+							reg_luma_quantization_matrix[41] <= PARSE_DATA[15:8];
+							reg_luma_quantization_matrix[42] <= PARSE_DATA[23:16];
+							reg_luma_quantization_matrix[43] <= PARSE_DATA[31:24];
 						end
 						S_luma_quantization_matrix_11:begin
-							reg_luma_quantization_matrix[385:352] <= PARSE_DATA[31:0];
+							reg_luma_quantization_matrix[44] <= PARSE_DATA[7:0];
+							reg_luma_quantization_matrix[45] <= PARSE_DATA[15:8];
+							reg_luma_quantization_matrix[46] <= PARSE_DATA[23:16];
+							reg_luma_quantization_matrix[47] <= PARSE_DATA[31:24];
 						end
+						/*
 						S_luma_quantization_matrix_12:begin
 							reg_luma_quantization_matrix[415:386] <= PARSE_DATA[31:0];
 						end
@@ -655,6 +702,7 @@ blk_mem_gen_0 blk_mem_gen_0_slice_table (
 						S_chroma_quantization_matrix_15:begin
 							reg_chroma_quantization_matrix[511:480] <= PARSE_DATA[31:0];
 						end
+						*/
 						S_picture_header_size:begin
 							reg_picture_header_size <= PARSE_DATA[31:26];
 							reg_picture_size[31:8] <= PARSE_DATA[22:0];
@@ -848,10 +896,22 @@ blk_mem_gen_0 blk_mem_gen_0_slice_table (
 	assign transfer_characteristic 		= reg_transfer_characteristic;
 	assign matrix_coefficients 			= reg_matrix_coefficients;
 	assign alpha_channel_type 			= reg_alpha_channel_type;
-	assign luma_quantization_matrix 	= reg_luma_quantization_matrix;
-	assign chroma_quantization_matrix 	= reg_chroma_quantization_matrix;
 
 
+generate
+	genvar j;
+	for (j=0;j<64;j = j + 1) begin
+		assign luma_quantization_matrix[j*8+7:j*8] 	= reg_luma_quantization_matrix[j];
+	end
+endgenerate
+
+
+generate
+		genvar k;
+	for (k=0;k<64;k = k + 1) begin
+		assign chroma_quantization_matrix[k*8+7:k*8] 	= reg_chroma_quantization_matrix[k];
+	end
+endgenerate
 
 	assign mb_width 					= reg_mb_width;
 	assign mb_height 					= reg_mb_height;

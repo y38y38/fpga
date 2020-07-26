@@ -26,6 +26,7 @@ module test_parse_control(
 
 
 	localparam STEP = 8;
+	localparam HALF_STEP = 4;
 	localparam INITIAL_WAIT = STEP * 20;
 
 	reg PARSE_CLK;
@@ -112,18 +113,24 @@ end
 
 /* create clock */
 always begin
-	PARSE_CLK = 0 ;
-	#(STEP/2);
 	PARSE_CLK = 1 ;
-	#(STEP/2);
+	#HALF_STEP;
+	PARSE_CLK = 0 ;
+	#HALF_STEP;
 end
 
 /* reset and start*/
 initial begin
 	//reset
 	PARSE_RESETN = 1;
+	PARSE_START = 1'b0;
+	PARSE_TOP_ADDR = 32'h00000000;
+	PARSE_TOTAL_SIZE = 32'd0;
+
+	#HALF_STEP;//for Racing
 	#(STEP*10) ; PARSE_RESETN = 0;
 	#(STEP*2)  ; PARSE_RESETN = 1;
+	#(STEP*2);
 
 	//start
 	PARSE_START = 1'b1;
@@ -133,9 +140,8 @@ initial begin
 	//clear parameter
 	#STEP;
 	PARSE_START = 1'b0;
-	PARSE_TOP_ADDR = 32'h00000000;
+//	PARSE_TOP_ADDR = 32'h00000000;
 	PARSE_TOTAL_SIZE = 32'd0;
-	#STEP;
 
 end
 
@@ -148,7 +154,7 @@ integer j;
 localparam S_IDLE = 2'd0;
 localparam S_READ = 2'd1;
 
-always @(posedge PARSE_CLK) begin
+always @(negedge PARSE_CLK) begin
 	if (PARSE_RESETN == 0) begin
 		state <= S_IDLE;
 	end else begin
@@ -169,7 +175,7 @@ end
 
 
 
-always @(posedge PARSE_CLK) begin
+always @(negedge PARSE_CLK) begin
 	if (PARSE_RESETN == 0) begin
 		PARSE_DATA = 32'h0;
 		PARSE_DATA_ENABLE  = 1'b0;
@@ -180,11 +186,13 @@ always @(posedge PARSE_CLK) begin
 		
 	end else begin
 		if (state == S_IDLE) begin
-			offset_addr <= 32'h00;
+//			offset_addr <= 32'h00;
 			PARSE_DATA_ENABLE <= 1'b0;
 			if (ONE_PARSE_START) begin
-				$display ("addr" , PARSE_ADDR);
-				$display ("size" , PARSE_SIZE);
+				$display ("addr %x" , PARSE_ADDR);
+				$display ("size %x" , PARSE_SIZE);
+				offset_addr <= PARSE_ADDR - PARSE_TOP_ADDR;
+				$display ("offset addr %x" , PARSE_ADDR - PARSE_TOP_ADDR);
 				parse_size <= PARSE_SIZE;
 			end else begin
 				parse_size <= 32'h0;
