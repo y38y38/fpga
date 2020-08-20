@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="test_axi_write_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="test_axi_write" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="432001fs"></ZoomEndTime>
+      <Cursor1Time time="84000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="318"></NameColumnWidth>
+      <ValueColumnWidth column_width="88"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="27" />
+   <wvobject type="logic" fp_name="/test_axi_write/m00_axi_aclk">
+      <obj_property name="ElementShortName">m00_axi_aclk</obj_property>
+      <obj_property name="ObjectShortName">m00_axi_aclk</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_axi_write/myip_v1_0_M00_AXI_inst/M_AXI_AWID">
+      <obj_property name="ElementShortName">M_AXI_AWID[0:0]</obj_property>
+      <obj_property name="ObjectShortName">M_AXI_AWID[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_axi_write/myip_v1_0_M00_AXI_inst/M_AXI_AWADDR">
+      <obj_property name="ElementShortName">M_AXI_AWADDR[31:0]</obj_property>
+      <obj_property name="ObjectShortName">M_AXI_AWADDR[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_axi_write/myip_v1_0_M00_AXI_inst/M_AXI_AWLEN">
+      <obj_property name="ElementShortName">M_AXI_AWLEN[7:0]</obj_property>
+      <obj_property name="ObjectShortName">M_AXI_AWLEN[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_axi_write/myip_v1_0_M00_AXI_inst/M_AXI_AWSIZE">
+      <obj_property name="ElementShortName">M_AXI_AWSIZE[2:0]</obj_property>
+      <obj_property name="ObjectShortName">M_AXI_AWSIZE[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_axi_write/myip_v1_0_M00_AXI_inst/M_AXI_AWBURST">
+      <obj_property name="ElementShortName">M_AXI_AWBURST[1:0]</obj_property>
+      <obj_property name="ObjectShortName">M_AXI_AWBURST[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/test_axi_write/myip_v1_0_M00_AXI_inst/M_AXI_AWLOCK">
+      <obj_property name="ElementShortName">M_AXI_AWLOCK</obj_property>
+      <obj_property name="ObjectShortName">M_AXI_AWLOCK</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_axi_write/myip_v1_0_M00_AXI_inst/M_AXI_AWCACHE">
+      <obj_property name="ElementShortName">M_AXI_AWCACHE[3:0]</obj_property>
+      <obj_property name="ObjectShortName">M_AXI_AWCACHE[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_axi_write/myip_v1_0_M00_AXI_inst/M_AXI_AWPROT">
+      <obj_property name="ElementShortName">M_AXI_AWPROT[2:0]</obj_property>
+      <obj_property name="ObjectShortName">M_AXI_AWPROT[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_axi_write/myip_v1_0_M00_AXI_inst/M_AXI_AWQOS">
+      <obj_property name="ElementShortName">M_AXI_AWQOS[3:0]</obj_property>
+      <obj_property name="ObjectShortName">M_AXI_AWQOS[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_axi_write/myip_v1_0_M00_AXI_inst/M_AXI_AWUSER">
+      <obj_property name="ElementShortName">M_AXI_AWUSER[-1:0]</obj_property>
+      <obj_property name="ObjectShortName">M_AXI_AWUSER[-1:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/test_axi_write/myip_v1_0_M00_AXI_inst/M_AXI_AWVALID">
+      <obj_property name="ElementShortName">M_AXI_AWVALID</obj_property>
+      <obj_property name="ObjectShortName">M_AXI_AWVALID</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/test_axi_write/myip_v1_0_M00_AXI_inst/awvaild">
+      <obj_property name="ElementShortName">awvaild</obj_property>
+      <obj_property name="ObjectShortName">awvaild</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/test_axi_write/myip_v1_0_M00_AXI_inst/M_AXI_AWREADY">
+      <obj_property name="ElementShortName">M_AXI_AWREADY</obj_property>
+      <obj_property name="ObjectShortName">M_AXI_AWREADY</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_axi_write/myip_v1_0_M00_AXI_inst/M_AXI_WDATA">
+      <obj_property name="ElementShortName">M_AXI_WDATA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">M_AXI_WDATA[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_axi_write/myip_v1_0_M00_AXI_inst/M_AXI_WSTRB">
+      <obj_property name="ElementShortName">M_AXI_WSTRB[3:0]</obj_property>
+      <obj_property name="ObjectShortName">M_AXI_WSTRB[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/test_axi_write/myip_v1_0_M00_AXI_inst/M_AXI_WLAST">
+      <obj_property name="ElementShortName">M_AXI_WLAST</obj_property>
+      <obj_property name="ObjectShortName">M_AXI_WLAST</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_axi_write/myip_v1_0_M00_AXI_inst/M_AXI_WUSER">
+      <obj_property name="ElementShortName">M_AXI_WUSER[-1:0]</obj_property>
+      <obj_property name="ObjectShortName">M_AXI_WUSER[-1:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/test_axi_write/myip_v1_0_M00_AXI_inst/M_AXI_WVALID">
+      <obj_property name="ElementShortName">M_AXI_WVALID</obj_property>
+      <obj_property name="ObjectShortName">M_AXI_WVALID</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/test_axi_write/myip_v1_0_M00_AXI_inst/wvaild">
+      <obj_property name="ElementShortName">wvaild</obj_property>
+      <obj_property name="ObjectShortName">wvaild</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/test_axi_write/myip_v1_0_M00_AXI_inst/M_AXI_WREADY">
+      <obj_property name="ElementShortName">M_AXI_WREADY</obj_property>
+      <obj_property name="ObjectShortName">M_AXI_WREADY</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_axi_write/myip_v1_0_M00_AXI_inst/M_AXI_BID">
+      <obj_property name="ElementShortName">M_AXI_BID[0:0]</obj_property>
+      <obj_property name="ObjectShortName">M_AXI_BID[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_axi_write/myip_v1_0_M00_AXI_inst/M_AXI_BRESP">
+      <obj_property name="ElementShortName">M_AXI_BRESP[1:0]</obj_property>
+      <obj_property name="ObjectShortName">M_AXI_BRESP[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_axi_write/myip_v1_0_M00_AXI_inst/M_AXI_BUSER">
+      <obj_property name="ElementShortName">M_AXI_BUSER[-1:0]</obj_property>
+      <obj_property name="ObjectShortName">M_AXI_BUSER[-1:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/test_axi_write/myip_v1_0_M00_AXI_inst/M_AXI_BVALID">
+      <obj_property name="ElementShortName">M_AXI_BVALID</obj_property>
+      <obj_property name="ObjectShortName">M_AXI_BVALID</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/test_axi_write/myip_v1_0_M00_AXI_inst/M_AXI_BREADY">
+      <obj_property name="ElementShortName">M_AXI_BREADY</obj_property>
+      <obj_property name="ObjectShortName">M_AXI_BREADY</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/test_axi_write/myip_v1_0_M00_AXI_inst/write_state">
+      <obj_property name="ElementShortName">write_state[1:0]</obj_property>
+      <obj_property name="ObjectShortName">write_state[1:0]</obj_property>
+   </wvobject>
+</wave_config>

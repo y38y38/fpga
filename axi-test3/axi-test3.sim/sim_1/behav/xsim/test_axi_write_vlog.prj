@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../axi-test3.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../axi-test3.srcs/sources_1/bd/design_1/ipshared/e257/hdl" --include "../../../../axi-test3.srcs/sources_1/bd/design_1/ipshared/2702/hdl/verilog" --include "/tools/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
+"../../../../axi-test3.srcs/sources_1/imports/hdl/myip_v1_0_M00_AXI.v" \
+"../../../../axi-test3.srcs/sim_1/new/test_axi_write.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
