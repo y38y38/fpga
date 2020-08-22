@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="console" location="/home/y/fpga/axi-test3/workspace2/console" platform="/home/y/fpga/axi-test3/workspace2/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm" platformUID="xilinx:ultra96v2::0.0(custom)" systemProject="console_system" sysConfig="design_1_wrapper" runtime="cpp" cpu="domain_psu_cortexa53_0" cpuInstance="psu_cortexa53_0" os="freertos10_xilinx" mssSignature="864521b0310344bac2791ace9fa0716f">
+  <configuration name="Debug" id="xilinx.gnu.arm.a53.exe.debug.2088016913">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.arm.a53.exe.release.1228671745" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="freertos_hello_world"/>
+</sdkproject:SdkProject>
