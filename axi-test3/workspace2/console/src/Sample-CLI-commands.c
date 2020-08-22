@@ -473,7 +473,6 @@ BaseType_t xParameterStringLength, xReturn,length;
 
 	u32 *addr = (u32)strtol(pcParameter, NULL, 16);
 	//xil_printf("%x", addr);
-
 	/* Return the parameter string. */
 	memset( pcWriteBuffer, 0x00, xWriteBufferLen );
 	sprintf( pcWriteBuffer, ( char * ) pcParameter, ( size_t ) xParameterStringLength );
@@ -490,6 +489,7 @@ BaseType_t xParameterStringLength, xReturn,length;
 						);
 	u32 val = strtol(pcParameter, NULL, 16);
 	*addr = val;
+	Xil_DCacheFlush();
 
 	sprintf(pcWriteBuffer + length,"%.8x", *addr);
 	length += 8;
@@ -526,7 +526,7 @@ BaseType_t xParameterStringLength, xReturn, length;
 
 	u32 *addr = (u32)strtol(pcParameter, NULL, 16);
 	//xil_printf("%x", addr);
-
+	Xil_DCacheInvalidate();
 	/* Return the parameter string. */
 	memset( pcWriteBuffer, 0x00, xWriteBufferLen );
 	sprintf( pcWriteBuffer, ( char * ) pcParameter, ( size_t ) xParameterStringLength );

@@ -13,9 +13,9 @@ set mode [expr [mrd -value 0xFF5E0200] & 0xf]
 targets -set -nocase -filter {name =~ "*A53*#0"}
 rst -processor
 dow /home/y/fpga/axi-test3/workspace2/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf
-set bp_45_49_fsbl_bp [bpadd -addr &XFsbl_Exit]
+set bp_49_31_fsbl_bp [bpadd -addr &XFsbl_Exit]
 con -block -timeout 60
-bpremove $bp_45_49_fsbl_bp
+bpremove $bp_49_31_fsbl_bp
 targets -set -nocase -filter {name =~ "*A53*#0"}
 rst -processor
 dow /home/y/fpga/axi-test3/workspace2/console/Debug/console.elf
