@@ -27,7 +27,7 @@
 	)
 	(
 		// Users to add ports here
-
+		output wire [31:0] write_state,
 		// User ports ends
 		// Do not modify the ports beyond this line
 
@@ -108,6 +108,9 @@
 	//user start
 	wire write_start;
 	wire [31:0] write_address;
+//	wire [31:0] write_state;
+
+//	assign WRITE_STATE = write_state;
 	//user end
 
 // Instantiation of Axi Bus Interface S00_AXI
@@ -154,6 +157,7 @@
 		.C_M_AXI_BUSER_WIDTH(C_M00_AXI_BUSER_WIDTH)
 	) myip_v1_0_M00_AXI_inst (
 		.WRITE_ADDRESS(write_address),
+		.WRITE_STATE(write_state),
 		.INIT_AXI_TXN(write_start),
 		.TXN_DONE(m00_axi_txn_done),
 		.ERROR(m00_axi_error),

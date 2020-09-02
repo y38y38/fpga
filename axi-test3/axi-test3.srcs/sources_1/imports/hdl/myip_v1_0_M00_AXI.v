@@ -32,6 +32,7 @@
 	(
 		// Users to add ports here
 		input wire [31:0] WRITE_ADDRESS,
+		output wire [31:0] WRITE_STATE,
 		// User ports ends
 		// Do not modify the ports beyond this line
 
@@ -159,23 +160,26 @@
 	reg awvaild;
 	reg wvaild;
 	reg bready;
+	reg last;
 
 
 //	wire aw_valid = M_AXI_AWREADY & awvaild;
 
 	//write state
-	reg [3:0] write_state;
-	localparam S_IDLE = 4'd0;
-//	localparam S_WRITE_START_WAIT = 4'd1;
-	localparam S_ADDRESS_WRITE_READY_WAIT = 4'd1;
-//	localparam S_WRITE = 4'd2;
-	localparam S_ADDRESS_WRITE_AND_WRITE_READY_WAIT = 4'd2;
-	localparam S_WRITING = 4'd3;
-	localparam S_WAIT_RESPONSE = 4'd4;
+	reg [31:0] write_state;
+	localparam S_IDLE = 32'd0;
+	localparam S_ADDRESS_WRITE_READY_WAIT = 32'd1;
+	localparam S_ADDRESS_WRITE_AND_WRITE_READY_WAIT = 32'd2;
+	localparam S_WRITING = 32'd4;
+	localparam S_WAIT_RESPONSE = 32'd8;
+
+	//write_length
+	reg [31:0] write_counter = 0;
 
 	always @(posedge M_AXI_ACLK) begin
 		if (M_AXI_ARESETN == 0 ) begin
 			write_state <= S_IDLE;
+			last <= 1'b0;
 		end else begin
 			if (write_state == S_IDLE) begin
 				if (INIT_AXI_TXN == 1'b1) begin
@@ -190,7 +194,12 @@
 					write_state <= S_WRITING;
 				end
 			end	else if (write_state == S_WRITING ) begin //S_WRITING
-				write_state <= S_WAIT_RESPONSE;
+				if (write_counter == 1) begin
+					last <=1'b1;
+				end else if (write_counter == 0) begin
+					write_state <= S_WAIT_RESPONSE;
+					last <=1'b0;
+				end
 			end else if (write_state == S_WAIT_RESPONSE) begin
 				if (bready & M_AXI_BVALID) begin
 					write_state <= S_IDLE;
@@ -199,25 +208,30 @@
 		end
 	end
 
+	assign WRITE_STATE = write_state;
+	
 	always @(posedge M_AXI_ACLK) begin
 		if (M_AXI_ARESETN == 0 ) begin
 			awvaild <= 1'b0;
 			wvaild <= 1'b0;
 			bready <= 1'b0;
+
 		end else begin
 			if (write_state == S_IDLE) begin
 				bready <= 1'b0;
 			end else if (write_state == S_ADDRESS_WRITE_READY_WAIT) begin
 				if (M_AXI_AWREADY == 1'b1) begin
 					awvaild <= 1'b1;
+					wvaild <= 1'b1;
 				end
 			end else if (write_state == S_ADDRESS_WRITE_AND_WRITE_READY_WAIT) begin
 				awvaild <= 1'b0;
-				if (M_AXI_WREADY == 1'b1) begin
-					wvaild <= 1'b1;
-				end
 			end else if (write_state == S_WRITING) begin
-				wvaild <= 1'b0;
+				if (M_AXI_WREADY & wvaild) begin
+				if (write_counter == 0) begin
+					wvaild <= 1'b0;
+				end
+				end
 			end else if (write_state == S_WAIT_RESPONSE) begin
 				bready <= 1'b1;
 				awvaild <= 1'b0;
@@ -226,10 +240,25 @@
 		end
 	end
 
+	always @(posedge M_AXI_ACLK) begin
+		if (M_AXI_ARESETN == 0 ) begin
+			write_counter <= 32'h0;
+		end else begin
+			if (write_state == S_ADDRESS_WRITE_READY_WAIT) begin
+				write_counter <= 32'hf;				
+			end	else if (write_state == S_WRITING ) begin //S_WRITING
+				write_counter <= write_counter - 32'h1;				
+			end
+			
+		end
+	end
+
+
+
 
 	//AWID
 
-	assign M_AXI_AWID = 1'b0;
+	assign M_AXI_AWID = 32'h0;
 
 	//AWADDR
 
@@ -237,7 +266,8 @@
 
 
 	//AWLEN
-	assign M_AXI_AWLEN = 8'd1;
+//	assign M_AXI_AWLEN = 8'd1;
+	assign M_AXI_AWLEN = 8'd15;
 
 	//AWSIZE
 	assign M_AXI_AWSIZE = 3'b010;
@@ -258,7 +288,7 @@
 	assign M_AXI_AWQOS	= 4'h0;
 
 	//AWUSER
-	assign M_AXI_AWUSER =  1'b0;
+	assign M_AXI_AWUSER =  32'b1;
 
 
 
@@ -272,10 +302,11 @@
 	assign M_AXI_WDATA = 32'h01234567;
 
 	//WSTRB
-	assign M_AXI_WSTRB = 4'b1111;
+//	assign M_AXI_WSTRB = 4'b1111;
+	assign M_AXI_WSTRB	= {(C_M_AXI_DATA_WIDTH/8){1'b1}};
 
 	//WLAST
-	assign M_AXI_WLAST = 1'b1;
+	assign M_AXI_WLAST = last;
 
 	//WUSER 
 	assign M_AXI_WUSER = 32'h0;
@@ -325,32 +356,25 @@
 	end
 
 	//BREADY
+	assign M_AXI_BREADY = bready;
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	//read
+	assign M_AXI_ARID = 32'h0;
+	assign M_AXI_ARADDR = 32'h0;
+	assign M_AXI_ARLEN = 8'h0f;
+	assign M_AXI_ARSIZE = 3'h2;
+	assign M_AXI_ARBURST = 2'h1;
+	assign M_AXI_ARLOCK = 1'b0;
+	assign M_AXI_ARCACHE = 4'h2;
+	assign M_AXI_ARPROT = 3'h0;
+	assign M_AXI_ARQOS = 4'h0;
+	assign M_AXI_ARUSER = 'h0;
+	assign M_AXI_ARVALID = 1'b0;
+	assign M_AXI_RREADY = 1'b0;
+	
 
 
 

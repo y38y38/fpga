@@ -230,9 +230,9 @@
 	  if ( S_AXI_ARESETN == 1'b0 )
 	    begin
 	      slv_reg0 <= 0;
-	      slv_reg1 <= 0;
+	      slv_reg1 <= 32'h40000000;
 	      slv_reg2 <= 0;
-	      slv_reg3 <= 0;
+	      slv_reg3 <= 2;
 	    end 
 	  else begin
 	    if (slv_reg_wren)
@@ -416,9 +416,10 @@
 	always @( posedge S_AXI_ACLK ) begin
 		if ( S_AXI_ARESETN == 1'b0 ) begin
 			write_start <= 1'b0;
+			write_state <= S_IDLE;
 		end else begin
 			if (write_state == S_IDLE) begin
-				if (slv_reg0[0] == 1'b0) begin
+				if (slv_reg0[0] == 1'b1) begin
 					write_start <= 1'b1;
 					write_state <= S_WRITE;
 				end
@@ -429,6 +430,7 @@
 	end
 
 	assign WRITE_ADDRESS = slv_reg1;
+	assign WRITE_START = write_start;
 	// User logic ends
 
 	endmodule

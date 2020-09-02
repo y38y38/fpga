@@ -70,6 +70,9 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param tcl.collectionResultDisplayLimit 0
+set_param xicom.use_bs_reader 1
+set_param chipscope.maxJobs 2
 set_msg_config -id {HDL-1065} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xczu3eg-sbva484-1-e
@@ -100,6 +103,8 @@ set_property used_in_implementation false [get_files -all /home/y/fpga/axi-test3
 set_property used_in_implementation false [get_files -all /home/y/fpga/axi-test3/axi-test3.srcs/sources_1/bd/design_1/ip/design_1_rst_ps8_0_100M_0/design_1_rst_ps8_0_100M_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/y/fpga/axi-test3/axi-test3.srcs/sources_1/bd/design_1/ip/design_1_axi_protocol_checker_0_0/design_1_axi_protocol_checker_0_0.xdc]
 set_property used_in_implementation false [get_files -all /home/y/fpga/axi-test3/axi-test3.srcs/sources_1/bd/design_1/ip/design_1_axi_protocol_checker_0_0/design_1_axi_protocol_checker_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/y/fpga/axi-test3/axi-test3.srcs/sources_1/bd/design_1/ip/design_1_vio_0_0/design_1_vio_0_0.xdc]
+set_property used_in_implementation false [get_files -all /home/y/fpga/axi-test3/axi-test3.srcs/sources_1/bd/design_1/ip/design_1_vio_0_0/design_1_vio_0_0_ooc.xdc]
 set_property used_in_synthesis false [get_files -all /home/y/fpga/axi-test3/axi-test3.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all /home/y/fpga/axi-test3/axi-test3.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all /home/y/fpga/axi-test3/axi-test3.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_ooc.xdc]
@@ -120,6 +125,9 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
+read_xdc /home/y/fpga/axi-test3/axi-test3.srcs/constrs_1/new/axi-test3.xdc
+set_property used_in_implementation false [get_files /home/y/fpga/axi-test3/axi-test3.srcs/constrs_1/new/axi-test3.xdc]
+
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1

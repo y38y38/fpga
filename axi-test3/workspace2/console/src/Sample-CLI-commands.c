@@ -132,17 +132,17 @@ static const CLI_Command_Definition_t xParameterEcho =
 
 static const CLI_Command_Definition_t xWrite32 =
 {
-	"w32",
-	"\r\nw32 address value \r\n Write value in address\r\n",
+	"w",
+	"\r\nw address value \r\n Write value in address\r\n",
 	prvWriteCommand, /* The function to run. */
 	2 /* The user can enter any number of commands. */
 };
 static const CLI_Command_Definition_t xRead32 =
 {
-	"r32",
-	"\r\nr32 address\r\n Read value in address\r\n",
+	"r",
+	"\r\nr address\r\n Read value in address\r\n",
 	prvReadCommand, /* The function to run. */
-	1 /* The user can enter any number of commands. */
+	2 /* The user can enter any number of commands. */
 };
 
 
@@ -533,8 +533,24 @@ BaseType_t xParameterStringLength, xReturn, length;
 	length = xParameterStringLength;
 	sprintf(pcWriteBuffer + length, " ");
 	length += 1;
-	sprintf(pcWriteBuffer + length,"%.8x", *addr);
-	length += 8;
+	//get size
+	pcParameter = FreeRTOS_CLIGetParameter
+						(
+							pcCommandString,		/* The command string itself. */
+							2,		/* Return the next parameter. */
+							&xParameterStringLength	/* Store the parameter string length. */
+						);
+	u32 size = strtol(pcParameter, NULL, 16);
+
+	int i;
+	for (i = 0 ;i<((size+3)/4);i++ ) {
+	 	sprintf(pcWriteBuffer + length,"%.8x ", *(addr + (i)));
+		length += 9;
+		if ((i % 4) == 3) {
+		 	sprintf(pcWriteBuffer + length,"\r\n ");
+			length += 2;
+		}
+	}
 
 
 	return pdFALSE;

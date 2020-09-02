@@ -2,8 +2,8 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Thu Aug 20 22:43:20 2020
-# Process ID: 23038
+# Start of session at: Fri Aug 21 23:57:29 2020
+# Process ID: 14372
 # Current directory: /home/y/fpga/axi-test3/axi-test3.runs/design_1_xbar_0_synth_1
 # Command line: vivado -log design_1_xbar_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_xbar_0.tcl
 # Log file: /home/y/fpga/axi-test3/axi-test3.runs/design_1_xbar_0_synth_1/design_1_xbar_0.vds
@@ -14,4 +14,4 @@ INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/y/fpga/axi-test3/myip_1.0'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2020.1/data/ip'.
 INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP design_1_xbar_0, cache-ID = b02f06166527fe0f.
-INFO: [Common 17-206] Exiting Vivado at Thu Aug 20 22:43:37 2020...
+INFO: [Common 17-206] Exiting Vivado at Fri Aug 21 23:57:45 2020...

@@ -161,14 +161,43 @@ initial begin
 	m00_axi_aresetn	= 1;
 	m00_axi_awready  = 1'b0;
 	m00_axi_wready = 1'b0;
+	m00_axi_bid = 32'h0;
+	m00_axi_bresp = 2'b0;
+	m00_axi_buser = 32'h0;
+	m00_axi_bvalid = 1'b0;
+
+
 	#(STEP * 4)  m00_axi_aresetn = 0;
 	#(STEP * 4)  m00_axi_aresetn = 1;
 	write_address = 32'h40000000;
 	write_start = 1'b1;
 	#(STEP * 2);
+	write_start = 1'b0;
 	m00_axi_awready  = 1'b1;
 	#(STEP * 4);
+	m00_axi_awready  = 1'b0;
 	m00_axi_wready = 1'b1;
+	#(STEP * 4);
+	m00_axi_wready = 1'b0;
+	m00_axi_bvalid = 1'b1;
+	#(STEP * 4);
+	m00_axi_bvalid = 1'b0;
+
+	//second time
+	#(STEP * 4);
+	write_start = 1'b1;
+	#(STEP * 2);
+	write_start = 1'b0;
+	m00_axi_awready  = 1'b1;
+	#(STEP * 4);
+	m00_axi_awready  = 1'b0;
+	m00_axi_wready = 1'b1;
+	#(STEP * 4);
+	m00_axi_wready = 1'b0;
+	m00_axi_bvalid = 1'b1;
+	#(STEP * 4);
+	m00_axi_bvalid = 1'b0;
+
 
 	#(STEP * 40) ;
 	$stop;

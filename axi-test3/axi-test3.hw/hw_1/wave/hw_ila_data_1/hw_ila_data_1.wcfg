@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/home/y/fpga/axi-test3/axi-test3.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wdb" id="1">
+         <top_modules>
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="4084fs"></ZoomStartTime>
+      <ZoomEndTime time="4116fs"></ZoomEndTime>
+      <Cursor1Time time="4098fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="371"></NameColumnWidth>
+      <ValueColumnWidth column_width="138"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="23" />
+   <wave_markers>
+   </wave_markers>
+   <wvobject type="logic" fp_name="design_1_i/myip_v1_0_0_m00_axi_AWID">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/myip_v1_0_0_m00_axi_AWID</obj_property>
+      <obj_property name="ObjectShortName">myip_v1_0_0_m00_axi_AWID</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="design_1_i/myip_v1_0_0_m00_axi_AWADDR">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/myip_v1_0_0_m00_axi_AWADDR[31:0]</obj_property>
+      <obj_property name="ObjectShortName">myip_v1_0_0_m00_axi_AWADDR[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="design_1_i/myip_v1_0_0_m00_axi_AWLEN">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/myip_v1_0_0_m00_axi_AWLEN[7:0]</obj_property>
+      <obj_property name="ObjectShortName">myip_v1_0_0_m00_axi_AWLEN[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="design_1_i/myip_v1_0_0_m00_axi_AWSIZE">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/myip_v1_0_0_m00_axi_AWSIZE[2:0]</obj_property>
+      <obj_property name="ObjectShortName">myip_v1_0_0_m00_axi_AWSIZE[2:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="design_1_i/myip_v1_0_0_m00_axi_AWBURST">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/myip_v1_0_0_m00_axi_AWBURST[1:0]</obj_property>
+      <obj_property name="ObjectShortName">myip_v1_0_0_m00_axi_AWBURST[1:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="design_1_i/myip_v1_0_0_m00_axi_AWLOCK">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/myip_v1_0_0_m00_axi_AWLOCK</obj_property>
+      <obj_property name="ObjectShortName">myip_v1_0_0_m00_axi_AWLOCK</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="design_1_i/myip_v1_0_0_m00_axi_AWCACHE">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/myip_v1_0_0_m00_axi_AWCACHE[3:0]</obj_property>
+      <obj_property name="ObjectShortName">myip_v1_0_0_m00_axi_AWCACHE[3:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="design_1_i/myip_v1_0_0_m00_axi_AWPROT">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/myip_v1_0_0_m00_axi_AWPROT[2:0]</obj_property>
+      <obj_property name="ObjectShortName">myip_v1_0_0_m00_axi_AWPROT[2:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="design_1_i/myip_v1_0_0_m00_axi_AWQOS">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/myip_v1_0_0_m00_axi_AWQOS[3:0]</obj_property>
+      <obj_property name="ObjectShortName">myip_v1_0_0_m00_axi_AWQOS[3:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="design_1_i/myip_v1_0_0_m00_axi_AWUSER">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/myip_v1_0_0_m00_axi_AWUSER</obj_property>
+      <obj_property name="ObjectShortName">myip_v1_0_0_m00_axi_AWUSER</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="design_1_i/myip_v1_0_0_m00_axi_AWVALID">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/myip_v1_0_0_m00_axi_AWVALID</obj_property>
+      <obj_property name="ObjectShortName">myip_v1_0_0_m00_axi_AWVALID</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="design_1_i/myip_v1_0_0_m00_axi_AWREADY">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/myip_v1_0_0_m00_axi_AWREADY</obj_property>
+      <obj_property name="ObjectShortName">myip_v1_0_0_m00_axi_AWREADY</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="design_1_i/myip_v1_0_0_m00_axi_WDATA">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/myip_v1_0_0_m00_axi_WDATA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">myip_v1_0_0_m00_axi_WDATA[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="design_1_i/myip_v1_0_0_m00_axi_WSTRB">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/myip_v1_0_0_m00_axi_WSTRB[3:0]</obj_property>
+      <obj_property name="ObjectShortName">myip_v1_0_0_m00_axi_WSTRB[3:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="design_1_i/myip_v1_0_0_m00_axi_WLAST">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/myip_v1_0_0_m00_axi_WLAST</obj_property>
+      <obj_property name="ObjectShortName">myip_v1_0_0_m00_axi_WLAST</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="design_1_i/myip_v1_0_0_m00_axi_WUSER">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/myip_v1_0_0_m00_axi_WUSER</obj_property>
+      <obj_property name="ObjectShortName">myip_v1_0_0_m00_axi_WUSER</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="design_1_i/myip_v1_0_0_m00_axi_WVALID">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/myip_v1_0_0_m00_axi_WVALID</obj_property>
+      <obj_property name="ObjectShortName">myip_v1_0_0_m00_axi_WVALID</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="design_1_i/myip_v1_0_0_m00_axi_WREADY">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/myip_v1_0_0_m00_axi_WREADY</obj_property>
+      <obj_property name="ObjectShortName">myip_v1_0_0_m00_axi_WREADY</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="design_1_i/myip_v1_0_0_m00_axi_BID">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/myip_v1_0_0_m00_axi_BID</obj_property>
+      <obj_property name="ObjectShortName">myip_v1_0_0_m00_axi_BID</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="design_1_i/myip_v1_0_0_m00_axi_BRESP">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/myip_v1_0_0_m00_axi_BRESP[1:0]</obj_property>
+      <obj_property name="ObjectShortName">myip_v1_0_0_m00_axi_BRESP[1:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="design_1_i/myip_v1_0_0_m00_axi_BREADY">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/myip_v1_0_0_m00_axi_BREADY</obj_property>
+      <obj_property name="ObjectShortName">myip_v1_0_0_m00_axi_BREADY</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="design_1_i/myip_v1_0_0_m00_axi_BVALID">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/myip_v1_0_0_m00_axi_BVALID</obj_property>
+      <obj_property name="ObjectShortName">myip_v1_0_0_m00_axi_BVALID</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="design_1_i/myip_v1_0_0/inst/write_start">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/myip_v1_0_0/inst/write_start</obj_property>
+      <obj_property name="ObjectShortName">write_start</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+</wave_config>
