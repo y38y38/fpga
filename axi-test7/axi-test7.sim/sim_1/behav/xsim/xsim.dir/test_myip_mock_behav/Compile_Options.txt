@@ -1,0 +1,1 @@
+-wto "b6067609bf8c4dae8004f2cd4ef78c22" --incr --debug "typical" --relax --mt "8" -L "xil_defaultlib" -L "xilinx_vip" -L "unisims_ver" -L "unimacro_ver" -L "secureip" -L "xpm" --snapshot "test_myip_mock_behav" "xil_defaultlib.test_myip_mock" "xil_defaultlib.glbl" -log "elaborate.log" 
