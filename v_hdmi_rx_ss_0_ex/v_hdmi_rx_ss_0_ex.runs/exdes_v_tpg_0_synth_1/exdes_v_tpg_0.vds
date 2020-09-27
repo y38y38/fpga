@@ -1,0 +1,1232 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Sun Aug 30 16:45:14 2020
+# Process ID: 7734
+# Current directory: /home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1
+# Command line: vivado -log exdes_v_tpg_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source exdes_v_tpg_0.tcl
+# Log file: /home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/exdes_v_tpg_0.vds
+# Journal file: /home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source exdes_v_tpg_0.tcl -notrace
+
+****** Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+  **** SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+  **** IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source /tools/Xilinx/Vivado/2020.1/scripts/vivado_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'y' on host 'y-Blade-Stealth' (Linux_x86_64 version 5.4.0-42-generic) on Sun Aug 30 16:45:44 JST 2020
+INFO: [HLS 200-10] On os Ubuntu 18.04.5 LTS
+INFO: [HLS 200-10] In directory '/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1'
+Sourcing Tcl script '/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/runhls.tcl'
+INFO: [HLS 200-10] Creating and opening project '/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/exdes_v_tpg_0'.
+INFO: [HLS 200-10] Adding design file '/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/src/v_tpg_config.h' to the project
+INFO: [HLS 200-10] Adding design file '/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/src/v_tpg.cpp' to the project
+INFO: [HLS 200-10] Adding design file '/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/src/v_tpg.h' to the project
+INFO: [HLS 200-10] Adding design file '/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/src/v_tpg_zoneplate.h' to the project
+INFO: [HLS 200-10] Adding design file '/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/src/hls_video.h' to the project
+INFO: [HLS 200-10] Adding design file '/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/src/hls_opencv.h' to the project
+INFO: [HLS 200-10] Adding design file '/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/src/hls/hls_axi_io.h' to the project
+INFO: [HLS 200-10] Adding design file '/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/src/hls/hls_video_arithm.h' to the project
+INFO: [HLS 200-10] Adding design file '/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/src/hls/hls_video_core.h' to the project
+INFO: [HLS 200-10] Adding design file '/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/src/hls/hls_video_fast.h' to the project
+INFO: [HLS 200-10] Adding design file '/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/src/hls/hls_video_haar.h' to the project
+INFO: [HLS 200-10] Adding design file '/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/src/hls/hls_video_harris.h' to the project
+INFO: [HLS 200-10] Adding design file '/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/src/hls/hls_video_histogram.h' to the project
+INFO: [HLS 200-10] Adding design file '/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/src/hls/hls_video_hough.h' to the project
+INFO: [HLS 200-10] Adding design file '/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/src/hls/hls_video_imgbase.h' to the project
+INFO: [HLS 200-10] Adding design file '/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/src/hls/hls_video_imgproc.h' to the project
+INFO: [HLS 200-10] Adding design file '/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/src/hls/hls_video_io.h' to the project
+INFO: [HLS 200-10] Adding design file '/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/src/hls/hls_video_mem.h' to the project
+INFO: [HLS 200-10] Adding design file '/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/src/hls/hls_video_stereobm.h' to the project
+INFO: [HLS 200-10] Adding design file '/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/src/hls/hls_video_types.h' to the project
+INFO: [HLS 200-10] Adding design file '/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/src/hls/hls_video_undistort.h' to the project
+INFO: [HLS 200-10] Creating and opening solution '/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/exdes_v_tpg_0/prj'.
+INFO: [HLS 200-10] Setting target device to 'xczu7ev-ffvc1156-2-e'
+INFO: [SYN 201-201] Setting up clock 'ap_clk' with a period of 3.334ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file '/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/src/v_tpg.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:43 ; elapsed = 00:00:46 . Memory (MB): peak = 1660.938 ; gain = 1227.754 ; free physical = 874 ; free virtual = 5028
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:43 ; elapsed = 00:00:46 . Memory (MB): peak = 1660.938 ; gain = 1227.754 ; free physical = 874 ; free virtual = 5029
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'hls::AXIGetBitFields<48, ap_uint<8> >.1' into 'hls::AXIGetBitFields<48, ap_uint<8> >' (/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/src/hls/hls_axi_io.h:71).
+INFO: [XFORM 203-603] Inlining function 'hls::AXIGetBitFields<48, ap_uint<8> >' into 'AXIvideo2MultiPixStream' (/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/src/v_tpg.cpp:844).
+INFO: [XFORM 203-603] Inlining function 'hls::AXIGetBitFields<48, ap_uint<8> >' into 'AXIvideo2MultiPixStream' (/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/src/v_tpg.cpp:845).
+INFO: [XFORM 203-603] Inlining function 'hls::AXIGetBitFields<48, ap_uint<8> >' into 'AXIvideo2MultiPixStream' (/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/src/v_tpg.cpp:846).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:47 ; elapsed = 00:00:50 . Memory (MB): peak = 1660.938 ; gain = 1227.754 ; free physical = 794 ; free virtual = 4974
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-23] /home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/src/v_tpg.cpp:995: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:50 ; elapsed = 00:00:53 . Memory (MB): peak = 1660.938 ; gain = 1227.754 ; free physical = 665 ; free virtual = 4805
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'tpgPatternTartanColorBars'.
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'tpgPatternSolidBlack'.
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'tpgPatternCrossHatch'.
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'tpgPatternColorBars'.
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'tpgPatternCheckerBoard'.
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'tpgPRBS'.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1.1' in function 'tpgBackground' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1.1' in function 'MultiPixStream2AXIvideo' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'loop_width' in function 'AXIvideo2MultiPixStream' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' in function 'tpgPatternTartanColorBars' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' in function 'tpgPatternSolidBlack' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' in function 'tpgPatternCrossHatch' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' in function 'tpgPatternColorBars' completely with a factor of 0.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2' in function 'tpgPatternColorBars' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' in function 'tpgPatternCheckerBoard' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' in function 'tpgPRBS' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.1' in function 'tpgBackground' completely with a factor of 6.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.2' in function 'tpgBackground' completely with a factor of 6.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.3' in function 'tpgBackground' completely with a factor of 6.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.4' in function 'tpgBackground' completely with a factor of 6.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.5' in function 'tpgBackground' completely with a factor of 6.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.6' in function 'tpgBackground' completely with a factor of 6.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.7' in function 'tpgBackground' completely with a factor of 6.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.8' in function 'tpgBackground' completely with a factor of 6.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.9' in function 'tpgBackground' completely with a factor of 6.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.10' in function 'tpgBackground' completely with a factor of 6.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.11' in function 'tpgBackground' completely with a factor of 6.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.12' in function 'tpgBackground' completely with a factor of 6.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.13' in function 'tpgBackground' completely with a factor of 6.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.14' in function 'tpgBackground' completely with a factor of 6.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.15' in function 'tpgBackground' completely with a factor of 6.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.16' in function 'tpgBackground' completely with a factor of 6.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.17' in function 'tpgBackground' completely with a factor of 6.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.18' in function 'tpgBackground' completely with a factor of 6.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.19' in function 'tpgBackground' completely with a factor of 6.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.20' in function 'tpgBackground' completely with a factor of 6.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.21' in function 'tpgBackground' completely with a factor of 6.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.22' in function 'tpgBackground' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.1' in function 'MultiPixStream2AXIvideo' completely with a factor of 6.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.2' in function 'MultiPixStream2AXIvideo' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.2.1' in function 'MultiPixStream2AXIvideo' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.1' in function 'AXIvideo2MultiPixStream' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.1.1' in function 'AXIvideo2MultiPixStream' completely with a factor of 3.
+INFO: [XFORM 203-102] Partitioning array 'xCount.V.2' automatically.
+INFO: [XFORM 203-102] Partitioning array 'xCount.V.1' automatically.
+INFO: [XFORM 203-102] Partitioning array 'xCount.V' automatically.
+INFO: [XFORM 203-102] Partitioning array 'xBar.V' automatically.
+INFO: [XFORM 203-102] Partitioning array 'hBarSel.3' automatically.
+INFO: [XFORM 203-102] Partitioning array 'hBarSel.2' automatically.
+INFO: [XFORM 203-102] Partitioning array 'hBarSel' automatically.
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'srcYUV.V.val.V' .
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'ovrlayYUV.V.val.V' .
+INFO: [XFORM 203-101] Partitioning array 'tmp.val.V' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'tmp.val.V' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'map' in dimension 1 completely.
+INFO: [XFORM 203-712] Applying dataflow to function 'v_tpg' , detected/extracted 3 process function(s): 
+	 'AXIvideo2MultiPixStream'
+	 'tpgBackground'
+	 'MultiPixStream2AXIvideo'.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock in function 'tpgPatternTartanColorBars'... converting 12 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock in function 'tpgPatternTartanColorBars'... converting 12 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock in function 'tpgPatternSolidBlack'... converting 5 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock in function 'tpgPatternCrossHatch'... converting 12 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock in function 'tpgPatternCrossHatch'... converting 12 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock in function 'tpgPatternColorBars'... converting 12 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock in function 'tpgPatternColorBars'... converting 12 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock in function 'tpgPatternColorBars'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock in function 'tpgPatternCheckerBoard'... converting 12 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock in function 'tpgPatternCheckerBoard'... converting 12 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock in function 'tpgPRBS'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock in function 'tpgBackground'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock in function 'MultiPixStream2AXIvideo'... converting 27 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock in function 'AXIvideo2MultiPixStream'... converting 4 basic blocks.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:56 ; elapsed = 00:01:00 . Memory (MB): peak = 1660.938 ; gain = 1227.754 ; free physical = 723 ; free virtual = 4309
+WARNING: [XFORM 203-631] Renaming function 'tpgPatternTartanColorBars' to 'tpgPatternTartanColo' 
+WARNING: [XFORM 203-631] Renaming function 'tpgPatternCheckerBoard' to 'tpgPatternCheckerBoa' 
+WARNING: [XFORM 203-631] Renaming function 'MultiPixStream2AXIvideo' to 'MultiPixStream2AXIvi' 
+WARNING: [XFORM 203-631] Renaming function 'AXIvideo2MultiPixStream' to 'AXIvideo2MultiPixStr' 
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:01:00 ; elapsed = 00:01:04 . Memory (MB): peak = 1660.938 ; gain = 1227.754 ; free physical = 659 ; free virtual = 4251
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'v_tpg' ...
+WARNING: [SYN 201-103] Legalizing function name 'reg<unsigned short>' to 'reg_unsigned_short_s'.
+WARNING: [SYN 201-103] Legalizing function name 'reg<ap_uint<10> >' to 'reg_ap_uint_10_s'.
+WARNING: [SYN 201-561] Cannot apply I/O mode 'ap_stable' on port 'fid' changing to the default 'ap_vld' mode.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'reg_unsigned_short_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+###	 Num	NTree	NLUT	EssAll	EssLUT	Size	MSize	Lev	MLev	Sel	Phy 
+####	 0	0	0	2	0	-nan	0	-nan	0	0	0
+INFO: [SCHED 204-11] Generating True dependence constraints ... 
+INFO: [SCHED 204-11] Generating Auxiliary dependence constraints ... 
+INFO: [SCHED 204-11] Generating Ternary mapping constraints ... 
+INFO: [SCHED 204-11] Generating Lut Grouping constraints ... 
+INFO: [SCHED 204-11] Generating Node latency constraints ... 
+INFO: [SCHED 204-11] Generating Relative time constraints ... 
+INFO: [SCHED 204-11] Generating Protocol constraints ... 
+INFO: [SCHED 204-11] Generating Precedence constraints ... 
+INFO: [SCHED 204-11] Generating Supporting dependence constraints ... 
+INFO: [SCHED 204-11] Generating Pipeline constraints ... 
+INFO: [SCHED 204-11] Generating DSP mapping constraints ... 
+INFO: [SCHED 204-11] Generating Supporting dependence constraints ... 
+INFO: [SCHED 204-11] Generating Resource constraints ... 
+INFO: [SCHED 204-11] Generating Latency constraints ... 
+INFO: [SCHED 204-11] Generating Latency constraints ... 
+INFO: [SCHED 204-11] Generating Cycle time constraints ... 
+INFO: [SCHED 204-11] Generating Blocking node constraints ... 
+INFO: [SCHED 204-11] Generating Chaining constraints ... 
+INFO: [SCHED 204-11] Generating Operation gating constraints ... 
+INFO: [SCHED 204-11] Generating Variable bound constraints ... 
+INFO: [SCHED 204-11] Generating PHI node constraints ... 
+INFO: [SCHED 204-11] Start checking consistency (resolving sdc graph) ...
+INFO: [SCHED 204-11] Finished checking consistency.
+INFO: [SCHED 204-11] Start scheduling optimization (solving LP) ...
+INFO: [SCHED 204-11] Finished scheduling optimization.
+INFO: [SCHED 204-11] Start constructing STG ...
+INFO: [SCHED 204-11] Finished constructing STG.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 63.88 seconds; current allocated memory: 456.393 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 456.440 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'AXIvideo2MultiPixStr' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+###	 Num	NTree	NLUT	EssAll	EssLUT	Size	MSize	Lev	MLev	Sel	Phy 
+####	 3	0	3	65	6	2	2	2	2	6	0
+INFO: [SCHED 204-11] Generating True dependence constraints ... 
+INFO: [SCHED 204-11] Generating Auxiliary dependence constraints ... 
+INFO: [SCHED 204-11] Generating Ternary mapping constraints ... 
+INFO: [SCHED 204-11] Generating Lut Grouping constraints ... 
+INFO: [SCHED 204-11] Generating Node latency constraints ... 
+INFO: [SCHED 204-11] Generating Relative time constraints ... 
+INFO: [SCHED 204-11] Generating Protocol constraints ... 
+INFO: [SCHED 204-11] Generating Precedence constraints ... 
+INFO: [SCHED 204-11] Generating Supporting dependence constraints ... 
+INFO: [SCHED 204-11] Generating Pipeline constraints ... 
+INFO: [SCHED 204-61] Pipelining loop 'loop_wait_for_start'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-61] Pipelining loop 'loop_width'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'loop_wait_for_eol'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Generating DSP mapping constraints ... 
+INFO: [SCHED 204-11] Generating Supporting dependence constraints ... 
+INFO: [SCHED 204-11] Generating Resource constraints ... 
+INFO: [SCHED 204-11] Generating Latency constraints ... 
+INFO: [SCHED 204-11] Generating Latency constraints ... 
+INFO: [SCHED 204-11] Generating Cycle time constraints ... 
+INFO: [SCHED 204-11] Generating Blocking node constraints ... 
+INFO: [SCHED 204-11] Generating Chaining constraints ... 
+INFO: [SCHED 204-11] Generating Operation gating constraints ... 
+INFO: [SCHED 204-11] Generating Variable bound constraints ... 
+INFO: [SCHED 204-11] Generating PHI node constraints ... 
+INFO: [SCHED 204-11] Start checking consistency (resolving sdc graph) ...
+INFO: [SCHED 204-11] Finished checking consistency.
+INFO: [SCHED 204-11] Start scheduling optimization (solving LP) ...
+INFO: [SCHED 204-11] Finished scheduling optimization.
+INFO: [SCHED 204-11] Start constructing STG ...
+INFO: [SCHED 204-11] Finished constructing STG.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.17 seconds; current allocated memory: 456.953 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.07 seconds; current allocated memory: 457.468 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'tpgPatternSolidBlack' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+###	 Num	NTree	NLUT	EssAll	EssLUT	Size	MSize	Lev	MLev	Sel	Phy 
+####	 2	0	2	20	4	2	2	2	2	2	0
+INFO: [SCHED 204-11] Generating True dependence constraints ... 
+INFO: [SCHED 204-11] Generating Auxiliary dependence constraints ... 
+INFO: [SCHED 204-11] Generating Ternary mapping constraints ... 
+INFO: [SCHED 204-11] Generating Lut Grouping constraints ... 
+INFO: [SCHED 204-11] Generating Node latency constraints ... 
+INFO: [SCHED 204-11] Generating Relative time constraints ... 
+INFO: [SCHED 204-11] Generating Protocol constraints ... 
+INFO: [SCHED 204-11] Generating Precedence constraints ... 
+INFO: [SCHED 204-11] Generating Supporting dependence constraints ... 
+INFO: [SCHED 204-11] Generating Pipeline constraints ... 
+INFO: [SCHED 204-61] Pipelining function 'tpgPatternSolidBlack'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Generating DSP mapping constraints ... 
+INFO: [SCHED 204-11] Generating Supporting dependence constraints ... 
+INFO: [SCHED 204-11] Generating Resource constraints ... 
+INFO: [SCHED 204-11] Generating Latency constraints ... 
+INFO: [SCHED 204-11] Generating Latency constraints ... 
+INFO: [SCHED 204-11] Generating Cycle time constraints ... 
+INFO: [SCHED 204-11] Generating Blocking node constraints ... 
+INFO: [SCHED 204-11] Generating Chaining constraints ... 
+INFO: [SCHED 204-11] Generating Operation gating constraints ... 
+INFO: [SCHED 204-11] Generating Variable bound constraints ... 
+INFO: [SCHED 204-11] Generating PHI node constraints ... 
+INFO: [SCHED 204-11] Start checking consistency (resolving sdc graph) ...
+INFO: [SCHED 204-11] Finished checking consistency.
+INFO: [SCHED 204-11] Start scheduling optimization (solving LP) ...
+INFO: [SCHED 204-11] Finished scheduling optimization.
+INFO: [SCHED 204-11] Start constructing STG ...
+INFO: [SCHED 204-11] Finished constructing STG.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.27 seconds; current allocated memory: 457.632 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.17 seconds; current allocated memory: 457.727 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'tpgPRBS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+###	 Num	NTree	NLUT	EssAll	EssLUT	Size	MSize	Lev	MLev	Sel	Phy 
+####	 10	0	2	31	8	4	5	3.5	4	2	0
+INFO: [SCHED 204-11] Generating True dependence constraints ... 
+INFO: [SCHED 204-11] Generating Auxiliary dependence constraints ... 
+INFO: [SCHED 204-11] Generating Ternary mapping constraints ... 
+INFO: [SCHED 204-11] Generating Lut Grouping constraints ... 
+INFO: [SCHED 204-11] Generating Node latency constraints ... 
+INFO: [SCHED 204-11] Generating Relative time constraints ... 
+INFO: [SCHED 204-11] Generating Protocol constraints ... 
+INFO: [SCHED 204-11] Generating Precedence constraints ... 
+INFO: [SCHED 204-11] Generating Supporting dependence constraints ... 
+INFO: [SCHED 204-11] Generating Pipeline constraints ... 
+INFO: [SCHED 204-61] Pipelining function 'tpgPRBS'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Generating DSP mapping constraints ... 
+INFO: [SCHED 204-11] Generating Supporting dependence constraints ... 
+INFO: [SCHED 204-11] Generating Resource constraints ... 
+INFO: [SCHED 204-11] Generating Latency constraints ... 
+INFO: [SCHED 204-11] Generating Latency constraints ... 
+INFO: [SCHED 204-11] Generating Cycle time constraints ... 
+INFO: [SCHED 204-11] Generating Blocking node constraints ... 
+INFO: [SCHED 204-11] Generating Chaining constraints ... 
+INFO: [SCHED 204-11] Generating Operation gating constraints ... 
+INFO: [SCHED 204-11] Generating Variable bound constraints ... 
+INFO: [SCHED 204-11] Generating PHI node constraints ... 
+INFO: [SCHED 204-11] Start checking consistency (resolving sdc graph) ...
+INFO: [SCHED 204-11] Finished checking consistency.
+INFO: [SCHED 204-11] Start scheduling optimization (solving LP) ...
+INFO: [SCHED 204-11] Finished scheduling optimization.
+INFO: [SCHED 204-11] Start constructing STG ...
+INFO: [SCHED 204-11] Finished constructing STG.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.25 seconds; current allocated memory: 457.929 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.61 seconds; current allocated memory: 458.174 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'tpgPatternCheckerBoa' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+###	 Num	NTree	NLUT	EssAll	EssLUT	Size	MSize	Lev	MLev	Sel	Phy 
+####	 12	0	9	125	21	2.3	3	2.3	3	14	0
+INFO: [SCHED 204-11] Generating True dependence constraints ... 
+INFO: [SCHED 204-11] Generating Auxiliary dependence constraints ... 
+INFO: [SCHED 204-11] Generating Ternary mapping constraints ... 
+INFO: [SCHED 204-11] Generating Lut Grouping constraints ... 
+INFO: [SCHED 204-11] Generating Node latency constraints ... 
+INFO: [SCHED 204-11] Generating Relative time constraints ... 
+INFO: [SCHED 204-11] Generating Protocol constraints ... 
+INFO: [SCHED 204-11] Generating Precedence constraints ... 
+INFO: [SCHED 204-11] Generating Supporting dependence constraints ... 
+INFO: [SCHED 204-11] Generating Pipeline constraints ... 
+INFO: [SCHED 204-61] Pipelining function 'tpgPatternCheckerBoa'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 4.
+INFO: [SCHED 204-11] Generating DSP mapping constraints ... 
+INFO: [SCHED 204-11] Generating Supporting dependence constraints ... 
+INFO: [SCHED 204-11] Generating Resource constraints ... 
+INFO: [SCHED 204-11] Generating Latency constraints ... 
+INFO: [SCHED 204-11] Generating Latency constraints ... 
+INFO: [SCHED 204-11] Generating Cycle time constraints ... 
+INFO: [SCHED 204-11] Generating Blocking node constraints ... 
+INFO: [SCHED 204-11] Generating Chaining constraints ... 
+INFO: [SCHED 204-11] Generating Operation gating constraints ... 
+INFO: [SCHED 204-11] Generating Variable bound constraints ... 
+INFO: [SCHED 204-11] Generating PHI node constraints ... 
+INFO: [SCHED 204-11] Start checking consistency (resolving sdc graph) ...
+INFO: [SCHED 204-11] Finished checking consistency.
+INFO: [SCHED 204-11] Start scheduling optimization (solving LP) ...
+INFO: [SCHED 204-11] Finished scheduling optimization.
+INFO: [SCHED 204-11] Start constructing STG ...
+INFO: [SCHED 204-11] Finished constructing STG.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.05 seconds; current allocated memory: 458.633 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.6 seconds; current allocated memory: 459.161 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'reg_ap_uint_10_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+###	 Num	NTree	NLUT	EssAll	EssLUT	Size	MSize	Lev	MLev	Sel	Phy 
+####	 0	0	0	2	0	-nan	0	-nan	0	0	0
+INFO: [SCHED 204-11] Generating True dependence constraints ... 
+INFO: [SCHED 204-11] Generating Auxiliary dependence constraints ... 
+INFO: [SCHED 204-11] Generating Ternary mapping constraints ... 
+INFO: [SCHED 204-11] Generating Lut Grouping constraints ... 
+INFO: [SCHED 204-11] Generating Node latency constraints ... 
+INFO: [SCHED 204-11] Generating Relative time constraints ... 
+INFO: [SCHED 204-11] Generating Protocol constraints ... 
+INFO: [SCHED 204-11] Generating Precedence constraints ... 
+INFO: [SCHED 204-11] Generating Supporting dependence constraints ... 
+INFO: [SCHED 204-11] Generating Pipeline constraints ... 
+INFO: [SCHED 204-61] Pipelining function 'reg<ap_uint<10> >'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Generating DSP mapping constraints ... 
+INFO: [SCHED 204-11] Generating Supporting dependence constraints ... 
+INFO: [SCHED 204-11] Generating Resource constraints ... 
+INFO: [SCHED 204-11] Generating Latency constraints ... 
+INFO: [SCHED 204-11] Generating Latency constraints ... 
+INFO: [SCHED 204-11] Generating Cycle time constraints ... 
+INFO: [SCHED 204-11] Generating Blocking node constraints ... 
+INFO: [SCHED 204-11] Generating Chaining constraints ... 
+INFO: [SCHED 204-11] Generating Operation gating constraints ... 
+INFO: [SCHED 204-11] Generating Variable bound constraints ... 
+INFO: [SCHED 204-11] Generating PHI node constraints ... 
+INFO: [SCHED 204-11] Start checking consistency (resolving sdc graph) ...
+INFO: [SCHED 204-11] Finished checking consistency.
+INFO: [SCHED 204-11] Start scheduling optimization (solving LP) ...
+INFO: [SCHED 204-11] Finished scheduling optimization.
+INFO: [SCHED 204-11] Start constructing STG ...
+INFO: [SCHED 204-11] Finished constructing STG.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.99 seconds; current allocated memory: 459.209 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 459.247 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'tpgPatternCrossHatch' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+###	 Num	NTree	NLUT	EssAll	EssLUT	Size	MSize	Lev	MLev	Sel	Phy 
+####	 12	0	5	115	12	2.4	3	2	2	8	2
+INFO: [SCHED 204-11] Generating True dependence constraints ... 
+INFO: [SCHED 204-11] Generating Auxiliary dependence constraints ... 
+INFO: [SCHED 204-11] Generating Ternary mapping constraints ... 
+INFO: [SCHED 204-11] Generating Lut Grouping constraints ... 
+INFO: [SCHED 204-11] Generating Node latency constraints ... 
+INFO: [SCHED 204-11] Generating Relative time constraints ... 
+INFO: [SCHED 204-11] Generating Protocol constraints ... 
+INFO: [SCHED 204-11] Generating Precedence constraints ... 
+INFO: [SCHED 204-11] Generating Supporting dependence constraints ... 
+INFO: [SCHED 204-11] Generating Pipeline constraints ... 
+INFO: [SCHED 204-61] Pipelining function 'tpgPatternCrossHatch'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Generating DSP mapping constraints ... 
+INFO: [SCHED 204-11] Generating Supporting dependence constraints ... 
+INFO: [SCHED 204-11] Generating Resource constraints ... 
+INFO: [SCHED 204-11] Generating Latency constraints ... 
+INFO: [SCHED 204-11] Generating Latency constraints ... 
+INFO: [SCHED 204-11] Generating Cycle time constraints ... 
+INFO: [SCHED 204-11] Generating Blocking node constraints ... 
+INFO: [SCHED 204-11] Generating Chaining constraints ... 
+INFO: [SCHED 204-11] Generating Operation gating constraints ... 
+INFO: [SCHED 204-11] Generating Variable bound constraints ... 
+INFO: [SCHED 204-11] Generating PHI node constraints ... 
+INFO: [SCHED 204-11] Start checking consistency (resolving sdc graph) ...
+INFO: [SCHED 204-11] Finished checking consistency.
+INFO: [SCHED 204-11] Start scheduling optimization (solving LP) ...
+INFO: [SCHED 204-11] Finished scheduling optimization.
+INFO: [SCHED 204-11] Start constructing STG ...
+INFO: [SCHED 204-11] Finished constructing STG.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.4 seconds; current allocated memory: 459.710 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.49 seconds; current allocated memory: 460.166 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'tpgPatternTartanColo' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+###	 Num	NTree	NLUT	EssAll	EssLUT	Size	MSize	Lev	MLev	Sel	Phy 
+####	 12	0	9	122	21	2.3	3	2.3	3	14	0
+INFO: [SCHED 204-11] Generating True dependence constraints ... 
+INFO: [SCHED 204-11] Generating Auxiliary dependence constraints ... 
+INFO: [SCHED 204-11] Generating Ternary mapping constraints ... 
+INFO: [SCHED 204-11] Generating Lut Grouping constraints ... 
+INFO: [SCHED 204-11] Generating Node latency constraints ... 
+INFO: [SCHED 204-11] Generating Relative time constraints ... 
+INFO: [SCHED 204-11] Generating Protocol constraints ... 
+INFO: [SCHED 204-11] Generating Precedence constraints ... 
+INFO: [SCHED 204-11] Generating Supporting dependence constraints ... 
+INFO: [SCHED 204-11] Generating Pipeline constraints ... 
+INFO: [SCHED 204-61] Pipelining function 'tpgPatternTartanColo'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 4.
+INFO: [SCHED 204-11] Generating DSP mapping constraints ... 
+INFO: [SCHED 204-11] Generating Supporting dependence constraints ... 
+INFO: [SCHED 204-11] Generating Resource constraints ... 
+INFO: [SCHED 204-11] Generating Latency constraints ... 
+INFO: [SCHED 204-11] Generating Latency constraints ... 
+INFO: [SCHED 204-11] Generating Cycle time constraints ... 
+INFO: [SCHED 204-11] Generating Blocking node constraints ... 
+INFO: [SCHED 204-11] Generating Chaining constraints ... 
+INFO: [SCHED 204-11] Generating Operation gating constraints ... 
+INFO: [SCHED 204-11] Generating Variable bound constraints ... 
+INFO: [SCHED 204-11] Generating PHI node constraints ... 
+INFO: [SCHED 204-11] Start checking consistency (resolving sdc graph) ...
+INFO: [SCHED 204-11] Finished checking consistency.
+INFO: [SCHED 204-11] Start scheduling optimization (solving LP) ...
+INFO: [SCHED 204-11] Finished scheduling optimization.
+INFO: [SCHED 204-11] Start constructing STG ...
+INFO: [SCHED 204-11] Finished constructing STG.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.91 seconds; current allocated memory: 460.607 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 2 seconds; current allocated memory: 461.124 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'tpgPatternColorBars' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SYN 201-351] The following objects are mapped to a ternary adder tree.
+   a  'load' operation ('xBar_V_0_load', /home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/src/v_tpg.cpp:1228) on static variable 'xBar_V_0'
+   b  constant 2
+   c  'partselect' operation ('barWidth.V', /home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/src/v_tpg.cpp:1219)
+
+INFO: [SYN 201-351] The following objects are mapped to a ternary adder tree.
+   a  'load' operation ('xBar_V_1_load', /home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/src/v_tpg.cpp:1228) on static variable 'xBar_V_1'
+   b  constant 2
+   c  'partselect' operation ('barWidth.V', /home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/src/v_tpg.cpp:1219)
+
+###	 Num	NTree	NLUT	EssAll	EssLUT	Size	MSize	Lev	MLev	Sel	Phy 
+####	 16	0	12	136	27	2.2	3	2.2	3	18	0
+INFO: [SCHED 204-11] Generating True dependence constraints ... 
+INFO: [SCHED 204-11] Generating Auxiliary dependence constraints ... 
+INFO: [SCHED 204-11] Generating Ternary mapping constraints ... 
+INFO: [SCHED 204-11] Generating Lut Grouping constraints ... 
+INFO: [SCHED 204-11] Generating Node latency constraints ... 
+INFO: [SCHED 204-11] Generating Relative time constraints ... 
+INFO: [SCHED 204-11] Generating Protocol constraints ... 
+INFO: [SCHED 204-11] Generating Precedence constraints ... 
+INFO: [SCHED 204-11] Generating Supporting dependence constraints ... 
+INFO: [SCHED 204-11] Generating Pipeline constraints ... 
+INFO: [SCHED 204-61] Pipelining function 'tpgPatternColorBars'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Generating DSP mapping constraints ... 
+INFO: [SCHED 204-11] Generating Supporting dependence constraints ... 
+INFO: [SCHED 204-11] Generating Resource constraints ... 
+INFO: [SCHED 204-11] Generating Latency constraints ... 
+INFO: [SCHED 204-11] Generating Latency constraints ... 
+INFO: [SCHED 204-11] Generating Cycle time constraints ... 
+INFO: [SCHED 204-11] Generating Blocking node constraints ... 
+INFO: [SCHED 204-11] Generating Chaining constraints ... 
+INFO: [SCHED 204-11] Generating Operation gating constraints ... 
+INFO: [SCHED 204-11] Generating Variable bound constraints ... 
+INFO: [SCHED 204-11] Generating PHI node constraints ... 
+INFO: [SCHED 204-11] Start checking consistency (resolving sdc graph) ...
+INFO: [SCHED 204-11] Finished checking consistency.
+INFO: [SCHED 204-11] Start scheduling optimization (solving LP) ...
+INFO: [SCHED 204-11] Finished scheduling optimization.
+INFO: [SCHED 204-11] Start constructing STG ...
+INFO: [SCHED 204-11] Finished constructing STG.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 2.57 seconds; current allocated memory: 461.621 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 2.54 seconds; current allocated memory: 462.258 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'tpgBackground' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+###	 Num	NTree	NLUT	EssAll	EssLUT	Size	MSize	Lev	MLev	Sel	Phy 
+####	 3	0	3	223	6	2	2	2	2	6	0
+INFO: [SCHED 204-11] Generating True dependence constraints ... 
+INFO: [SCHED 204-11] Generating Auxiliary dependence constraints ... 
+INFO: [SCHED 204-11] Generating Ternary mapping constraints ... 
+INFO: [SCHED 204-11] Generating Lut Grouping constraints ... 
+INFO: [SCHED 204-11] Generating Node latency constraints ... 
+INFO: [SCHED 204-11] Generating Relative time constraints ... 
+INFO: [SCHED 204-11] Generating Protocol constraints ... 
+INFO: [SCHED 204-11] Generating Precedence constraints ... 
+INFO: [SCHED 204-11] Generating Supporting dependence constraints ... 
+INFO: [SCHED 204-11] Generating Pipeline constraints ... 
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1.1'.
+INFO: [SCHED 204-61]  rescheduled in stage scheduling from 1 to 4 with current asap = 1, alap = 4
+INFO: [SCHED 204-61]  rescheduled in stage scheduling from 1 to 4 with current asap = 1, alap = 4
+INFO: [SCHED 204-61]  rescheduled in stage scheduling from 1 to 4 with current asap = 1, alap = 4
+INFO: [SCHED 204-61]  rescheduled in stage scheduling from 1 to 4 with current asap = 1, alap = 4
+INFO: [SCHED 204-61]  rescheduled in stage scheduling from 1 to 4 with current asap = 1, alap = 4
+INFO: [SCHED 204-61]  rescheduled in stage scheduling from 1 to 4 with current asap = 1, alap = 4
+INFO: [SCHED 204-61]  rescheduled in stage scheduling from 1 to 4 with current asap = 1, alap = 4
+INFO: [SCHED 204-61]  rescheduled in stage scheduling from 1 to 4 with current asap = 1, alap = 4
+INFO: [SCHED 204-61]  rescheduled in stage scheduling from 1 to 4 with current asap = 1, alap = 4
+INFO: [SCHED 204-61]  rescheduled in stage scheduling from 1 to 4 with current asap = 1, alap = 4
+INFO: [SCHED 204-61]  rescheduled in stage scheduling from 1 to 4 with current asap = 1, alap = 4
+INFO: [SCHED 204-61]  rescheduled in stage scheduling from 1 to 4 with current asap = 1, alap = 4
+INFO: [SCHED 204-61]  rescheduled in stage scheduling from 1 to 4 with current asap = 1, alap = 4
+INFO: [SCHED 204-61]  rescheduled in stage scheduling from 1 to 4 with current asap = 1, alap = 4
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 7.
+INFO: [SCHED 204-11] Generating DSP mapping constraints ... 
+INFO: [SCHED 204-11] Generating Supporting dependence constraints ... 
+INFO: [SCHED 204-11] Generating Resource constraints ... 
+INFO: [SCHED 204-11] Generating Latency constraints ... 
+INFO: [SCHED 204-11] Generating Latency constraints ... 
+INFO: [SCHED 204-11] Generating Cycle time constraints ... 
+INFO: [SCHED 204-11] Generating Blocking node constraints ... 
+INFO: [SCHED 204-11] Generating Chaining constraints ... 
+INFO: [SCHED 204-11] Generating Operation gating constraints ... 
+INFO: [SCHED 204-11] Generating Variable bound constraints ... 
+INFO: [SCHED 204-11] Generating PHI node constraints ... 
+INFO: [SCHED 204-11] Start checking consistency (resolving sdc graph) ...
+INFO: [SCHED 204-11] Finished checking consistency.
+INFO: [SCHED 204-11] Start scheduling optimization (solving LP) ...
+INFO: [SCHED 204-11] Finished scheduling optimization.
+INFO: [SCHED 204-11] Start constructing STG ...
+INFO: [SCHED 204-11] Finished constructing STG.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 2.66 seconds; current allocated memory: 463.107 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] After resource sharing, estimated clock period (3.35585ns) exceeds the target (target clock period: 3.334ns, clock uncertainty: 0.41675ns, effective delay budget: 2.91725ns).
+INFO: [BIND 205-100] The critical path consists of the following:
+	'call' operation ('call_ret18', /home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/src/v_tpg.cpp:679) to 'tpgPatternSolidBlack' (3.36 ns)
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 3.54 seconds; current allocated memory: 465.833 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'MultiPixStream2AXIvi' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+###	 Num	NTree	NLUT	EssAll	EssLUT	Size	MSize	Lev	MLev	Sel	Phy 
+####	 7	0	7	70	15	2.1	3	2.1	3	10	0
+INFO: [SCHED 204-11] Generating True dependence constraints ... 
+INFO: [SCHED 204-11] Generating Auxiliary dependence constraints ... 
+INFO: [SCHED 204-11] Generating Ternary mapping constraints ... 
+INFO: [SCHED 204-11] Generating Lut Grouping constraints ... 
+INFO: [SCHED 204-11] Generating Node latency constraints ... 
+INFO: [SCHED 204-11] Generating Relative time constraints ... 
+INFO: [SCHED 204-11] Generating Protocol constraints ... 
+INFO: [SCHED 204-11] Generating Precedence constraints ... 
+INFO: [SCHED 204-11] Generating Supporting dependence constraints ... 
+INFO: [SCHED 204-11] Generating Pipeline constraints ... 
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1.1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Generating DSP mapping constraints ... 
+INFO: [SCHED 204-11] Generating Supporting dependence constraints ... 
+INFO: [SCHED 204-11] Generating Resource constraints ... 
+INFO: [SCHED 204-11] Generating Latency constraints ... 
+INFO: [SCHED 204-11] Generating Latency constraints ... 
+INFO: [SCHED 204-11] Generating Cycle time constraints ... 
+INFO: [SCHED 204-11] Generating Blocking node constraints ... 
+INFO: [SCHED 204-11] Generating Chaining constraints ... 
+INFO: [SCHED 204-11] Generating Operation gating constraints ... 
+INFO: [SCHED 204-11] Generating Variable bound constraints ... 
+INFO: [SCHED 204-11] Generating PHI node constraints ... 
+INFO: [SCHED 204-11] Start checking consistency (resolving sdc graph) ...
+INFO: [SCHED 204-11] Finished checking consistency.
+INFO: [SCHED 204-11] Start scheduling optimization (solving LP) ...
+INFO: [SCHED 204-11] Finished scheduling optimization.
+INFO: [SCHED 204-11] Start constructing STG ...
+INFO: [SCHED 204-11] Finished constructing STG.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 3.48 seconds; current allocated memory: 466.134 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.24 seconds; current allocated memory: 466.602 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'v_tpg' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+###	 Num	NTree	NLUT	EssAll	EssLUT	Size	MSize	Lev	MLev	Sel	Phy 
+####	 0	0	0	17	0	-nan	0	-nan	0	0	0
+INFO: [SCHED 204-11] Generating True dependence constraints ... 
+INFO: [SCHED 204-11] Generating Auxiliary dependence constraints ... 
+INFO: [SCHED 204-11] Generating Ternary mapping constraints ... 
+INFO: [SCHED 204-11] Generating Lut Grouping constraints ... 
+INFO: [SCHED 204-11] Generating Node latency constraints ... 
+INFO: [SCHED 204-11] Generating Relative time constraints ... 
+INFO: [SCHED 204-11] Generating Protocol constraints ... 
+INFO: [SCHED 204-11] Generating Precedence constraints ... 
+INFO: [SCHED 204-11] Generating Supporting dependence constraints ... 
+INFO: [SCHED 204-11] Generating Pipeline constraints ... 
+INFO: [SCHED 204-11] Generating DSP mapping constraints ... 
+INFO: [SCHED 204-11] Generating Supporting dependence constraints ... 
+INFO: [SCHED 204-11] Generating Resource constraints ... 
+INFO: [SCHED 204-11] Generating Latency constraints ... 
+INFO: [SCHED 204-11] Generating Latency constraints ... 
+INFO: [SCHED 204-11] Generating Cycle time constraints ... 
+INFO: [SCHED 204-11] Generating Blocking node constraints ... 
+INFO: [SCHED 204-11] Generating Chaining constraints ... 
+INFO: [SCHED 204-11] Generating Operation gating constraints ... 
+INFO: [SCHED 204-11] Generating Variable bound constraints ... 
+INFO: [SCHED 204-11] Generating PHI node constraints ... 
+INFO: [SCHED 204-11] Start checking consistency (resolving sdc graph) ...
+INFO: [SCHED 204-11] Finished checking consistency.
+INFO: [SCHED 204-11] Start scheduling optimization (solving LP) ...
+INFO: [SCHED 204-11] Finished scheduling optimization.
+INFO: [SCHED 204-11] Start constructing STG ...
+INFO: [SCHED 204-11] Finished constructing STG.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.55 seconds; current allocated memory: 466.916 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 2.37 seconds; current allocated memory: 468.082 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'reg_unsigned_short_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'reg_unsigned_short_s'.
+INFO: [HLS 200-111]  Elapsed time: 1.98 seconds; current allocated memory: 468.316 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'AXIvideo2MultiPixStr' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'AXIvideo2MultiPixStr'.
+INFO: [HLS 200-111]  Elapsed time: 0.11 seconds; current allocated memory: 469.515 MB.
+INFO: [WVHDL 200-304] Encrypting RTL VHDL done.
+INFO: [WVHDL 200-304] Encrypting RTL Verilog done.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'tpgPatternSolidBlack' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'tpgPatternSolidBlack_blkYuv' to 'tpgPatternSolidBlbkb' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'tpgPatternSolidBlack'.
+INFO: [HLS 200-111]  Elapsed time: 1.18 seconds; current allocated memory: 459.372 MB.
+INFO: [WVHDL 200-304] Encrypting RTL VHDL done.
+INFO: [WVHDL 200-304] Encrypting RTL Verilog done.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'tpgPRBS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'rSerie_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'gSerie_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'bSerie_V' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'tpgPRBS'.
+INFO: [HLS 200-111]  Elapsed time: 0.28 seconds; current allocated memory: 459.929 MB.
+INFO: [WVHDL 200-304] Encrypting RTL VHDL done.
+INFO: [WVHDL 200-304] Encrypting RTL Verilog done.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'tpgPatternCheckerBoa' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'vBarSel_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'yCount_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'hBarSel_2_0' is power-on initialization.
+INFO: [SYN 201-210] Renamed object name 'tpgPatternCheckerBoa_tpgCheckerBoardArray' to 'tpgPatternCheckercud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tpgPatternCheckerBoa_tpgBarSelRgb_r256' to 'tpgPatternCheckerdEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tpgPatternCheckerBoa_tpgBarSelYuv_y254' to 'tpgPatternCheckereOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tpgPatternCheckerBoa_tpgBarSelRgb_g258' to 'tpgPatternCheckerfYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tpgPatternCheckerBoa_tpgBarSelYuv_u252' to 'tpgPatternCheckerg8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tpgPatternCheckerBoa_tpgBarSelYuv_v250' to 'tpgPatternCheckerhbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tpgPatternCheckerBoa_tpgBarSelRgb_b260' to 'tpgPatternCheckeribs' due to the length limit 20
+WARNING: [RTGEN 206-101] Register 'hBarSel_2_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'xCount_V_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'xCount_V_1' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'tpgPatternCheckerBoa'.
+INFO: [HLS 200-111]  Elapsed time: 0.65 seconds; current allocated memory: 461.028 MB.
+INFO: [WVHDL 200-304] Encrypting RTL VHDL done.
+INFO: [WVHDL 200-304] Encrypting RTL Verilog done.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'reg_ap_uint_10_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'reg_ap_uint_10_s'.
+INFO: [HLS 200-111]  Elapsed time: 1.76 seconds; current allocated memory: 461.141 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'tpgPatternCrossHatch' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'yCount_V_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'vHatch' is power-on initialization.
+INFO: [SYN 201-210] Renamed object name 'tpgPatternCrossHatch_whiYuv' to 'tpgPatternCrossHajbC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tpgPatternCrossHatch_blkYuv_1' to 'tpgPatternCrossHakbM' due to the length limit 20
+WARNING: [RTGEN 206-101] Register 'xCount_V_1_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'xCount_V_1_1' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'tpgPatternCrossHatch'.
+INFO: [HLS 200-111]  Elapsed time: 0.23 seconds; current allocated memory: 462.140 MB.
+INFO: [WVHDL 200-304] Encrypting RTL VHDL done.
+INFO: [WVHDL 200-304] Encrypting RTL Verilog done.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'tpgPatternTartanColo' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'vBarSel' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'yCount_V_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'hBarSel_0' is power-on initialization.
+INFO: [SYN 201-210] Renamed object name 'tpgPatternTartanColo_tpgTartanBarArray' to 'tpgPatternTartanClbW' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tpgPatternTartanColo_tpgBarSelRgb_r255' to 'tpgPatternTartanCmb6' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tpgPatternTartanColo_tpgBarSelYuv_y253' to 'tpgPatternTartanCncg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tpgPatternTartanColo_tpgBarSelRgb_g257' to 'tpgPatternTartanCocq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tpgPatternTartanColo_tpgBarSelYuv_u251' to 'tpgPatternTartanCpcA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tpgPatternTartanColo_tpgBarSelYuv_v249' to 'tpgPatternTartanCqcK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tpgPatternTartanColo_tpgBarSelRgb_b259' to 'tpgPatternTartanCrcU' due to the length limit 20
+WARNING: [RTGEN 206-101] Register 'hBarSel_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'xCount_V_2_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'xCount_V_2_1' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'tpgPatternTartanColo'.
+INFO: [HLS 200-111]  Elapsed time: 2.33 seconds; current allocated memory: 463.169 MB.
+INFO: [WVHDL 200-304] Encrypting RTL VHDL done.
+INFO: [WVHDL 200-304] Encrypting RTL Verilog done.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'tpgPatternColorBars' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 's' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'guard_variable_for_t' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'hBarSel_3_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'hBarSel_3_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'xBar_V_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'xBar_V_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'count' is power-on initialization.
+INFO: [SYN 201-210] Renamed object name 'tpgPatternColorBars_tpgBarSelRgb_r' to 'tpgPatternColorBasc4' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tpgPatternColorBars_tpgBarSelYuv_y' to 'tpgPatternColorBatde' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tpgPatternColorBars_tpgBarSelRgb_g' to 'tpgPatternColorBaudo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tpgPatternColorBars_tpgBarSelYuv_u' to 'tpgPatternColorBavdy' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tpgPatternColorBars_tpgBarSelYuv_v' to 'tpgPatternColorBawdI' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'tpgPatternColorBars_tpgBarSelRgb_b' to 'tpgPatternColorBaxdS' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'tpgPatternColorBars'.
+INFO: [HLS 200-111]  Elapsed time: 2.41 seconds; current allocated memory: 464.341 MB.
+INFO: [WVHDL 200-304] Encrypting RTL VHDL done.
+INFO: [WVHDL 200-304] Encrypting RTL Verilog done.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'tpgBackground' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'rampStart' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'tpgBackground'.
+INFO: [HLS 200-111]  Elapsed time: 2.94 seconds; current allocated memory: 467.220 MB.
+INFO: [WVHDL 200-304] Encrypting RTL VHDL done.
+INFO: [WVHDL 200-304] Encrypting RTL Verilog done.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'MultiPixStream2AXIvi' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'counter' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'MultiPixStream2AXIvi'.
+INFO: [HLS 200-111]  Elapsed time: 4.41 seconds; current allocated memory: 468.131 MB.
+INFO: [WVHDL 200-304] Encrypting RTL VHDL done.
+INFO: [WVHDL 200-304] Encrypting RTL Verilog done.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'v_tpg' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_tpg/s_axis_video_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_tpg/s_axis_video_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_tpg/s_axis_video_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_tpg/s_axis_video_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_tpg/s_axis_video_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_tpg/s_axis_video_V_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_tpg/s_axis_video_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_tpg/height' to 's_axilite & ap_stable'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_tpg/width' to 's_axilite & ap_stable'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_tpg/field_id' to 's_axilite & ap_stable'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_tpg/fid_in' to 'ap_stable'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_tpg/passthruStartX' to 's_axilite & ap_stable'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_tpg/passthruStartY' to 's_axilite & ap_stable'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_tpg/passthruEndX' to 's_axilite & ap_stable'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_tpg/passthruEndY' to 's_axilite & ap_stable'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_tpg/enableInput' to 's_axilite & ap_stable'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_tpg/bckgndId' to 's_axilite & ap_stable'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_tpg/ovrlayId' to 's_axilite & ap_stable'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_tpg/maskId' to 's_axilite & ap_stable'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_tpg/motionSpeed' to 's_axilite & ap_stable'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_tpg/colorFormat' to 's_axilite & ap_stable'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_tpg/crossHairX' to 's_axilite & ap_stable'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_tpg/crossHairY' to 's_axilite & ap_stable'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_tpg/ZplateHorContStart' to 's_axilite & ap_stable'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_tpg/ZplateHorContDelta' to 's_axilite & ap_stable'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_tpg/ZplateVerContStart' to 's_axilite & ap_stable'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_tpg/ZplateVerContDelta' to 's_axilite & ap_stable'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_tpg/boxSize' to 's_axilite & ap_stable'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_tpg/boxColorR' to 's_axilite & ap_stable'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_tpg/boxColorG' to 's_axilite & ap_stable'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_tpg/boxColorB' to 's_axilite & ap_stable'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_tpg/dpDynamicRange' to 's_axilite & ap_stable'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_tpg/dpYUVCoef' to 's_axilite & ap_stable'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_tpg/bck_motion_en' to 's_axilite & ap_stable'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_tpg/m_axis_video_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_tpg/m_axis_video_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_tpg/m_axis_video_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_tpg/m_axis_video_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_tpg/m_axis_video_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_tpg/m_axis_video_V_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_tpg/m_axis_video_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_tpg/fid' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'v_tpg' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'height', 'width', 'bckgndId', 'ovrlayId', 'maskId', 'motionSpeed', 'colorFormat', 'crossHairX', 'crossHairY', 'ZplateHorContStart', 'ZplateHorContDelta', 'ZplateVerContStart', 'ZplateVerContDelta', 'boxSize', 'boxColorR', 'boxColorG', 'boxColorB', 'enableInput', 'passthruStartX', 'passthruStartY', 'passthruEndX', 'passthruEndY', 'dpDynamicRange', 'dpYUVCoef', 'field_id', 'bck_motion_en' to AXI-Lite port CTRL.
+INFO: [SYN 201-210] Renamed object name 'start_for_tpgBackground_U0' to 'start_for_tpgBackyd2' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_for_MultiPixStream2AXIvi_U0' to 'start_for_MultiPizec' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'v_tpg'.
+INFO: [HLS 200-111]  Elapsed time: 1.91 seconds; current allocated memory: 469.201 MB.
+INFO: [WVHDL 200-304] Encrypting RTL VHDL done.
+INFO: [WVHDL 200-304] Encrypting RTL Verilog done.
+INFO: [RTMG 210-279] Implementing memory 'exdes_v_tpg_0_tpgPatternSolidBlbkb_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'exdes_v_tpg_0_tpgPatternCheckercud_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'exdes_v_tpg_0_tpgPatternCheckerdEe_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'exdes_v_tpg_0_tpgPatternCheckereOg_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'exdes_v_tpg_0_tpgPatternCheckerfYi_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'exdes_v_tpg_0_tpgPatternCheckerg8j_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'exdes_v_tpg_0_tpgPatternCheckerhbi_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'exdes_v_tpg_0_tpgPatternCheckeribs_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'exdes_v_tpg_0_tpgPatternCrossHajbC_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'exdes_v_tpg_0_tpgPatternTartanClbW_rom' using distributed ROMs.
+INFO: [RTMG 210-285] Implementing FIFO 'srcYUV_V_val_0_V_U(exdes_v_tpg_0_fifo_w8_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'srcYUV_V_val_1_V_U(exdes_v_tpg_0_fifo_w8_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'srcYUV_V_val_2_V_U(exdes_v_tpg_0_fifo_w8_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'srcYUV_V_val_3_V_U(exdes_v_tpg_0_fifo_w8_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'srcYUV_V_val_4_V_U(exdes_v_tpg_0_fifo_w8_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'srcYUV_V_val_5_V_U(exdes_v_tpg_0_fifo_w8_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'ovrlayYUV_V_val_0_V_U(exdes_v_tpg_0_fifo_w8_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'ovrlayYUV_V_val_1_V_U(exdes_v_tpg_0_fifo_w8_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'ovrlayYUV_V_val_2_V_U(exdes_v_tpg_0_fifo_w8_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'ovrlayYUV_V_val_3_V_U(exdes_v_tpg_0_fifo_w8_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'ovrlayYUV_V_val_4_V_U(exdes_v_tpg_0_fifo_w8_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'ovrlayYUV_V_val_5_V_U(exdes_v_tpg_0_fifo_w8_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_tpgBackyd2_U(exdes_v_tpg_0_start_for_tpgBackyd2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_MultiPizec_U(exdes_v_tpg_0_start_for_MultiPizec)' using Shift Registers.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:01:58 ; elapsed = 00:02:04 . Memory (MB): peak = 1660.938 ; gain = 1227.754 ; free physical = 2553 ; free virtual = 6236
+INFO: [VHDL 208-304] Generating VHDL RTL for v_tpg with prefix exdes_v_tpg_0_.
+INFO: [VLOG 209-307] Generating Verilog RTL for v_tpg with prefix exdes_v_tpg_0_.
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2020.1 (64-bit)
+  **** SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+  **** IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2020.1/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Sun Aug 30 16:48:13 2020...
+INFO: [HLS 200-112] Total elapsed time: 152.96 seconds; peak allocated memory: 469.515 MB.
+INFO: [Common 17-206] Exiting vivado_hls at Sun Aug 30 16:48:16 2020...
+compile_c: Time (s): cpu = 00:02:26 ; elapsed = 00:02:37 . Memory (MB): peak = 2177.031 ; gain = 0.000 ; free physical = 2541 ; free virtual = 6461
+Command: synth_design -top exdes_v_tpg_0 -part xczu7ev-ffvc1156-2-e -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Device 21-403] Loading part xczu7ev-ffvc1156-2-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 9534
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2746.336 ; gain = 12.902 ; free physical = 860 ; free virtual = 4391
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'exdes_v_tpg_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/synth/exdes_v_tpg_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'exdes_v_tpg_0_v_tpg_CTRL_s_axi' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_v_tpg_CTRL_s_axi.v:6]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_v_tpg_CTRL_s_axi.v:392]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_v_tpg_0_v_tpg_CTRL_s_axi' (1#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_v_tpg_CTRL_s_axi.v:6]
+INFO: [Synth 8-6157] synthesizing module 'exdes_v_tpg_0_reg_unsigned_short_s' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_reg_unsigned_short_s.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_v_tpg_0_reg_unsigned_short_s' (2#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_reg_unsigned_short_s.v:10]
+INFO: [Synth 8-6157] synthesizing module 'regslice_both' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/regslice_core.v:8]
+INFO: [Synth 8-6157] synthesizing module 'ibuf' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/regslice_core.v:372]
+INFO: [Synth 8-6155] done synthesizing module 'ibuf' (3#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/regslice_core.v:372]
+INFO: [Synth 8-6157] synthesizing module 'obuf' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/regslice_core.v:402]
+INFO: [Synth 8-6155] done synthesizing module 'obuf' (4#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/regslice_core.v:402]
+INFO: [Synth 8-6155] done synthesizing module 'regslice_both' (5#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/regslice_core.v:8]
+INFO: [Synth 8-6157] synthesizing module 'regslice_both__parameterized0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/regslice_core.v:8]
+INFO: [Synth 8-6157] synthesizing module 'ibuf__parameterized0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/regslice_core.v:372]
+INFO: [Synth 8-6155] done synthesizing module 'ibuf__parameterized0' (5#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/regslice_core.v:372]
+INFO: [Synth 8-6157] synthesizing module 'obuf__parameterized0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/regslice_core.v:402]
+INFO: [Synth 8-6155] done synthesizing module 'obuf__parameterized0' (5#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/regslice_core.v:402]
+INFO: [Synth 8-6155] done synthesizing module 'regslice_both__parameterized0' (5#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/regslice_core.v:8]
+INFO: [Synth 8-6157] synthesizing module 'regslice_both__parameterized1' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/regslice_core.v:8]
+INFO: [Synth 8-6157] synthesizing module 'ibuf__parameterized1' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/regslice_core.v:372]
+INFO: [Synth 8-6155] done synthesizing module 'ibuf__parameterized1' (5#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/regslice_core.v:372]
+INFO: [Synth 8-6157] synthesizing module 'obuf__parameterized1' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/regslice_core.v:402]
+INFO: [Synth 8-6155] done synthesizing module 'obuf__parameterized1' (5#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/regslice_core.v:402]
+INFO: [Synth 8-6155] done synthesizing module 'regslice_both__parameterized1' (5#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/regslice_core.v:8]
+INFO: [Synth 8-6157] synthesizing module 'exdes_v_tpg_0_tpgPatternCheckerdEe' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_tpgPatternCheckerdEe.v:52]
+INFO: [Synth 8-6157] synthesizing module 'exdes_v_tpg_0_tpgPatternCheckerdEe_rom' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_tpgPatternCheckerdEe.v:6]
+INFO: [Synth 8-3876] $readmem data file './exdes_v_tpg_0_tpgPatternCheckerdEe_rom.dat' is read successfully [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_tpgPatternCheckerdEe.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_v_tpg_0_tpgPatternCheckerdEe_rom' (7#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_tpgPatternCheckerdEe.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_v_tpg_0_tpgPatternCheckerdEe' (8#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_tpgPatternCheckerdEe.v:52]
+INFO: [Synth 8-6157] synthesizing module 'exdes_v_tpg_0_tpgPatternCheckereOg' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_tpgPatternCheckereOg.v:52]
+INFO: [Synth 8-6157] synthesizing module 'exdes_v_tpg_0_tpgPatternCheckereOg_rom' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_tpgPatternCheckereOg.v:6]
+INFO: [Synth 8-3876] $readmem data file './exdes_v_tpg_0_tpgPatternCheckereOg_rom.dat' is read successfully [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_tpgPatternCheckereOg.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_v_tpg_0_tpgPatternCheckereOg_rom' (9#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_tpgPatternCheckereOg.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_v_tpg_0_tpgPatternCheckereOg' (10#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_tpgPatternCheckereOg.v:52]
+INFO: [Synth 8-6157] synthesizing module 'exdes_v_tpg_0_tpgPatternCheckerfYi' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_tpgPatternCheckerfYi.v:52]
+INFO: [Synth 8-6157] synthesizing module 'exdes_v_tpg_0_tpgPatternCheckerfYi_rom' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_tpgPatternCheckerfYi.v:6]
+INFO: [Synth 8-3876] $readmem data file './exdes_v_tpg_0_tpgPatternCheckerfYi_rom.dat' is read successfully [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_tpgPatternCheckerfYi.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_v_tpg_0_tpgPatternCheckerfYi_rom' (11#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_tpgPatternCheckerfYi.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_v_tpg_0_tpgPatternCheckerfYi' (12#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_tpgPatternCheckerfYi.v:52]
+INFO: [Synth 8-6157] synthesizing module 'exdes_v_tpg_0_tpgPatternCheckerg8j' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_tpgPatternCheckerg8j.v:52]
+INFO: [Synth 8-6157] synthesizing module 'exdes_v_tpg_0_tpgPatternCheckerg8j_rom' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_tpgPatternCheckerg8j.v:6]
+INFO: [Synth 8-3876] $readmem data file './exdes_v_tpg_0_tpgPatternCheckerg8j_rom.dat' is read successfully [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_tpgPatternCheckerg8j.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_v_tpg_0_tpgPatternCheckerg8j_rom' (13#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_tpgPatternCheckerg8j.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_v_tpg_0_tpgPatternCheckerg8j' (14#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_tpgPatternCheckerg8j.v:52]
+INFO: [Synth 8-6157] synthesizing module 'exdes_v_tpg_0_tpgPatternCheckerhbi' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_tpgPatternCheckerhbi.v:52]
+INFO: [Synth 8-6157] synthesizing module 'exdes_v_tpg_0_tpgPatternCheckerhbi_rom' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_tpgPatternCheckerhbi.v:6]
+INFO: [Synth 8-3876] $readmem data file './exdes_v_tpg_0_tpgPatternCheckerhbi_rom.dat' is read successfully [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_tpgPatternCheckerhbi.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_v_tpg_0_tpgPatternCheckerhbi_rom' (15#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_tpgPatternCheckerhbi.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_v_tpg_0_tpgPatternCheckerhbi' (16#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_tpgPatternCheckerhbi.v:52]
+INFO: [Synth 8-6157] synthesizing module 'exdes_v_tpg_0_tpgPatternCheckeribs' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_tpgPatternCheckeribs.v:52]
+INFO: [Synth 8-6157] synthesizing module 'exdes_v_tpg_0_tpgPatternCheckeribs_rom' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_tpgPatternCheckeribs.v:6]
+INFO: [Synth 8-3876] $readmem data file './exdes_v_tpg_0_tpgPatternCheckeribs_rom.dat' is read successfully [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_tpgPatternCheckeribs.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_v_tpg_0_tpgPatternCheckeribs_rom' (17#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_tpgPatternCheckeribs.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_v_tpg_0_tpgPatternCheckeribs' (18#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_tpgPatternCheckeribs.v:52]
+INFO: [Synth 8-6157] synthesizing module 'exdes_v_tpg_0_tpgPatternCheckercud' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_tpgPatternCheckercud.v:52]
+INFO: [Synth 8-6157] synthesizing module 'exdes_v_tpg_0_tpgPatternCheckercud_rom' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_tpgPatternCheckercud.v:6]
+INFO: [Synth 8-3876] $readmem data file './exdes_v_tpg_0_tpgPatternCheckercud_rom.dat' is read successfully [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_tpgPatternCheckercud.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_v_tpg_0_tpgPatternCheckercud_rom' (20#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_tpgPatternCheckercud.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_v_tpg_0_tpgPatternCheckercud' (21#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_tpgPatternCheckercud.v:52]
+INFO: [Synth 8-6157] synthesizing module 'exdes_v_tpg_0_tpgPatternTartanClbW' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_tpgPatternTartanClbW.v:52]
+INFO: [Synth 8-6157] synthesizing module 'exdes_v_tpg_0_tpgPatternTartanClbW_rom' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_tpgPatternTartanClbW.v:6]
+INFO: [Synth 8-3876] $readmem data file './exdes_v_tpg_0_tpgPatternTartanClbW_rom.dat' is read successfully [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_tpgPatternTartanClbW.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_v_tpg_0_tpgPatternTartanClbW_rom' (23#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_tpgPatternTartanClbW.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_v_tpg_0_tpgPatternTartanClbW' (24#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_tpgPatternTartanClbW.v:52]
+INFO: [Synth 8-6157] synthesizing module 'exdes_v_tpg_0_tpgPatternCrossHajbC' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_tpgPatternCrossHajbC.v:52]
+INFO: [Synth 8-6157] synthesizing module 'exdes_v_tpg_0_tpgPatternCrossHajbC_rom' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_tpgPatternCrossHajbC.v:6]
+INFO: [Synth 8-3876] $readmem data file './exdes_v_tpg_0_tpgPatternCrossHajbC_rom.dat' is read successfully [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_tpgPatternCrossHajbC.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_v_tpg_0_tpgPatternCrossHajbC_rom' (26#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_tpgPatternCrossHajbC.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_v_tpg_0_tpgPatternCrossHajbC' (27#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_tpgPatternCrossHajbC.v:52]
+INFO: [Synth 8-6157] synthesizing module 'exdes_v_tpg_0_tpgPatternSolidBlbkb' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_tpgPatternSolidBlbkb.v:52]
+INFO: [Synth 8-6157] synthesizing module 'exdes_v_tpg_0_tpgPatternSolidBlbkb_rom' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_tpgPatternSolidBlbkb.v:6]
+INFO: [Synth 8-3876] $readmem data file './exdes_v_tpg_0_tpgPatternSolidBlbkb_rom.dat' is read successfully [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_tpgPatternSolidBlbkb.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_v_tpg_0_tpgPatternSolidBlbkb_rom' (28#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_tpgPatternSolidBlbkb.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_v_tpg_0_tpgPatternSolidBlbkb' (29#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_tpgPatternSolidBlbkb.v:52]
+INFO: [Synth 8-6157] synthesizing module 'exdes_v_tpg_0_reg_ap_uint_10_s' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_reg_ap_uint_10_s.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_v_tpg_0_reg_ap_uint_10_s' (30#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_reg_ap_uint_10_s.v:10]
+INFO: [Synth 8-6157] synthesizing module 'exdes_v_tpg_0_fifo_w8_d2_A' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_fifo_w8_d2_A.v:42]
+INFO: [Synth 8-6157] synthesizing module 'exdes_v_tpg_0_fifo_w8_d2_A_shiftReg' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_fifo_w8_d2_A.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_v_tpg_0_fifo_w8_d2_A_shiftReg' (36#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_fifo_w8_d2_A.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_v_tpg_0_fifo_w8_d2_A' (37#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_fifo_w8_d2_A.v:42]
+INFO: [Synth 8-6157] synthesizing module 'exdes_v_tpg_0_start_for_tpgBackyd2' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_start_for_tpgBackyd2.v:42]
+INFO: [Synth 8-6157] synthesizing module 'exdes_v_tpg_0_start_for_tpgBackyd2_shiftReg' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_start_for_tpgBackyd2.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_v_tpg_0_start_for_tpgBackyd2_shiftReg' (38#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_start_for_tpgBackyd2.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_v_tpg_0_start_for_tpgBackyd2' (39#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_start_for_tpgBackyd2.v:42]
+INFO: [Synth 8-6157] synthesizing module 'exdes_v_tpg_0_start_for_MultiPizec' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_start_for_MultiPizec.v:42]
+INFO: [Synth 8-6157] synthesizing module 'exdes_v_tpg_0_start_for_MultiPizec_shiftReg' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_start_for_MultiPizec.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_v_tpg_0_start_for_MultiPizec_shiftReg' (40#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_start_for_MultiPizec.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_v_tpg_0_start_for_MultiPizec' (41#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/hdl/verilog/exdes_v_tpg_0_start_for_MultiPizec.v:42]
+WARNING: [Synth 8-7071] port 'fid_ap_vld' of module 'exdes_v_tpg_0_v_tpg' is unconnected for instance 'inst' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/synth/exdes_v_tpg_0.v:196]
+WARNING: [Synth 8-7023] instance 'inst' of module 'exdes_v_tpg_0_v_tpg' has 41 connections declared, but only 40 given [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/synth/exdes_v_tpg_0.v:196]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_v_tpg_0' (43#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/synth/exdes_v_tpg_0.v:57]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 2847.211 ; gain = 113.777 ; free physical = 1285 ; free virtual = 4842
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 2859.086 ; gain = 125.652 ; free physical = 1351 ; free virtual = 4892
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 2859.086 ; gain = 125.652 ; free physical = 1351 ; free virtual = 4892
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2859.086 ; gain = 0.000 ; free physical = 1331 ; free virtual = 4875
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/exdes_v_tpg_0_ooc.xdc] for cell 'inst'
+create_clock: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 3028.836 ; gain = 0.000 ; free physical = 766 ; free virtual = 4360
+Finished Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/exdes_v_tpg_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/dont_touch.xdc]
+Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/exdes_v_tpg_0.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/exdes_v_tpg_0.xdc] for cell 'inst'
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3028.836 ; gain = 0.000 ; free physical = 763 ; free virtual = 4357
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.08 . Memory (MB): peak = 3028.836 ; gain = 0.000 ; free physical = 755 ; free virtual = 4349
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:31 ; elapsed = 00:00:39 . Memory (MB): peak = 3028.836 ; gain = 295.402 ; free physical = 2738 ; free virtual = 6340
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu7ev-ffvc1156-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:31 ; elapsed = 00:00:39 . Memory (MB): peak = 3028.836 ; gain = 295.402 ; free physical = 2738 ; free virtual = 6340
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst. (constraint file  /home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:39 . Memory (MB): peak = 3028.836 ; gain = 295.402 ; free physical = 2736 ; free virtual = 6338
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'wstate_reg' in module 'exdes_v_tpg_0_v_tpg_CTRL_s_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'rstate_reg' in module 'exdes_v_tpg_0_v_tpg_CTRL_s_axi'
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                             0001 |                               11
+*
+                  WRIDLE |                             0010 |                               00
+                  WRDATA |                             0100 |                               01
+                  WRRESP |                             1000 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wstate_reg' using encoding 'one-hot' in module 'exdes_v_tpg_0_v_tpg_CTRL_s_axi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              001 |                               10
+*
+                  RDIDLE |                              010 |                               00
+                  RDDATA |                              100 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rstate_reg' using encoding 'one-hot' in module 'exdes_v_tpg_0_v_tpg_CTRL_s_axi'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:35 ; elapsed = 00:00:44 . Memory (MB): peak = 3028.836 ; gain = 295.402 ; free physical = 2361 ; free virtual = 5975
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'inst/MultiPixStream2AXIvi_U0/regslice_both_AXI_video_strm_V_id_V_U' (regslice_both__parameterized1) to 'inst/MultiPixStream2AXIvi_U0/regslice_both_AXI_video_strm_V_dest_V_U'
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1728 (col length:144)
+BRAMs: 624 (col length: RAMB18 144 RAMB36 72)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:12 ; elapsed = 00:01:22 . Memory (MB): peak = 3028.836 ; gain = 295.402 ; free physical = 484 ; free virtual = 3576
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:49 ; elapsed = 00:02:30 . Memory (MB): peak = 3409.305 ; gain = 675.871 ; free physical = 175 ; free virtual = 2847
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:58 ; elapsed = 00:02:40 . Memory (MB): peak = 3493.500 ; gain = 760.066 ; free physical = 175 ; free virtual = 2481
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:02:03 ; elapsed = 00:02:44 . Memory (MB): peak = 3509.516 ; gain = 776.082 ; free physical = 174 ; free virtual = 2303
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:02:08 ; elapsed = 00:02:50 . Memory (MB): peak = 3512.484 ; gain = 779.051 ; free physical = 164 ; free virtual = 2112
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:08 ; elapsed = 00:02:50 . Memory (MB): peak = 3512.484 ; gain = 779.051 ; free physical = 175 ; free virtual = 2111
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:08 ; elapsed = 00:02:50 . Memory (MB): peak = 3512.484 ; gain = 779.051 ; free physical = 173 ; free virtual = 2089
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:08 ; elapsed = 00:02:50 . Memory (MB): peak = 3512.484 ; gain = 779.051 ; free physical = 172 ; free virtual = 2088
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:09 ; elapsed = 00:02:50 . Memory (MB): peak = 3512.484 ; gain = 779.051 ; free physical = 163 ; free virtual = 2083
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:09 ; elapsed = 00:02:50 . Memory (MB): peak = 3512.484 ; gain = 779.051 ; free physical = 163 ; free virtual = 2083
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY8 |    64|
+|2     |LUT1   |    51|
+|3     |LUT2   |   210|
+|4     |LUT3   |   838|
+|5     |LUT4   |   501|
+|6     |LUT5   |   481|
+|7     |LUT6   |   669|
+|8     |MUXF7  |    26|
+|9     |MUXF8  |     5|
+|10    |SRL16E |     6|
+|11    |FDRE   |  2153|
+|12    |FDSE   |    90|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:09 ; elapsed = 00:02:50 . Memory (MB): peak = 3512.484 ; gain = 779.051 ; free physical = 163 ; free virtual = 2083
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:57 ; elapsed = 00:02:35 . Memory (MB): peak = 3512.484 ; gain = 609.301 ; free physical = 199 ; free virtual = 2122
+Synthesis Optimization Complete : Time (s): cpu = 00:02:09 ; elapsed = 00:02:50 . Memory (MB): peak = 3512.492 ; gain = 779.051 ; free physical = 196 ; free virtual = 2121
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.06 . Memory (MB): peak = 3526.422 ; gain = 0.000 ; free physical = 224 ; free virtual = 2145
+INFO: [Netlist 29-17] Analyzing 95 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3558.438 ; gain = 0.000 ; free physical = 161 ; free virtual = 2069
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+115 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:35 ; elapsed = 00:03:24 . Memory (MB): peak = 3558.438 ; gain = 1381.406 ; free physical = 331 ; free virtual = 2213
+INFO: [Common 17-1381] The checkpoint '/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/exdes_v_tpg_0.dcp' has been generated.
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP exdes_v_tpg_0, cache-ID = aff2729c04cac7fb
+INFO: [Coretcl 2-1174] Renamed 90 cell refs.
+INFO: [Common 17-1381] The checkpoint '/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_v_tpg_0_synth_1/exdes_v_tpg_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file exdes_v_tpg_0_utilization_synth.rpt -pb exdes_v_tpg_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Aug 30 16:51:47 2020...

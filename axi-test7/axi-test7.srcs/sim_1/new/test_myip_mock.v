@@ -48,15 +48,16 @@ myip_mock_v1_0 #(
 
 
 always begin
-	clk = 0; #(STEP/2);
 	clk = 1; #(STEP/2);
+	clk = 0; #(STEP/2);
 end
 
 initial begin
-	reset = 0;
-	#(STEP*10) reset = 1;
+	reset = 1;
 	#(STEP*10) reset = 0;
+	#(STEP*10) reset = 1;
 	#(STEP*10);
+	#1;
 	tready = 1'b1;
 	#(STEP*20);
 	tready = 1'b0;

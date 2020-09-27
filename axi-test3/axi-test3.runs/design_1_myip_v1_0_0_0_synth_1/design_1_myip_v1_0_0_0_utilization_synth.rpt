@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
-| Date         : Wed Sep  2 23:08:39 2020
+| Date         : Fri Sep  4 01:16:07 2020
 | Host         : y-Blade-Stealth running 64-bit Ubuntu 18.04.5 LTS
 | Command      : report_utilization -file design_1_myip_v1_0_0_0_utilization_synth.rpt -pb design_1_myip_v1_0_0_0_utilization_synth.pb
 | Design       : design_1_myip_v1_0_0_0
@@ -148,13 +148,13 @@ Table of Contents
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
 | FDRE     |  208 |            Register |
-| LUT6     |   41 |                 CLB |
-| LUT1     |   33 |                 CLB |
-| LUT4     |   31 |                 CLB |
-| LUT2     |    8 |                 CLB |
+| LUT6     |   42 |                 CLB |
+| LUT1     |   34 |                 CLB |
+| LUT4     |   32 |                 CLB |
 | LUT3     |    7 |                 CLB |
 | LUT5     |    5 |                 CLB |
 | CARRY8   |    4 |                 CLB |
+| LUT2     |    3 |                 CLB |
 | FDSE     |    3 |            Register |
 +----------+------+---------------------+
 

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Sun Aug 30 16:18:10 2020
+# Process ID: 7408
+# Current directory: /home/y/fpga/hdmi/hdmi.runs/bd_2422_0_v_hdmi_rx_0_synth_1
+# Command line: vivado -log bd_2422_0_v_hdmi_rx_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source bd_2422_0_v_hdmi_rx_0.tcl
+# Log file: /home/y/fpga/hdmi/hdmi.runs/bd_2422_0_v_hdmi_rx_0_synth_1/bd_2422_0_v_hdmi_rx_0.vds
+# Journal file: /home/y/fpga/hdmi/hdmi.runs/bd_2422_0_v_hdmi_rx_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source bd_2422_0_v_hdmi_rx_0.tcl -notrace

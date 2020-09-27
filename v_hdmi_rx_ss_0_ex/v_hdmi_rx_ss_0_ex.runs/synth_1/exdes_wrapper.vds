@@ -1,0 +1,650 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Sun Aug 30 16:55:51 2020
+# Process ID: 11999
+# Current directory: /home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1
+# Command line: vivado -log exdes_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source exdes_wrapper.tcl
+# Log file: /home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/exdes_wrapper.vds
+# Journal file: /home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source exdes_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2020.1/data/ip'.
+add_files: Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 2465.172 ; gain = 288.141 ; free physical = 9010 ; free virtual = 12107
+Command: synth_design -top exdes_wrapper -part xczu7ev-ffvc1156-2-e
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Device 21-403] Loading part xczu7ev-ffvc1156-2-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 12146
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2833.359 ; gain = 12.902 ; free physical = 7683 ; free virtual = 10943
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'exdes_wrapper' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/hdl/exdes_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'IOBUF' [/tools/Xilinx/Vivado/2020.1/scripts/rt/data/unisim_comp.v:36238]
+	Parameter DRIVE bound to: 12 - type: integer 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (1#1) [/tools/Xilinx/Vivado/2020.1/scripts/rt/data/unisim_comp.v:36238]
+INFO: [Synth 8-6157] synthesizing module 'exdes' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:493]
+INFO: [Synth 8-6157] synthesizing module 'audio_ss_0_imp_L2LLI5' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:12]
+INFO: [Synth 8-6157] synthesizing module 'exdes_aud_pat_gen_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-11999-y-Blade-Stealth/realtime/exdes_aud_pat_gen_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_aud_pat_gen_0' (2#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-11999-y-Blade-Stealth/realtime/exdes_aud_pat_gen_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'exdes_axi_interconnect_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:1352]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_5QVHE' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:4328]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_5QVHE' (3#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:4328]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_1FFZTVU' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:4784]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_1FFZTVU' (4#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:4784]
+INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_1AMYN3N' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:5226]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_1AMYN3N' (5#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:5226]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_O40D8P' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:7928]
+INFO: [Synth 8-6157] synthesizing module 'exdes_auto_pc_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-11999-y-Blade-Stealth/realtime/exdes_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_auto_pc_0' (6#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-11999-y-Blade-Stealth/realtime/exdes_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_O40D8P' (7#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:7928]
+INFO: [Synth 8-6157] synthesizing module 'exdes_xbar_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-11999-y-Blade-Stealth/realtime/exdes_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_xbar_0' (8#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-11999-y-Blade-Stealth/realtime/exdes_xbar_0_stub.v:6]
+WARNING: [Synth 8-689] width (3) of port connection 'm_axi_arprot' does not match port width (9) of module 'exdes_xbar_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:2007]
+WARNING: [Synth 8-689] width (3) of port connection 'm_axi_awprot' does not match port width (9) of module 'exdes_xbar_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:2011]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_axi_interconnect_0' (9#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:1352]
+INFO: [Synth 8-6157] synthesizing module 'exdes_clk_wiz_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-11999-y-Blade-Stealth/realtime/exdes_clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_clk_wiz_0' (10#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-11999-y-Blade-Stealth/realtime/exdes_clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'exdes_hdmi_acr_ctrl_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-11999-y-Blade-Stealth/realtime/exdes_hdmi_acr_ctrl_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_hdmi_acr_ctrl_0' (11#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-11999-y-Blade-Stealth/realtime/exdes_hdmi_acr_ctrl_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'audio_ss_0_imp_L2LLI5' (12#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:12]
+INFO: [Synth 8-6157] synthesizing module 'exdes_dru_ibufds_gt_odiv2_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-11999-y-Blade-Stealth/realtime/exdes_dru_ibufds_gt_odiv2_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_dru_ibufds_gt_odiv2_0' (13#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-11999-y-Blade-Stealth/realtime/exdes_dru_ibufds_gt_odiv2_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'exdes_gt_refclk_buf_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-11999-y-Blade-Stealth/realtime/exdes_gt_refclk_buf_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_gt_refclk_buf_0' (14#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-11999-y-Blade-Stealth/realtime/exdes_gt_refclk_buf_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'exdes_rx_video_axis_reg_slice_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-11999-y-Blade-Stealth/realtime/exdes_rx_video_axis_reg_slice_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_rx_video_axis_reg_slice_0' (15#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-11999-y-Blade-Stealth/realtime/exdes_rx_video_axis_reg_slice_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'exdes_tx_video_axis_reg_slice_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-11999-y-Blade-Stealth/realtime/exdes_tx_video_axis_reg_slice_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_tx_video_axis_reg_slice_0' (16#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-11999-y-Blade-Stealth/realtime/exdes_tx_video_axis_reg_slice_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axis_tstrb' of module 'exdes_tx_video_axis_reg_slice_0' is unconnected for instance 'tx_video_axis_reg_slice' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:943]
+WARNING: [Synth 8-7071] port 'm_axis_tkeep' of module 'exdes_tx_video_axis_reg_slice_0' is unconnected for instance 'tx_video_axis_reg_slice' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:943]
+WARNING: [Synth 8-7071] port 'm_axis_tid' of module 'exdes_tx_video_axis_reg_slice_0' is unconnected for instance 'tx_video_axis_reg_slice' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:943]
+WARNING: [Synth 8-7071] port 'm_axis_tdest' of module 'exdes_tx_video_axis_reg_slice_0' is unconnected for instance 'tx_video_axis_reg_slice' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:943]
+WARNING: [Synth 8-7023] instance 'tx_video_axis_reg_slice' of module 'exdes_tx_video_axis_reg_slice_0' has 20 connections declared, but only 16 given [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:943]
+INFO: [Synth 8-6157] synthesizing module 'exdes_v_hdmi_rx_ss_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-11999-y-Blade-Stealth/realtime/exdes_v_hdmi_rx_ss_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_v_hdmi_rx_ss_0' (17#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-11999-y-Blade-Stealth/realtime/exdes_v_hdmi_rx_ss_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'exdes_v_hdmi_tx_ss_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-11999-y-Blade-Stealth/realtime/exdes_v_hdmi_tx_ss_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_v_hdmi_tx_ss_0' (18#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-11999-y-Blade-Stealth/realtime/exdes_v_hdmi_tx_ss_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'v_tpg_ss_0_imp_5QXXBT' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:8238]
+INFO: [Synth 8-6157] synthesizing module 'exdes_axi_gpio_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-11999-y-Blade-Stealth/realtime/exdes_axi_gpio_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_axi_gpio_0' (19#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-11999-y-Blade-Stealth/realtime/exdes_axi_gpio_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'exdes_v_tpg_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-11999-y-Blade-Stealth/realtime/exdes_v_tpg_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_v_tpg_0' (20#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-11999-y-Blade-Stealth/realtime/exdes_v_tpg_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'fid' of module 'exdes_v_tpg_0' is unconnected for instance 'v_tpg' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:8463]
+WARNING: [Synth 8-7071] port 'interrupt' of module 'exdes_v_tpg_0' is unconnected for instance 'v_tpg' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:8463]
+WARNING: [Synth 8-7023] instance 'v_tpg' of module 'exdes_v_tpg_0' has 40 connections declared, but only 38 given [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:8463]
+INFO: [Synth 8-6155] done synthesizing module 'v_tpg_ss_0_imp_5QXXBT' (21#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:8238]
+INFO: [Synth 8-6157] synthesizing module 'exdes_vcc_const_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_vcc_const_0/synth/exdes_vcc_const_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_7_xlconstant' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
+	Parameter CONST_VAL bound to: 1 - type: integer 
+	Parameter CONST_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_7_xlconstant' (22#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_vcc_const_0' (23#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_vcc_const_0/synth/exdes_vcc_const_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'exdes_vcc_const0_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_vcc_const0_0/synth/exdes_vcc_const0_0.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_vcc_const0_0' (24#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_vcc_const0_0/synth/exdes_vcc_const0_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'exdes_vid_phy_controller_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-11999-y-Blade-Stealth/realtime/exdes_vid_phy_controller_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_vid_phy_controller_0' (25#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-11999-y-Blade-Stealth/realtime/exdes_vid_phy_controller_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'rx_tmds_clk' of module 'exdes_vid_phy_controller_0' is unconnected for instance 'vid_phy_controller' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:1131]
+WARNING: [Synth 8-7071] port 'vid_phy_tx_axi4s_ch0_tready' of module 'exdes_vid_phy_controller_0' is unconnected for instance 'vid_phy_controller' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:1131]
+WARNING: [Synth 8-7071] port 'vid_phy_tx_axi4s_ch1_tready' of module 'exdes_vid_phy_controller_0' is unconnected for instance 'vid_phy_controller' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:1131]
+WARNING: [Synth 8-7071] port 'vid_phy_tx_axi4s_ch2_tready' of module 'exdes_vid_phy_controller_0' is unconnected for instance 'vid_phy_controller' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:1131]
+WARNING: [Synth 8-7071] port 'vid_phy_rx_axi4s_ch0_tuser' of module 'exdes_vid_phy_controller_0' is unconnected for instance 'vid_phy_controller' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:1131]
+WARNING: [Synth 8-7071] port 'vid_phy_rx_axi4s_ch1_tuser' of module 'exdes_vid_phy_controller_0' is unconnected for instance 'vid_phy_controller' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:1131]
+WARNING: [Synth 8-7071] port 'vid_phy_rx_axi4s_ch2_tuser' of module 'exdes_vid_phy_controller_0' is unconnected for instance 'vid_phy_controller' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:1131]
+WARNING: [Synth 8-7023] instance 'vid_phy_controller' of module 'exdes_vid_phy_controller_0' has 80 connections declared, but only 73 given [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:1131]
+INFO: [Synth 8-6157] synthesizing module 'zynq_us_ss_0_imp_1A5BJWS' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:8504]
+INFO: [Synth 8-6157] synthesizing module 'exdes_axi_interconnect_0_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:2046]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_YLXJD6' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:4474]
+INFO: [Synth 8-6157] synthesizing module 'exdes_auto_pc_1' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-11999-y-Blade-Stealth/realtime/exdes_auto_pc_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_auto_pc_1' (26#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-11999-y-Blade-Stealth/realtime/exdes_auto_pc_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_YLXJD6' (27#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:4474]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_1IQ9Y1U' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:4916]
+INFO: [Synth 8-6157] synthesizing module 'exdes_auto_pc_2' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-11999-y-Blade-Stealth/realtime/exdes_auto_pc_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_auto_pc_2' (28#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-11999-y-Blade-Stealth/realtime/exdes_auto_pc_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_1IQ9Y1U' (29#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:4916]
+INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_1MW07A3' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:5358]
+INFO: [Synth 8-6157] synthesizing module 'exdes_auto_pc_3' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-11999-y-Blade-Stealth/realtime/exdes_auto_pc_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_auto_pc_3' (30#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-11999-y-Blade-Stealth/realtime/exdes_auto_pc_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_1MW07A3' (31#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:5358]
+INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_UGIVCJ' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:5668]
+INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_UGIVCJ' (32#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:5668]
+INFO: [Synth 8-6157] synthesizing module 'm04_couplers_imp_1WH0NJD' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:5926]
+INFO: [Synth 8-6157] synthesizing module 'exdes_auto_pc_4' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-11999-y-Blade-Stealth/realtime/exdes_auto_pc_4_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_auto_pc_4' (33#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-11999-y-Blade-Stealth/realtime/exdes_auto_pc_4_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'exdes_auto_pc_4' is unconnected for instance 'auto_pc' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:6165]
+WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'exdes_auto_pc_4' is unconnected for instance 'auto_pc' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:6165]
+WARNING: [Synth 8-7023] instance 'auto_pc' of module 'exdes_auto_pc_4' has 60 connections declared, but only 58 given [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:6165]
+INFO: [Synth 8-6155] done synthesizing module 'm04_couplers_imp_1WH0NJD' (34#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:5926]
+INFO: [Synth 8-6157] synthesizing module 'm05_couplers_imp_LZGR0H' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:6226]
+INFO: [Synth 8-6157] synthesizing module 'exdes_auto_cc_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-11999-y-Blade-Stealth/realtime/exdes_auto_cc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_auto_cc_0' (35#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-11999-y-Blade-Stealth/realtime/exdes_auto_cc_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axi_awuser' of module 'exdes_auto_cc_0' is unconnected for instance 'auto_cc' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:6516]
+WARNING: [Synth 8-7071] port 'm_axi_aruser' of module 'exdes_auto_cc_0' is unconnected for instance 'auto_cc' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:6516]
+WARNING: [Synth 8-7023] instance 'auto_cc' of module 'exdes_auto_cc_0' has 86 connections declared, but only 84 given [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:6516]
+INFO: [Synth 8-6157] synthesizing module 'exdes_auto_pc_5' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-11999-y-Blade-Stealth/realtime/exdes_auto_pc_5_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_auto_pc_5' (36#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-11999-y-Blade-Stealth/realtime/exdes_auto_pc_5_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'exdes_auto_pc_5' is unconnected for instance 'auto_pc' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:6601]
+WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'exdes_auto_pc_5' is unconnected for instance 'auto_pc' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:6601]
+WARNING: [Synth 8-7023] instance 'auto_pc' of module 'exdes_auto_pc_5' has 60 connections declared, but only 58 given [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:6601]
+INFO: [Synth 8-6155] done synthesizing module 'm05_couplers_imp_LZGR0H' (37#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:6226]
+INFO: [Synth 8-6157] synthesizing module 'm06_couplers_imp_Q5H6T4' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:6662]
+INFO: [Synth 8-6155] done synthesizing module 'm06_couplers_imp_Q5H6T4' (38#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:6662]
+INFO: [Synth 8-6157] synthesizing module 'm07_couplers_imp_1SAOMKW' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:6948]
+INFO: [Synth 8-6155] done synthesizing module 'm07_couplers_imp_1SAOMKW' (39#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:6948]
+INFO: [Synth 8-6157] synthesizing module 'm08_couplers_imp_1DPXNF1' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:7206]
+INFO: [Synth 8-6157] synthesizing module 'exdes_auto_cc_1' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-11999-y-Blade-Stealth/realtime/exdes_auto_cc_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_auto_cc_1' (40#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-11999-y-Blade-Stealth/realtime/exdes_auto_cc_1_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axi_awuser' of module 'exdes_auto_cc_1' is unconnected for instance 'auto_cc' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:7496]
+WARNING: [Synth 8-7071] port 'm_axi_aruser' of module 'exdes_auto_cc_1' is unconnected for instance 'auto_cc' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:7496]
+WARNING: [Synth 8-7023] instance 'auto_cc' of module 'exdes_auto_cc_1' has 86 connections declared, but only 84 given [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:7496]
+INFO: [Synth 8-6157] synthesizing module 'exdes_auto_pc_6' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-11999-y-Blade-Stealth/realtime/exdes_auto_pc_6_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_auto_pc_6' (41#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-11999-y-Blade-Stealth/realtime/exdes_auto_pc_6_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'exdes_auto_pc_6' is unconnected for instance 'auto_pc' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:7581]
+WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'exdes_auto_pc_6' is unconnected for instance 'auto_pc' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:7581]
+WARNING: [Synth 8-7023] instance 'auto_pc' of module 'exdes_auto_pc_6' has 60 connections declared, but only 58 given [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:7581]
+INFO: [Synth 8-6155] done synthesizing module 'm08_couplers_imp_1DPXNF1' (42#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:7206]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_BVLCBL' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:7642]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_BVLCBL' (43#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:7642]
+INFO: [Synth 8-6157] synthesizing module 'exdes_xbar_1' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-11999-y-Blade-Stealth/realtime/exdes_xbar_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_xbar_1' (44#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-11999-y-Blade-Stealth/realtime/exdes_xbar_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_axi_interconnect_0_0' (45#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:2046]
+WARNING: [Synth 8-7071] port 'M03_AXI_araddr' of module 'exdes_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:9143]
+WARNING: [Synth 8-7071] port 'M03_AXI_arburst' of module 'exdes_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:9143]
+WARNING: [Synth 8-7071] port 'M03_AXI_arcache' of module 'exdes_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:9143]
+WARNING: [Synth 8-7071] port 'M03_AXI_arlen' of module 'exdes_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:9143]
+WARNING: [Synth 8-7071] port 'M03_AXI_arlock' of module 'exdes_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:9143]
+WARNING: [Synth 8-7071] port 'M03_AXI_arprot' of module 'exdes_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:9143]
+WARNING: [Synth 8-7071] port 'M03_AXI_arqos' of module 'exdes_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:9143]
+WARNING: [Synth 8-7071] port 'M03_AXI_arregion' of module 'exdes_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:9143]
+WARNING: [Synth 8-7071] port 'M03_AXI_arsize' of module 'exdes_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:9143]
+WARNING: [Synth 8-7071] port 'M03_AXI_arvalid' of module 'exdes_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:9143]
+WARNING: [Synth 8-7071] port 'M03_AXI_awaddr' of module 'exdes_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:9143]
+WARNING: [Synth 8-7071] port 'M03_AXI_awburst' of module 'exdes_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:9143]
+WARNING: [Synth 8-7071] port 'M03_AXI_awcache' of module 'exdes_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:9143]
+WARNING: [Synth 8-7071] port 'M03_AXI_awlen' of module 'exdes_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:9143]
+WARNING: [Synth 8-7071] port 'M03_AXI_awlock' of module 'exdes_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:9143]
+WARNING: [Synth 8-7071] port 'M03_AXI_awprot' of module 'exdes_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:9143]
+WARNING: [Synth 8-7071] port 'M03_AXI_awqos' of module 'exdes_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:9143]
+WARNING: [Synth 8-7071] port 'M03_AXI_awregion' of module 'exdes_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:9143]
+WARNING: [Synth 8-7071] port 'M03_AXI_awsize' of module 'exdes_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:9143]
+WARNING: [Synth 8-7071] port 'M03_AXI_awvalid' of module 'exdes_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:9143]
+WARNING: [Synth 8-7071] port 'M03_AXI_bready' of module 'exdes_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:9143]
+WARNING: [Synth 8-7071] port 'M03_AXI_rready' of module 'exdes_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:9143]
+WARNING: [Synth 8-7071] port 'M03_AXI_wdata' of module 'exdes_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:9143]
+WARNING: [Synth 8-7071] port 'M03_AXI_wlast' of module 'exdes_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:9143]
+WARNING: [Synth 8-7071] port 'M03_AXI_wstrb' of module 'exdes_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:9143]
+WARNING: [Synth 8-7071] port 'M03_AXI_wvalid' of module 'exdes_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:9143]
+WARNING: [Synth 8-7071] port 'M07_AXI_araddr' of module 'exdes_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:9143]
+WARNING: [Synth 8-7071] port 'M07_AXI_arburst' of module 'exdes_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:9143]
+WARNING: [Synth 8-7071] port 'M07_AXI_arcache' of module 'exdes_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:9143]
+WARNING: [Synth 8-7071] port 'M07_AXI_arlen' of module 'exdes_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:9143]
+WARNING: [Synth 8-7071] port 'M07_AXI_arlock' of module 'exdes_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:9143]
+WARNING: [Synth 8-7071] port 'M07_AXI_arprot' of module 'exdes_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:9143]
+WARNING: [Synth 8-7071] port 'M07_AXI_arqos' of module 'exdes_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:9143]
+WARNING: [Synth 8-7071] port 'M07_AXI_arregion' of module 'exdes_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:9143]
+WARNING: [Synth 8-7071] port 'M07_AXI_arsize' of module 'exdes_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:9143]
+WARNING: [Synth 8-7071] port 'M07_AXI_arvalid' of module 'exdes_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:9143]
+WARNING: [Synth 8-7071] port 'M07_AXI_awaddr' of module 'exdes_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:9143]
+WARNING: [Synth 8-7071] port 'M07_AXI_awburst' of module 'exdes_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:9143]
+WARNING: [Synth 8-7071] port 'M07_AXI_awcache' of module 'exdes_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:9143]
+WARNING: [Synth 8-7071] port 'M07_AXI_awlen' of module 'exdes_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:9143]
+WARNING: [Synth 8-7071] port 'M07_AXI_awlock' of module 'exdes_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:9143]
+WARNING: [Synth 8-7071] port 'M07_AXI_awprot' of module 'exdes_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:9143]
+WARNING: [Synth 8-7071] port 'M07_AXI_awqos' of module 'exdes_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:9143]
+WARNING: [Synth 8-7071] port 'M07_AXI_awregion' of module 'exdes_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:9143]
+WARNING: [Synth 8-7071] port 'M07_AXI_awsize' of module 'exdes_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:9143]
+WARNING: [Synth 8-7071] port 'M07_AXI_awvalid' of module 'exdes_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:9143]
+WARNING: [Synth 8-7071] port 'M07_AXI_bready' of module 'exdes_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:9143]
+WARNING: [Synth 8-7071] port 'M07_AXI_rready' of module 'exdes_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:9143]
+WARNING: [Synth 8-7071] port 'M07_AXI_wdata' of module 'exdes_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:9143]
+WARNING: [Synth 8-7071] port 'M07_AXI_wlast' of module 'exdes_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:9143]
+WARNING: [Synth 8-7071] port 'M07_AXI_wstrb' of module 'exdes_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:9143]
+WARNING: [Synth 8-7071] port 'M07_AXI_wvalid' of module 'exdes_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:9143]
+WARNING: [Synth 8-7023] instance 'axi_interconnect_0' of module 'exdes_axi_interconnect_0_0' has 278 connections declared, but only 226 given [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:9143]
+INFO: [Synth 8-6157] synthesizing module 'exdes_fmch_axi_iic_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-11999-y-Blade-Stealth/realtime/exdes_fmch_axi_iic_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_fmch_axi_iic_0' (46#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-11999-y-Blade-Stealth/realtime/exdes_fmch_axi_iic_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'iic2intc_irpt' of module 'exdes_fmch_axi_iic_0' is unconnected for instance 'fmch_axi_iic' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:9370]
+WARNING: [Synth 8-7071] port 'gpo' of module 'exdes_fmch_axi_iic_0' is unconnected for instance 'fmch_axi_iic' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:9370]
+WARNING: [Synth 8-7023] instance 'fmch_axi_iic' of module 'exdes_fmch_axi_iic_0' has 27 connections declared, but only 25 given [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:9370]
+INFO: [Synth 8-6157] synthesizing module 'exdes_rst_processor_1_100M_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-11999-y-Blade-Stealth/realtime/exdes_rst_processor_1_100M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_rst_processor_1_100M_0' (47#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-11999-y-Blade-Stealth/realtime/exdes_rst_processor_1_100M_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'exdes_rst_processor_1_100M_0' is unconnected for instance 'rst_processor_1_100M' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:9396]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'exdes_rst_processor_1_100M_0' is unconnected for instance 'rst_processor_1_100M' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:9396]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'exdes_rst_processor_1_100M_0' is unconnected for instance 'rst_processor_1_100M' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:9396]
+WARNING: [Synth 8-7023] instance 'rst_processor_1_100M' of module 'exdes_rst_processor_1_100M_0' has 10 connections declared, but only 7 given [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:9396]
+INFO: [Synth 8-6157] synthesizing module 'exdes_rst_processor_1_300M_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-11999-y-Blade-Stealth/realtime/exdes_rst_processor_1_300M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_rst_processor_1_300M_0' (48#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-11999-y-Blade-Stealth/realtime/exdes_rst_processor_1_300M_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'exdes_rst_processor_1_300M_0' is unconnected for instance 'rst_processor_1_300M' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:9404]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'exdes_rst_processor_1_300M_0' is unconnected for instance 'rst_processor_1_300M' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:9404]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'exdes_rst_processor_1_300M_0' is unconnected for instance 'rst_processor_1_300M' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:9404]
+WARNING: [Synth 8-7023] instance 'rst_processor_1_300M' of module 'exdes_rst_processor_1_300M_0' has 10 connections declared, but only 7 given [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:9404]
+INFO: [Synth 8-6157] synthesizing module 'exdes_xlconcat0_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_xlconcat0_0/synth/exdes_xlconcat0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_3_xlconcat' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ipshared/442e/hdl/xlconcat_v2_1_vl_rfs.v:14]
+	Parameter IN0_WIDTH bound to: 1 - type: integer 
+	Parameter IN1_WIDTH bound to: 1 - type: integer 
+	Parameter IN2_WIDTH bound to: 1 - type: integer 
+	Parameter IN3_WIDTH bound to: 1 - type: integer 
+	Parameter IN4_WIDTH bound to: 1 - type: integer 
+	Parameter IN5_WIDTH bound to: 1 - type: integer 
+	Parameter IN6_WIDTH bound to: 1 - type: integer 
+	Parameter IN7_WIDTH bound to: 1 - type: integer 
+	Parameter IN8_WIDTH bound to: 1 - type: integer 
+	Parameter IN9_WIDTH bound to: 1 - type: integer 
+	Parameter IN10_WIDTH bound to: 1 - type: integer 
+	Parameter IN11_WIDTH bound to: 1 - type: integer 
+	Parameter IN12_WIDTH bound to: 1 - type: integer 
+	Parameter IN13_WIDTH bound to: 1 - type: integer 
+	Parameter IN14_WIDTH bound to: 1 - type: integer 
+	Parameter IN15_WIDTH bound to: 1 - type: integer 
+	Parameter IN16_WIDTH bound to: 1 - type: integer 
+	Parameter IN17_WIDTH bound to: 1 - type: integer 
+	Parameter IN18_WIDTH bound to: 1 - type: integer 
+	Parameter IN19_WIDTH bound to: 1 - type: integer 
+	Parameter IN20_WIDTH bound to: 1 - type: integer 
+	Parameter IN21_WIDTH bound to: 1 - type: integer 
+	Parameter IN22_WIDTH bound to: 1 - type: integer 
+	Parameter IN23_WIDTH bound to: 1 - type: integer 
+	Parameter IN24_WIDTH bound to: 1 - type: integer 
+	Parameter IN25_WIDTH bound to: 1 - type: integer 
+	Parameter IN26_WIDTH bound to: 1 - type: integer 
+	Parameter IN27_WIDTH bound to: 1 - type: integer 
+	Parameter IN28_WIDTH bound to: 1 - type: integer 
+	Parameter IN29_WIDTH bound to: 1 - type: integer 
+	Parameter IN30_WIDTH bound to: 1 - type: integer 
+	Parameter IN31_WIDTH bound to: 1 - type: integer 
+	Parameter dout_width bound to: 3 - type: integer 
+	Parameter NUM_PORTS bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_3_xlconcat' (49#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ipshared/442e/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_xlconcat0_0' (50#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_xlconcat0_0/synth/exdes_xlconcat0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'exdes_zynq_us_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-11999-y-Blade-Stealth/realtime/exdes_zynq_us_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_zynq_us_0' (51#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/.Xil/Vivado-11999-y-Blade-Stealth/realtime/exdes_zynq_us_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'emio_gpio_o' of module 'exdes_zynq_us_0' is unconnected for instance 'zynq_us' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:9417]
+WARNING: [Synth 8-7071] port 'emio_gpio_t' of module 'exdes_zynq_us_0' is unconnected for instance 'zynq_us' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:9417]
+WARNING: [Synth 8-7023] instance 'zynq_us' of module 'exdes_zynq_us_0' has 48 connections declared, but only 46 given [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:9417]
+INFO: [Synth 8-6155] done synthesizing module 'zynq_us_ss_0_imp_1A5BJWS' (52#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:8504]
+INFO: [Synth 8-6155] done synthesizing module 'exdes' (53#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/synth/exdes.v:493]
+INFO: [Synth 8-6155] done synthesizing module 'exdes_wrapper' (54#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/hdl/exdes_wrapper.v:12]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 2889.234 ; gain = 68.777 ; free physical = 7752 ; free virtual = 10979
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2904.109 ; gain = 83.652 ; free physical = 7768 ; free virtual = 10975
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2904.109 ; gain = 83.652 ; free physical = 7767 ; free virtual = 10974
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2916.016 ; gain = 0.000 ; free physical = 7781 ; free virtual = 10987
+INFO: [Netlist 29-17] Analyzing 6 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc] for cell 'exdes_i/vid_phy_controller'
+WARNING: [Vivado 12-584] No ports matched ''. [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc:2]
+WARNING: [Vivado 12-584] No ports matched ''. [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc:4]
+WARNING: [Vivado 12-584] No ports matched ''. [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc:6]
+WARNING: [Vivado 12-584] No ports matched ''. [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc:8]
+WARNING: [Vivado 12-584] No ports matched ''. [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc:10]
+WARNING: [Vivado 12-584] No ports matched ''. [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc:12]
+Finished Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc] for cell 'exdes_i/vid_phy_controller'
+Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_tx_video_axis_reg_slice_0/exdes_tx_video_axis_reg_slice_0/exdes_tx_video_axis_reg_slice_0_in_context.xdc] for cell 'exdes_i/tx_video_axis_reg_slice'
+Finished Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_tx_video_axis_reg_slice_0/exdes_tx_video_axis_reg_slice_0/exdes_tx_video_axis_reg_slice_0_in_context.xdc] for cell 'exdes_i/tx_video_axis_reg_slice'
+Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_hdmi_tx_ss_0/exdes_v_hdmi_tx_ss_0/exdes_v_hdmi_tx_ss_0_in_context.xdc] for cell 'exdes_i/v_hdmi_tx_ss'
+WARNING: [Vivado 12-584] No ports matched ''. [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_hdmi_tx_ss_0/exdes_v_hdmi_tx_ss_0/exdes_v_hdmi_tx_ss_0_in_context.xdc:2]
+Finished Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_hdmi_tx_ss_0/exdes_v_hdmi_tx_ss_0/exdes_v_hdmi_tx_ss_0_in_context.xdc] for cell 'exdes_i/v_hdmi_tx_ss'
+Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_hdmi_rx_ss_0/exdes_v_hdmi_rx_ss_0/exdes_v_hdmi_rx_ss_0_in_context.xdc] for cell 'exdes_i/v_hdmi_rx_ss'
+WARNING: [Vivado 12-584] No ports matched ''. [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_hdmi_rx_ss_0/exdes_v_hdmi_rx_ss_0/exdes_v_hdmi_rx_ss_0_in_context.xdc:2]
+Finished Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_hdmi_rx_ss_0/exdes_v_hdmi_rx_ss_0/exdes_v_hdmi_rx_ss_0_in_context.xdc] for cell 'exdes_i/v_hdmi_rx_ss'
+Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_rx_video_axis_reg_slice_0/exdes_rx_video_axis_reg_slice_0/exdes_rx_video_axis_reg_slice_0_in_context.xdc] for cell 'exdes_i/rx_video_axis_reg_slice'
+Finished Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_rx_video_axis_reg_slice_0/exdes_rx_video_axis_reg_slice_0/exdes_rx_video_axis_reg_slice_0_in_context.xdc] for cell 'exdes_i/rx_video_axis_reg_slice'
+Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_dru_ibufds_gt_odiv2_0/exdes_dru_ibufds_gt_odiv2_0/exdes_dru_ibufds_gt_odiv2_0_in_context.xdc] for cell 'exdes_i/dru_ibufds_gt_odiv2'
+Finished Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_dru_ibufds_gt_odiv2_0/exdes_dru_ibufds_gt_odiv2_0/exdes_dru_ibufds_gt_odiv2_0_in_context.xdc] for cell 'exdes_i/dru_ibufds_gt_odiv2'
+Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_gt_refclk_buf_0/exdes_gt_refclk_buf_0/exdes_gt_refclk_buf_0_in_context.xdc] for cell 'exdes_i/gt_refclk_buf'
+WARNING: [Vivado 12-584] No ports matched ''. [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_gt_refclk_buf_0/exdes_gt_refclk_buf_0/exdes_gt_refclk_buf_0_in_context.xdc:2]
+Finished Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_gt_refclk_buf_0/exdes_gt_refclk_buf_0/exdes_gt_refclk_buf_0_in_context.xdc] for cell 'exdes_i/gt_refclk_buf'
+Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/exdes_v_tpg_0/exdes_v_tpg_0_in_context.xdc] for cell 'exdes_i/v_tpg_ss_0/v_tpg'
+Finished Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_tpg_0/exdes_v_tpg_0/exdes_v_tpg_0_in_context.xdc] for cell 'exdes_i/v_tpg_ss_0/v_tpg'
+Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_axi_gpio_0/exdes_axi_gpio_0/exdes_axi_gpio_0_in_context.xdc] for cell 'exdes_i/v_tpg_ss_0/axi_gpio'
+Finished Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_axi_gpio_0/exdes_axi_gpio_0/exdes_axi_gpio_0_in_context.xdc] for cell 'exdes_i/v_tpg_ss_0/axi_gpio'
+Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_xbar_0/exdes_xbar_0/exdes_xbar_0_in_context.xdc] for cell 'exdes_i/audio_ss_0/axi_interconnect/xbar'
+Finished Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_xbar_0/exdes_xbar_0/exdes_xbar_0_in_context.xdc] for cell 'exdes_i/audio_ss_0/axi_interconnect/xbar'
+Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_clk_wiz_0/exdes_clk_wiz_0/exdes_clk_wiz_0_in_context.xdc] for cell 'exdes_i/audio_ss_0/clk_wiz'
+WARNING: [Vivado 12-584] No ports matched ''. [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_clk_wiz_0/exdes_clk_wiz_0/exdes_clk_wiz_0_in_context.xdc:2]
+Finished Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_clk_wiz_0/exdes_clk_wiz_0/exdes_clk_wiz_0_in_context.xdc] for cell 'exdes_i/audio_ss_0/clk_wiz'
+Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_aud_pat_gen_0/exdes_aud_pat_gen_0/exdes_aud_pat_gen_0_in_context.xdc] for cell 'exdes_i/audio_ss_0/aud_pat_gen'
+Finished Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_aud_pat_gen_0/exdes_aud_pat_gen_0/exdes_aud_pat_gen_0_in_context.xdc] for cell 'exdes_i/audio_ss_0/aud_pat_gen'
+Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_hdmi_acr_ctrl_0/exdes_hdmi_acr_ctrl_0/exdes_hdmi_acr_ctrl_0_in_context.xdc] for cell 'exdes_i/audio_ss_0/hdmi_acr_ctrl'
+Finished Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_hdmi_acr_ctrl_0/exdes_hdmi_acr_ctrl_0/exdes_hdmi_acr_ctrl_0_in_context.xdc] for cell 'exdes_i/audio_ss_0/hdmi_acr_ctrl'
+Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_xbar_1/exdes_xbar_1/exdes_xbar_1_in_context.xdc] for cell 'exdes_i/zynq_us_ss_0/axi_interconnect_0/xbar'
+Finished Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_xbar_1/exdes_xbar_1/exdes_xbar_1_in_context.xdc] for cell 'exdes_i/zynq_us_ss_0/axi_interconnect_0/xbar'
+Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_zynq_us_0/exdes_zynq_us_0/exdes_zynq_us_0_in_context.xdc] for cell 'exdes_i/zynq_us_ss_0/zynq_us'
+WARNING: [Vivado 12-584] No ports matched ''. [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_zynq_us_0/exdes_zynq_us_0/exdes_zynq_us_0_in_context.xdc:2]
+WARNING: [Vivado 12-584] No ports matched ''. [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_zynq_us_0/exdes_zynq_us_0/exdes_zynq_us_0_in_context.xdc:4]
+Finished Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_zynq_us_0/exdes_zynq_us_0/exdes_zynq_us_0_in_context.xdc] for cell 'exdes_i/zynq_us_ss_0/zynq_us'
+Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_fmch_axi_iic_0/exdes_fmch_axi_iic_0/exdes_fmch_axi_iic_0_in_context.xdc] for cell 'exdes_i/zynq_us_ss_0/fmch_axi_iic'
+Finished Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_fmch_axi_iic_0/exdes_fmch_axi_iic_0/exdes_fmch_axi_iic_0_in_context.xdc] for cell 'exdes_i/zynq_us_ss_0/fmch_axi_iic'
+Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_rst_processor_1_100M_0/exdes_rst_processor_1_100M_0/exdes_rst_processor_1_100M_0_in_context.xdc] for cell 'exdes_i/zynq_us_ss_0/rst_processor_1_100M'
+Finished Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_rst_processor_1_100M_0/exdes_rst_processor_1_100M_0/exdes_rst_processor_1_100M_0_in_context.xdc] for cell 'exdes_i/zynq_us_ss_0/rst_processor_1_100M'
+Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_rst_processor_1_300M_0/exdes_rst_processor_1_300M_0/exdes_rst_processor_1_300M_0_in_context.xdc] for cell 'exdes_i/zynq_us_ss_0/rst_processor_1_300M'
+Finished Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_rst_processor_1_300M_0/exdes_rst_processor_1_300M_0/exdes_rst_processor_1_300M_0_in_context.xdc] for cell 'exdes_i/zynq_us_ss_0/rst_processor_1_300M'
+Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_auto_pc_0/exdes_auto_pc_0/exdes_auto_pc_0_in_context.xdc] for cell 'exdes_i/audio_ss_0/axi_interconnect/s00_couplers/auto_pc'
+Finished Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_auto_pc_0/exdes_auto_pc_0/exdes_auto_pc_0_in_context.xdc] for cell 'exdes_i/audio_ss_0/axi_interconnect/s00_couplers/auto_pc'
+Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_auto_pc_1/exdes_auto_pc_1/exdes_auto_pc_0_in_context.xdc] for cell 'exdes_i/zynq_us_ss_0/axi_interconnect_0/m00_couplers/auto_pc'
+Finished Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_auto_pc_1/exdes_auto_pc_1/exdes_auto_pc_0_in_context.xdc] for cell 'exdes_i/zynq_us_ss_0/axi_interconnect_0/m00_couplers/auto_pc'
+Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_auto_pc_2/exdes_auto_pc_2/exdes_auto_pc_2_in_context.xdc] for cell 'exdes_i/zynq_us_ss_0/axi_interconnect_0/m01_couplers/auto_pc'
+Finished Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_auto_pc_2/exdes_auto_pc_2/exdes_auto_pc_2_in_context.xdc] for cell 'exdes_i/zynq_us_ss_0/axi_interconnect_0/m01_couplers/auto_pc'
+Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_auto_pc_3/exdes_auto_pc_3/exdes_auto_pc_3_in_context.xdc] for cell 'exdes_i/zynq_us_ss_0/axi_interconnect_0/m02_couplers/auto_pc'
+Finished Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_auto_pc_3/exdes_auto_pc_3/exdes_auto_pc_3_in_context.xdc] for cell 'exdes_i/zynq_us_ss_0/axi_interconnect_0/m02_couplers/auto_pc'
+Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_auto_pc_4/exdes_auto_pc_4/exdes_auto_pc_0_in_context.xdc] for cell 'exdes_i/zynq_us_ss_0/axi_interconnect_0/m04_couplers/auto_pc'
+Finished Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_auto_pc_4/exdes_auto_pc_4/exdes_auto_pc_0_in_context.xdc] for cell 'exdes_i/zynq_us_ss_0/axi_interconnect_0/m04_couplers/auto_pc'
+Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_auto_cc_0/exdes_auto_cc_0/exdes_auto_cc_1_in_context.xdc] for cell 'exdes_i/zynq_us_ss_0/axi_interconnect_0/m05_couplers/auto_cc'
+Finished Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_auto_cc_0/exdes_auto_cc_0/exdes_auto_cc_1_in_context.xdc] for cell 'exdes_i/zynq_us_ss_0/axi_interconnect_0/m05_couplers/auto_cc'
+Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_auto_pc_5/exdes_auto_pc_5/exdes_auto_pc_6_in_context.xdc] for cell 'exdes_i/zynq_us_ss_0/axi_interconnect_0/m05_couplers/auto_pc'
+Finished Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_auto_pc_5/exdes_auto_pc_5/exdes_auto_pc_6_in_context.xdc] for cell 'exdes_i/zynq_us_ss_0/axi_interconnect_0/m05_couplers/auto_pc'
+Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_auto_cc_1/exdes_auto_cc_1/exdes_auto_cc_1_in_context.xdc] for cell 'exdes_i/zynq_us_ss_0/axi_interconnect_0/m08_couplers/auto_cc'
+Finished Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_auto_cc_1/exdes_auto_cc_1/exdes_auto_cc_1_in_context.xdc] for cell 'exdes_i/zynq_us_ss_0/axi_interconnect_0/m08_couplers/auto_cc'
+Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_auto_pc_6/exdes_auto_pc_6/exdes_auto_pc_6_in_context.xdc] for cell 'exdes_i/zynq_us_ss_0/axi_interconnect_0/m08_couplers/auto_pc'
+Finished Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_auto_pc_6/exdes_auto_pc_6/exdes_auto_pc_6_in_context.xdc] for cell 'exdes_i/zynq_us_ss_0/axi_interconnect_0/m08_couplers/auto_pc'
+Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3021.812 ; gain = 0.000 ; free physical = 7600 ; free virtual = 10820
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 6 instances were transformed.
+  IOBUF => IOBUF (IBUFCTRL, INBUF, OBUFT): 6 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.52 ; elapsed = 00:00:00.14 . Memory (MB): peak = 3021.812 ; gain = 0.000 ; free physical = 7600 ; free virtual = 10821
+WARNING: [Timing 38-316] Clock period '6.734' specified during out-of-context synthesis of instance 'exdes_i/v_hdmi_rx_ss' at clock pin 'link_clk' is different from the actual clock period '3.367', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '6.734' specified during out-of-context synthesis of instance 'exdes_i/v_hdmi_tx_ss' at clock pin 'link_clk' is different from the actual clock period '3.285', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '6.734' specified during out-of-context synthesis of instance 'exdes_i/vid_phy_controller' at clock pin 'vid_phy_rx_axi4s_aclk' is different from the actual clock period '3.367', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'exdes_i/v_tpg_ss_0/axi_gpio' at clock pin 's_axi_aclk' is different from the actual clock period '3.333', this can lead to different synthesis results.
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 3025.781 ; gain = 205.324 ; free physical = 7674 ; free virtual = 10904
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu7ev-ffvc1156-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 3025.781 ; gain = 205.324 ; free physical = 7674 ; free virtual = 10904
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for TX_REFCLK_N_IN. (constraint file  /home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 13).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for TX_REFCLK_N_IN. (constraint file  /home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 14).
+Applied set_property IO_BUFFER_TYPE = NONE for TX_REFCLK_P_IN. (constraint file  /home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 15).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for TX_REFCLK_P_IN. (constraint file  /home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 16).
+Applied set_property IO_BUFFER_TYPE = NONE for HDMI_RX_CLK_N_IN. (constraint file  /home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 17).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for HDMI_RX_CLK_N_IN. (constraint file  /home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 18).
+Applied set_property IO_BUFFER_TYPE = NONE for HDMI_RX_CLK_P_IN. (constraint file  /home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 19).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for HDMI_RX_CLK_P_IN. (constraint file  /home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 20).
+Applied set_property IO_BUFFER_TYPE = NONE for HDMI_RX_DAT_N_IN[0]. (constraint file  /home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 21).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for HDMI_RX_DAT_N_IN[0]. (constraint file  /home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 22).
+Applied set_property IO_BUFFER_TYPE = NONE for HDMI_RX_DAT_N_IN[1]. (constraint file  /home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 23).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for HDMI_RX_DAT_N_IN[1]. (constraint file  /home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 24).
+Applied set_property IO_BUFFER_TYPE = NONE for HDMI_RX_DAT_N_IN[2]. (constraint file  /home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 25).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for HDMI_RX_DAT_N_IN[2]. (constraint file  /home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 26).
+Applied set_property IO_BUFFER_TYPE = NONE for HDMI_RX_DAT_P_IN[0]. (constraint file  /home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 27).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for HDMI_RX_DAT_P_IN[0]. (constraint file  /home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 28).
+Applied set_property IO_BUFFER_TYPE = NONE for HDMI_RX_DAT_P_IN[1]. (constraint file  /home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 29).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for HDMI_RX_DAT_P_IN[1]. (constraint file  /home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 30).
+Applied set_property IO_BUFFER_TYPE = NONE for HDMI_RX_DAT_P_IN[2]. (constraint file  /home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 31).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for HDMI_RX_DAT_P_IN[2]. (constraint file  /home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 32).
+Applied set_property IO_BUFFER_TYPE = NONE for HDMI_TX_DAT_N_OUT[0]. (constraint file  /home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 33).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for HDMI_TX_DAT_N_OUT[0]. (constraint file  /home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 34).
+Applied set_property IO_BUFFER_TYPE = NONE for HDMI_TX_DAT_N_OUT[1]. (constraint file  /home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 35).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for HDMI_TX_DAT_N_OUT[1]. (constraint file  /home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 36).
+Applied set_property IO_BUFFER_TYPE = NONE for HDMI_TX_DAT_N_OUT[2]. (constraint file  /home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 37).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for HDMI_TX_DAT_N_OUT[2]. (constraint file  /home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 38).
+Applied set_property IO_BUFFER_TYPE = NONE for HDMI_TX_DAT_P_OUT[0]. (constraint file  /home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 39).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for HDMI_TX_DAT_P_OUT[0]. (constraint file  /home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 40).
+Applied set_property IO_BUFFER_TYPE = NONE for HDMI_TX_DAT_P_OUT[1]. (constraint file  /home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 41).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for HDMI_TX_DAT_P_OUT[1]. (constraint file  /home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 42).
+Applied set_property IO_BUFFER_TYPE = NONE for HDMI_TX_DAT_P_OUT[2]. (constraint file  /home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 43).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for HDMI_TX_DAT_P_OUT[2]. (constraint file  /home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 44).
+Applied set_property IO_BUFFER_TYPE = NONE for RX_REFCLK_N_OUT. (constraint file  /home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 45).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for RX_REFCLK_N_OUT. (constraint file  /home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 46).
+Applied set_property IO_BUFFER_TYPE = NONE for RX_REFCLK_P_OUT. (constraint file  /home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 47).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for RX_REFCLK_P_OUT. (constraint file  /home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 48).
+Applied set_property IO_BUFFER_TYPE = NONE for HDMI_TX_CLK_N_OUT. (constraint file  /home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 49).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for HDMI_TX_CLK_N_OUT. (constraint file  /home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 50).
+Applied set_property IO_BUFFER_TYPE = NONE for HDMI_TX_CLK_P_OUT. (constraint file  /home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 51).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for HDMI_TX_CLK_P_OUT. (constraint file  /home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0/exdes_vid_phy_controller_0_in_context.xdc, line 52).
+Applied set_property IO_BUFFER_TYPE = NONE for DRU_CLK_IN_clk_n[0]. (constraint file  /home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_gt_refclk_buf_0/exdes_gt_refclk_buf_0/exdes_gt_refclk_buf_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DRU_CLK_IN_clk_n[0]. (constraint file  /home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_gt_refclk_buf_0/exdes_gt_refclk_buf_0/exdes_gt_refclk_buf_0_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for DRU_CLK_IN_clk_p[0]. (constraint file  /home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_gt_refclk_buf_0/exdes_gt_refclk_buf_0/exdes_gt_refclk_buf_0_in_context.xdc, line 5).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DRU_CLK_IN_clk_p[0]. (constraint file  /home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_gt_refclk_buf_0/exdes_gt_refclk_buf_0/exdes_gt_refclk_buf_0_in_context.xdc, line 6).
+Applied set_property DONT_TOUCH = true for exdes_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for exdes_i/vid_phy_controller. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for exdes_i/vcc_const. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for exdes_i/tx_video_axis_reg_slice. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for exdes_i/v_hdmi_tx_ss. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for exdes_i/v_hdmi_rx_ss. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for exdes_i/rx_video_axis_reg_slice. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for exdes_i/dru_ibufds_gt_odiv2. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for exdes_i/gt_refclk_buf. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for exdes_i/vcc_const0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for exdes_i/v_tpg_ss_0/v_tpg. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for exdes_i/v_tpg_ss_0/axi_gpio. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for exdes_i/audio_ss_0/axi_interconnect/xbar. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for exdes_i/audio_ss_0/axi_interconnect. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for exdes_i/audio_ss_0/clk_wiz. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for exdes_i/audio_ss_0/aud_pat_gen. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for exdes_i/audio_ss_0/hdmi_acr_ctrl. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for exdes_i/zynq_us_ss_0/axi_interconnect_0/xbar. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for exdes_i/zynq_us_ss_0/axi_interconnect_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for exdes_i/zynq_us_ss_0/xlconcat0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for exdes_i/zynq_us_ss_0/zynq_us. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for exdes_i/zynq_us_ss_0/fmch_axi_iic. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for exdes_i/zynq_us_ss_0/rst_processor_1_100M. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for exdes_i/zynq_us_ss_0/rst_processor_1_300M. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for exdes_i/audio_ss_0/axi_interconnect/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for exdes_i/zynq_us_ss_0/axi_interconnect_0/m00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for exdes_i/zynq_us_ss_0/axi_interconnect_0/m01_couplers/auto_pc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for exdes_i/zynq_us_ss_0/axi_interconnect_0/m02_couplers/auto_pc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for exdes_i/zynq_us_ss_0/axi_interconnect_0/m04_couplers/auto_pc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for exdes_i/zynq_us_ss_0/axi_interconnect_0/m05_couplers/auto_cc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for exdes_i/zynq_us_ss_0/axi_interconnect_0/m05_couplers/auto_pc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for exdes_i/zynq_us_ss_0/axi_interconnect_0/m08_couplers/auto_cc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for exdes_i/zynq_us_ss_0/axi_interconnect_0/m08_couplers/auto_pc. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 3025.781 ; gain = 205.324 ; free physical = 7670 ; free virtual = 10900
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 3025.781 ; gain = 205.324 ; free physical = 7670 ; free virtual = 10901
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1728 (col length:144)
+BRAMs: 624 (col length: RAMB18 144 RAMB36 72)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 3025.781 ; gain = 205.324 ; free physical = 7658 ; free virtual = 10892
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:42 ; elapsed = 00:01:02 . Memory (MB): peak = 3436.219 ; gain = 615.762 ; free physical = 7026 ; free virtual = 10327
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:42 ; elapsed = 00:01:02 . Memory (MB): peak = 3437.219 ; gain = 616.762 ; free physical = 7025 ; free virtual = 10326
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:42 ; elapsed = 00:01:02 . Memory (MB): peak = 3457.258 ; gain = 636.801 ; free physical = 7023 ; free virtual = 10324
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:45 ; elapsed = 00:01:05 . Memory (MB): peak = 3463.195 ; gain = 642.738 ; free physical = 7023 ; free virtual = 10330
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:45 ; elapsed = 00:01:05 . Memory (MB): peak = 3463.195 ; gain = 642.738 ; free physical = 7023 ; free virtual = 10330
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:45 ; elapsed = 00:01:05 . Memory (MB): peak = 3463.195 ; gain = 642.738 ; free physical = 7023 ; free virtual = 10330
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:45 ; elapsed = 00:01:05 . Memory (MB): peak = 3463.195 ; gain = 642.738 ; free physical = 7023 ; free virtual = 10330
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:45 ; elapsed = 00:01:05 . Memory (MB): peak = 3463.195 ; gain = 642.738 ; free physical = 7023 ; free virtual = 10330
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:45 ; elapsed = 00:01:05 . Memory (MB): peak = 3463.195 ; gain = 642.738 ; free physical = 7023 ; free virtual = 10330
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------------------------+----------+
+|      |BlackBox name                   |Instances |
++------+--------------------------------+----------+
+|1     |exdes_dru_ibufds_gt_odiv2_0     |         1|
+|2     |exdes_gt_refclk_buf_0           |         1|
+|3     |exdes_rx_video_axis_reg_slice_0 |         1|
+|4     |exdes_tx_video_axis_reg_slice_0 |         1|
+|5     |exdes_v_hdmi_rx_ss_0            |         1|
+|6     |exdes_v_hdmi_tx_ss_0            |         1|
+|7     |exdes_vid_phy_controller_0      |         1|
+|8     |exdes_xbar_0                    |         1|
+|9     |exdes_auto_pc_0                 |         1|
+|10    |exdes_aud_pat_gen_0             |         1|
+|11    |exdes_clk_wiz_0                 |         1|
+|12    |exdes_hdmi_acr_ctrl_0           |         1|
+|13    |exdes_axi_gpio_0                |         1|
+|14    |exdes_v_tpg_0                   |         1|
+|15    |exdes_xbar_1                    |         1|
+|16    |exdes_auto_pc_1                 |         1|
+|17    |exdes_auto_pc_2                 |         1|
+|18    |exdes_auto_pc_3                 |         1|
+|19    |exdes_auto_pc_4                 |         1|
+|20    |exdes_auto_cc_0                 |         1|
+|21    |exdes_auto_pc_5                 |         1|
+|22    |exdes_auto_cc_1                 |         1|
+|23    |exdes_auto_pc_6                 |         1|
+|24    |exdes_fmch_axi_iic_0            |         1|
+|25    |exdes_rst_processor_1_100M_0    |         1|
+|26    |exdes_rst_processor_1_300M_0    |         1|
+|27    |exdes_zynq_us_0                 |         1|
++------+--------------------------------+----------+
+
+Report Cell Usage: 
++------+------------------------------+------+
+|      |Cell                          |Count |
++------+------------------------------+------+
+|1     |exdes_aud_pat_gen             |     1|
+|2     |exdes_auto_cc                 |     2|
+|4     |exdes_auto_pc                 |     7|
+|11    |exdes_axi_gpio                |     1|
+|12    |exdes_clk_wiz                 |     1|
+|13    |exdes_dru_ibufds_gt_odiv2     |     1|
+|14    |exdes_fmch_axi_iic            |     1|
+|15    |exdes_gt_refclk_buf           |     1|
+|16    |exdes_hdmi_acr_ctrl           |     1|
+|17    |exdes_rst_processor_1_100M    |     1|
+|18    |exdes_rst_processor_1_300M    |     1|
+|19    |exdes_rx_video_axis_reg_slice |     1|
+|20    |exdes_tx_video_axis_reg_slice |     1|
+|21    |exdes_v_hdmi_rx_ss            |     1|
+|22    |exdes_v_hdmi_tx_ss            |     1|
+|23    |exdes_v_tpg                   |     1|
+|24    |exdes_vid_phy_controller      |     1|
+|25    |exdes_xbar                    |     2|
+|27    |exdes_zynq_us                 |     1|
+|28    |IBUF                          |     4|
+|29    |IOBUF                         |     6|
+|30    |OBUF                          |     4|
++------+------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:45 ; elapsed = 00:01:05 . Memory (MB): peak = 3463.195 ; gain = 642.738 ; free physical = 7023 ; free virtual = 10330
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:38 ; elapsed = 00:00:56 . Memory (MB): peak = 3463.195 ; gain = 521.066 ; free physical = 7060 ; free virtual = 10367
+Synthesis Optimization Complete : Time (s): cpu = 00:00:45 ; elapsed = 00:01:05 . Memory (MB): peak = 3463.203 ; gain = 642.738 ; free physical = 7060 ; free virtual = 10367
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3466.164 ; gain = 0.000 ; free physical = 7141 ; free virtual = 10447
+INFO: [Netlist 29-17] Analyzing 10 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3501.883 ; gain = 0.000 ; free physical = 7073 ; free virtual = 10378
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 10 instances were transformed.
+  IBUF => IBUF (IBUFCTRL, INBUF): 4 instances
+  IOBUF => IOBUF (IBUFCTRL, INBUF, OBUFT): 6 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+128 Infos, 116 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:01 ; elapsed = 00:01:23 . Memory (MB): peak = 3501.883 ; gain = 1036.711 ; free physical = 7203 ; free virtual = 10508
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint '/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/synth_1/exdes_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file exdes_wrapper_utilization_synth.rpt -pb exdes_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Aug 30 16:57:37 2020...

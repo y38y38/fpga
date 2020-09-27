@@ -1,0 +1,5 @@
+bd_2422_0_v_hdmi_rx_0.sv,systemverilog,xil_defaultlib,../../../../hdmi.srcs/sources_1/ip/v_hdmi_rx_ss_0/bd_0/ip/ip_0/sim/bd_2422_0_v_hdmi_rx_0.sv,
+bd_2422_0_v_vid_in_axi4s_0.v,verilog,xil_defaultlib,../../../../hdmi.srcs/sources_1/ip/v_hdmi_rx_ss_0/bd_0/ip/ip_1/sim/bd_2422_0_v_vid_in_axi4s_0.v,
+bd_2422_0.v,verilog,xil_defaultlib,../../../../hdmi.srcs/sources_1/ip/v_hdmi_rx_ss_0/bd_0/sim/bd_2422_0.v,
+v_hdmi_rx_ss_0.v,verilog,xil_defaultlib,../../../../hdmi.srcs/sources_1/ip/v_hdmi_rx_ss_0/sim/v_hdmi_rx_ss_0.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

@@ -1,0 +1,597 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Sun Aug 30 16:47:50 2020
+# Process ID: 9061
+# Current directory: /home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/bd_3ea7_v_hdmi_tx_0_synth_1
+# Command line: vivado -log bd_3ea7_v_hdmi_tx_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source bd_3ea7_v_hdmi_tx_0.tcl
+# Log file: /home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/bd_3ea7_v_hdmi_tx_0_synth_1/bd_3ea7_v_hdmi_tx_0.vds
+# Journal file: /home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/bd_3ea7_v_hdmi_tx_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source bd_3ea7_v_hdmi_tx_0.tcl -notrace
+Command: synth_design -top bd_3ea7_v_hdmi_tx_0 -part xczu7ev-ffvc1156-2-e -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Device 21-403] Loading part xczu7ev-ffvc1156-2-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 9480
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2760.316 ; gain = 11.902 ; free physical = 1364 ; free virtual = 4886
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'bd_3ea7_v_hdmi_tx_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_hdmi_tx_ss_0/bd_0/ip/ip_0/synth/bd_3ea7_v_hdmi_tx_0.sv:57]
+INFO: [Synth 8-6157] synthesizing module 'RAM64X1S' [/tools/Xilinx/Vivado/2020.1/scripts/rt/data/unisim_comp.v:70671]
+INFO: [Synth 8-6155] done synthesizing module 'RAM64X1S' (1#1) [/tools/Xilinx/Vivado/2020.1/scripts/rt/data/unisim_comp.v:70671]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_single' [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:153]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_single' (2#1) [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:153]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_sync_rst' [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1059]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_sync_rst' (4#1) [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1059]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_handshake' [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:469]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_single__parameterized0' [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:153]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_single__parameterized0' (7#1) [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:153]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_handshake' (8#1) [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:469]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_handshake__parameterized0' [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:469]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_handshake__parameterized0' (8#1) [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:469]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray' [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:284]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray' (14#1) [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:284]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray__parameterized0' [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:284]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray__parameterized0' (16#1) [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:284]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_handshake__parameterized1' [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:469]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_handshake__parameterized1' (16#1) [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:469]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray__parameterized1' [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:284]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray__parameterized1' (17#1) [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:284]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray__parameterized2' [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:284]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray__parameterized2' (17#1) [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:284]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_handshake__parameterized2' [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:469]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_handshake__parameterized2' (17#1) [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:469]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray__parameterized3' [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:284]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray__parameterized3' (18#1) [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:284]
+INFO: [Synth 8-6155] done synthesizing module 'bd_3ea7_v_hdmi_tx_0' (38#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_hdmi_tx_ss_0/bd_0/ip/ip_0/synth/bd_3ea7_v_hdmi_tx_0.sv:57]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 2890.191 ; gain = 141.777 ; free physical = 1328 ; free virtual = 4883
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 2910.035 ; gain = 161.621 ; free physical = 1300 ; free virtual = 4842
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 2910.035 ; gain = 161.621 ; free physical = 1300 ; free virtual = 4842
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.15 ; elapsed = 00:00:00.16 . Memory (MB): peak = 2921.941 ; gain = 0.000 ; free physical = 1277 ; free virtual = 4813
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_hdmi_tx_ss_0/bd_0/ip/ip_0/bd_3ea7_v_hdmi_tx_0_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_hdmi_tx_ss_0/bd_0/ip/ip_0/bd_3ea7_v_hdmi_tx_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/bd_3ea7_v_hdmi_tx_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/bd_3ea7_v_hdmi_tx_0_synth_1/dont_touch.xdc]
+Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_hdmi_tx_ss_0/bd_0/ip/ip_0/bd_3ea7_v_hdmi_tx_0_core.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_hdmi_tx_ss_0/bd_0/ip/ip_0/bd_3ea7_v_hdmi_tx_0_core.xdc] for cell 'inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_v_hdmi_tx_ss_0/bd_0/ip/ip_0/bd_3ea7_v_hdmi_tx_0_core.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/bd_3ea7_v_hdmi_tx_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/bd_3ea7_v_hdmi_tx_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/SYS_INST/AUX_INST/HDR_FIFO_INST/RP_CDA_INST/XPM_GRAY_INST'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/SYS_INST/AUX_INST/HDR_FIFO_INST/RP_CDA_INST/XPM_GRAY_INST'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/SYS_INST/AUX_INST/HDR_FIFO_INST/WP_CDA_INST/XPM_GRAY_INST'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/SYS_INST/AUX_INST/HDR_FIFO_INST/WP_CDA_INST/XPM_GRAY_INST'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/SYS_INST/AUX_INST/SUB_FIFO_INST/RP_CDA_INST/XPM_GRAY_INST'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/SYS_INST/AUX_INST/SUB_FIFO_INST/RP_CDA_INST/XPM_GRAY_INST'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/SYS_INST/AUX_INST/SUB_FIFO_INST/WP_CDA_INST/XPM_GRAY_INST'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/SYS_INST/AUX_INST/SUB_FIFO_INST/WP_CDA_INST/XPM_GRAY_INST'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/SYS_INST/AUD_INST/AUD_FIFO_INST/RP_CDA_INST/XPM_GRAY_INST'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/SYS_INST/AUD_INST/AUD_FIFO_INST/RP_CDA_INST/XPM_GRAY_INST'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/SYS_INST/AUD_INST/AUD_FIFO_INST/WP_CDA_INST/XPM_GRAY_INST'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/SYS_INST/AUD_INST/AUD_FIFO_INST/WP_CDA_INST/XPM_GRAY_INST'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/SYS_INST/AUD_INST/ACR_FIFO_INST/RP_CDA_INST/XPM_GRAY_INST'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/SYS_INST/AUD_INST/ACR_FIFO_INST/RP_CDA_INST/XPM_GRAY_INST'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/SYS_INST/AUD_INST/ACR_FIFO_INST/WP_CDA_INST/XPM_GRAY_INST'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/SYS_INST/AUD_INST/ACR_FIFO_INST/WP_CDA_INST/XPM_GRAY_INST'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/SYS_INST/CORE_INST/CH0_INST/VID_WO_ARB.VID_INST/FIFO_INST/RP_CDA_INST/XPM_GRAY_INST'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/SYS_INST/CORE_INST/CH0_INST/VID_WO_ARB.VID_INST/FIFO_INST/RP_CDA_INST/XPM_GRAY_INST'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/SYS_INST/CORE_INST/CH0_INST/VID_WO_ARB.VID_INST/FIFO_INST/WP_CDA_INST/XPM_GRAY_INST'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/SYS_INST/CORE_INST/CH0_INST/VID_WO_ARB.VID_INST/FIFO_INST/WP_CDA_INST/XPM_GRAY_INST'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/SYS_INST/CORE_INST/CH1_INST/VID_WO_ARB.VID_INST/FIFO_INST/RP_CDA_INST/XPM_GRAY_INST'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/SYS_INST/CORE_INST/CH1_INST/VID_WO_ARB.VID_INST/FIFO_INST/RP_CDA_INST/XPM_GRAY_INST'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/SYS_INST/CORE_INST/CH1_INST/VID_WO_ARB.VID_INST/FIFO_INST/WP_CDA_INST/XPM_GRAY_INST'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/SYS_INST/CORE_INST/CH1_INST/VID_WO_ARB.VID_INST/FIFO_INST/WP_CDA_INST/XPM_GRAY_INST'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/SYS_INST/CORE_INST/CH2_INST/VID_WO_ARB.VID_INST/FIFO_INST/RP_CDA_INST/XPM_GRAY_INST'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/SYS_INST/CORE_INST/CH2_INST/VID_WO_ARB.VID_INST/FIFO_INST/RP_CDA_INST/XPM_GRAY_INST'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/SYS_INST/CORE_INST/CH2_INST/VID_WO_ARB.VID_INST/FIFO_INST/WP_CDA_INST/XPM_GRAY_INST'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/SYS_INST/CORE_INST/CH2_INST/VID_WO_ARB.VID_INST/FIFO_INST/WP_CDA_INST/XPM_GRAY_INST'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/bd_3ea7_v_hdmi_tx_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/bd_3ea7_v_hdmi_tx_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/BRDG_CDC_INST/gen_handshake.XPM_INST'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/BRDG_CDC_INST/gen_handshake.XPM_INST'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/SYS_INST/AUX_INST/LCLK_CFG_CD_SYNC_INST/gen_handshake.XPM_INST'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/SYS_INST/AUX_INST/LCLK_CFG_CD_SYNC_INST/gen_handshake.XPM_INST'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/SYS_INST/CORE_INST/CFG_CD_CDC_INST/gen_handshake.XPM_INST'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/SYS_INST/CORE_INST/CFG_CD_CDC_INST/gen_handshake.XPM_INST'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/SYS_INST/CORE_INST/CFG_SR_CDC_INST/gen_handshake.XPM_INST'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/SYS_INST/CORE_INST/CFG_SR_CDC_INST/gen_handshake.XPM_INST'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/SYS_INST/CORE_INST/CH0_INST/VID_WO_ARB.VID_INST/VCLK_CFG_CD_CDC_INST/gen_handshake.XPM_INST'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/SYS_INST/CORE_INST/CH0_INST/VID_WO_ARB.VID_INST/VCLK_CFG_CD_CDC_INST/gen_handshake.XPM_INST'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/SYS_INST/CORE_INST/CH1_INST/VID_WO_ARB.VID_INST/VCLK_CFG_CD_CDC_INST/gen_handshake.XPM_INST'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/SYS_INST/CORE_INST/CH1_INST/VID_WO_ARB.VID_INST/VCLK_CFG_CD_CDC_INST/gen_handshake.XPM_INST'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/SYS_INST/CORE_INST/CH2_INST/VID_WO_ARB.VID_INST/VCLK_CFG_CD_CDC_INST/gen_handshake.XPM_INST'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/SYS_INST/CORE_INST/CH2_INST/VID_WO_ARB.VID_INST/VCLK_CFG_CD_CDC_INST/gen_handshake.XPM_INST'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/SYS_INST/GEN_MASK.MASK_INST/VCLK_CFG_CS_CDC_INST/gen_handshake.XPM_INST'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/SYS_INST/GEN_MASK.MASK_INST/VCLK_CFG_CS_CDC_INST/gen_handshake.XPM_INST'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/SYS_INST/VCLK_CD_CDC_INST/gen_handshake.XPM_INST'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/SYS_INST/VCLK_CD_CDC_INST/gen_handshake.XPM_INST'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/SYS_INST/GEN_MASK.MASK_INST/VCLK_BU_CDC_INST/gen_handshake.XPM_INST'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/SYS_INST/GEN_MASK.MASK_INST/VCLK_BU_CDC_INST/gen_handshake.XPM_INST'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/SYS_INST/GEN_MASK.MASK_INST/VCLK_GY_CDC_INST/gen_handshake.XPM_INST'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/SYS_INST/GEN_MASK.MASK_INST/VCLK_GY_CDC_INST/gen_handshake.XPM_INST'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/SYS_INST/GEN_MASK.MASK_INST/VCLK_RV_CDC_INST/gen_handshake.XPM_INST'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/SYS_INST/GEN_MASK.MASK_INST/VCLK_RV_CDC_INST/gen_handshake.XPM_INST'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/SYS_INST/AUD_INST/ACLK_CTRL_FMT_SYNC_INST/gen_handshake.XPM_INST'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/SYS_INST/AUD_INST/ACLK_CTRL_FMT_SYNC_INST/gen_handshake.XPM_INST'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/SYS_INST/AUD_INST/LCLK_CTRL_FMT_SYNC_INST/gen_handshake.XPM_INST'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/SYS_INST/AUD_INST/LCLK_CTRL_FMT_SYNC_INST/gen_handshake.XPM_INST'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/SYS_INST/AUX_INST/LCLK_CFG_PP_SYNC_INST/gen_handshake.XPM_INST'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/SYS_INST/AUX_INST/LCLK_CFG_PP_SYNC_INST/gen_handshake.XPM_INST'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/SYS_INST/CORE_INST/STA_PP_CDC_INST/gen_handshake.XPM_INST'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/SYS_INST/CORE_INST/STA_PP_CDC_INST/gen_handshake.XPM_INST'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/SYS_INST/AUD_INST/LCLK_CTRL_CH_SYNC_INST/gen_handshake.XPM_INST'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/SYS_INST/AUD_INST/LCLK_CTRL_CH_SYNC_INST/gen_handshake.XPM_INST'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/bd_3ea7_v_hdmi_tx_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/bd_3ea7_v_hdmi_tx_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/ET_DIS_CDC_INST/gen_single.(null)[0].XPM_INST'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/ET_DIS_CDC_INST/gen_single.(null)[0].XPM_INST'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/PIO_CDC_INST/gen_single.(null)[0].XPM_INST'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/PIO_CDC_INST/gen_single.(null)[0].XPM_INST'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/AUD_INST/ACLK_CTRL_RUN_SYNC_INST/gen_single.(null)[0].XPM_INST'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/AUD_INST/ACLK_CTRL_RUN_SYNC_INST/gen_single.(null)[0].XPM_INST'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/AUD_INST/ACLK_PKT_RDY_SYNC_INST/gen_single.(null)[0].XPM_INST'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/AUD_INST/ACLK_PKT_RDY_SYNC_INST/gen_single.(null)[0].XPM_INST'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/AUD_INST/LCLK_CTRL_RUN_SYNC_INST/gen_single.(null)[0].XPM_INST'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/AUD_INST/LCLK_CTRL_RUN_SYNC_INST/gen_single.(null)[0].XPM_INST'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/AUX_INST/LCLK_CTRL_RUN_SYNC_INST/gen_single.(null)[0].XPM_INST'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/AUX_INST/LCLK_CTRL_RUN_SYNC_INST/gen_single.(null)[0].XPM_INST'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/AUX_INST/LCLK_VID_VS_SYNC_INST/gen_single.(null)[0].XPM_INST'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/AUX_INST/LCLK_VID_VS_SYNC_INST/gen_single.(null)[0].XPM_INST'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/AUX_INST/SCLK_PKT_RDY_SYNC_INST/gen_single.(null)[0].XPM_INST'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/AUX_INST/SCLK_PKT_RDY_SYNC_INST/gen_single.(null)[0].XPM_INST'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/CORE_INST/CFG_MODE_CDC_INST/gen_single.(null)[0].XPM_INST'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/CORE_INST/CFG_MODE_CDC_INST/gen_single.(null)[0].XPM_INST'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/CORE_INST/CFG_MODE_SCRM_INST/gen_single.(null)[0].XPM_INST'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/CORE_INST/CFG_MODE_SCRM_INST/gen_single.(null)[0].XPM_INST'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/GCP_AVMUTE_CDC_INST/gen_single.(null)[0].XPM_INST'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/GCP_AVMUTE_CDC_INST/gen_single.(null)[0].XPM_INST'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/GCP_CLEARAVMUTE_CDC_INST/gen_single.(null)[0].XPM_INST'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/GCP_CLEARAVMUTE_CDC_INST/gen_single.(null)[0].XPM_INST'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/GEN_MASK.MASK_INST/VCLK_CTRL_REG_NOISE_CDC_INST/gen_single.(null)[0].XPM_INST'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/GEN_MASK.MASK_INST/VCLK_CTRL_REG_NOISE_CDC_INST/gen_single.(null)[0].XPM_INST'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/GEN_MASK.MASK_INST/VCLK_CTRL_REG_RUN_CDC_INST/gen_single.(null)[0].XPM_INST'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/GEN_MASK.MASK_INST/VCLK_CTRL_REG_RUN_CDC_INST/gen_single.(null)[0].XPM_INST'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/VID_BRDG_LOCKED_CDC_INST/gen_single.(null)[0].XPM_INST'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/VID_BRDG_LOCKED_CDC_INST/gen_single.(null)[0].XPM_INST'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/VID_BRDG_UNDERFLOW_CDC_INST/gen_single.(null)[0].XPM_INST'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/VID_BRDG_UNDERFLOW_CDC_INST/gen_single.(null)[0].XPM_INST'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/VID_VS_CDC_INST/gen_single.(null)[0].XPM_INST'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/VID_VS_CDC_INST/gen_single.(null)[0].XPM_INST'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/BRDG_CDC_INST/gen_handshake.XPM_INST/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/BRDG_CDC_INST/gen_handshake.XPM_INST/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/BRDG_CDC_INST/gen_handshake.XPM_INST/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/BRDG_CDC_INST/gen_handshake.XPM_INST/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/AUD_INST/ACLK_CTRL_FMT_SYNC_INST/gen_handshake.XPM_INST/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/AUD_INST/ACLK_CTRL_FMT_SYNC_INST/gen_handshake.XPM_INST/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/AUD_INST/ACLK_CTRL_FMT_SYNC_INST/gen_handshake.XPM_INST/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/AUD_INST/ACLK_CTRL_FMT_SYNC_INST/gen_handshake.XPM_INST/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/AUD_INST/LCLK_CTRL_CH_SYNC_INST/gen_handshake.XPM_INST/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/AUD_INST/LCLK_CTRL_CH_SYNC_INST/gen_handshake.XPM_INST/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/AUD_INST/LCLK_CTRL_CH_SYNC_INST/gen_handshake.XPM_INST/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/AUD_INST/LCLK_CTRL_CH_SYNC_INST/gen_handshake.XPM_INST/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/AUD_INST/LCLK_CTRL_FMT_SYNC_INST/gen_handshake.XPM_INST/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/AUD_INST/LCLK_CTRL_FMT_SYNC_INST/gen_handshake.XPM_INST/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/AUD_INST/LCLK_CTRL_FMT_SYNC_INST/gen_handshake.XPM_INST/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/AUD_INST/LCLK_CTRL_FMT_SYNC_INST/gen_handshake.XPM_INST/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/AUX_INST/LCLK_CFG_CD_SYNC_INST/gen_handshake.XPM_INST/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/AUX_INST/LCLK_CFG_CD_SYNC_INST/gen_handshake.XPM_INST/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/AUX_INST/LCLK_CFG_CD_SYNC_INST/gen_handshake.XPM_INST/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/AUX_INST/LCLK_CFG_CD_SYNC_INST/gen_handshake.XPM_INST/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/AUX_INST/LCLK_CFG_PP_SYNC_INST/gen_handshake.XPM_INST/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/AUX_INST/LCLK_CFG_PP_SYNC_INST/gen_handshake.XPM_INST/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/AUX_INST/LCLK_CFG_PP_SYNC_INST/gen_handshake.XPM_INST/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/AUX_INST/LCLK_CFG_PP_SYNC_INST/gen_handshake.XPM_INST/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/CORE_INST/CFG_CD_CDC_INST/gen_handshake.XPM_INST/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/CORE_INST/CFG_CD_CDC_INST/gen_handshake.XPM_INST/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/CORE_INST/CFG_CD_CDC_INST/gen_handshake.XPM_INST/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/CORE_INST/CFG_CD_CDC_INST/gen_handshake.XPM_INST/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/CORE_INST/CFG_SR_CDC_INST/gen_handshake.XPM_INST/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/CORE_INST/CFG_SR_CDC_INST/gen_handshake.XPM_INST/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/CORE_INST/CFG_SR_CDC_INST/gen_handshake.XPM_INST/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/CORE_INST/CFG_SR_CDC_INST/gen_handshake.XPM_INST/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/CORE_INST/CH0_INST/VID_WO_ARB.VID_INST/VCLK_CFG_CD_CDC_INST/gen_handshake.XPM_INST/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/CORE_INST/CH0_INST/VID_WO_ARB.VID_INST/VCLK_CFG_CD_CDC_INST/gen_handshake.XPM_INST/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/CORE_INST/CH0_INST/VID_WO_ARB.VID_INST/VCLK_CFG_CD_CDC_INST/gen_handshake.XPM_INST/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/CORE_INST/CH0_INST/VID_WO_ARB.VID_INST/VCLK_CFG_CD_CDC_INST/gen_handshake.XPM_INST/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/CORE_INST/CH1_INST/VID_WO_ARB.VID_INST/VCLK_CFG_CD_CDC_INST/gen_handshake.XPM_INST/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/CORE_INST/CH1_INST/VID_WO_ARB.VID_INST/VCLK_CFG_CD_CDC_INST/gen_handshake.XPM_INST/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/CORE_INST/CH1_INST/VID_WO_ARB.VID_INST/VCLK_CFG_CD_CDC_INST/gen_handshake.XPM_INST/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/CORE_INST/CH1_INST/VID_WO_ARB.VID_INST/VCLK_CFG_CD_CDC_INST/gen_handshake.XPM_INST/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/CORE_INST/CH2_INST/VID_WO_ARB.VID_INST/VCLK_CFG_CD_CDC_INST/gen_handshake.XPM_INST/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/CORE_INST/CH2_INST/VID_WO_ARB.VID_INST/VCLK_CFG_CD_CDC_INST/gen_handshake.XPM_INST/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/CORE_INST/CH2_INST/VID_WO_ARB.VID_INST/VCLK_CFG_CD_CDC_INST/gen_handshake.XPM_INST/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/CORE_INST/CH2_INST/VID_WO_ARB.VID_INST/VCLK_CFG_CD_CDC_INST/gen_handshake.XPM_INST/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/CORE_INST/STA_PP_CDC_INST/gen_handshake.XPM_INST/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/CORE_INST/STA_PP_CDC_INST/gen_handshake.XPM_INST/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/CORE_INST/STA_PP_CDC_INST/gen_handshake.XPM_INST/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/CORE_INST/STA_PP_CDC_INST/gen_handshake.XPM_INST/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/GEN_MASK.MASK_INST/VCLK_BU_CDC_INST/gen_handshake.XPM_INST/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/GEN_MASK.MASK_INST/VCLK_BU_CDC_INST/gen_handshake.XPM_INST/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/GEN_MASK.MASK_INST/VCLK_BU_CDC_INST/gen_handshake.XPM_INST/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/GEN_MASK.MASK_INST/VCLK_BU_CDC_INST/gen_handshake.XPM_INST/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/GEN_MASK.MASK_INST/VCLK_CFG_CS_CDC_INST/gen_handshake.XPM_INST/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/GEN_MASK.MASK_INST/VCLK_CFG_CS_CDC_INST/gen_handshake.XPM_INST/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/GEN_MASK.MASK_INST/VCLK_CFG_CS_CDC_INST/gen_handshake.XPM_INST/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/GEN_MASK.MASK_INST/VCLK_CFG_CS_CDC_INST/gen_handshake.XPM_INST/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/GEN_MASK.MASK_INST/VCLK_GY_CDC_INST/gen_handshake.XPM_INST/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/GEN_MASK.MASK_INST/VCLK_GY_CDC_INST/gen_handshake.XPM_INST/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/GEN_MASK.MASK_INST/VCLK_GY_CDC_INST/gen_handshake.XPM_INST/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/GEN_MASK.MASK_INST/VCLK_GY_CDC_INST/gen_handshake.XPM_INST/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/GEN_MASK.MASK_INST/VCLK_RV_CDC_INST/gen_handshake.XPM_INST/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/GEN_MASK.MASK_INST/VCLK_RV_CDC_INST/gen_handshake.XPM_INST/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/GEN_MASK.MASK_INST/VCLK_RV_CDC_INST/gen_handshake.XPM_INST/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/GEN_MASK.MASK_INST/VCLK_RV_CDC_INST/gen_handshake.XPM_INST/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/HPD_INST/HPD_CAP_INST/XPM_INST'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/HPD_INST/HPD_CAP_INST/XPM_INST'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/VCLK_CD_CDC_INST/gen_handshake.XPM_INST/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/VCLK_CD_CDC_INST/gen_handshake.XPM_INST/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/VCLK_CD_CDC_INST/gen_handshake.XPM_INST/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/SYS_INST/VCLK_CD_CDC_INST/gen_handshake.XPM_INST/xpm_cdc_single_src2dest_inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/bd_3ea7_v_hdmi_tx_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/bd_3ea7_v_hdmi_tx_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'inst/ARST_INST'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'inst/ARST_INST'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'inst/AXIS_RST_INST/XPM_RST_INST'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'inst/AXIS_RST_INST/XPM_RST_INST'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'inst/SRST_INST'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'inst/SRST_INST'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'inst/SYS_INST/LRST_INST/XPM_RST_INST'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'inst/SYS_INST/LRST_INST/XPM_RST_INST'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'inst/SYS_INST/VRST_INST/XPM_RST_INST'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'inst/SYS_INST/VRST_INST/XPM_RST_INST'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'inst/S_AXIS_VIDEO_RST_CDC_INST'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'inst/S_AXIS_VIDEO_RST_CDC_INST'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'inst/VIDEO_RST_INST/XPM_RST_INST'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'inst/VIDEO_RST_INST/XPM_RST_INST'
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3083.754 ; gain = 0.000 ; free physical = 834 ; free virtual = 4428
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  RAM64X1S => RAM64X1S (RAMS64E): 1 instance 
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.20 ; elapsed = 00:00:00.13 . Memory (MB): peak = 3086.723 ; gain = 2.969 ; free physical = 825 ; free virtual = 4418
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:33 ; elapsed = 00:00:42 . Memory (MB): peak = 3086.723 ; gain = 338.309 ; free physical = 2734 ; free virtual = 6341
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu7ev-ffvc1156-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:33 ; elapsed = 00:00:42 . Memory (MB): peak = 3086.723 ; gain = 338.309 ; free physical = 2733 ; free virtual = 6341
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst. (constraint file  /home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/bd_3ea7_v_hdmi_tx_0_synth_1/dont_touch.xdc, line 6).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/AUX_INST/HDR_FIFO_INST/RP_CDA_INST/XPM_GRAY_INST. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/AUX_INST/HDR_FIFO_INST/WP_CDA_INST/XPM_GRAY_INST. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/AUD_INST/ACR_FIFO_INST/RP_CDA_INST/XPM_GRAY_INST. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/AUD_INST/ACR_FIFO_INST/WP_CDA_INST/XPM_GRAY_INST. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/AUD_INST/AUD_FIFO_INST/RP_CDA_INST/XPM_GRAY_INST. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/AUD_INST/AUD_FIFO_INST/WP_CDA_INST/XPM_GRAY_INST. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/AUX_INST/SUB_FIFO_INST/RP_CDA_INST/XPM_GRAY_INST. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/AUX_INST/SUB_FIFO_INST/WP_CDA_INST/XPM_GRAY_INST. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/CORE_INST/CH0_INST/\VID_WO_ARB.VID_INST /FIFO_INST/RP_CDA_INST/XPM_GRAY_INST. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/CORE_INST/CH0_INST/\VID_WO_ARB.VID_INST /FIFO_INST/WP_CDA_INST/XPM_GRAY_INST. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/CORE_INST/CH1_INST/\VID_WO_ARB.VID_INST /FIFO_INST/RP_CDA_INST/XPM_GRAY_INST. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/CORE_INST/CH1_INST/\VID_WO_ARB.VID_INST /FIFO_INST/WP_CDA_INST/XPM_GRAY_INST. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/CORE_INST/CH2_INST/\VID_WO_ARB.VID_INST /FIFO_INST/RP_CDA_INST/XPM_GRAY_INST. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/CORE_INST/CH2_INST/\VID_WO_ARB.VID_INST /FIFO_INST/WP_CDA_INST/XPM_GRAY_INST. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/\GEN_MASK.MASK_INST /VCLK_CFG_CS_CDC_INST/\gen_handshake.XPM_INST . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/AUX_INST/LCLK_CFG_CD_SYNC_INST/\gen_handshake.XPM_INST . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/CORE_INST/CFG_CD_CDC_INST/\gen_handshake.XPM_INST . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/CORE_INST/CFG_SR_CDC_INST/\gen_handshake.XPM_INST . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/CORE_INST/CH0_INST/\VID_WO_ARB.VID_INST /VCLK_CFG_CD_CDC_INST/\gen_handshake.XPM_INST . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/CORE_INST/CH1_INST/\VID_WO_ARB.VID_INST /VCLK_CFG_CD_CDC_INST/\gen_handshake.XPM_INST . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/CORE_INST/CH2_INST/\VID_WO_ARB.VID_INST /VCLK_CFG_CD_CDC_INST/\gen_handshake.XPM_INST . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/VCLK_CD_CDC_INST/\gen_handshake.XPM_INST . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/BRDG_CDC_INST/\gen_handshake.XPM_INST . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/AUD_INST/LCLK_CTRL_CH_SYNC_INST/\gen_handshake.XPM_INST . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/AUX_INST/LCLK_CFG_PP_SYNC_INST/\gen_handshake.XPM_INST . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/AUD_INST/ACLK_CTRL_FMT_SYNC_INST/\gen_handshake.XPM_INST . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/AUD_INST/LCLK_CTRL_FMT_SYNC_INST/\gen_handshake.XPM_INST . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/CORE_INST/STA_PP_CDC_INST/\gen_handshake.XPM_INST . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/\GEN_MASK.MASK_INST /VCLK_RV_CDC_INST/\gen_handshake.XPM_INST . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/\GEN_MASK.MASK_INST /VCLK_GY_CDC_INST/\gen_handshake.XPM_INST . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/\GEN_MASK.MASK_INST /VCLK_BU_CDC_INST/\gen_handshake.XPM_INST . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/ET_DIS_CDC_INST/\gen_single.(null)[0].XPM_INST . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/\GEN_MASK.MASK_INST /VCLK_CTRL_REG_RUN_CDC_INST/\gen_single.(null)[0].XPM_INST . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/\GEN_MASK.MASK_INST /VCLK_CTRL_REG_NOISE_CDC_INST/\gen_single.(null)[0].XPM_INST . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/VID_VS_CDC_INST/\gen_single.(null)[0].XPM_INST . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/VID_BRDG_LOCKED_CDC_INST/\gen_single.(null)[0].XPM_INST . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/VID_BRDG_UNDERFLOW_CDC_INST/\gen_single.(null)[0].XPM_INST . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/GCP_AVMUTE_CDC_INST/\gen_single.(null)[0].XPM_INST . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/GCP_CLEARAVMUTE_CDC_INST/\gen_single.(null)[0].XPM_INST . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/AUX_INST/SCLK_PKT_RDY_SYNC_INST/\gen_single.(null)[0].XPM_INST . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/AUX_INST/LCLK_CTRL_RUN_SYNC_INST/\gen_single.(null)[0].XPM_INST . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/AUX_INST/LCLK_VID_VS_SYNC_INST/\gen_single.(null)[0].XPM_INST . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/AUD_INST/ACLK_PKT_RDY_SYNC_INST/\gen_single.(null)[0].XPM_INST . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/AUD_INST/ACLK_CTRL_RUN_SYNC_INST/\gen_single.(null)[0].XPM_INST . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/AUD_INST/LCLK_CTRL_RUN_SYNC_INST/\gen_single.(null)[0].XPM_INST . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/CORE_INST/CFG_MODE_CDC_INST/\gen_single.(null)[0].XPM_INST . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/CORE_INST/CFG_MODE_SCRM_INST/\gen_single.(null)[0].XPM_INST . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/PIO_CDC_INST/\gen_single.(null)[0].XPM_INST . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/HPD_INST/HPD_CAP_INST/XPM_INST. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/\GEN_MASK.MASK_INST /VCLK_CFG_CS_CDC_INST/\gen_handshake.XPM_INST /xpm_cdc_single_dest2src_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/\GEN_MASK.MASK_INST /VCLK_RV_CDC_INST/\gen_handshake.XPM_INST /xpm_cdc_single_dest2src_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/\GEN_MASK.MASK_INST /VCLK_GY_CDC_INST/\gen_handshake.XPM_INST /xpm_cdc_single_dest2src_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/\GEN_MASK.MASK_INST /VCLK_BU_CDC_INST/\gen_handshake.XPM_INST /xpm_cdc_single_dest2src_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/AUX_INST/LCLK_CFG_CD_SYNC_INST/\gen_handshake.XPM_INST /xpm_cdc_single_dest2src_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/AUX_INST/LCLK_CFG_PP_SYNC_INST/\gen_handshake.XPM_INST /xpm_cdc_single_dest2src_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/AUD_INST/ACLK_CTRL_FMT_SYNC_INST/\gen_handshake.XPM_INST /xpm_cdc_single_dest2src_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/AUD_INST/LCLK_CTRL_FMT_SYNC_INST/\gen_handshake.XPM_INST /xpm_cdc_single_dest2src_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/AUD_INST/LCLK_CTRL_CH_SYNC_INST/\gen_handshake.XPM_INST /xpm_cdc_single_dest2src_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/CORE_INST/CFG_CD_CDC_INST/\gen_handshake.XPM_INST /xpm_cdc_single_dest2src_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/CORE_INST/CFG_SR_CDC_INST/\gen_handshake.XPM_INST /xpm_cdc_single_dest2src_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/CORE_INST/CH0_INST/\VID_WO_ARB.VID_INST /VCLK_CFG_CD_CDC_INST/\gen_handshake.XPM_INST /xpm_cdc_single_dest2src_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/CORE_INST/CH1_INST/\VID_WO_ARB.VID_INST /VCLK_CFG_CD_CDC_INST/\gen_handshake.XPM_INST /xpm_cdc_single_dest2src_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/CORE_INST/CH2_INST/\VID_WO_ARB.VID_INST /VCLK_CFG_CD_CDC_INST/\gen_handshake.XPM_INST /xpm_cdc_single_dest2src_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/CORE_INST/STA_PP_CDC_INST/\gen_handshake.XPM_INST /xpm_cdc_single_dest2src_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/VCLK_CD_CDC_INST/\gen_handshake.XPM_INST /xpm_cdc_single_dest2src_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/BRDG_CDC_INST/\gen_handshake.XPM_INST /xpm_cdc_single_dest2src_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/\GEN_MASK.MASK_INST /VCLK_CFG_CS_CDC_INST/\gen_handshake.XPM_INST /xpm_cdc_single_src2dest_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/\GEN_MASK.MASK_INST /VCLK_RV_CDC_INST/\gen_handshake.XPM_INST /xpm_cdc_single_src2dest_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/\GEN_MASK.MASK_INST /VCLK_GY_CDC_INST/\gen_handshake.XPM_INST /xpm_cdc_single_src2dest_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/\GEN_MASK.MASK_INST /VCLK_BU_CDC_INST/\gen_handshake.XPM_INST /xpm_cdc_single_src2dest_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/AUX_INST/LCLK_CFG_CD_SYNC_INST/\gen_handshake.XPM_INST /xpm_cdc_single_src2dest_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/AUX_INST/LCLK_CFG_PP_SYNC_INST/\gen_handshake.XPM_INST /xpm_cdc_single_src2dest_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/AUD_INST/ACLK_CTRL_FMT_SYNC_INST/\gen_handshake.XPM_INST /xpm_cdc_single_src2dest_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/AUD_INST/LCLK_CTRL_FMT_SYNC_INST/\gen_handshake.XPM_INST /xpm_cdc_single_src2dest_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/AUD_INST/LCLK_CTRL_CH_SYNC_INST/\gen_handshake.XPM_INST /xpm_cdc_single_src2dest_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/CORE_INST/CFG_CD_CDC_INST/\gen_handshake.XPM_INST /xpm_cdc_single_src2dest_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/CORE_INST/CFG_SR_CDC_INST/\gen_handshake.XPM_INST /xpm_cdc_single_src2dest_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/CORE_INST/CH0_INST/\VID_WO_ARB.VID_INST /VCLK_CFG_CD_CDC_INST/\gen_handshake.XPM_INST /xpm_cdc_single_src2dest_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/CORE_INST/CH1_INST/\VID_WO_ARB.VID_INST /VCLK_CFG_CD_CDC_INST/\gen_handshake.XPM_INST /xpm_cdc_single_src2dest_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/CORE_INST/CH2_INST/\VID_WO_ARB.VID_INST /VCLK_CFG_CD_CDC_INST/\gen_handshake.XPM_INST /xpm_cdc_single_src2dest_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/CORE_INST/STA_PP_CDC_INST/\gen_handshake.XPM_INST /xpm_cdc_single_src2dest_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/VCLK_CD_CDC_INST/\gen_handshake.XPM_INST /xpm_cdc_single_src2dest_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/BRDG_CDC_INST/\gen_handshake.XPM_INST /xpm_cdc_single_src2dest_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/ARST_INST. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SRST_INST. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/S_AXIS_VIDEO_RST_CDC_INST. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/VRST_INST/XPM_RST_INST. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SYS_INST/LRST_INST/XPM_RST_INST. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/VIDEO_RST_INST/XPM_RST_INST. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/AXIS_RST_INST/XPM_RST_INST. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:42 . Memory (MB): peak = 3086.723 ; gain = 338.309 ; free physical = 2715 ; free virtual = 6318
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'clk_sm_cur_reg' in module 'v_hdmi_tx_v3_0_0_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'lclk_sm_cur_reg' in module 'v_hdmi_tx_v3_0_0_aud'
+INFO: [Synth 8-802] inferred FSM for state register 'vclk_vid_reg[state]' in module 'v_hdmi_tx_v3_0_0_vid__xdcDup__1'
+INFO: [Synth 8-802] inferred FSM for state register 'clk_sm_cur_reg' in module 'v_hdmi_tx_v3_0_0_dly'
+INFO: [Synth 8-802] inferred FSM for state register 'vclk_vid_reg[state]' in module 'v_hdmi_tx_v3_0_0_vid__xdcDup__2'
+INFO: [Synth 8-802] inferred FSM for state register 'vclk_vid_reg[state]' in module 'v_hdmi_tx_v3_0_0_vid'
+INFO: [Synth 8-802] inferred FSM for state register 'clk_rsm_cur_reg' in module 'v_hdmi_tx_v3_0_0_pkt_fifo'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 sm_idle |                           000001 | 00000000000000000000000000000000
+                   sm_wr |                           000010 | 00000000000000000000000000000001
+               sm_wr_end |                           000100 | 00000000000000000000000000000010
+                   sm_rd |                           001000 | 00000000000000000000000000000011
+              sm_rd_loop |                           010000 | 00000000000000000000000000000100
+               sm_rd_end |                           100000 | 00000000000000000000000000000101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'clk_sm_cur_reg' using encoding 'one-hot' in module 'v_hdmi_tx_v3_0_0_axi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 sm_idle |                               00 | 00000000000000000000000000000000
+                  sm_acr |                               01 | 00000000000000000000000000000001
+                  sm_aud |                               10 | 00000000000000000000000000000010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'lclk_sm_cur_reg' using encoding 'sequential' in module 'v_hdmi_tx_v3_0_0_aud'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                                0 |                               00
+                 iSTATE0 |                                1 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'vclk_vid_reg[state]' using encoding 'sequential' in module 'v_hdmi_tx_v3_0_0_vid__xdcDup__1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 sm_idle |                              001 | 00000000000000000000000000000000
+                   sm_ld |                              010 | 00000000000000000000000000000001
+                  sm_run |                              100 | 00000000000000000000000000000010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'clk_sm_cur_reg' using encoding 'one-hot' in module 'v_hdmi_tx_v3_0_0_dly'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                                0 |                               00
+                 iSTATE0 |                                1 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'vclk_vid_reg[state]' using encoding 'sequential' in module 'v_hdmi_tx_v3_0_0_vid__xdcDup__2'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                                0 |                               00
+                 iSTATE0 |                                1 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'vclk_vid_reg[state]' using encoding 'sequential' in module 'v_hdmi_tx_v3_0_0_vid'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                rsm_idle |                               00 | 00000000000000000000000000000000
+                 rsm_err |                               01 | 00000000000000000000000000000011
+                 rsm_sop |                               10 | 00000000000000000000000000000001
+                 rsm_eop |                               11 | 00000000000000000000000000000010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'clk_rsm_cur_reg' using encoding 'sequential' in module 'v_hdmi_tx_v3_0_0_pkt_fifo'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:43 ; elapsed = 00:00:52 . Memory (MB): peak = 3086.723 ; gain = 338.309 ; free physical = 1730 ; free virtual = 5349
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1728 (col length:144)
+BRAMs: 624 (col length: RAMB18 144 RAMB36 72)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:36 ; elapsed = 00:01:48 . Memory (MB): peak = 3086.723 ; gain = 338.309 ; free physical = 358 ; free virtual = 2951
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:16 ; elapsed = 00:03:02 . Memory (MB): peak = 3448.316 ; gain = 699.902 ; free physical = 167 ; free virtual = 1550
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:02:20 ; elapsed = 00:03:06 . Memory (MB): peak = 3465.316 ; gain = 716.902 ; free physical = 167 ; free virtual = 1361
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:02:33 ; elapsed = 00:03:23 . Memory (MB): peak = 3541.371 ; gain = 792.957 ; free physical = 710 ; free virtual = 2711
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:02:38 ; elapsed = 00:03:28 . Memory (MB): peak = 3541.371 ; gain = 792.957 ; free physical = 2748 ; free virtual = 4683
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:38 ; elapsed = 00:03:28 . Memory (MB): peak = 3541.371 ; gain = 792.957 ; free physical = 2743 ; free virtual = 4681
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:40 ; elapsed = 00:03:30 . Memory (MB): peak = 3541.371 ; gain = 792.957 ; free physical = 2877 ; free virtual = 4827
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:40 ; elapsed = 00:03:30 . Memory (MB): peak = 3541.371 ; gain = 792.957 ; free physical = 2943 ; free virtual = 4895
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:41 ; elapsed = 00:03:31 . Memory (MB): peak = 3541.371 ; gain = 792.957 ; free physical = 4526 ; free virtual = 6489
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:41 ; elapsed = 00:03:31 . Memory (MB): peak = 3541.371 ; gain = 792.957 ; free physical = 4507 ; free virtual = 6470
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY8   |    17|
+|2     |LUT1     |   112|
+|3     |LUT2     |   663|
+|4     |LUT3     |   350|
+|5     |LUT4     |   817|
+|6     |LUT5     |   864|
+|7     |LUT6     |  1786|
+|8     |MUXF7    |    40|
+|9     |RAM32M16 |    33|
+|10    |RAM64M8  |    69|
+|11    |RAM64X1D |     8|
+|12    |RAM64X1S |     1|
+|13    |SRL16E   |   191|
+|14    |FDCE     |  1630|
+|15    |FDPE     |    75|
+|16    |FDRE     |  3813|
+|17    |FDSE     |    73|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:41 ; elapsed = 00:03:31 . Memory (MB): peak = 3541.371 ; gain = 792.957 ; free physical = 4515 ; free virtual = 6478
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:30 ; elapsed = 00:03:16 . Memory (MB): peak = 3541.371 ; gain = 616.270 ; free physical = 4543 ; free virtual = 6507
+Synthesis Optimization Complete : Time (s): cpu = 00:02:41 ; elapsed = 00:03:31 . Memory (MB): peak = 3541.379 ; gain = 792.957 ; free physical = 4545 ; free virtual = 6509
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.21 ; elapsed = 00:00:00.26 . Memory (MB): peak = 3541.379 ; gain = 0.000 ; free physical = 4539 ; free virtual = 6530
+INFO: [Netlist 29-17] Analyzing 168 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3579.324 ; gain = 0.000 ; free physical = 4455 ; free virtual = 6450
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 111 instances were transformed.
+  RAM32M16 => RAM32M16 (RAMD32(x14), RAMS32(x2)): 33 instances
+  RAM64M8 => RAM64M8 (RAMD64E(x8)): 69 instances
+  RAM64X1D => RAM64X1D (RAMD64E(x2)): 8 instances
+  RAM64X1S => RAM64X1S (RAMS64E): 1 instance 
+
+INFO: [Common 17-83] Releasing license: Synthesis
+63 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:03:10 ; elapsed = 00:04:06 . Memory (MB): peak = 3579.324 ; gain = 1386.309 ; free physical = 4594 ; free virtual = 6590
+INFO: [Common 17-1381] The checkpoint '/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/bd_3ea7_v_hdmi_tx_0_synth_1/bd_3ea7_v_hdmi_tx_0.dcp' has been generated.
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP bd_3ea7_v_hdmi_tx_0, cache-ID = 27bc648cb17bb8f8
+INFO: [Coretcl 2-1174] Renamed 238 cell refs.
+INFO: [Common 17-1381] The checkpoint '/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/bd_3ea7_v_hdmi_tx_0_synth_1/bd_3ea7_v_hdmi_tx_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file bd_3ea7_v_hdmi_tx_0_utilization_synth.rpt -pb bd_3ea7_v_hdmi_tx_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Aug 30 16:52:32 2020...

@@ -1,0 +1,289 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Sun Sep  6 23:07:29 2020
+# Process ID: 6740
+# Current directory: /home/y/fpga/axi-test6/axi-test6.runs/synth_1
+# Command line: vivado -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
+# Log file: /home/y/fpga/axi-test6/axi-test6.runs/synth_1/design_1_wrapper.vds
+# Journal file: /home/y/fpga/axi-test6/axi-test6.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source design_1_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2020.1/data/ip'.
+add_files: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2310.070 ; gain = 136.066 ; free physical = 9316 ; free virtual = 14357
+Command: synth_design -top design_1_wrapper -part xczu3eg-sbva484-1-e
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu3eg'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu3eg'
+INFO: [Device 21-403] Loading part xczu3eg-sbva484-1-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 6818
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2614.387 ; gain = 3.965 ; free physical = 8377 ; free virtual = 13419
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [/home/y/fpga/axi-test6/axi-test6.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'design_1' [/home/y/fpga/axi-test6/axi-test6.srcs/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_smc_0' [/home/y/fpga/axi-test6/axi-test6.runs/synth_1/.Xil/Vivado-6740-y-Blade-Stealth/realtime/design_1_axi_smc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_smc_0' (1#1) [/home/y/fpga/axi-test6/axi-test6.runs/synth_1/.Xil/Vivado-6740-y-Blade-Stealth/realtime/design_1_axi_smc_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_myip5_v1_0_0_0' [/home/y/fpga/axi-test6/axi-test6.runs/synth_1/.Xil/Vivado-6740-y-Blade-Stealth/realtime/design_1_myip5_v1_0_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_myip5_v1_0_0_0' (2#1) [/home/y/fpga/axi-test6/axi-test6.runs/synth_1/.Xil/Vivado-6740-y-Blade-Stealth/realtime/design_1_myip5_v1_0_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'm00_axi_txn_done' of module 'design_1_myip5_v1_0_0_0' is unconnected for instance 'myip5_v1_0_0' [/home/y/fpga/axi-test6/axi-test6.srcs/sources_1/bd/design_1/synth/design_1.v:272]
+WARNING: [Synth 8-7071] port 'm00_axi_error' of module 'design_1_myip5_v1_0_0_0' is unconnected for instance 'myip5_v1_0_0' [/home/y/fpga/axi-test6/axi-test6.srcs/sources_1/bd/design_1/synth/design_1.v:272]
+WARNING: [Synth 8-7071] port 'm00_axi_wuser' of module 'design_1_myip5_v1_0_0_0' is unconnected for instance 'myip5_v1_0_0' [/home/y/fpga/axi-test6/axi-test6.srcs/sources_1/bd/design_1/synth/design_1.v:272]
+WARNING: [Synth 8-7023] instance 'myip5_v1_0_0' of module 'design_1_myip5_v1_0_0_0' has 82 connections declared, but only 79 given [/home/y/fpga/axi-test6/axi-test6.srcs/sources_1/bd/design_1/synth/design_1.v:272]
+INFO: [Synth 8-6157] synthesizing module 'design_1_ps8_0_axi_periph_0' [/home/y/fpga/axi-test6/axi-test6.srcs/sources_1/bd/design_1/synth/design_1.v:581]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_QJIMLI' [/home/y/fpga/axi-test6/axi-test6.srcs/sources_1/bd/design_1/synth/design_1.v:1241]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_QJIMLI' (3#1) [/home/y/fpga/axi-test6/axi-test6.srcs/sources_1/bd/design_1/synth/design_1.v:1241]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1A7ZMW4' [/home/y/fpga/axi-test6/axi-test6.srcs/sources_1/bd/design_1/synth/design_1.v:1387]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_ds_0' [/home/y/fpga/axi-test6/axi-test6.runs/synth_1/.Xil/Vivado-6740-y-Blade-Stealth/realtime/design_1_auto_ds_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_ds_0' (4#1) [/home/y/fpga/axi-test6/axi-test6.runs/synth_1/.Xil/Vivado-6740-y-Blade-Stealth/realtime/design_1_auto_ds_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_0' [/home/y/fpga/axi-test6/axi-test6.runs/synth_1/.Xil/Vivado-6740-y-Blade-Stealth/realtime/design_1_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_0' (5#1) [/home/y/fpga/axi-test6/axi-test6.runs/synth_1/.Xil/Vivado-6740-y-Blade-Stealth/realtime/design_1_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1A7ZMW4' (6#1) [/home/y/fpga/axi-test6/axi-test6.srcs/sources_1/bd/design_1/synth/design_1.v:1387]
+INFO: [Synth 8-6157] synthesizing module 's01_couplers_imp_KGUFR9' [/home/y/fpga/axi-test6/axi-test6.srcs/sources_1/bd/design_1/synth/design_1.v:1797]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_ds_1' [/home/y/fpga/axi-test6/axi-test6.runs/synth_1/.Xil/Vivado-6740-y-Blade-Stealth/realtime/design_1_auto_ds_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_ds_1' (7#1) [/home/y/fpga/axi-test6/axi-test6.runs/synth_1/.Xil/Vivado-6740-y-Blade-Stealth/realtime/design_1_auto_ds_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_1' [/home/y/fpga/axi-test6/axi-test6.runs/synth_1/.Xil/Vivado-6740-y-Blade-Stealth/realtime/design_1_auto_pc_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_1' (8#1) [/home/y/fpga/axi-test6/axi-test6.runs/synth_1/.Xil/Vivado-6740-y-Blade-Stealth/realtime/design_1_auto_pc_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's01_couplers_imp_KGUFR9' (9#1) [/home/y/fpga/axi-test6/axi-test6.srcs/sources_1/bd/design_1/synth/design_1.v:1797]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_0' [/home/y/fpga/axi-test6/axi-test6.runs/synth_1/.Xil/Vivado-6740-y-Blade-Stealth/realtime/design_1_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_0' (10#1) [/home/y/fpga/axi-test6/axi-test6.runs/synth_1/.Xil/Vivado-6740-y-Blade-Stealth/realtime/design_1_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_ps8_0_axi_periph_0' (11#1) [/home/y/fpga/axi-test6/axi-test6.srcs/sources_1/bd/design_1/synth/design_1.v:581]
+INFO: [Synth 8-6157] synthesizing module 'design_1_rst_ps8_0_100M_0' [/home/y/fpga/axi-test6/axi-test6.runs/synth_1/.Xil/Vivado-6740-y-Blade-Stealth/realtime/design_1_rst_ps8_0_100M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_rst_ps8_0_100M_0' (12#1) [/home/y/fpga/axi-test6/axi-test6.runs/synth_1/.Xil/Vivado-6740-y-Blade-Stealth/realtime/design_1_rst_ps8_0_100M_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_rst_ps8_0_100M_0' is unconnected for instance 'rst_ps8_0_100M' [/home/y/fpga/axi-test6/axi-test6.srcs/sources_1/bd/design_1/synth/design_1.v:454]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_1_rst_ps8_0_100M_0' is unconnected for instance 'rst_ps8_0_100M' [/home/y/fpga/axi-test6/axi-test6.srcs/sources_1/bd/design_1/synth/design_1.v:454]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_1_rst_ps8_0_100M_0' is unconnected for instance 'rst_ps8_0_100M' [/home/y/fpga/axi-test6/axi-test6.srcs/sources_1/bd/design_1/synth/design_1.v:454]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'design_1_rst_ps8_0_100M_0' is unconnected for instance 'rst_ps8_0_100M' [/home/y/fpga/axi-test6/axi-test6.srcs/sources_1/bd/design_1/synth/design_1.v:454]
+WARNING: [Synth 8-7023] instance 'rst_ps8_0_100M' of module 'design_1_rst_ps8_0_100M_0' has 10 connections declared, but only 6 given [/home/y/fpga/axi-test6/axi-test6.srcs/sources_1/bd/design_1/synth/design_1.v:454]
+INFO: [Synth 8-6157] synthesizing module 'design_1_zynq_ultra_ps_e_0_0' [/home/y/fpga/axi-test6/axi-test6.runs/synth_1/.Xil/Vivado-6740-y-Blade-Stealth/realtime/design_1_zynq_ultra_ps_e_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_zynq_ultra_ps_e_0_0' (13#1) [/home/y/fpga/axi-test6/axi-test6.runs/synth_1/.Xil/Vivado-6740-y-Blade-Stealth/realtime/design_1_zynq_ultra_ps_e_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'maxigp0_awuser' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/y/fpga/axi-test6/axi-test6.srcs/sources_1/bd/design_1/synth/design_1.v:461]
+WARNING: [Synth 8-7071] port 'maxigp0_aruser' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/y/fpga/axi-test6/axi-test6.srcs/sources_1/bd/design_1/synth/design_1.v:461]
+WARNING: [Synth 8-7071] port 'maxigp1_awuser' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/y/fpga/axi-test6/axi-test6.srcs/sources_1/bd/design_1/synth/design_1.v:461]
+WARNING: [Synth 8-7071] port 'maxigp1_aruser' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/y/fpga/axi-test6/axi-test6.srcs/sources_1/bd/design_1/synth/design_1.v:461]
+WARNING: [Synth 8-7071] port 'saxigp0_bid' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/y/fpga/axi-test6/axi-test6.srcs/sources_1/bd/design_1/synth/design_1.v:461]
+WARNING: [Synth 8-7071] port 'saxigp0_rid' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/y/fpga/axi-test6/axi-test6.srcs/sources_1/bd/design_1/synth/design_1.v:461]
+WARNING: [Synth 8-7023] instance 'zynq_ultra_ps_e_0' of module 'design_1_zynq_ultra_ps_e_0_0' has 123 connections declared, but only 117 given [/home/y/fpga/axi-test6/axi-test6.srcs/sources_1/bd/design_1/synth/design_1.v:461]
+INFO: [Synth 8-6155] done synthesizing module 'design_1' (14#1) [/home/y/fpga/axi-test6/axi-test6.srcs/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (15#1) [/home/y/fpga/axi-test6/axi-test6.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2660.293 ; gain = 49.871 ; free physical = 8417 ; free virtual = 13460
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2677.137 ; gain = 66.715 ; free physical = 8412 ; free virtual = 13455
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2677.137 ; gain = 66.715 ; free physical = 8412 ; free virtual = 13455
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2677.137 ; gain = 0.000 ; free physical = 8406 ; free virtual = 13448
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/y/fpga/axi-test6/axi-test6.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0_in_context.xdc] for cell 'design_1_i/zynq_ultra_ps_e_0'
+WARNING: [Vivado 12-584] No ports matched ''. [/home/y/fpga/axi-test6/axi-test6.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0_in_context.xdc:2]
+Finished Parsing XDC File [/home/y/fpga/axi-test6/axi-test6.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0_in_context.xdc] for cell 'design_1_i/zynq_ultra_ps_e_0'
+Parsing XDC File [/home/y/fpga/axi-test6/axi-test6.srcs/sources_1/bd/design_1/ip/design_1_myip5_v1_0_0_0/design_1_myip5_v1_0_0_0/design_1_myip5_v1_0_0_0_in_context.xdc] for cell 'design_1_i/myip5_v1_0_0'
+Finished Parsing XDC File [/home/y/fpga/axi-test6/axi-test6.srcs/sources_1/bd/design_1/ip/design_1_myip5_v1_0_0_0/design_1_myip5_v1_0_0_0/design_1_myip5_v1_0_0_0_in_context.xdc] for cell 'design_1_i/myip5_v1_0_0'
+Parsing XDC File [/home/y/fpga/axi-test6/axi-test6.srcs/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0/design_1_xbar_0_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/xbar'
+Finished Parsing XDC File [/home/y/fpga/axi-test6/axi-test6.srcs/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0/design_1_xbar_0_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/xbar'
+Parsing XDC File [/home/y/fpga/axi-test6/axi-test6.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0/design_1_auto_ds_1_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds'
+Finished Parsing XDC File [/home/y/fpga/axi-test6/axi-test6.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0/design_1_auto_ds_1_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds'
+Parsing XDC File [/home/y/fpga/axi-test6/axi-test6.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0/design_1_auto_pc_1_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/s00_couplers/auto_pc'
+Finished Parsing XDC File [/home/y/fpga/axi-test6/axi-test6.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0/design_1_auto_pc_1_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/s00_couplers/auto_pc'
+Parsing XDC File [/home/y/fpga/axi-test6/axi-test6.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_1/design_1_auto_ds_1/design_1_auto_ds_1_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/s01_couplers/auto_ds'
+Finished Parsing XDC File [/home/y/fpga/axi-test6/axi-test6.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_1/design_1_auto_ds_1/design_1_auto_ds_1_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/s01_couplers/auto_ds'
+Parsing XDC File [/home/y/fpga/axi-test6/axi-test6.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1/design_1_auto_pc_1_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/s01_couplers/auto_pc'
+Finished Parsing XDC File [/home/y/fpga/axi-test6/axi-test6.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1/design_1_auto_pc_1_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/s01_couplers/auto_pc'
+Parsing XDC File [/home/y/fpga/axi-test6/axi-test6.srcs/sources_1/bd/design_1/ip/design_1_rst_ps8_0_100M_0/design_1_rst_ps8_0_100M_0/design_1_rst_ps8_0_100M_0_in_context.xdc] for cell 'design_1_i/rst_ps8_0_100M'
+Finished Parsing XDC File [/home/y/fpga/axi-test6/axi-test6.srcs/sources_1/bd/design_1/ip/design_1_rst_ps8_0_100M_0/design_1_rst_ps8_0_100M_0/design_1_rst_ps8_0_100M_0_in_context.xdc] for cell 'design_1_i/rst_ps8_0_100M'
+Parsing XDC File [/home/y/fpga/axi-test6/axi-test6.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0/design_1_axi_smc_0_in_context.xdc] for cell 'design_1_i/axi_smc'
+Finished Parsing XDC File [/home/y/fpga/axi-test6/axi-test6.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0/design_1_axi_smc_0_in_context.xdc] for cell 'design_1_i/axi_smc'
+Parsing XDC File [/home/y/fpga/axi-test6/axi-test6.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/y/fpga/axi-test6/axi-test6.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2767.871 ; gain = 0.000 ; free physical = 8323 ; free virtual = 13367
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2767.871 ; gain = 0.000 ; free physical = 8323 ; free virtual = 13367
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 2767.871 ; gain = 157.449 ; free physical = 8393 ; free virtual = 13437
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu3eg-sbva484-1-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 2767.871 ; gain = 157.449 ; free physical = 8393 ; free virtual = 13437
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/zynq_ultra_ps_e_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/myip5_v1_0_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/ps8_0_axi_periph/xbar. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/ps8_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/ps8_0_axi_periph/s01_couplers/auto_ds. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/ps8_0_axi_periph/s01_couplers/auto_pc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/ps8_0_axi_periph. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/rst_ps8_0_100M. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/axi_smc. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 2767.871 ; gain = 157.449 ; free physical = 8393 ; free virtual = 13437
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 2767.871 ; gain = 157.449 ; free physical = 8395 ; free virtual = 13440
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 360 (col length:72)
+BRAMs: 432 (col length: RAMB18 72 RAMB36 36)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 2767.871 ; gain = 157.449 ; free physical = 8382 ; free virtual = 13430
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:47 . Memory (MB): peak = 3254.301 ; gain = 643.879 ; free physical = 7757 ; free virtual = 12804
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:47 . Memory (MB): peak = 3254.301 ; gain = 643.879 ; free physical = 7757 ; free virtual = 12804
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:00:47 . Memory (MB): peak = 3275.348 ; gain = 664.926 ; free physical = 7755 ; free virtual = 12802
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:49 . Memory (MB): peak = 3279.316 ; gain = 668.895 ; free physical = 7755 ; free virtual = 12801
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:49 . Memory (MB): peak = 3279.316 ; gain = 668.895 ; free physical = 7755 ; free virtual = 12801
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:34 ; elapsed = 00:00:49 . Memory (MB): peak = 3279.316 ; gain = 668.895 ; free physical = 7755 ; free virtual = 12801
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:34 ; elapsed = 00:00:49 . Memory (MB): peak = 3279.316 ; gain = 668.895 ; free physical = 7755 ; free virtual = 12801
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:00:49 . Memory (MB): peak = 3279.316 ; gain = 668.895 ; free physical = 7755 ; free virtual = 12801
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:34 ; elapsed = 00:00:49 . Memory (MB): peak = 3279.316 ; gain = 668.895 ; free physical = 7755 ; free virtual = 12801
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+-----------------------------+----------+
+|      |BlackBox name                |Instances |
++------+-----------------------------+----------+
+|1     |design_1_xbar_0              |         1|
+|2     |design_1_auto_ds_0           |         1|
+|3     |design_1_auto_pc_0           |         1|
+|4     |design_1_auto_ds_1           |         1|
+|5     |design_1_auto_pc_1           |         1|
+|6     |design_1_axi_smc_0           |         1|
+|7     |design_1_myip5_v1_0_0_0      |         1|
+|8     |design_1_rst_ps8_0_100M_0    |         1|
+|9     |design_1_zynq_ultra_ps_e_0_0 |         1|
++------+-----------------------------+----------+
+
+Report Cell Usage: 
++------+---------------------------+------+
+|      |Cell                       |Count |
++------+---------------------------+------+
+|1     |design_1_auto_ds           |     2|
+|3     |design_1_auto_pc           |     2|
+|5     |design_1_axi_smc           |     1|
+|6     |design_1_myip5_v1_0_0      |     1|
+|7     |design_1_rst_ps8_0_100M    |     1|
+|8     |design_1_xbar              |     1|
+|9     |design_1_zynq_ultra_ps_e_0 |     1|
++------+---------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:49 . Memory (MB): peak = 3279.316 ; gain = 668.895 ; free physical = 7755 ; free virtual = 12801
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:00:43 . Memory (MB): peak = 3279.316 ; gain = 578.160 ; free physical = 7792 ; free virtual = 12838
+Synthesis Optimization Complete : Time (s): cpu = 00:00:34 ; elapsed = 00:00:49 . Memory (MB): peak = 3279.324 ; gain = 668.895 ; free physical = 7792 ; free virtual = 12838
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3279.324 ; gain = 0.000 ; free physical = 7864 ; free virtual = 12911
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3308.035 ; gain = 0.000 ; free physical = 7805 ; free virtual = 12852
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+46 Infos, 17 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:46 ; elapsed = 00:01:03 . Memory (MB): peak = 3321.973 ; gain = 1011.902 ; free physical = 7937 ; free virtual = 12984
+INFO: [Common 17-1381] The checkpoint '/home/y/fpga/axi-test6/axi-test6.runs/synth_1/design_1_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Sep  6 23:08:48 2020...

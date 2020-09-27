@@ -122,9 +122,13 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
+  set_param power.enableLutRouteBelPower 1
+  set_param power.enableCarry8RouteBelPower 1
+  set_param power.enableUnconnectedCarry8PinPower 1
   set_param tcl.collectionResultDisplayLimit 0
   set_param xicom.use_bs_reader 1
   set_param chipscope.maxJobs 2
+  set_param power.BramSDPPropagationFix 1
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xczu3eg-sbva484-1-e
   set_property board_part em.avnet.com:ultra96v2:part0:1.0 [current_project]

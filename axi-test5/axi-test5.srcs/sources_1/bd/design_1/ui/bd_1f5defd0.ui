@@ -1,0 +1,28 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-104,-739",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:9.0 TLS
+#  -string -flagsOSRD
+preplace inst zynq_ultra_ps_e_0 -pg 1 -lvl 2 -x 710 -y -130 -defaultsOSRD
+preplace inst ps8_0_axi_periph -pg 1 -lvl 4 -x 1580 -y -180 -defaultsOSRD
+preplace inst rst_ps8_0_100M -pg 1 -lvl 3 -x 1230 -y -140 -defaultsOSRD
+preplace inst axi_smc -pg 1 -lvl 4 -x 1580 -y 60 -defaultsOSRD
+preplace inst myip_v1_0_0 -pg 1 -lvl 1 -x 210 -y -190 -defaultsOSRD
+preplace netloc zynq_ultra_ps_e_0_pl_clk0 1 0 4 40 -290 380 -250 1030 -260 1420
+preplace netloc zynq_ultra_ps_e_0_pl_resetn0 1 2 1 1050 -160n
+preplace netloc rst_ps8_0_100M_peripheral_aresetn 1 0 4 20 -300 NJ -300 NJ -300 1430
+preplace netloc axi_smc_M00_AXI 1 1 4 390 -30 NJ -30 NJ -30 1730
+preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM1_FPD 1 2 2 1040 -250 NJ
+preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM0_FPD 1 2 2 1020J -270 N
+preplace netloc myip_v1_0_0_m00_axi 1 1 3 390J -240 NJ -240 1410
+preplace netloc ps8_0_axi_periph_M00_AXI 1 0 5 30 -20 NJ -20 NJ -20 NJ -20 1740
+levelinfo -pg 1 0 210 710 1230 1580 1760
+pagesize -pg 1 -db -bbox -sgen 0 -330 1760 180
+"
+}
+{
+   "da_axi4_cnt":"3",
+   "da_zynq_ultra_ps_e_cnt":"1"
+}

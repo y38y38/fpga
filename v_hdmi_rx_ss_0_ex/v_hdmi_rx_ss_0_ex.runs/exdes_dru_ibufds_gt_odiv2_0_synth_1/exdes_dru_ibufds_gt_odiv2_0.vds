@@ -1,0 +1,223 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Sun Aug 30 16:44:37 2020
+# Process ID: 7347
+# Current directory: /home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_dru_ibufds_gt_odiv2_0_synth_1
+# Command line: vivado -log exdes_dru_ibufds_gt_odiv2_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source exdes_dru_ibufds_gt_odiv2_0.tcl
+# Log file: /home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_dru_ibufds_gt_odiv2_0_synth_1/exdes_dru_ibufds_gt_odiv2_0.vds
+# Journal file: /home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_dru_ibufds_gt_odiv2_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source exdes_dru_ibufds_gt_odiv2_0.tcl -notrace
+Command: synth_design -top exdes_dru_ibufds_gt_odiv2_0 -part xczu7ev-ffvc1156-2-e -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Device 21-403] Loading part xczu7ev-ffvc1156-2-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 7831
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 2744.309 ; gain = 12.902 ; free physical = 4022 ; free virtual = 7776
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'exdes_dru_ibufds_gt_odiv2_0' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_dru_ibufds_gt_odiv2_0/synth/exdes_dru_ibufds_gt_odiv2_0.vhd:68]
+	Parameter C_BUF_TYPE bound to: BUFG_GT - type: string 
+	Parameter C_SIZE bound to: 1 - type: integer 
+	Parameter C_BUFGCE_DIV bound to: 1 - type: integer 
+	Parameter C_BUFG_GT_SYNC bound to: 0 - type: integer 
+	Parameter C_SIM_DEVICE bound to: VERSAL_AI_CORE_ES1 - type: string 
+	Parameter C_OBUFDS_GTE5_ADV bound to: 2'b00 
+	Parameter C_REFCLK_ICNTL_TX bound to: 5'b00000 
+INFO: [Synth 8-3491] module 'util_ds_buf' declared at '/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_dru_ibufds_gt_odiv2_0/util_ds_buf.vhd:72' bound to instance 'U0' of component 'util_ds_buf' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_dru_ibufds_gt_odiv2_0/synth/exdes_dru_ibufds_gt_odiv2_0.vhd:183]
+INFO: [Synth 8-638] synthesizing module 'util_ds_buf' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_dru_ibufds_gt_odiv2_0/util_ds_buf.vhd:219]
+	Parameter C_BUF_TYPE bound to: BUFG_GT - type: string 
+	Parameter C_SIZE bound to: 1 - type: integer 
+	Parameter C_BUFGCE_DIV bound to: 1 - type: integer 
+	Parameter C_BUFG_GT_SYNC bound to: 0 - type: integer 
+	Parameter C_SIM_DEVICE bound to: VERSAL_AI_CORE_ES1 - type: string 
+	Parameter C_OBUFDS_GTE5_ADV bound to: 2'b00 
+	Parameter C_REFCLK_ICNTL_TX bound to: 5'b00000 
+	Parameter SIM_DEVICE bound to: ULTRASCALE - type: string 
+	Parameter STARTUP_SYNC bound to: FALSE - type: string 
+INFO: [Synth 8-113] binding component instance 'BUFG_GT_U' to cell 'BUFG_GT' [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_dru_ibufds_gt_odiv2_0/util_ds_buf.vhd:524]
+INFO: [Synth 8-256] done synthesizing module 'util_ds_buf' (1#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_dru_ibufds_gt_odiv2_0/util_ds_buf.vhd:219]
+INFO: [Synth 8-256] done synthesizing module 'exdes_dru_ibufds_gt_odiv2_0' (2#1) [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_dru_ibufds_gt_odiv2_0/synth/exdes_dru_ibufds_gt_odiv2_0.vhd:68]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2786.215 ; gain = 54.809 ; free physical = 4178 ; free virtual = 7901
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 2805.059 ; gain = 73.652 ; free physical = 4105 ; free virtual = 7832
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 2805.059 ; gain = 73.652 ; free physical = 4104 ; free virtual = 7831
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2815.965 ; gain = 0.000 ; free physical = 4077 ; free virtual = 7778
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+WARNING: [Designutils 20-1758] instance U0 wraps a black box. Constraint reading is skipped for elaborated designs in this case. Skipping constraint file '/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_dru_ibufds_gt_odiv2_0/exdes_dru_ibufds_gt_odiv2_0_ooc.xdc'.
+WARNING: [Designutils 20-1758] instance U0 wraps a black box. Constraint reading is skipped for elaborated designs in this case. Skipping constraint file '/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.srcs/sources_1/bd/exdes/ip/exdes_dru_ibufds_gt_odiv2_0/exdes_dru_ibufds_gt_odiv2_0_board.xdc'.
+Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_dru_ibufds_gt_odiv2_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_dru_ibufds_gt_odiv2_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2896.840 ; gain = 0.000 ; free physical = 1837 ; free virtual = 5736
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2896.840 ; gain = 0.000 ; free physical = 1828 ; free virtual = 5722
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:29 . Memory (MB): peak = 2896.840 ; gain = 165.434 ; free physical = 2495 ; free virtual = 6368
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu7ev-ffvc1156-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:29 . Memory (MB): peak = 2896.840 ; gain = 165.434 ; free physical = 2493 ; free virtual = 6366
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for U0. (constraint file  /home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_dru_ibufds_gt_odiv2_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:29 . Memory (MB): peak = 2896.840 ; gain = 165.434 ; free physical = 2490 ; free virtual = 6362
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:29 . Memory (MB): peak = 2896.840 ; gain = 165.434 ; free physical = 2431 ; free virtual = 6303
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1728 (col length:144)
+BRAMs: 624 (col length: RAMB18 144 RAMB36 72)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:31 . Memory (MB): peak = 2896.840 ; gain = 165.434 ; free physical = 2732 ; free virtual = 6619
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:01 ; elapsed = 00:01:45 . Memory (MB): peak = 3364.355 ; gain = 632.949 ; free physical = 216 ; free virtual = 3605
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:01 ; elapsed = 00:01:45 . Memory (MB): peak = 3364.355 ; gain = 632.949 ; free physical = 216 ; free virtual = 3605
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:01 ; elapsed = 00:01:45 . Memory (MB): peak = 3383.387 ; gain = 651.980 ; free physical = 214 ; free virtual = 3603
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:06 ; elapsed = 00:01:50 . Memory (MB): peak = 3389.324 ; gain = 657.918 ; free physical = 2004 ; free virtual = 5433
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:06 ; elapsed = 00:01:50 . Memory (MB): peak = 3389.324 ; gain = 657.918 ; free physical = 2004 ; free virtual = 5433
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:06 ; elapsed = 00:01:50 . Memory (MB): peak = 3389.324 ; gain = 657.918 ; free physical = 2004 ; free virtual = 5433
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:06 ; elapsed = 00:01:50 . Memory (MB): peak = 3389.324 ; gain = 657.918 ; free physical = 2004 ; free virtual = 5433
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:06 ; elapsed = 00:01:50 . Memory (MB): peak = 3389.324 ; gain = 657.918 ; free physical = 2004 ; free virtual = 5433
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:06 ; elapsed = 00:01:50 . Memory (MB): peak = 3389.324 ; gain = 657.918 ; free physical = 2004 ; free virtual = 5433
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BUFG_GT |     1|
++------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:06 ; elapsed = 00:01:50 . Memory (MB): peak = 3389.324 ; gain = 657.918 ; free physical = 2004 ; free virtual = 5433
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:00 ; elapsed = 00:01:39 . Memory (MB): peak = 3389.324 ; gain = 566.137 ; free physical = 2039 ; free virtual = 5468
+Synthesis Optimization Complete : Time (s): cpu = 00:01:06 ; elapsed = 00:01:50 . Memory (MB): peak = 3389.332 ; gain = 657.918 ; free physical = 2039 ; free virtual = 5468
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3389.332 ; gain = 0.000 ; free physical = 2032 ; free virtual = 5461
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-441] Inserted BUFG_GT_SYNC BUFG_GT_SYNC for BUFG_GT U0/USE_BUFG_GT.GEN_BUFG_GT[0].BUFG_GT_U
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3420.043 ; gain = 0.000 ; free physical = 2034 ; free virtual = 5460
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+20 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:31 ; elapsed = 00:02:21 . Memory (MB): peak = 3420.043 ; gain = 1246.039 ; free physical = 2163 ; free virtual = 5589
+INFO: [Common 17-1381] The checkpoint '/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_dru_ibufds_gt_odiv2_0_synth_1/exdes_dru_ibufds_gt_odiv2_0.dcp' has been generated.
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP exdes_dru_ibufds_gt_odiv2_0, cache-ID = 5ab4a56fe5df7578
+INFO: [Common 17-1381] The checkpoint '/home/y/fpga/v_hdmi_rx_ss_0_ex/v_hdmi_rx_ss_0_ex.runs/exdes_dru_ibufds_gt_odiv2_0_synth_1/exdes_dru_ibufds_gt_odiv2_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file exdes_dru_ibufds_gt_odiv2_0_utilization_synth.rpt -pb exdes_dru_ibufds_gt_odiv2_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Aug 30 16:47:22 2020...

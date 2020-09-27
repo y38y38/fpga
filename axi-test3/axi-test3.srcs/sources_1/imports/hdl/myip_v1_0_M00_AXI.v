@@ -209,7 +209,9 @@
 	end
 
 	assign WRITE_STATE = write_state;
-	
+
+	assign writing = M_AXI_WREADY & wvaild;
+
 	always @(posedge M_AXI_ACLK) begin
 		if (M_AXI_ARESETN == 0 ) begin
 			awvaild <= 1'b0;
@@ -227,10 +229,10 @@
 			end else if (write_state == S_ADDRESS_WRITE_AND_WRITE_READY_WAIT) begin
 				awvaild <= 1'b0;
 			end else if (write_state == S_WRITING) begin
-				if (M_AXI_WREADY & wvaild) begin
-				if (write_counter == 0) begin
-					wvaild <= 1'b0;
-				end
+				if (writing) begin
+					if (write_counter == 0) begin
+						wvaild <= 1'b0;
+					end
 				end
 			end else if (write_state == S_WAIT_RESPONSE) begin
 				bready <= 1'b1;
@@ -239,15 +241,20 @@
 			end
 		end
 	end
-
 	always @(posedge M_AXI_ACLK) begin
 		if (M_AXI_ARESETN == 0 ) begin
-			write_counter <= 32'h0;
+			write_counter <= 32'h00000000;
 		end else begin
 			if (write_state == S_ADDRESS_WRITE_READY_WAIT) begin
-				write_counter <= 32'hf;				
+				write_counter <= 32'h00000010;				
+			end else if (write_state == S_ADDRESS_WRITE_AND_WRITE_READY_WAIT) begin
+				if (writing) begin
+					write_counter <= write_counter - 32'h00000001;
+				end
 			end	else if (write_state == S_WRITING ) begin //S_WRITING
-				write_counter <= write_counter - 32'h1;				
+				if (writing) begin
+					write_counter <= write_counter - 32'h00000001;
+				end
 			end
 			
 		end
@@ -258,7 +265,7 @@
 
 	//AWID
 
-	assign M_AXI_AWID = 32'h0;
+	assign M_AXI_AWID = 32'h00000000;
 
 	//AWADDR
 
@@ -309,7 +316,7 @@
 	assign M_AXI_WLAST = last;
 
 	//WUSER 
-	assign M_AXI_WUSER = 32'h0;
+	assign M_AXI_WUSER = 32'h00000000;
 
 	//WVALID
 
@@ -362,16 +369,16 @@
 
 
 	//read
-	assign M_AXI_ARID = 32'h0;
-	assign M_AXI_ARADDR = 32'h0;
-	assign M_AXI_ARLEN = 8'h0f;
-	assign M_AXI_ARSIZE = 3'h2;
-	assign M_AXI_ARBURST = 2'h1;
-	assign M_AXI_ARLOCK = 1'b0;
-	assign M_AXI_ARCACHE = 4'h2;
-	assign M_AXI_ARPROT = 3'h0;
-	assign M_AXI_ARQOS = 4'h0;
-	assign M_AXI_ARUSER = 'h0;
+	assign M_AXI_ARID = 32'h00000000;
+	assign M_AXI_ARADDR = 32'h00000000;
+	assign M_AXI_ARLEN = 8'h0000000f;
+	assign M_AXI_ARSIZE = 3'h00000002;
+	assign M_AXI_ARBURST = 2'h00000001;
+	assign M_AXI_ARLOCK = 1'b00000000;
+	assign M_AXI_ARCACHE = 4'h00000002;
+	assign M_AXI_ARPROT = 3'h00000000;
+	assign M_AXI_ARQOS = 4'h00000000;
+	assign M_AXI_ARUSER = 'h00000000;
 	assign M_AXI_ARVALID = 1'b0;
 	assign M_AXI_RREADY = 1'b0;
 	

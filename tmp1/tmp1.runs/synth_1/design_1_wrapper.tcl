@@ -70,8 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 2
-set_msg_config -id {HDL-1065} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xczu3eg-sbva484-1-e
 
@@ -97,28 +95,37 @@ read_verilog -library xil_defaultlib /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/de
 add_files /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/design_1.bd
 set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0.xdc]
-set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_1/bd_6e42_psr_aclk_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_1/bd_6e42_psr_aclk_0.xdc]
-set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_5/bd_6e42_s00a2s_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_6/bd_6e42_sarn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_7/bd_6e42_srn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_8/bd_6e42_sawn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_9/bd_6e42_swn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_10/bd_6e42_sbn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_11/bd_6e42_m00s2a_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_2/ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_rst_ps8_0_100M_2/design_1_rst_ps8_0_100M_2_board.xdc]
-set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_rst_ps8_0_100M_2/design_1_rst_ps8_0_100M_2.xdc]
-set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_rst_ps8_0_100M_2/design_1_rst_ps8_0_100M_2_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0_ooc.xdc]
-set_property used_in_synthesis false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc]
-set_property used_in_synthesis false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_1/design_1_auto_ds_1_clocks.xdc]
-set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_1/design_1_auto_ds_1_clocks.xdc]
-set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_1/design_1_auto_ds_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_0_1/design_1_axi_bram_ctrl_0_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_0_bram_0/design_1_axi_bram_ctrl_0_bram_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_3/bd_0/ip/ip_1/bd_ae83_psr_aclk_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_3/bd_0/ip/ip_1/bd_ae83_psr_aclk_0.xdc]
+set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_3/bd_0/ip/ip_2/bd_ae83_arsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_3/bd_0/ip/ip_3/bd_ae83_rsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_3/bd_0/ip/ip_4/bd_ae83_awsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_3/bd_0/ip/ip_5/bd_ae83_wsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_3/bd_0/ip/ip_6/bd_ae83_bsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_3/bd_0/ip/ip_10/bd_ae83_s00a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_3/bd_0/ip/ip_11/bd_ae83_sarn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_3/bd_0/ip/ip_12/bd_ae83_srn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_3/bd_0/ip/ip_13/bd_ae83_sawn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_3/bd_0/ip/ip_14/bd_ae83_swn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_3/bd_0/ip/ip_15/bd_ae83_sbn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_3/bd_0/ip/ip_19/bd_ae83_s01a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_3/bd_0/ip/ip_20/bd_ae83_sarn_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_3/bd_0/ip/ip_21/bd_ae83_srn_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_3/bd_0/ip/ip_22/bd_ae83_sawn_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_3/bd_0/ip/ip_23/bd_ae83_swn_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_3/bd_0/ip/ip_24/bd_ae83_sbn_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_3/bd_0/ip/ip_25/bd_ae83_m00s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_3/bd_0/ip/ip_26/bd_ae83_m00arn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_3/bd_0/ip/ip_27/bd_ae83_m00rn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_3/bd_0/ip/ip_28/bd_ae83_m00awn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_3/bd_0/ip/ip_29/bd_ae83_m00wn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_3/bd_0/ip/ip_30/bd_ae83_m00bn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_3/ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_rst_ps8_0_100M_3/design_1_rst_ps8_0_100M_3_board.xdc]
+set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_rst_ps8_0_100M_3/design_1_rst_ps8_0_100M_3.xdc]
+set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/ip/design_1_rst_ps8_0_100M_3/design_1_rst_ps8_0_100M_3_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/y/fpga/tmp1/tmp1.srcs/sources_1/bd/design_1/design_1_ooc.xdc]
 
 OPTRACE "Adding files" END { }

@@ -14,9 +14,9 @@
     </Object>
   </ObjectList>
   <ObjectList object_type="hw_probe" gui_info="">
-    <Object name="design_1_i/myip_v1_0_S00_AXI_0_REG_VALUE" gui_info="dashboard_2/hw_vio_1=1"/>
+    <Object name="design_1_i/myip_v1_0_S00_AXI_0_REG_VALUE" gui_info="dashboard_2/hw_vio_1=0"/>
     <Object name="design_1_i/vio_0/probe_out0[0:0]" gui_info="dashboard_2/hw_vio_1=0"/>
-    <Object name="design_1_i/vio_0_probe_out0" gui_info="dashboard_2/hw_vio_1=0"/>
+    <Object name="design_1_i/vio_0_probe_out0" gui_info="dashboard_2/hw_vio_1=1"/>
   </ObjectList>
   <ObjectList object_type="hw_sysmon" gui_info="">
     <Object name="SysMon" gui_info="dashboard_1=[TEMPERATURE=-65281;SCAN_RATE=1000;TRACK_TIME=1;]"/>
@@ -62,7 +62,7 @@
         <Option Id="HW_VIO" value="hw_vio_1"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
-        <Option Id="OUTPUT_VALUE" value="0"/>
+        <Option Id="OUTPUT_VALUE" value="1"/>
         <Option Id="OUTPUT_VALUE_RADIX" value="BINARY"/>
         <Option Id="SOURCE" value="netlist"/>
       </probeOptions>

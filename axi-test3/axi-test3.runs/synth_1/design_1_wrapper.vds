@@ -2,8 +2,8 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Wed Sep  2 23:08:44 2020
-# Process ID: 6268
+# Start of session at: Fri Sep  4 01:16:12 2020
+# Process ID: 32025
 # Current directory: /home/y/fpga/axi-test3/axi-test3.runs/synth_1
 # Command line: vivado -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
 # Log file: /home/y/fpga/axi-test3/axi-test3.runs/synth_1/design_1_wrapper.vds
@@ -20,18 +20,18 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu3eg
 INFO: [Device 21-403] Loading part xczu3eg-sbva484-1-e
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 6391
+INFO: [Synth 8-7075] Helper process launched with PID 32131
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2612.355 ; gain = 5.934 ; free physical = 745 ; free virtual = 3974
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2612.414 ; gain = 5.934 ; free physical = 1984 ; free virtual = 8337
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [/home/y/fpga/axi-test3/axi-test3.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'design_1' [/home/y/fpga/axi-test3/axi-test3.srcs/sources_1/bd/design_1/synth/design_1.v:13]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_protocol_checker_0_0' [/home/y/fpga/axi-test3/axi-test3.runs/synth_1/.Xil/Vivado-6268-y-Blade-Stealth/realtime/design_1_axi_protocol_checker_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_protocol_checker_0_0' (1#1) [/home/y/fpga/axi-test3/axi-test3.runs/synth_1/.Xil/Vivado-6268-y-Blade-Stealth/realtime/design_1_axi_protocol_checker_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_protocol_checker_0_0' [/home/y/fpga/axi-test3/axi-test3.runs/synth_1/.Xil/Vivado-32025-y-Blade-Stealth/realtime/design_1_axi_protocol_checker_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_protocol_checker_0_0' (1#1) [/home/y/fpga/axi-test3/axi-test3.runs/synth_1/.Xil/Vivado-32025-y-Blade-Stealth/realtime/design_1_axi_protocol_checker_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'pc_status' of module 'design_1_axi_protocol_checker_0_0' is unconnected for instance 'axi_protocol_checker_0' [/home/y/fpga/axi-test3/axi-test3.srcs/sources_1/bd/design_1/synth/design_1.v:161]
 WARNING: [Synth 8-7023] instance 'axi_protocol_checker_0' of module 'design_1_axi_protocol_checker_0_0' has 55 connections declared, but only 54 given [/home/y/fpga/axi-test3/axi-test3.srcs/sources_1/bd/design_1/synth/design_1.v:161]
-INFO: [Synth 8-6157] synthesizing module 'design_1_myip_v1_0_0_0' [/home/y/fpga/axi-test3/axi-test3.runs/synth_1/.Xil/Vivado-6268-y-Blade-Stealth/realtime/design_1_myip_v1_0_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_myip_v1_0_0_0' (2#1) [/home/y/fpga/axi-test3/axi-test3.runs/synth_1/.Xil/Vivado-6268-y-Blade-Stealth/realtime/design_1_myip_v1_0_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_myip_v1_0_0_0' [/home/y/fpga/axi-test3/axi-test3.runs/synth_1/.Xil/Vivado-32025-y-Blade-Stealth/realtime/design_1_myip_v1_0_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_myip_v1_0_0_0' (2#1) [/home/y/fpga/axi-test3/axi-test3.runs/synth_1/.Xil/Vivado-32025-y-Blade-Stealth/realtime/design_1_myip_v1_0_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'write_state' of module 'design_1_myip_v1_0_0_0' is unconnected for instance 'myip_v1_0_0' [/home/y/fpga/axi-test3/axi-test3.srcs/sources_1/bd/design_1/synth/design_1.v:216]
 WARNING: [Synth 8-7071] port 'm00_axi_txn_done' of module 'design_1_myip_v1_0_0_0' is unconnected for instance 'myip_v1_0_0' [/home/y/fpga/axi-test3/axi-test3.srcs/sources_1/bd/design_1/synth/design_1.v:216]
 WARNING: [Synth 8-7071] port 'm00_axi_error' of module 'design_1_myip_v1_0_0_0' is unconnected for instance 'myip_v1_0_0' [/home/y/fpga/axi-test3/axi-test3.srcs/sources_1/bd/design_1/synth/design_1.v:216]
@@ -42,23 +42,23 @@ INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_QJIMLI' (3#1) [/
 INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_1D3SAH3' [/home/y/fpga/axi-test3/axi-test3.srcs/sources_1/bd/design_1/synth/design_1.v:1620]
 INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_1D3SAH3' (4#1) [/home/y/fpga/axi-test3/axi-test3.srcs/sources_1/bd/design_1/synth/design_1.v:1620]
 INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1A7ZMW4' [/home/y/fpga/axi-test3/axi-test3.srcs/sources_1/bd/design_1/synth/design_1.v:1682]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_ds_0' [/home/y/fpga/axi-test3/axi-test3.runs/synth_1/.Xil/Vivado-6268-y-Blade-Stealth/realtime/design_1_auto_ds_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_ds_0' (5#1) [/home/y/fpga/axi-test3/axi-test3.runs/synth_1/.Xil/Vivado-6268-y-Blade-Stealth/realtime/design_1_auto_ds_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_0' [/home/y/fpga/axi-test3/axi-test3.runs/synth_1/.Xil/Vivado-6268-y-Blade-Stealth/realtime/design_1_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_0' (6#1) [/home/y/fpga/axi-test3/axi-test3.runs/synth_1/.Xil/Vivado-6268-y-Blade-Stealth/realtime/design_1_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_ds_0' [/home/y/fpga/axi-test3/axi-test3.runs/synth_1/.Xil/Vivado-32025-y-Blade-Stealth/realtime/design_1_auto_ds_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_ds_0' (5#1) [/home/y/fpga/axi-test3/axi-test3.runs/synth_1/.Xil/Vivado-32025-y-Blade-Stealth/realtime/design_1_auto_ds_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_0' [/home/y/fpga/axi-test3/axi-test3.runs/synth_1/.Xil/Vivado-32025-y-Blade-Stealth/realtime/design_1_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_0' (6#1) [/home/y/fpga/axi-test3/axi-test3.runs/synth_1/.Xil/Vivado-32025-y-Blade-Stealth/realtime/design_1_auto_pc_0_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1A7ZMW4' (7#1) [/home/y/fpga/axi-test3/axi-test3.srcs/sources_1/bd/design_1/synth/design_1.v:1682]
 INFO: [Synth 8-6157] synthesizing module 's01_couplers_imp_KGUFR9' [/home/y/fpga/axi-test3/axi-test3.srcs/sources_1/bd/design_1/synth/design_1.v:2092]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_ds_1' [/home/y/fpga/axi-test3/axi-test3.runs/synth_1/.Xil/Vivado-6268-y-Blade-Stealth/realtime/design_1_auto_ds_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_ds_1' (8#1) [/home/y/fpga/axi-test3/axi-test3.runs/synth_1/.Xil/Vivado-6268-y-Blade-Stealth/realtime/design_1_auto_ds_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_1' [/home/y/fpga/axi-test3/axi-test3.runs/synth_1/.Xil/Vivado-6268-y-Blade-Stealth/realtime/design_1_auto_pc_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_1' (9#1) [/home/y/fpga/axi-test3/axi-test3.runs/synth_1/.Xil/Vivado-6268-y-Blade-Stealth/realtime/design_1_auto_pc_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_ds_1' [/home/y/fpga/axi-test3/axi-test3.runs/synth_1/.Xil/Vivado-32025-y-Blade-Stealth/realtime/design_1_auto_ds_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_ds_1' (8#1) [/home/y/fpga/axi-test3/axi-test3.runs/synth_1/.Xil/Vivado-32025-y-Blade-Stealth/realtime/design_1_auto_ds_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_1' [/home/y/fpga/axi-test3/axi-test3.runs/synth_1/.Xil/Vivado-32025-y-Blade-Stealth/realtime/design_1_auto_pc_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_1' (9#1) [/home/y/fpga/axi-test3/axi-test3.runs/synth_1/.Xil/Vivado-32025-y-Blade-Stealth/realtime/design_1_auto_pc_1_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 's01_couplers_imp_KGUFR9' (10#1) [/home/y/fpga/axi-test3/axi-test3.srcs/sources_1/bd/design_1/synth/design_1.v:2092]
 INFO: [Synth 8-6157] synthesizing module 's02_couplers_imp_19AQZVR' [/home/y/fpga/axi-test3/axi-test3.srcs/sources_1/bd/design_1/synth/design_1.v:2502]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_2' [/home/y/fpga/axi-test3/axi-test3.runs/synth_1/.Xil/Vivado-6268-y-Blade-Stealth/realtime/design_1_auto_pc_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_2' (11#1) [/home/y/fpga/axi-test3/axi-test3.runs/synth_1/.Xil/Vivado-6268-y-Blade-Stealth/realtime/design_1_auto_pc_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_2' [/home/y/fpga/axi-test3/axi-test3.runs/synth_1/.Xil/Vivado-32025-y-Blade-Stealth/realtime/design_1_auto_pc_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_2' (11#1) [/home/y/fpga/axi-test3/axi-test3.runs/synth_1/.Xil/Vivado-32025-y-Blade-Stealth/realtime/design_1_auto_pc_2_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 's02_couplers_imp_19AQZVR' (12#1) [/home/y/fpga/axi-test3/axi-test3.srcs/sources_1/bd/design_1/synth/design_1.v:2502]
-INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_0' [/home/y/fpga/axi-test3/axi-test3.runs/synth_1/.Xil/Vivado-6268-y-Blade-Stealth/realtime/design_1_xbar_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_0' (13#1) [/home/y/fpga/axi-test3/axi-test3.runs/synth_1/.Xil/Vivado-6268-y-Blade-Stealth/realtime/design_1_xbar_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_0' [/home/y/fpga/axi-test3/axi-test3.runs/synth_1/.Xil/Vivado-32025-y-Blade-Stealth/realtime/design_1_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_0' (13#1) [/home/y/fpga/axi-test3/axi-test3.runs/synth_1/.Xil/Vivado-32025-y-Blade-Stealth/realtime/design_1_xbar_0_stub.v:6]
 WARNING: [Synth 8-689] width (3) of port connection 'm_axi_arprot' does not match port width (6) of module 'design_1_xbar_0' [/home/y/fpga/axi-test3/axi-test3.srcs/sources_1/bd/design_1/synth/design_1.v:1435]
 WARNING: [Synth 8-689] width (40) of port connection 'm_axi_awaddr' does not match port width (80) of module 'design_1_xbar_0' [/home/y/fpga/axi-test3/axi-test3.srcs/sources_1/bd/design_1/synth/design_1.v:1438]
 WARNING: [Synth 8-689] width (3) of port connection 'm_axi_awprot' does not match port width (6) of module 'design_1_xbar_0' [/home/y/fpga/axi-test3/axi-test3.srcs/sources_1/bd/design_1/synth/design_1.v:1439]
@@ -68,20 +68,20 @@ WARNING: [Synth 8-689] width (32) of port connection 'm_axi_wdata' does not matc
 WARNING: [Synth 8-689] width (4) of port connection 'm_axi_wstrb' does not match port width (8) of module 'design_1_xbar_0' [/home/y/fpga/axi-test3/axi-test3.srcs/sources_1/bd/design_1/synth/design_1.v:1451]
 WARNING: [Synth 8-689] width (1) of port connection 'm_axi_wvalid' does not match port width (2) of module 'design_1_xbar_0' [/home/y/fpga/axi-test3/axi-test3.srcs/sources_1/bd/design_1/synth/design_1.v:1452]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_ps8_0_axi_periph_0' (14#1) [/home/y/fpga/axi-test3/axi-test3.srcs/sources_1/bd/design_1/synth/design_1.v:524]
-INFO: [Synth 8-6157] synthesizing module 'design_1_rst_ps8_0_100M_0' [/home/y/fpga/axi-test3/axi-test3.runs/synth_1/.Xil/Vivado-6268-y-Blade-Stealth/realtime/design_1_rst_ps8_0_100M_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_rst_ps8_0_100M_0' (15#1) [/home/y/fpga/axi-test3/axi-test3.runs/synth_1/.Xil/Vivado-6268-y-Blade-Stealth/realtime/design_1_rst_ps8_0_100M_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_rst_ps8_0_100M_0' [/home/y/fpga/axi-test3/axi-test3.runs/synth_1/.Xil/Vivado-32025-y-Blade-Stealth/realtime/design_1_rst_ps8_0_100M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_rst_ps8_0_100M_0' (15#1) [/home/y/fpga/axi-test3/axi-test3.runs/synth_1/.Xil/Vivado-32025-y-Blade-Stealth/realtime/design_1_rst_ps8_0_100M_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_rst_ps8_0_100M_0' is unconnected for instance 'rst_ps8_0_100M' [/home/y/fpga/axi-test3/axi-test3.srcs/sources_1/bd/design_1/synth/design_1.v:432]
 WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_1_rst_ps8_0_100M_0' is unconnected for instance 'rst_ps8_0_100M' [/home/y/fpga/axi-test3/axi-test3.srcs/sources_1/bd/design_1/synth/design_1.v:432]
 WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_1_rst_ps8_0_100M_0' is unconnected for instance 'rst_ps8_0_100M' [/home/y/fpga/axi-test3/axi-test3.srcs/sources_1/bd/design_1/synth/design_1.v:432]
 WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'design_1_rst_ps8_0_100M_0' is unconnected for instance 'rst_ps8_0_100M' [/home/y/fpga/axi-test3/axi-test3.srcs/sources_1/bd/design_1/synth/design_1.v:432]
 WARNING: [Synth 8-7023] instance 'rst_ps8_0_100M' of module 'design_1_rst_ps8_0_100M_0' has 10 connections declared, but only 6 given [/home/y/fpga/axi-test3/axi-test3.srcs/sources_1/bd/design_1/synth/design_1.v:432]
 WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/y/fpga/axi-test3/axi-test3.srcs/sources_1/bd/design_1/synth/design_1.v:439]
-INFO: [Synth 8-6157] synthesizing module 'design_1_vio_0_0' [/home/y/fpga/axi-test3/axi-test3.runs/synth_1/.Xil/Vivado-6268-y-Blade-Stealth/realtime/design_1_vio_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_vio_0_0' (16#1) [/home/y/fpga/axi-test3/axi-test3.runs/synth_1/.Xil/Vivado-6268-y-Blade-Stealth/realtime/design_1_vio_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_vio_0_0' [/home/y/fpga/axi-test3/axi-test3.runs/synth_1/.Xil/Vivado-32025-y-Blade-Stealth/realtime/design_1_vio_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_vio_0_0' (16#1) [/home/y/fpga/axi-test3/axi-test3.runs/synth_1/.Xil/Vivado-32025-y-Blade-Stealth/realtime/design_1_vio_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'probe_out0' of module 'design_1_vio_0_0' is unconnected for instance 'vio_0' [/home/y/fpga/axi-test3/axi-test3.srcs/sources_1/bd/design_1/synth/design_1.v:439]
 WARNING: [Synth 8-7023] instance 'vio_0' of module 'design_1_vio_0_0' has 3 connections declared, but only 2 given [/home/y/fpga/axi-test3/axi-test3.srcs/sources_1/bd/design_1/synth/design_1.v:439]
-INFO: [Synth 8-6157] synthesizing module 'design_1_zynq_ultra_ps_e_0_0' [/home/y/fpga/axi-test3/axi-test3.runs/synth_1/.Xil/Vivado-6268-y-Blade-Stealth/realtime/design_1_zynq_ultra_ps_e_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_zynq_ultra_ps_e_0_0' (17#1) [/home/y/fpga/axi-test3/axi-test3.runs/synth_1/.Xil/Vivado-6268-y-Blade-Stealth/realtime/design_1_zynq_ultra_ps_e_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_zynq_ultra_ps_e_0_0' [/home/y/fpga/axi-test3/axi-test3.runs/synth_1/.Xil/Vivado-32025-y-Blade-Stealth/realtime/design_1_zynq_ultra_ps_e_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_zynq_ultra_ps_e_0_0' (17#1) [/home/y/fpga/axi-test3/axi-test3.runs/synth_1/.Xil/Vivado-32025-y-Blade-Stealth/realtime/design_1_zynq_ultra_ps_e_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'maxigp0_awuser' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/y/fpga/axi-test3/axi-test3.srcs/sources_1/bd/design_1/synth/design_1.v:442]
 WARNING: [Synth 8-7071] port 'maxigp0_aruser' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/y/fpga/axi-test3/axi-test3.srcs/sources_1/bd/design_1/synth/design_1.v:442]
 WARNING: [Synth 8-7071] port 'maxigp1_awuser' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/y/fpga/axi-test3/axi-test3.srcs/sources_1/bd/design_1/synth/design_1.v:442]
@@ -92,18 +92,18 @@ INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance '
 INFO: [Synth 8-6155] done synthesizing module 'design_1' (18#1) [/home/y/fpga/axi-test3/axi-test3.srcs/sources_1/bd/design_1/synth/design_1.v:13]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (19#1) [/home/y/fpga/axi-test3/axi-test3.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2657.262 ; gain = 50.840 ; free physical = 840 ; free virtual = 4071
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2657.320 ; gain = 50.840 ; free physical = 2080 ; free virtual = 8433
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2675.105 ; gain = 68.684 ; free physical = 835 ; free virtual = 4067
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2675.164 ; gain = 68.684 ; free physical = 2075 ; free virtual = 8428
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2675.105 ; gain = 68.684 ; free physical = 835 ; free virtual = 4067
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2675.164 ; gain = 68.684 ; free physical = 2075 ; free virtual = 8428
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2675.105 ; gain = 0.000 ; free physical = 830 ; free virtual = 4062
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2675.164 ; gain = 0.000 ; free physical = 2070 ; free virtual = 8424
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -133,6 +133,41 @@ Parsing XDC File [/home/y/fpga/axi-test3/axi-test3.srcs/sources_1/bd/design_1/ip
 Finished Parsing XDC File [/home/y/fpga/axi-test3/axi-test3.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_2/design_1_auto_pc_2/design_1_auto_pc_2_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/s02_couplers/auto_pc'
 Parsing XDC File [/home/y/fpga/axi-test3/axi-test3.srcs/constrs_1/new/axi-test3.xdc]
 WARNING: [Vivado 12-507] No nets matched 'design_1_i/myip_v1_0_0/inst/write_start'. [/home/y/fpga/axi-test3/axi-test3.srcs/constrs_1/new/axi-test3.xdc:109]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/myip_v1_0_0/write_state[0]'. [/home/y/fpga/axi-test3/axi-test3.srcs/constrs_1/new/axi-test3.xdc:111]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/myip_v1_0_0/write_state[2]'. [/home/y/fpga/axi-test3/axi-test3.srcs/constrs_1/new/axi-test3.xdc:112]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/myip_v1_0_0/write_state[1]'. [/home/y/fpga/axi-test3/axi-test3.srcs/constrs_1/new/axi-test3.xdc:113]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/myip_v1_0_0/write_state[3]'. [/home/y/fpga/axi-test3/axi-test3.srcs/constrs_1/new/axi-test3.xdc:114]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/myip_v1_0_0/inst/myip_v1_0_M00_AXI_inst/write_counter0[1]'. [/home/y/fpga/axi-test3/axi-test3.srcs/constrs_1/new/axi-test3.xdc:116]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/myip_v1_0_0/inst/myip_v1_0_M00_AXI_inst/write_counter0[2]'. [/home/y/fpga/axi-test3/axi-test3.srcs/constrs_1/new/axi-test3.xdc:117]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/myip_v1_0_0/inst/myip_v1_0_M00_AXI_inst/write_counter0[9]'. [/home/y/fpga/axi-test3/axi-test3.srcs/constrs_1/new/axi-test3.xdc:118]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/myip_v1_0_0/inst/myip_v1_0_M00_AXI_inst/write_counter0[11]'. [/home/y/fpga/axi-test3/axi-test3.srcs/constrs_1/new/axi-test3.xdc:119]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/myip_v1_0_0/inst/myip_v1_0_M00_AXI_inst/write_counter0[12]'. [/home/y/fpga/axi-test3/axi-test3.srcs/constrs_1/new/axi-test3.xdc:120]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/myip_v1_0_0/inst/myip_v1_0_M00_AXI_inst/write_counter0[19]'. [/home/y/fpga/axi-test3/axi-test3.srcs/constrs_1/new/axi-test3.xdc:121]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/myip_v1_0_0/inst/myip_v1_0_M00_AXI_inst/write_counter0[24]'. [/home/y/fpga/axi-test3/axi-test3.srcs/constrs_1/new/axi-test3.xdc:122]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/myip_v1_0_0/inst/myip_v1_0_M00_AXI_inst/write_counter0[27]'. [/home/y/fpga/axi-test3/axi-test3.srcs/constrs_1/new/axi-test3.xdc:123]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/myip_v1_0_0/inst/myip_v1_0_M00_AXI_inst/write_counter0[29]'. [/home/y/fpga/axi-test3/axi-test3.srcs/constrs_1/new/axi-test3.xdc:124]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/myip_v1_0_0/inst/myip_v1_0_M00_AXI_inst/write_counter0[6]'. [/home/y/fpga/axi-test3/axi-test3.srcs/constrs_1/new/axi-test3.xdc:125]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/myip_v1_0_0/inst/myip_v1_0_M00_AXI_inst/write_counter0[17]'. [/home/y/fpga/axi-test3/axi-test3.srcs/constrs_1/new/axi-test3.xdc:126]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/myip_v1_0_0/inst/myip_v1_0_M00_AXI_inst/write_counter0[18]'. [/home/y/fpga/axi-test3/axi-test3.srcs/constrs_1/new/axi-test3.xdc:127]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/myip_v1_0_0/inst/myip_v1_0_M00_AXI_inst/write_counter0[21]'. [/home/y/fpga/axi-test3/axi-test3.srcs/constrs_1/new/axi-test3.xdc:128]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/myip_v1_0_0/inst/myip_v1_0_M00_AXI_inst/write_counter0[22]'. [/home/y/fpga/axi-test3/axi-test3.srcs/constrs_1/new/axi-test3.xdc:129]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/myip_v1_0_0/inst/myip_v1_0_M00_AXI_inst/write_counter0[25]'. [/home/y/fpga/axi-test3/axi-test3.srcs/constrs_1/new/axi-test3.xdc:130]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/myip_v1_0_0/inst/myip_v1_0_M00_AXI_inst/write_counter0[26]'. [/home/y/fpga/axi-test3/axi-test3.srcs/constrs_1/new/axi-test3.xdc:131]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/myip_v1_0_0/inst/myip_v1_0_M00_AXI_inst/write_counter0[10]'. [/home/y/fpga/axi-test3/axi-test3.srcs/constrs_1/new/axi-test3.xdc:132]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/myip_v1_0_0/inst/myip_v1_0_M00_AXI_inst/write_counter0[3]'. [/home/y/fpga/axi-test3/axi-test3.srcs/constrs_1/new/axi-test3.xdc:133]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/myip_v1_0_0/inst/myip_v1_0_M00_AXI_inst/write_counter0[4]'. [/home/y/fpga/axi-test3/axi-test3.srcs/constrs_1/new/axi-test3.xdc:134]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/myip_v1_0_0/inst/myip_v1_0_M00_AXI_inst/write_counter0[31]'. [/home/y/fpga/axi-test3/axi-test3.srcs/constrs_1/new/axi-test3.xdc:135]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/myip_v1_0_0/inst/myip_v1_0_M00_AXI_inst/write_counter0[20]'. [/home/y/fpga/axi-test3/axi-test3.srcs/constrs_1/new/axi-test3.xdc:136]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/myip_v1_0_0/inst/myip_v1_0_M00_AXI_inst/write_counter0[28]'. [/home/y/fpga/axi-test3/axi-test3.srcs/constrs_1/new/axi-test3.xdc:137]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/myip_v1_0_0/inst/myip_v1_0_M00_AXI_inst/write_counter0[8]'. [/home/y/fpga/axi-test3/axi-test3.srcs/constrs_1/new/axi-test3.xdc:138]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/myip_v1_0_0/inst/myip_v1_0_M00_AXI_inst/write_counter0[23]'. [/home/y/fpga/axi-test3/axi-test3.srcs/constrs_1/new/axi-test3.xdc:139]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/myip_v1_0_0/inst/myip_v1_0_M00_AXI_inst/write_counter0[30]'. [/home/y/fpga/axi-test3/axi-test3.srcs/constrs_1/new/axi-test3.xdc:140]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/myip_v1_0_0/inst/myip_v1_0_M00_AXI_inst/write_counter0[5]'. [/home/y/fpga/axi-test3/axi-test3.srcs/constrs_1/new/axi-test3.xdc:141]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/myip_v1_0_0/inst/myip_v1_0_M00_AXI_inst/write_counter0[7]'. [/home/y/fpga/axi-test3/axi-test3.srcs/constrs_1/new/axi-test3.xdc:142]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/myip_v1_0_0/inst/myip_v1_0_M00_AXI_inst/write_counter0[14]'. [/home/y/fpga/axi-test3/axi-test3.srcs/constrs_1/new/axi-test3.xdc:143]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/myip_v1_0_0/inst/myip_v1_0_M00_AXI_inst/write_counter0[15]'. [/home/y/fpga/axi-test3/axi-test3.srcs/constrs_1/new/axi-test3.xdc:144]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/myip_v1_0_0/inst/myip_v1_0_M00_AXI_inst/write_counter0[13]'. [/home/y/fpga/axi-test3/axi-test3.srcs/constrs_1/new/axi-test3.xdc:145]
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/myip_v1_0_0/inst/myip_v1_0_M00_AXI_inst/write_counter0[16]'. [/home/y/fpga/axi-test3/axi-test3.srcs/constrs_1/new/axi-test3.xdc:146]
 Finished Parsing XDC File [/home/y/fpga/axi-test3/axi-test3.srcs/constrs_1/new/axi-test3.xdc]
 WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [/home/y/fpga/axi-test3/axi-test3.srcs/constrs_1/new/axi-test3.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/design_1_wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/y/fpga/axi-test3/axi-test3.srcs/constrs_1/new/axi-test3.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
@@ -141,13 +176,13 @@ Parsing XDC File [/home/y/fpga/axi-test3/axi-test3.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [/home/y/fpga/axi-test3/axi-test3.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2770.840 ; gain = 0.000 ; free physical = 732 ; free virtual = 3974
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2770.898 ; gain = 0.000 ; free physical = 1985 ; free virtual = 8338
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2770.840 ; gain = 0.000 ; free physical = 732 ; free virtual = 3974
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2770.898 ; gain = 0.000 ; free physical = 1985 ; free virtual = 8338
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 2770.840 ; gain = 164.418 ; free physical = 795 ; free virtual = 4038
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 2770.898 ; gain = 164.418 ; free physical = 2054 ; free virtual = 8408
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -155,7 +190,7 @@ Start Loading Part and Timing Information
 Loading part: xczu3eg-sbva484-1-e
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 2770.840 ; gain = 164.418 ; free physical = 795 ; free virtual = 4038
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 2770.898 ; gain = 164.418 ; free physical = 2054 ; free virtual = 8408
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -197,12 +232,12 @@ Applied set_property DONT_TOUCH = true for design_1_i/ps8_0_axi_periph/s01_coupl
 Applied set_property DONT_TOUCH = true for design_1_i/ps8_0_axi_periph/s01_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/ps8_0_axi_periph/s02_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 2770.840 ; gain = 164.418 ; free physical = 795 ; free virtual = 4038
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 2770.898 ; gain = 164.418 ; free physical = 2054 ; free virtual = 8408
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'myip_v1_0_0'. This will prevent further optimization [/home/y/fpga/axi-test3/axi-test3.srcs/sources_1/bd/design_1/synth/design_1.v:216]
 INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ps8_0_axi_periph'. This will prevent further optimization [/home/y/fpga/axi-test3/axi-test3.srcs/sources_1/bd/design_1/synth/design_1.v:282]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 2770.840 ; gain = 164.418 ; free physical = 797 ; free virtual = 4041
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 2770.898 ; gain = 164.418 ; free physical = 2057 ; free virtual = 8411
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -224,25 +259,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 2770.840 ; gain = 164.418 ; free physical = 783 ; free virtual = 4031
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 2770.898 ; gain = 164.418 ; free physical = 2044 ; free virtual = 8402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:52 . Memory (MB): peak = 3251.270 ; gain = 644.848 ; free physical = 166 ; free virtual = 3379
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:49 . Memory (MB): peak = 3251.328 ; gain = 644.848 ; free physical = 1405 ; free virtual = 7763
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:52 . Memory (MB): peak = 3252.270 ; gain = 645.848 ; free physical = 166 ; free virtual = 3379
+Finished Timing Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:49 . Memory (MB): peak = 3252.328 ; gain = 645.848 ; free physical = 1405 ; free virtual = 7763
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:34 ; elapsed = 00:00:52 . Memory (MB): peak = 3272.309 ; gain = 665.887 ; free physical = 175 ; free virtual = 3372
+Finished Technology Mapping : Time (s): cpu = 00:00:33 ; elapsed = 00:00:50 . Memory (MB): peak = 3272.367 ; gain = 665.887 ; free physical = 1403 ; free virtual = 7761
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -260,37 +295,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:36 ; elapsed = 00:00:54 . Memory (MB): peak = 3276.277 ; gain = 669.855 ; free physical = 173 ; free virtual = 3373
+Finished IO Insertion : Time (s): cpu = 00:00:35 ; elapsed = 00:00:52 . Memory (MB): peak = 3278.305 ; gain = 671.824 ; free physical = 1403 ; free virtual = 7761
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:36 ; elapsed = 00:00:54 . Memory (MB): peak = 3276.277 ; gain = 669.855 ; free physical = 173 ; free virtual = 3373
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:35 ; elapsed = 00:00:52 . Memory (MB): peak = 3278.305 ; gain = 671.824 ; free physical = 1403 ; free virtual = 7761
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:36 ; elapsed = 00:00:54 . Memory (MB): peak = 3276.277 ; gain = 669.855 ; free physical = 173 ; free virtual = 3373
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:35 ; elapsed = 00:00:52 . Memory (MB): peak = 3278.305 ; gain = 671.824 ; free physical = 1403 ; free virtual = 7761
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:36 ; elapsed = 00:00:54 . Memory (MB): peak = 3276.277 ; gain = 669.855 ; free physical = 173 ; free virtual = 3373
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:35 ; elapsed = 00:00:52 . Memory (MB): peak = 3278.305 ; gain = 671.824 ; free physical = 1403 ; free virtual = 7761
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:36 ; elapsed = 00:00:54 . Memory (MB): peak = 3276.277 ; gain = 669.855 ; free physical = 173 ; free virtual = 3373
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:35 ; elapsed = 00:00:52 . Memory (MB): peak = 3278.305 ; gain = 671.824 ; free physical = 1403 ; free virtual = 7761
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:36 ; elapsed = 00:00:54 . Memory (MB): peak = 3276.277 ; gain = 669.855 ; free physical = 173 ; free virtual = 3373
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:35 ; elapsed = 00:00:52 . Memory (MB): peak = 3278.305 ; gain = 671.824 ; free physical = 1403 ; free virtual = 7761
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -327,25 +362,25 @@ Report Cell Usage:
 |11    |design_1_zynq_ultra_ps_e_0      |     1|
 +------+--------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:36 ; elapsed = 00:00:54 . Memory (MB): peak = 3276.277 ; gain = 669.855 ; free physical = 173 ; free virtual = 3373
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:35 ; elapsed = 00:00:52 . Memory (MB): peak = 3278.305 ; gain = 671.824 ; free physical = 1403 ; free virtual = 7761
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:31 ; elapsed = 00:00:48 . Memory (MB): peak = 3276.277 ; gain = 574.121 ; free physical = 211 ; free virtual = 3410
-Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:00:54 . Memory (MB): peak = 3276.285 ; gain = 669.855 ; free physical = 211 ; free virtual = 3410
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:30 ; elapsed = 00:00:45 . Memory (MB): peak = 3278.305 ; gain = 576.090 ; free physical = 1440 ; free virtual = 7798
+Synthesis Optimization Complete : Time (s): cpu = 00:00:35 ; elapsed = 00:00:52 . Memory (MB): peak = 3278.312 ; gain = 671.824 ; free physical = 1440 ; free virtual = 7798
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3276.285 ; gain = 0.000 ; free physical = 283 ; free virtual = 3482
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3278.312 ; gain = 0.000 ; free physical = 1512 ; free virtual = 7870
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3305.027 ; gain = 0.000 ; free physical = 224 ; free virtual = 3423
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3305.055 ; gain = 0.000 ; free physical = 1453 ; free virtual = 7811
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-59 Infos, 30 Warnings, 0 Critical Warnings and 0 Errors encountered.
+59 Infos, 65 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:49 ; elapsed = 00:01:09 . Memory (MB): peak = 3318.965 ; gain = 1008.895 ; free physical = 354 ; free virtual = 3554
+synth_design: Time (s): cpu = 00:00:47 ; elapsed = 00:01:06 . Memory (MB): peak = 3318.992 ; gain = 998.855 ; free physical = 1585 ; free virtual = 7943
 INFO: [Common 17-600] The following parameters have non-default value.
 tcl.collectionResultDisplayLimit
 INFO: [Common 17-1381] The checkpoint '/home/y/fpga/axi-test3/axi-test3.runs/synth_1/design_1_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Sep  2 23:10:12 2020...
+INFO: [Common 17-206] Exiting Vivado at Fri Sep  4 01:17:35 2020...

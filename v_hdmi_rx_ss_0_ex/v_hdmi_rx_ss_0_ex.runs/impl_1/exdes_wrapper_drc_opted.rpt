@@ -1,0 +1,82 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
+| Date         : Sun Aug 30 17:00:32 2020
+| Host         : y-Blade-Stealth running 64-bit Ubuntu 18.04.5 LTS
+| Command      : report_drc -file exdes_wrapper_drc_opted.rpt -pb exdes_wrapper_drc_opted.pb -rpx exdes_wrapper_drc_opted.rpx
+| Design       : exdes_wrapper
+| Device       : xczu7ev-ffvc1156-2-e
+| Speed File   : -2
+| Design State : Synthesized
+------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 9
++--------+----------+------------------------+------------+
+| Rule   | Severity | Description            | Violations |
++--------+----------+------------------------+------------+
+| DPIP-2 | Warning  | Input pipelining       | 6          |
+| DPOP-4 | Warning  | MREG Output pipelining | 3          |
++--------+----------+------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+DPIP-2#1 Warning
+Input pipelining  
+DSP exdes_i/vid_phy_controller/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input exdes_i/vid_phy_controller/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#2 Warning
+Input pipelining  
+DSP exdes_i/vid_phy_controller/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input exdes_i/vid_phy_controller/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#3 Warning
+Input pipelining  
+DSP exdes_i/vid_phy_controller/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input exdes_i/vid_phy_controller/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#4 Warning
+Input pipelining  
+DSP exdes_i/vid_phy_controller/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input exdes_i/vid_phy_controller/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#5 Warning
+Input pipelining  
+DSP exdes_i/vid_phy_controller/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input exdes_i/vid_phy_controller/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#6 Warning
+Input pipelining  
+DSP exdes_i/vid_phy_controller/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp input exdes_i/vid_phy_controller/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPOP-4#1 Warning
+MREG Output pipelining  
+DSP exdes_i/vid_phy_controller/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp multiplier stage exdes_i/vid_phy_controller/inst/dru_b0gt0_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#2 Warning
+MREG Output pipelining  
+DSP exdes_i/vid_phy_controller/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp multiplier stage exdes_i/vid_phy_controller/inst/dru_b0gt1_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#3 Warning
+MREG Output pipelining  
+DSP exdes_i/vid_phy_controller/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp multiplier stage exdes_i/vid_phy_controller/inst/dru_b0gt2_inst/NIDRU_INST/Inst_dru/fnidru_1.Inst_pd/multOp/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+

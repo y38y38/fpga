@@ -44,11 +44,13 @@
 	localparam STATE_OUT  = 4'h1;
 	localparam STATE_END  = 4'h2;
 
-	reg state = STATE_IDLE;
+	reg [3:1] state = STATE_IDLE;
 
 	assign M_AXIS_TDATA = stream_out;
 
 	assign M_AXIS_TSTRB = 32'h0000_000f;
+
+	assign M_AXIS_TLAST = axis_tlast;
 
 	always @( posedge M_AXIS_ACLK ) begin
 		if (M_AXIS_ARESETN) begin

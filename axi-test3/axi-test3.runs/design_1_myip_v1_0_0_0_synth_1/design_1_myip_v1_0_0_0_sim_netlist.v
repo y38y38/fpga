@@ -1,7 +1,7 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
-// Date        : Wed Sep  2 23:08:38 2020
+// Date        : Fri Sep  4 01:16:07 2020
 // Host        : y-Blade-Stealth running 64-bit Ubuntu 18.04.5 LTS
 // Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ design_1_myip_v1_0_0_0_sim_netlist.v
@@ -358,7 +358,6 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
         .m00_axi_bvalid(m00_axi_bvalid),
         .m00_axi_wlast(m00_axi_wlast),
         .m00_axi_wready(m00_axi_wready),
-        .m00_axi_wvalid(m00_axi_wvalid),
         .s00_axi_aclk(s00_axi_aclk),
         .s00_axi_araddr(s00_axi_araddr[3:2]),
         .s00_axi_aresetn(s00_axi_aresetn),
@@ -376,7 +375,8 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
         .s00_axi_wready(s00_axi_wready),
         .s00_axi_wstrb(s00_axi_wstrb),
         .s00_axi_wvalid(s00_axi_wvalid),
-        .write_state(\^write_state ));
+        .write_state(\^write_state ),
+        .wvaild_reg(m00_axi_wvalid));
 endmodule
 
 module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myip_v1_0
@@ -387,7 +387,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myip_v1_0
     s00_axi_arready,
     s00_axi_rdata,
     s00_axi_rvalid,
-    m00_axi_wvalid,
+    wvaild_reg,
     m00_axi_bready,
     s00_axi_bvalid,
     m00_axi_awvalid,
@@ -415,7 +415,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myip_v1_0
   output s00_axi_arready;
   output [31:0]s00_axi_rdata;
   output s00_axi_rvalid;
-  output m00_axi_wvalid;
+  output wvaild_reg;
   output m00_axi_bready;
   output s00_axi_bvalid;
   output m00_axi_awvalid;
@@ -446,7 +446,6 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myip_v1_0
   wire m00_axi_bvalid;
   wire m00_axi_wlast;
   wire m00_axi_wready;
-  wire m00_axi_wvalid;
   wire s00_axi_aclk;
   wire [1:0]s00_axi_araddr;
   wire s00_axi_aresetn;
@@ -466,6 +465,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myip_v1_0
   wire s00_axi_wvalid;
   wire write_start;
   wire [3:0]write_state;
+  wire wvaild_reg;
 
   decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myip_v1_0_M00_AXI myip_v1_0_M00_AXI_inst
        (.m00_axi_aclk(m00_axi_aclk),
@@ -476,19 +476,18 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myip_v1_0
         .m00_axi_bvalid(m00_axi_bvalid),
         .m00_axi_wlast(m00_axi_wlast),
         .m00_axi_wready(m00_axi_wready),
-        .m00_axi_wvalid(m00_axi_wvalid),
         .write_start(write_start),
-        .write_state(write_state));
+        .write_state(write_state),
+        .wvaild_reg_0(wvaild_reg));
   decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myip_v1_0_S00_AXI myip_v1_0_S00_AXI_inst
-       (.axi_arready_reg_0(s00_axi_arready),
-        .axi_awready_reg_0(s00_axi_awready),
-        .axi_wready_reg_0(s00_axi_wready),
-        .m00_axi_awaddr(m00_axi_awaddr),
+       (.m00_axi_awaddr(m00_axi_awaddr),
         .s00_axi_aclk(s00_axi_aclk),
         .s00_axi_araddr(s00_axi_araddr),
         .s00_axi_aresetn(s00_axi_aresetn),
+        .s00_axi_arready(s00_axi_arready),
         .s00_axi_arvalid(s00_axi_arvalid),
         .s00_axi_awaddr(s00_axi_awaddr),
+        .s00_axi_awready(s00_axi_awready),
         .s00_axi_awvalid(s00_axi_awvalid),
         .s00_axi_bready(s00_axi_bready),
         .s00_axi_bvalid(s00_axi_bvalid),
@@ -496,13 +495,14 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myip_v1_0
         .s00_axi_rready(s00_axi_rready),
         .s00_axi_rvalid(s00_axi_rvalid),
         .s00_axi_wdata(s00_axi_wdata),
+        .s00_axi_wready(s00_axi_wready),
         .s00_axi_wstrb(s00_axi_wstrb),
         .s00_axi_wvalid(s00_axi_wvalid),
         .write_start(write_start));
 endmodule
 
 module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myip_v1_0_M00_AXI
-   (m00_axi_wvalid,
+   (wvaild_reg_0,
     m00_axi_bready,
     m00_axi_awvalid,
     m00_axi_wlast,
@@ -513,7 +513,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myip_v1_0_M00_AXI
     m00_axi_aresetn,
     write_start,
     m00_axi_bvalid);
-  output m00_axi_wvalid;
+  output wvaild_reg_0;
   output m00_axi_bready;
   output m00_axi_awvalid;
   output m00_axi_wlast;
@@ -550,9 +550,8 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myip_v1_0_M00_AXI
   wire m00_axi_bvalid;
   wire m00_axi_wlast;
   wire m00_axi_wready;
-  wire m00_axi_wvalid;
   wire [1:0]p_0_out;
-  wire [31:1]write_counter0;
+  wire [31:0]write_counter0;
   wire write_counter0_carry__0_i_1_n_0;
   wire write_counter0_carry__0_i_2_n_0;
   wire write_counter0_carry__0_i_3_n_0;
@@ -614,12 +613,9 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myip_v1_0_M00_AXI
   wire write_counter0_carry_n_5;
   wire write_counter0_carry_n_6;
   wire write_counter0_carry_n_7;
-  wire \write_counter[0]_i_1_n_0 ;
-  wire \write_counter[1]_i_1_n_0 ;
-  wire \write_counter[2]_i_1_n_0 ;
   wire \write_counter[31]_i_1_n_0 ;
-  wire \write_counter[3]_i_1_n_0 ;
-  wire \write_counter[3]_i_2_n_0 ;
+  wire \write_counter[31]_i_2_n_0 ;
+  wire \write_counter[4]_i_1_n_0 ;
   wire \write_counter_reg_n_0_[0] ;
   wire \write_counter_reg_n_0_[10] ;
   wire \write_counter_reg_n_0_[11] ;
@@ -660,17 +656,17 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myip_v1_0_M00_AXI
   wire wvaild_i_4_n_0;
   wire wvaild_i_5_n_0;
   wire wvaild_i_6_n_0;
+  wire wvaild_reg_0;
   wire [7:6]NLW_write_counter0_carry__2_CO_UNCONNECTED;
   wire [7:7]NLW_write_counter0_carry__2_O_UNCONNECTED;
 
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT2 #(
     .INIT(4'h1)) 
     \FSM_sequential_write_state[0]_i_1 
        (.I0(write_state__0[0]),
         .I1(write_state__0[2]),
         .O(p_0_out[0]));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT3 #(
     .INIT(8'h06)) 
     \FSM_sequential_write_state[1]_i_1 
@@ -679,43 +675,43 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myip_v1_0_M00_AXI
         .I2(write_state__0[2]),
         .O(p_0_out[1]));
   LUT6 #(
-    .INIT(64'hFEEEEEEEEEEEEEEE)) 
+    .INIT(64'hFFFFFFFFFFFF8000)) 
     \FSM_sequential_write_state[2]_i_1 
        (.I0(\FSM_sequential_write_state[2]_i_2_n_0 ),
-        .I1(\FSM_sequential_write_state[2]_i_3_n_0 ),
-        .I2(\FSM_sequential_write_state[2]_i_4_n_0 ),
-        .I3(last_i_2_n_0),
-        .I4(last_i_3_n_0),
-        .I5(last_i_4_n_0),
+        .I1(last_i_2_n_0),
+        .I2(last_i_3_n_0),
+        .I3(last_i_4_n_0),
+        .I4(\FSM_sequential_write_state[2]_i_3_n_0 ),
+        .I5(\FSM_sequential_write_state[2]_i_4_n_0 ),
         .O(\FSM_sequential_write_state[2]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'h00000ACF00000AC0)) 
-    \FSM_sequential_write_state[2]_i_2 
-       (.I0(m00_axi_awready),
-        .I1(m00_axi_wready),
-        .I2(write_state__0[1]),
-        .I3(write_state__0[0]),
-        .I4(write_state__0[2]),
-        .I5(write_start),
-        .O(\FSM_sequential_write_state[2]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
-  LUT5 #(
-    .INIT(32'h00080000)) 
-    \FSM_sequential_write_state[2]_i_3 
-       (.I0(m00_axi_bvalid),
-        .I1(m00_axi_bready),
-        .I2(write_state__0[0]),
-        .I3(write_state__0[1]),
-        .I4(write_state__0[2]),
-        .O(\FSM_sequential_write_state[2]_i_3_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT4 #(
     .INIT(16'h0008)) 
-    \FSM_sequential_write_state[2]_i_4 
+    \FSM_sequential_write_state[2]_i_2 
        (.I0(write_state__0[1]),
         .I1(write_state__0[0]),
         .I2(write_state__0[2]),
         .I3(\write_counter_reg_n_0_[0] ),
+        .O(\FSM_sequential_write_state[2]_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  LUT5 #(
+    .INIT(32'h00000C0A)) 
+    \FSM_sequential_write_state[2]_i_3 
+       (.I0(write_start),
+        .I1(m00_axi_awready),
+        .I2(write_state__0[2]),
+        .I3(write_state__0[0]),
+        .I4(write_state__0[1]),
+        .O(\FSM_sequential_write_state[2]_i_3_n_0 ));
+  LUT6 #(
+    .INIT(64'h000F080000000800)) 
+    \FSM_sequential_write_state[2]_i_4 
+       (.I0(m00_axi_bready),
+        .I1(m00_axi_bvalid),
+        .I2(write_state__0[0]),
+        .I3(write_state__0[2]),
+        .I4(write_state__0[1]),
+        .I5(m00_axi_wready),
         .O(\FSM_sequential_write_state[2]_i_4_n_0 ));
   (* FSM_ENCODED_STATES = "iSTATE:100,iSTATE0:000,iSTATE1:001,iSTATE2:010,iSTATE3:011," *) 
   FDRE \FSM_sequential_write_state_reg[0] 
@@ -1048,27 +1044,11 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myip_v1_0_M00_AXI
     write_counter0_carry_i_8
        (.I0(\write_counter_reg_n_0_[1] ),
         .O(write_counter0_carry_i_8_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
-  LUT2 #(
-    .INIT(4'h7)) 
+  LUT1 #(
+    .INIT(2'h1)) 
     \write_counter[0]_i_1 
-       (.I0(write_state__0[1]),
-        .I1(\write_counter_reg_n_0_[0] ),
-        .O(\write_counter[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
-  LUT2 #(
-    .INIT(4'hB)) 
-    \write_counter[1]_i_1 
-       (.I0(write_counter0[1]),
-        .I1(write_state__0[1]),
-        .O(\write_counter[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
-  LUT2 #(
-    .INIT(4'hB)) 
-    \write_counter[2]_i_1 
-       (.I0(write_counter0[2]),
-        .I1(write_state__0[1]),
-        .O(\write_counter[2]_i_1_n_0 ));
+       (.I0(\write_counter_reg_n_0_[0] ),
+        .O(write_counter0[0]));
   LUT4 #(
     .INIT(16'h04FF)) 
     \write_counter[31]_i_1 
@@ -1077,32 +1057,37 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myip_v1_0_M00_AXI
         .I2(write_state__0[2]),
         .I3(m00_axi_aresetn),
         .O(\write_counter[31]_i_1_n_0 ));
-  LUT2 #(
-    .INIT(4'h2)) 
-    \write_counter[3]_i_1 
-       (.I0(write_state__0[0]),
-        .I1(write_state__0[2]),
-        .O(\write_counter[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
-  LUT2 #(
-    .INIT(4'hB)) 
-    \write_counter[3]_i_2 
-       (.I0(write_counter0[3]),
+  LUT4 #(
+    .INIT(16'h4000)) 
+    \write_counter[31]_i_2 
+       (.I0(write_state__0[2]),
         .I1(write_state__0[1]),
-        .O(\write_counter[3]_i_2_n_0 ));
+        .I2(wvaild_reg_0),
+        .I3(m00_axi_wready),
+        .O(\write_counter[31]_i_2_n_0 ));
+  LUT6 #(
+    .INIT(64'hBBBBBFBB88888F88)) 
+    \write_counter[4]_i_1 
+       (.I0(write_counter0[4]),
+        .I1(\write_counter[31]_i_2_n_0 ),
+        .I2(write_state__0[1]),
+        .I3(write_state__0[0]),
+        .I4(write_state__0[2]),
+        .I5(\write_counter_reg_n_0_[4] ),
+        .O(\write_counter[4]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \write_counter_reg[0] 
        (.C(m00_axi_aclk),
-        .CE(\write_counter[3]_i_1_n_0 ),
-        .D(\write_counter[0]_i_1_n_0 ),
+        .CE(\write_counter[31]_i_2_n_0 ),
+        .D(write_counter0[0]),
         .Q(\write_counter_reg_n_0_[0] ),
-        .R(awvaild_i_1_n_0));
+        .R(\write_counter[31]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \write_counter_reg[10] 
        (.C(m00_axi_aclk),
-        .CE(write_state[2]),
+        .CE(\write_counter[31]_i_2_n_0 ),
         .D(write_counter0[10]),
         .Q(\write_counter_reg_n_0_[10] ),
         .R(\write_counter[31]_i_1_n_0 ));
@@ -1110,7 +1095,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myip_v1_0_M00_AXI
     .INIT(1'b0)) 
     \write_counter_reg[11] 
        (.C(m00_axi_aclk),
-        .CE(write_state[2]),
+        .CE(\write_counter[31]_i_2_n_0 ),
         .D(write_counter0[11]),
         .Q(\write_counter_reg_n_0_[11] ),
         .R(\write_counter[31]_i_1_n_0 ));
@@ -1118,7 +1103,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myip_v1_0_M00_AXI
     .INIT(1'b0)) 
     \write_counter_reg[12] 
        (.C(m00_axi_aclk),
-        .CE(write_state[2]),
+        .CE(\write_counter[31]_i_2_n_0 ),
         .D(write_counter0[12]),
         .Q(\write_counter_reg_n_0_[12] ),
         .R(\write_counter[31]_i_1_n_0 ));
@@ -1126,7 +1111,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myip_v1_0_M00_AXI
     .INIT(1'b0)) 
     \write_counter_reg[13] 
        (.C(m00_axi_aclk),
-        .CE(write_state[2]),
+        .CE(\write_counter[31]_i_2_n_0 ),
         .D(write_counter0[13]),
         .Q(\write_counter_reg_n_0_[13] ),
         .R(\write_counter[31]_i_1_n_0 ));
@@ -1134,7 +1119,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myip_v1_0_M00_AXI
     .INIT(1'b0)) 
     \write_counter_reg[14] 
        (.C(m00_axi_aclk),
-        .CE(write_state[2]),
+        .CE(\write_counter[31]_i_2_n_0 ),
         .D(write_counter0[14]),
         .Q(\write_counter_reg_n_0_[14] ),
         .R(\write_counter[31]_i_1_n_0 ));
@@ -1142,7 +1127,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myip_v1_0_M00_AXI
     .INIT(1'b0)) 
     \write_counter_reg[15] 
        (.C(m00_axi_aclk),
-        .CE(write_state[2]),
+        .CE(\write_counter[31]_i_2_n_0 ),
         .D(write_counter0[15]),
         .Q(\write_counter_reg_n_0_[15] ),
         .R(\write_counter[31]_i_1_n_0 ));
@@ -1150,7 +1135,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myip_v1_0_M00_AXI
     .INIT(1'b0)) 
     \write_counter_reg[16] 
        (.C(m00_axi_aclk),
-        .CE(write_state[2]),
+        .CE(\write_counter[31]_i_2_n_0 ),
         .D(write_counter0[16]),
         .Q(\write_counter_reg_n_0_[16] ),
         .R(\write_counter[31]_i_1_n_0 ));
@@ -1158,7 +1143,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myip_v1_0_M00_AXI
     .INIT(1'b0)) 
     \write_counter_reg[17] 
        (.C(m00_axi_aclk),
-        .CE(write_state[2]),
+        .CE(\write_counter[31]_i_2_n_0 ),
         .D(write_counter0[17]),
         .Q(\write_counter_reg_n_0_[17] ),
         .R(\write_counter[31]_i_1_n_0 ));
@@ -1166,7 +1151,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myip_v1_0_M00_AXI
     .INIT(1'b0)) 
     \write_counter_reg[18] 
        (.C(m00_axi_aclk),
-        .CE(write_state[2]),
+        .CE(\write_counter[31]_i_2_n_0 ),
         .D(write_counter0[18]),
         .Q(\write_counter_reg_n_0_[18] ),
         .R(\write_counter[31]_i_1_n_0 ));
@@ -1174,7 +1159,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myip_v1_0_M00_AXI
     .INIT(1'b0)) 
     \write_counter_reg[19] 
        (.C(m00_axi_aclk),
-        .CE(write_state[2]),
+        .CE(\write_counter[31]_i_2_n_0 ),
         .D(write_counter0[19]),
         .Q(\write_counter_reg_n_0_[19] ),
         .R(\write_counter[31]_i_1_n_0 ));
@@ -1182,15 +1167,15 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myip_v1_0_M00_AXI
     .INIT(1'b0)) 
     \write_counter_reg[1] 
        (.C(m00_axi_aclk),
-        .CE(\write_counter[3]_i_1_n_0 ),
-        .D(\write_counter[1]_i_1_n_0 ),
+        .CE(\write_counter[31]_i_2_n_0 ),
+        .D(write_counter0[1]),
         .Q(\write_counter_reg_n_0_[1] ),
-        .R(awvaild_i_1_n_0));
+        .R(\write_counter[31]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \write_counter_reg[20] 
        (.C(m00_axi_aclk),
-        .CE(write_state[2]),
+        .CE(\write_counter[31]_i_2_n_0 ),
         .D(write_counter0[20]),
         .Q(\write_counter_reg_n_0_[20] ),
         .R(\write_counter[31]_i_1_n_0 ));
@@ -1198,7 +1183,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myip_v1_0_M00_AXI
     .INIT(1'b0)) 
     \write_counter_reg[21] 
        (.C(m00_axi_aclk),
-        .CE(write_state[2]),
+        .CE(\write_counter[31]_i_2_n_0 ),
         .D(write_counter0[21]),
         .Q(\write_counter_reg_n_0_[21] ),
         .R(\write_counter[31]_i_1_n_0 ));
@@ -1206,7 +1191,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myip_v1_0_M00_AXI
     .INIT(1'b0)) 
     \write_counter_reg[22] 
        (.C(m00_axi_aclk),
-        .CE(write_state[2]),
+        .CE(\write_counter[31]_i_2_n_0 ),
         .D(write_counter0[22]),
         .Q(\write_counter_reg_n_0_[22] ),
         .R(\write_counter[31]_i_1_n_0 ));
@@ -1214,7 +1199,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myip_v1_0_M00_AXI
     .INIT(1'b0)) 
     \write_counter_reg[23] 
        (.C(m00_axi_aclk),
-        .CE(write_state[2]),
+        .CE(\write_counter[31]_i_2_n_0 ),
         .D(write_counter0[23]),
         .Q(\write_counter_reg_n_0_[23] ),
         .R(\write_counter[31]_i_1_n_0 ));
@@ -1222,7 +1207,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myip_v1_0_M00_AXI
     .INIT(1'b0)) 
     \write_counter_reg[24] 
        (.C(m00_axi_aclk),
-        .CE(write_state[2]),
+        .CE(\write_counter[31]_i_2_n_0 ),
         .D(write_counter0[24]),
         .Q(\write_counter_reg_n_0_[24] ),
         .R(\write_counter[31]_i_1_n_0 ));
@@ -1230,7 +1215,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myip_v1_0_M00_AXI
     .INIT(1'b0)) 
     \write_counter_reg[25] 
        (.C(m00_axi_aclk),
-        .CE(write_state[2]),
+        .CE(\write_counter[31]_i_2_n_0 ),
         .D(write_counter0[25]),
         .Q(\write_counter_reg_n_0_[25] ),
         .R(\write_counter[31]_i_1_n_0 ));
@@ -1238,7 +1223,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myip_v1_0_M00_AXI
     .INIT(1'b0)) 
     \write_counter_reg[26] 
        (.C(m00_axi_aclk),
-        .CE(write_state[2]),
+        .CE(\write_counter[31]_i_2_n_0 ),
         .D(write_counter0[26]),
         .Q(\write_counter_reg_n_0_[26] ),
         .R(\write_counter[31]_i_1_n_0 ));
@@ -1246,7 +1231,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myip_v1_0_M00_AXI
     .INIT(1'b0)) 
     \write_counter_reg[27] 
        (.C(m00_axi_aclk),
-        .CE(write_state[2]),
+        .CE(\write_counter[31]_i_2_n_0 ),
         .D(write_counter0[27]),
         .Q(\write_counter_reg_n_0_[27] ),
         .R(\write_counter[31]_i_1_n_0 ));
@@ -1254,7 +1239,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myip_v1_0_M00_AXI
     .INIT(1'b0)) 
     \write_counter_reg[28] 
        (.C(m00_axi_aclk),
-        .CE(write_state[2]),
+        .CE(\write_counter[31]_i_2_n_0 ),
         .D(write_counter0[28]),
         .Q(\write_counter_reg_n_0_[28] ),
         .R(\write_counter[31]_i_1_n_0 ));
@@ -1262,7 +1247,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myip_v1_0_M00_AXI
     .INIT(1'b0)) 
     \write_counter_reg[29] 
        (.C(m00_axi_aclk),
-        .CE(write_state[2]),
+        .CE(\write_counter[31]_i_2_n_0 ),
         .D(write_counter0[29]),
         .Q(\write_counter_reg_n_0_[29] ),
         .R(\write_counter[31]_i_1_n_0 ));
@@ -1270,15 +1255,15 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myip_v1_0_M00_AXI
     .INIT(1'b0)) 
     \write_counter_reg[2] 
        (.C(m00_axi_aclk),
-        .CE(\write_counter[3]_i_1_n_0 ),
-        .D(\write_counter[2]_i_1_n_0 ),
+        .CE(\write_counter[31]_i_2_n_0 ),
+        .D(write_counter0[2]),
         .Q(\write_counter_reg_n_0_[2] ),
-        .R(awvaild_i_1_n_0));
+        .R(\write_counter[31]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \write_counter_reg[30] 
        (.C(m00_axi_aclk),
-        .CE(write_state[2]),
+        .CE(\write_counter[31]_i_2_n_0 ),
         .D(write_counter0[30]),
         .Q(\write_counter_reg_n_0_[30] ),
         .R(\write_counter[31]_i_1_n_0 ));
@@ -1286,7 +1271,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myip_v1_0_M00_AXI
     .INIT(1'b0)) 
     \write_counter_reg[31] 
        (.C(m00_axi_aclk),
-        .CE(write_state[2]),
+        .CE(\write_counter[31]_i_2_n_0 ),
         .D(write_counter0[31]),
         .Q(\write_counter_reg_n_0_[31] ),
         .R(\write_counter[31]_i_1_n_0 ));
@@ -1294,23 +1279,23 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myip_v1_0_M00_AXI
     .INIT(1'b0)) 
     \write_counter_reg[3] 
        (.C(m00_axi_aclk),
-        .CE(\write_counter[3]_i_1_n_0 ),
-        .D(\write_counter[3]_i_2_n_0 ),
+        .CE(\write_counter[31]_i_2_n_0 ),
+        .D(write_counter0[3]),
         .Q(\write_counter_reg_n_0_[3] ),
-        .R(awvaild_i_1_n_0));
+        .R(\write_counter[31]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \write_counter_reg[4] 
        (.C(m00_axi_aclk),
-        .CE(write_state[2]),
-        .D(write_counter0[4]),
+        .CE(1'b1),
+        .D(\write_counter[4]_i_1_n_0 ),
         .Q(\write_counter_reg_n_0_[4] ),
-        .R(\write_counter[31]_i_1_n_0 ));
+        .R(awvaild_i_1_n_0));
   FDRE #(
     .INIT(1'b0)) 
     \write_counter_reg[5] 
        (.C(m00_axi_aclk),
-        .CE(write_state[2]),
+        .CE(\write_counter[31]_i_2_n_0 ),
         .D(write_counter0[5]),
         .Q(\write_counter_reg_n_0_[5] ),
         .R(\write_counter[31]_i_1_n_0 ));
@@ -1318,7 +1303,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myip_v1_0_M00_AXI
     .INIT(1'b0)) 
     \write_counter_reg[6] 
        (.C(m00_axi_aclk),
-        .CE(write_state[2]),
+        .CE(\write_counter[31]_i_2_n_0 ),
         .D(write_counter0[6]),
         .Q(\write_counter_reg_n_0_[6] ),
         .R(\write_counter[31]_i_1_n_0 ));
@@ -1326,7 +1311,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myip_v1_0_M00_AXI
     .INIT(1'b0)) 
     \write_counter_reg[7] 
        (.C(m00_axi_aclk),
-        .CE(write_state[2]),
+        .CE(\write_counter[31]_i_2_n_0 ),
         .D(write_counter0[7]),
         .Q(\write_counter_reg_n_0_[7] ),
         .R(\write_counter[31]_i_1_n_0 ));
@@ -1334,7 +1319,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myip_v1_0_M00_AXI
     .INIT(1'b0)) 
     \write_counter_reg[8] 
        (.C(m00_axi_aclk),
-        .CE(write_state[2]),
+        .CE(\write_counter[31]_i_2_n_0 ),
         .D(write_counter0[8]),
         .Q(\write_counter_reg_n_0_[8] ),
         .R(\write_counter[31]_i_1_n_0 ));
@@ -1342,11 +1327,11 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myip_v1_0_M00_AXI
     .INIT(1'b0)) 
     \write_counter_reg[9] 
        (.C(m00_axi_aclk),
-        .CE(write_state[2]),
+        .CE(\write_counter[31]_i_2_n_0 ),
         .D(write_counter0[9]),
         .Q(\write_counter_reg_n_0_[9] ),
         .R(\write_counter[31]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT3 #(
     .INIT(8'h04)) 
     \write_state[0]_INST_0 
@@ -1362,6 +1347,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myip_v1_0_M00_AXI
         .I1(write_state__0[0]),
         .I2(write_state__0[1]),
         .O(write_state[1]));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT3 #(
     .INIT(8'h40)) 
     \write_state[2]_INST_0 
@@ -1369,7 +1355,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myip_v1_0_M00_AXI
         .I1(write_state__0[0]),
         .I2(write_state__0[1]),
         .O(write_state[2]));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT3 #(
     .INIT(8'h02)) 
     \write_state[3]_INST_0 
@@ -1385,7 +1371,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myip_v1_0_M00_AXI
         .I2(wvaild_i_4_n_0),
         .I3(last_i_4_n_0),
         .I4(write_state[3]),
-        .I5(m00_axi_wvalid),
+        .I5(wvaild_reg_0),
         .O(wvaild_i_1_n_0));
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT4 #(
@@ -1397,11 +1383,11 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myip_v1_0_M00_AXI
         .I3(m00_axi_awready),
         .O(awvaild));
   LUT6 #(
-    .INIT(64'h0000000008000000)) 
+    .INIT(64'h0000000040000000)) 
     wvaild_i_3
-       (.I0(m00_axi_wready),
-        .I1(m00_axi_wvalid),
-        .I2(\write_counter_reg_n_0_[0] ),
+       (.I0(\write_counter_reg_n_0_[0] ),
+        .I1(m00_axi_wready),
+        .I2(wvaild_reg_0),
         .I3(write_state__0[1]),
         .I4(write_state__0[0]),
         .I5(write_state__0[2]),
@@ -1436,14 +1422,14 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myip_v1_0_M00_AXI
        (.C(m00_axi_aclk),
         .CE(1'b1),
         .D(wvaild_i_1_n_0),
-        .Q(m00_axi_wvalid),
+        .Q(wvaild_reg_0),
         .R(awvaild_i_1_n_0));
 endmodule
 
 module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myip_v1_0_S00_AXI
-   (axi_awready_reg_0,
-    axi_wready_reg_0,
-    axi_arready_reg_0,
+   (s00_axi_awready,
+    s00_axi_wready,
+    s00_axi_arready,
     s00_axi_bvalid,
     write_start,
     s00_axi_rvalid,
@@ -1460,9 +1446,9 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myip_v1_0_S00_AXI
     s00_axi_araddr,
     s00_axi_aresetn,
     s00_axi_wstrb);
-  output axi_awready_reg_0;
-  output axi_wready_reg_0;
-  output axi_arready_reg_0;
+  output s00_axi_awready;
+  output s00_axi_wready;
+  output s00_axi_arready;
   output s00_axi_bvalid;
   output write_start;
   output s00_axi_rvalid;
@@ -1484,14 +1470,11 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myip_v1_0_S00_AXI
   wire aw_en_reg_n_0;
   wire [3:2]axi_araddr;
   wire axi_arready0;
-  wire axi_arready_reg_0;
   wire axi_awready0;
   wire axi_awready_i_1_n_0;
-  wire axi_awready_reg_0;
   wire axi_bvalid_i_1_n_0;
   wire axi_rvalid_i_1_n_0;
   wire axi_wready0;
-  wire axi_wready_reg_0;
   wire [31:0]m00_axi_awaddr;
   wire [1:0]p_0_in;
   wire [31:7]p_1_in;
@@ -1499,8 +1482,10 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myip_v1_0_S00_AXI
   wire s00_axi_aclk;
   wire [1:0]s00_axi_araddr;
   wire s00_axi_aresetn;
+  wire s00_axi_arready;
   wire s00_axi_arvalid;
   wire [1:0]s00_axi_awaddr;
+  wire s00_axi_awready;
   wire s00_axi_awvalid;
   wire s00_axi_bready;
   wire s00_axi_bvalid;
@@ -1508,6 +1493,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myip_v1_0_S00_AXI
   wire s00_axi_rready;
   wire s00_axi_rvalid;
   wire [31:0]s00_axi_wdata;
+  wire s00_axi_wready;
   wire [3:0]s00_axi_wstrb;
   wire s00_axi_wvalid;
   wire [0:0]slv_reg0;
@@ -1567,7 +1553,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myip_v1_0_S00_AXI
   LUT6 #(
     .INIT(64'hBFFF8CCC8CCC8CCC)) 
     aw_en_i_1
-       (.I0(axi_awready_reg_0),
+       (.I0(s00_axi_awready),
         .I1(aw_en_reg_n_0),
         .I2(s00_axi_wvalid),
         .I3(s00_axi_awvalid),
@@ -1596,13 +1582,13 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myip_v1_0_S00_AXI
     .INIT(4'h2)) 
     axi_arready_i_1
        (.I0(s00_axi_arvalid),
-        .I1(axi_arready_reg_0),
+        .I1(s00_axi_arready),
         .O(axi_arready0));
   FDRE axi_arready_reg
        (.C(s00_axi_aclk),
         .CE(1'b1),
         .D(axi_arready0),
-        .Q(axi_arready_reg_0),
+        .Q(s00_axi_arready),
         .R(axi_awready_i_1_n_0));
   FDRE \axi_awaddr_reg[2] 
        (.C(s00_axi_aclk),
@@ -1627,20 +1613,20 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myip_v1_0_S00_AXI
        (.I0(s00_axi_awvalid),
         .I1(s00_axi_wvalid),
         .I2(aw_en_reg_n_0),
-        .I3(axi_awready_reg_0),
+        .I3(s00_axi_awready),
         .O(axi_awready0));
   FDRE axi_awready_reg
        (.C(s00_axi_aclk),
         .CE(1'b1),
         .D(axi_awready0),
-        .Q(axi_awready_reg_0),
+        .Q(s00_axi_awready),
         .R(axi_awready_i_1_n_0));
   LUT6 #(
     .INIT(64'h0000FFFF80008000)) 
     axi_bvalid_i_1
        (.I0(s00_axi_awvalid),
-        .I1(axi_wready_reg_0),
-        .I2(axi_awready_reg_0),
+        .I1(s00_axi_wready),
+        .I2(s00_axi_awready),
         .I3(s00_axi_wvalid),
         .I4(s00_axi_bready),
         .I5(s00_axi_bvalid),
@@ -2166,7 +2152,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myip_v1_0_S00_AXI
   LUT4 #(
     .INIT(16'h08F8)) 
     axi_rvalid_i_1
-       (.I0(axi_arready_reg_0),
+       (.I0(s00_axi_arready),
         .I1(s00_axi_arvalid),
         .I2(s00_axi_rvalid),
         .I3(s00_axi_rready),
@@ -2177,20 +2163,20 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myip_v1_0_S00_AXI
         .D(axi_rvalid_i_1_n_0),
         .Q(s00_axi_rvalid),
         .R(axi_awready_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT4 #(
     .INIT(16'h0080)) 
     axi_wready_i_1
        (.I0(s00_axi_awvalid),
         .I1(s00_axi_wvalid),
         .I2(aw_en_reg_n_0),
-        .I3(axi_wready_reg_0),
+        .I3(s00_axi_wready),
         .O(axi_wready0));
   FDRE axi_wready_reg
        (.C(s00_axi_aclk),
         .CE(1'b1),
         .D(axi_wready0),
-        .Q(axi_wready_reg_0),
+        .Q(s00_axi_wready),
         .R(axi_awready_i_1_n_0));
   LUT6 #(
     .INIT(64'hE200E2000000E200)) 
@@ -2450,13 +2436,13 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myip_v1_0_S00_AXI
         .I2(p_0_in[0]),
         .I3(p_0_in[1]),
         .O(\slv_reg1[31]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT4 #(
     .INIT(16'h8000)) 
     \slv_reg1[31]_i_2 
        (.I0(s00_axi_awvalid),
-        .I1(axi_wready_reg_0),
-        .I2(axi_awready_reg_0),
+        .I1(s00_axi_wready),
+        .I2(s00_axi_awready),
         .I3(s00_axi_wvalid),
         .O(slv_reg_wren__2));
   LUT4 #(
@@ -3112,9 +3098,9 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myip_v1_0_S00_AXI
     slv_reg_rden
        (.I0(s00_axi_arvalid),
         .I1(s00_axi_rvalid),
-        .I2(axi_arready_reg_0),
+        .I2(s00_axi_arready),
         .O(slv_reg_rden__0));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT3 #(
     .INIT(8'hF4)) 
     write_start_i_1
@@ -3128,7 +3114,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_myip_v1_0_S00_AXI
         .D(write_start_i_1_n_0),
         .Q(write_start),
         .R(axi_awready_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT2 #(
     .INIT(4'h4)) 
     write_state_i_1

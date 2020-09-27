@@ -1,0 +1,22 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Sun Aug 30 16:24:59 2020
+# Process ID: 9198
+# Current directory: /home/y/fpga/v_hdmi_rx_ss_0_ex
+# Command line: vivado -notrace -source /home/y/fpga/hdmi/hdmi.srcs/sources_1/ip/v_hdmi_rx_ss_0/v_hdmi_rx_ss_0_ex.tcl
+# Log file: /home/y/fpga/v_hdmi_rx_ss_0_ex/vivado.log
+# Journal file: /home/y/fpga/v_hdmi_rx_ss_0_ex/vivado.jou
+#-----------------------------------------------------------
+start_gui
+source /home/y/fpga/hdmi/hdmi.srcs/sources_1/ip/v_hdmi_rx_ss_0/v_hdmi_rx_ss_0_ex.tcl -notrace
+update_compile_order -fileset sources_1
+startgroup
+copy_bd_objs /  [get_bd_cells {dru_ibufds_gt_odiv2}]
+set_property location {5 2237 1971} [get_bd_cells dru_ibufds_gt_odiv3]
+endgroup
+undo
+save_bd_design
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1

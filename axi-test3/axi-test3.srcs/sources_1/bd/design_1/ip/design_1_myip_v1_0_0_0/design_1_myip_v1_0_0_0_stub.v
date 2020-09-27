@@ -1,7 +1,7 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
-// Date        : Wed Sep  2 23:08:39 2020
+// Date        : Fri Sep  4 01:16:07 2020
 // Host        : y-Blade-Stealth running 64-bit Ubuntu 18.04.5 LTS
 // Command     : write_verilog -force -mode synth_stub
 //               /home/y/fpga/axi-test3/axi-test3.srcs/sources_1/bd/design_1/ip/design_1_myip_v1_0_0_0/design_1_myip_v1_0_0_0_stub.v
